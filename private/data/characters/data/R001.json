@@ -1,0 +1,11 @@
+{
+    "Id": "R001",
+    "Name": "Amiya",
+    "Rarity": 5,
+    "Class": "Caster",
+    "Attack_Range": "Ranged",
+    "Position": "Highground",
+    "Gender": "Female",
+    "Race": ["Cautus", "Chimera"],
+    "Faction": "Rhodes Island"
+}

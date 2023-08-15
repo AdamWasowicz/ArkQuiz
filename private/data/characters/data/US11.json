@@ -1,0 +1,11 @@
+{
+    "Id": "US11",
+    "Name": "Absinthe",
+    "Rarity": 5,
+    "Class": "Caster",
+    "Attack_Range": "Ranged",
+    "Position": "Highground",
+    "Gender": "Absinthe",
+    "Race": "Ursus",
+    "Faction": "Ursus"
+}

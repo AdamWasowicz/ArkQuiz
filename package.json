@@ -1,7 +1,8 @@
 {
-  "name": "app",
-  "version": "0.1.0",
+  "name": "arkquiz",
+  "version": "0.1.5",
   "private": true,
+  "author": "Adam Wąsowicz",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -18,5 +19,8 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "typescript": "5.1.6"
+  },
+  "devDependencies": {
+    "sass": "^1.65.1"
   }
 }
