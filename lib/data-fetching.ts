@@ -1,6 +1,11 @@
-import { CharacterHeader } from '@/resources/data/characters/lib/types';
+import { CharacterHeader } from '@/resources/character/lib/types';
 import axios from 'axios';
 
+const API_SPLASH_ROUTE = 'api/character/image/splash';
+const API_ICON_ROUTE = 'api/character/image/icon';
+const API_CHARACTER_GUESS = 'api/character';
+
+// REMOVE OR MOD
 export const fetchAllCharactersHeaders = async (siteUrl: string): Promise<CharacterHeader[]> => {
     const apiEndpointRoute = 'api/character/headers';
     const axiosClient = axios.create({
@@ -19,6 +24,28 @@ export const fetchAllCharactersHeaders = async (siteUrl: string): Promise<Charac
     return response.data;
 }
 
-export const fetchCharacterSplash = async(baseUrl: string, id: string) => {
-    
+export const urlToSplash = (baseUrl: string, id: string): string => {
+    return `${baseUrl}${API_SPLASH_ROUTE}/${id}`
+}
+
+export const urlToIcon = (baseUrl: string, id: string): string => {
+    return `${baseUrl}${API_ICON_ROUTE}/${id}`
+}
+
+export const takeGuess = async (baseUrl: string, id: string) => {
+    const axiosClient = axios.create({
+        baseURL: baseUrl,
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+
+
+    const response = await axiosClient.post<{message: string}>(API_CHARACTER_GUESS, 
+        {
+            id: id,
+        }
+    )
+
+    return response.data.message;
 }

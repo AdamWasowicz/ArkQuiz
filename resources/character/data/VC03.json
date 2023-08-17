@@ -1,0 +1,11 @@
+{
+    "Id": "VC03",
+    "Name": "Nightmare",
+    "Rarity": 5,
+    "Class": "Caster",
+    "Attack_Range": "Ranged",
+    "Position": "Highground",
+    "Gender": "Female",
+    "Race": "Feline",
+    "Faction": "Victoria"
+}

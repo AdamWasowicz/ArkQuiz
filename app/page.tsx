@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { getCharacterIconRoute, getCharacterSplashRoute, getTodayCharacterId, getAllCharactersHeaderMap } from "@/resources/data/character/lib/utils";
-import SearchBar from "@/resources/data/character/components/searchbar";
+import { getCharacterIconRoute, getCharacterSplashRoute, getTodayCharacterId, getAllCharactersHeaderMap } from "@/resources/character/lib/utils";
+import SearchBar from "@/resources/character/components/searchBar";
 
 const Home: React.FC= () => {
   const todayId = getTodayCharacterId();
@@ -14,7 +14,7 @@ const Home: React.FC= () => {
       <Image src={`/${r1}`} alt={todayId} height={200} width={200}/>
       <Image src={`/${r2}`} alt={todayId} height={100} width={100}/>
     
-      <SearchBar a={headers}/>
+      <SearchBar characterHeaders={headers}/>
     </main>
   )
 }

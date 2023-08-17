@@ -1,25 +1,25 @@
-import { CharacterHeaderMap } from '@/resources/data/characters/lib/types';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { getAllCharactersHeaderMap } from '@/resources/data/characters/lib/utils';
 
 export interface IAppState {
-    characterHeaderMap: CharacterHeaderMap
+    searchBarValue: string
 }
 
 const initialState: IAppState = {
-    characterHeaderMap: getAllCharactersHeaderMap()
+    searchBarValue: ''
 }
 
 const AppSlice = createSlice({
     name: 'app',
     initialState,
     reducers: {
-
+        setSearchBarValue(state: IAppState, action: PayloadAction<string>) {
+            state.searchBarValue = action.payload;
+        }
     }
 })
 
 export const {
-
+    setSearchBarValue
 } = AppSlice.actions;
 
 export default AppSlice.reducer;

@@ -1,0 +1,11 @@
+{
+    "Id": "SI03",
+    "Name": "Qanipalaat",
+    "Rarity": 5,
+    "Class": "Caster",
+    "Attack_Range": "Ranged",
+    "Position": "Highground",
+    "Gender": "Male",
+    "Race": "Vulpo",
+    "Faction": "Sami"
+}

@@ -2,10 +2,10 @@ import { Character, CharacterHeader, CharacterHeaderMap } from "./types";
 import path from 'path';
 import { getAllFileNamesInDirectory, readJson, doesFileExist } from "@/lib/filesystem";
 import { 
-    EXTERNAL_PATH_TO_CHARACTER_ICONS_IMAGES,
-    LOCAL_PATH_TO_CHARACTER_ICONS_IMAGES, 
-    EXTERNAL_PATH_TO_CHARACTER_SPLASH_IMAGES, 
-    LOCAL_PATH_TO_CHARACTER_SPLASH_IMAGES,
+    EXTERNAL_PATH_TO_CHARACTER_ICONS,
+    LOCAL_PATH_TO_CHARACTER_ICONS, 
+    EXTERNAL_PATH_TO_CHARACTER_SPLASH, 
+    LOCAL_PATH_TO_CHARACTER_SPLASH,
     PATH_TO_CHARACTER_DATA, 
 } from "@/lib/paths";
 
@@ -13,8 +13,8 @@ import {
 const imageFormat = '.webp';
 const characterDataFormat = '.json';
 const localPathToCharacters = path.join(process.cwd(), ...PATH_TO_CHARACTER_DATA);
-const pathToCharacterSplash = path.join(...EXTERNAL_PATH_TO_CHARACTER_SPLASH_IMAGES)
-const pathToCharacterIcon = path.join(...EXTERNAL_PATH_TO_CHARACTER_ICONS_IMAGES)
+const pathToCharacterSplash = path.join(...EXTERNAL_PATH_TO_CHARACTER_SPLASH)
+const pathToCharacterIcon = path.join(...EXTERNAL_PATH_TO_CHARACTER_ICONS)
 
 
 // Functions
@@ -67,7 +67,7 @@ export const getCharacterSplashRoute = (id: string): string => {
         throw new Error(`Splash ${fullPath} not found`)
     }
 
-    const route = path.join(...LOCAL_PATH_TO_CHARACTER_SPLASH_IMAGES, id + imageFormat);
+    const route = path.join(...LOCAL_PATH_TO_CHARACTER_SPLASH, id + imageFormat);
     return route;
 }
 
@@ -83,7 +83,7 @@ export const getCharacterIconRoute = (id: string): string => {
         throw new Error(`Icon ${id + imageFormat} not found`)
     }
 
-    const route = path.join(...LOCAL_PATH_TO_CHARACTER_ICONS_IMAGES, id + imageFormat);
+    const route = path.join(...LOCAL_PATH_TO_CHARACTER_ICONS, id + imageFormat);
     return route;
 }
 

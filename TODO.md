@@ -3,4 +3,7 @@
 
 ## Not important
 - Add more characters
-- - Casters
+
+## Finished 
+- Casters (1/7)
+- - Core

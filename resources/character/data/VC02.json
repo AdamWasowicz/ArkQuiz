@@ -1,0 +1,11 @@
+{
+    "Id": "VC02",
+    "Name": "Haze",
+    "Rarity": 4,
+    "Class": "Caster",
+    "Attack_Range": "Ranged",
+    "Position": "Highground",
+    "Gender": "Female",
+    "Race": "Feline",
+    "Faction": "Victoria" 
+}

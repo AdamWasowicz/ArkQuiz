@@ -1,0 +1,11 @@
+{
+    "Id": "PA42",
+    "Name": "Steward",
+    "Rarity": 3,
+    "Class": "Caster",
+    "Attack_Range": "Ranged",
+    "Position": "Highground",
+    "Gender": "Male",
+    "Race": "Vulpo",
+    "Faction": "Rhodes Island Operations Reserve Team A4"
+}
