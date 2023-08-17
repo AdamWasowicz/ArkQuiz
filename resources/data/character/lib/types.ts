@@ -14,3 +14,5 @@ export type CharacterHeader = {
     Id: string;
     Name: string;
 }
+
+export type CharacterHeaderMap = Map<string, CharacterHeader[]>
