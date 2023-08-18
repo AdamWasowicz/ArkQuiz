@@ -1,11 +1,16 @@
+import { CharacterComparisonResult } from '@/resources/character/lib/types';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 export interface IAppState {
-    searchBarValue: string
+    searchBarValue: string,
+    currentGuesses: CharacterComparisonResult[],
+    characterGuessWon: boolean
 }
 
 const initialState: IAppState = {
-    searchBarValue: ''
+    searchBarValue: '',
+    currentGuesses: [],
+    characterGuessWon: false
 }
 
 const AppSlice = createSlice({
@@ -14,12 +19,20 @@ const AppSlice = createSlice({
     reducers: {
         setSearchBarValue(state: IAppState, action: PayloadAction<string>) {
             state.searchBarValue = action.payload;
+        },
+
+        addGuess(state: IAppState, action: PayloadAction<CharacterComparisonResult>) {
+            state.currentGuesses = [action.payload, ...state.currentGuesses]
+        },
+
+        setCharacterGuessWon(state: IAppState, action: PayloadAction<boolean>) {
+            state.characterGuessWon = action.payload;
         }
     }
 })
 
 export const {
-    setSearchBarValue
+    setSearchBarValue, addGuess, setCharacterGuessWon
 } = AppSlice.actions;
 
 export default AppSlice.reducer;

@@ -1,5 +1,5 @@
-import { urlToIcon } from "@/lib/data-fetching"
-import { CharacterHeader } from "../lib/types"
+import { urlToIcon } from "@/lib/api-access"
+import { CharacterHeader } from "../../lib/types"
 import Image from "next/image";
 import styles from './searchBarResultItem.module.scss';
 

@@ -1,6 +1,9 @@
 export type Character = {
+    // Not for comparison
     Id: string;
     Name: string;
+
+    // For comparison
     Rarity: number;
     Class: string;
     Attack_Range: string;
@@ -16,3 +19,10 @@ export type CharacterHeader = {
 }
 
 export type CharacterHeaderMap = Map<string, CharacterHeader[]>
+
+export type CharacterComparisonResult = {
+    character: Character;
+    isCorrect: boolean;
+    differences: number[]
+}
+

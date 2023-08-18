@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { EXTERNAL_PATH_TO_CHARACTER_ICONS, EXTERNAL_PATH_TO_CHARACTER_SPLASH } from "@/lib/paths";
+import { compareTwoCharacters } from "./utils";
 import fs from 'fs';
 import path from 'path';
 import { getTodayCharacterId } from "./utils";
@@ -50,7 +51,7 @@ export const POST_Character_Guess = async (req: NextRequest, res: NextResponse):
     const guess = body.id;
 
     if (todayId === guess) {
-        const response = new NextResponse(JSON.stringify({ message: 'OK'}), 
+        const response = new NextResponse(JSON.stringify(compareTwoCharacters(todayId, guess)), 
             {
                 status: 200,
                 headers: {
@@ -61,7 +62,7 @@ export const POST_Character_Guess = async (req: NextRequest, res: NextResponse):
         return response;
     }
     else {
-        const response = new NextResponse(JSON.stringify({ message: 'BAD'}), 
+        const response = new NextResponse(JSON.stringify(compareTwoCharacters(todayId, guess)), 
             {
                 status: 200,
                 headers: {

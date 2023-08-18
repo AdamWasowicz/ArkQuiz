@@ -3,6 +3,7 @@
   "version": "0.1.5",
   "private": true,
   "author": "Adam Wąsowicz",
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

@@ -1,10 +1,11 @@
 "use client"
 import { ChangeEvent } from "react";
-import { CharacterHeaderMap, CharacterHeader } from "../lib/types";
+import { CharacterHeaderMap, CharacterHeader } from "../../lib/types";
 import SearchBarResult from "./searchBarResult";
 import { useAppDispatch, useAppSelector } from "@/redux/hooks";
-import { setSearchBarValue } from "@/redux/features/app-slice";
-import { takeGuess } from "@/lib/data-fetching";
+import { addGuess, setCharacterGuessWon, setSearchBarValue } from "@/redux/features/app-slice";
+import { takeGuess } from "@/lib/api-access";
+import GuessResult from "../guessResult/guessResult";
 
 interface ISearchBar {
     characterHeaders: CharacterHeaderMap
@@ -12,6 +13,8 @@ interface ISearchBar {
 
 const SearchBar: React.FC<ISearchBar> = (props) => {
     const searchValue = useAppSelector(state => state.app.searchBarValue);
+    const guesses = useAppSelector(state => state.app.currentGuesses)
+    const guessWon = useAppSelector(state => state.app.characterGuessWon)
     const dispatch = useAppDispatch();
 
     const handleInputContentChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -24,7 +27,12 @@ const SearchBar: React.FC<ISearchBar> = (props) => {
         const selectedCharacterHeader = charactersHeaders.find(item => item.Name.toUpperCase() === searchValue.toUpperCase())
         if (typeof selectedCharacterHeader !== 'undefined') {
             const res = await takeGuess(localUrl, selectedCharacterHeader.Id)
-            console.log(res);
+            dispatch(setSearchBarValue(''));
+            dispatch(addGuess(res));
+            
+            if (res.isCorrect) {
+                dispatch(setCharacterGuessWon(res.isCorrect));
+            }
         }
     }
 
@@ -38,6 +46,13 @@ const SearchBar: React.FC<ISearchBar> = (props) => {
             if (typeof filteredValues === 'undefined') {
                 filteredValues = [];
             }
+
+            const guessedCharactersNames = guesses.map(item => { return item.character.Name });
+            filteredValues = filteredValues.filter((item) => {
+                return guessedCharactersNames.includes(item.Name)
+                    ? false
+                    : true;
+            })
 
             return filteredValues!;
         }
@@ -57,11 +72,21 @@ const SearchBar: React.FC<ISearchBar> = (props) => {
                 value={searchValue}
             />
 
-            <button onClick={handleFormSubmit}>Submit</button>
+            <button 
+                onClick={handleFormSubmit}
+                disabled={guessWon}
+            >
+                Submit
+            </button>
 
             {
                 charactersHeaders.length > 0 &&
                 <SearchBarResult charactersHeaders={charactersHeaders}/>
+            }
+
+            {
+                guesses.length > 0 &&
+                <GuessResult guesses={guesses}/>
             }
         </div>
     )

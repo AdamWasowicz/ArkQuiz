@@ -1,4 +1,4 @@
-import { CharacterHeader } from '@/resources/character/lib/types';
+import { CharacterComparisonResult, CharacterHeader } from '@/resources/character/lib/types';
 import axios from 'axios';
 
 const API_SPLASH_ROUTE = 'api/character/image/splash';
@@ -32,7 +32,7 @@ export const urlToIcon = (baseUrl: string, id: string): string => {
     return `${baseUrl}${API_ICON_ROUTE}/${id}`
 }
 
-export const takeGuess = async (baseUrl: string, id: string) => {
+export const takeGuess = async (baseUrl: string, id: string): Promise<CharacterComparisonResult> => {
     const axiosClient = axios.create({
         baseURL: baseUrl,
         headers: {
@@ -40,12 +40,6 @@ export const takeGuess = async (baseUrl: string, id: string) => {
         }
     })
 
-
-    const response = await axiosClient.post<{message: string}>(API_CHARACTER_GUESS, 
-        {
-            id: id,
-        }
-    )
-
-    return response.data.message;
+    const response = await axiosClient.post<CharacterComparisonResult>(API_CHARACTER_GUESS, {id: id,})
+    return response.data;
 }

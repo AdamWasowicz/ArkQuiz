@@ -1,4 +1,4 @@
-import { Character, CharacterHeader, CharacterHeaderMap } from "./types";
+import { Character, CharacterHeader, CharacterHeaderMap, CharacterComparisonResult } from "./types";
 import path from 'path';
 import { getAllFileNamesInDirectory, readJson, doesFileExist } from "@/lib/filesystem";
 import { 
@@ -131,4 +131,74 @@ export const getAllCharactersHeaderMap = (): CharacterHeaderMap => {
     })
 
     return headerMap;
+}
+
+export const compareTwoCharacters = (originalId: string, comparedId: string): CharacterComparisonResult => {
+    // Get characters data
+    const oc: Character = findCharacterById(originalId);
+    const cc: Character = findCharacterById(comparedId);
+
+    // Compare
+    const differencesArray: number[] = [];
+    const data1 = new Map<string, unknown>(Object.entries(oc));
+    const data2 = new Map<string, unknown>(Object.entries(cc));
+    const keys = Array.from(data1.keys())
+
+    keys.forEach((key) => {
+        if (key != 'Id' && key !== 'Name') {
+            differencesArray.push(compareTwoCharactersComparer(data1.get(key as string), data2.get(key as string)))
+        }
+    })
+
+    const indexOfNotCorrectAnswer = differencesArray.findIndex((item) => {return item < 1});
+
+    const outputObj: CharacterComparisonResult = {
+        character: cc,
+        differences: differencesArray,
+        isCorrect: indexOfNotCorrectAnswer === -1 ? true : false
+    }
+
+    return outputObj;
+}
+
+const compareTwoCharactersComparer = (t1: unknown, t2: unknown): number => {
+    //  1 means correct
+    //  0 means partial
+    // -1 means wrong
+
+    if (typeof t1 !== 'object' && typeof t2 !== 'object') {
+        return t1 === t2 ? 1 : -1;
+    }
+
+    let te1;
+    let te2;
+    if (typeof t1 === 'object' && typeof t2 !== 'object' || typeof t1 !== 'object' && typeof t2 === 'object') {
+        console.log('Hi')
+        if (typeof t1 === 'object') {
+            te1 = t1 as unknown[]
+            te2 = [t2]
+        }
+        else {
+            te1 = [t1]
+            te2 = t2 as unknown[]
+        }
+    }
+    else {
+        te1 = t1 as unknown[];
+        te2 = t2 as unknown[];
+    }
+
+    const t1s = [...te1!.sort()];
+    const t2s = [...te2!.sort()];
+    let sameCounter = 0;
+
+    t1s.forEach((item1) => {
+        t2s.forEach((item2) => {
+            if (item1 === item2) sameCounter++;
+        })
+    })
+
+    if (sameCounter === 0) return -1;
+    if (te1.length === te2.length && sameCounter === te1.length) return 1;
+    return 0;
 }
