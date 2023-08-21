@@ -3,6 +3,7 @@
     "Name": "Ebenholz",
     "Rarity": 6,
     "Class": "Caster",
+    "Branch": "Mystic",
     "Attack_Range": "Ranged",
     "Position": "High ground",
     "Gender": "Male",

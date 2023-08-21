@@ -1,0 +1,25 @@
+.table {
+    // Size and position
+    width: 60%;
+    background-color: rgb(70, 65, 65);
+
+    // Text
+    text-align: center;
+}
+
+.headerRow {
+    color: white;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+.smallSizedColumn {
+    width: 50px;
+}
+
+.mediumSizedColumn {
+    width: 100px;
+}
+
+.bigSizedColumn {
+    width: 150px;
+}

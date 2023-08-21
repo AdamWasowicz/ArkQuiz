@@ -3,6 +3,7 @@
     "Name": "Passenger",
     "Rarity": 6,
     "Class": "Caster",
+    "Branch": "Chain",
     "Attack_Range": "Ranged",
     "Position": "High ground",
     "Gender": "Male",

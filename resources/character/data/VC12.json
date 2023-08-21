@@ -3,6 +3,7 @@
     "Name": "Iris",
     "Rarity": 5,
     "Class": "Caster",
+    "Branch": "Mystic",
     "Attack_Range": "Ranged",
     "Position": "High ground",
     "Gender": "Female",

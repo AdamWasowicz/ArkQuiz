@@ -3,6 +3,7 @@
     "Name": "Leizi",
     "Rarity": 5,
     "Class": "Caster",
+    "Branch": "Chain",
     "Attack_Range": "Ranged",
     "Position": "High ground",
     "Gender": "Female",

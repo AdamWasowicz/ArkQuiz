@@ -3,6 +3,7 @@
     "Name": "Corroserum",
     "Rarity": 5,
     "Class": "Caster",
+    "Branch": "Blast",
     "Attack_Range": "Ranged",
     "Position": "High ground",
     "Gender": "Male",

@@ -1,34 +1,32 @@
-import { CharacterHeader } from "../lib/types";
-import SearchBarResultItem from "./searchBarResultItem";
+import { urlToIcon } from "@/lib/api-access"
+import { CharacterHeader } from "../../lib/types"
+import Image from "next/image";
 import styles from './searchBarResult.module.scss';
-import { useAppDispatch } from "@/redux/hooks";
-import { setSearchBarValue } from "@/redux/features/app-slice";
 
 interface ISearchBarResultProps {
-    charactersHeaders: CharacterHeader[]
+    characterHeader: CharacterHeader
+    onClick: (id: string) => void
 }
 
 const SearchBarResult: React.FC<ISearchBarResultProps> = (props) => {
-    const { charactersHeaders: characterHeaders } = props;
-    const dispatch = useAppDispatch();
+    const { characterHeader, onClick } = props;
 
-    const onClickHandler = (value: string) => {
-        dispatch(setSearchBarValue(value))
+    const onClickHandler = () => {
+        onClick(characterHeader.Name)
     }
-
+    
     return (
-        <div className={styles.searchBarResult}>
-            {
-                characterHeaders.map((item, key) => {
-                    return <SearchBarResultItem 
-                        key={key} 
-                        characterHeader={item}
-                        onClick={onClickHandler}
-                    />
-                })
-            }
+        <div className={styles.searchBarResultItem} onClick={onClickHandler}>
+            <Image
+                src={urlToIcon(window.location.href, characterHeader.Id)}
+                alt={characterHeader.Name}
+                width={50}
+                height={50}
+            />
+
+            <p>{characterHeader.Name}</p>
         </div>
     )
 }
 
-export default SearchBarResult;
+export default SearchBarResult

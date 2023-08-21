@@ -3,6 +3,7 @@
     "Name": "Lava",
     "Rarity": 3,
     "Class": "Caster",
+    "Branch": "Splash",
     "Attack_Range": "Ranged",
     "Position": "High ground",
     "Gender": "Female",

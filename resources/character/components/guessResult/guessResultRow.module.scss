@@ -9,3 +9,21 @@
 .wrong {
     background-color: red;
 }
+
+.operatorColumn {
+    background-color: rgb(54, 51, 51);
+    width: 75px;
+    height: 75px;
+    display: block;
+
+    & > img {
+        background-color: white;
+        object-fit: contain;
+    }
+}
+
+.resultRow {
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}

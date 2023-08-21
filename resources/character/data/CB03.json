@@ -3,6 +3,7 @@
     "Name": "Pudding",
     "Rarity": 4,
     "Class": "Caster",
+    "Branch": "Chain",
     "Attack_Range": "Ranged",
     "Position": "High ground",
     "Gender": "Female",

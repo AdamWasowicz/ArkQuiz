@@ -173,7 +173,6 @@ const compareTwoCharactersComparer = (t1: unknown, t2: unknown): number => {
     let te1;
     let te2;
     if (typeof t1 === 'object' && typeof t2 !== 'object' || typeof t1 !== 'object' && typeof t2 === 'object') {
-        console.log('Hi')
         if (typeof t1 === 'object') {
             te1 = t1 as unknown[]
             te2 = [t2]

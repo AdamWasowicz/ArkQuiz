@@ -1,31 +1,33 @@
-import GuessResultRow from "./guessResultRow";
+import CharacterGuessResultRow from "./guessResultRow";
 import { CharacterComparisonResult } from "../../lib/types";
+import styles from './guessResult.module.scss';
 
-interface IGuessResultProps {
+interface ICharacterGuessResultPorps {
     guesses: CharacterComparisonResult[]
 }
 
-const GuessResult: React.FC<IGuessResultProps> = (props) => {
+const CharacterGuessResult: React.FC<ICharacterGuessResultPorps> = (props) => {
     const { guesses } = props;
 
     return (
-        <table>
+        <table className={styles.table}>
             <tbody>
-                <tr>
-                    <th>Operator</th>
+                <tr className={styles.headerRow}>
+                    <th className={styles.smallSizedColumn}>Operator</th>
                     <th>Rarity</th>
-                    <th>Class</th>
-                    <th>Attack Range</th>
-                    <th>Position</th>
-                    <th>Gender</th>
-                    <th>Race</th>
-                    <th>Faction</th>
+                    <th className={styles.mediumSizedColumn}>Class</th>
+                    <th className={styles.mediumSizedColumn}>Branch</th>
+                    <th className={styles.mediumSizedColumn}>Attack Range</th>
+                    <th className={styles.mediumSizedColumn}>Position</th>
+                    <th className={styles.mediumSizedColumn}>Gender</th>
+                    <th className={styles.bigSizedColumn}>Race</th>
+                    <th className={styles.bigSizedColumn}>Faction</th>
                 </tr>
 
                 {
                     guesses.length > 0 &&
                     guesses.map((item, key) => {
-                        return <GuessResultRow
+                        return <CharacterGuessResultRow
                             characterData={item.character}
                             diffrenceArray={item.differences}
                             key={key}
@@ -37,4 +39,4 @@ const GuessResult: React.FC<IGuessResultProps> = (props) => {
     )
 }
 
-export default GuessResult;
+export default CharacterGuessResult;

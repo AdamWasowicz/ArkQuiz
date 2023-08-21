@@ -3,6 +3,7 @@
     "Name": "Carnelian",
     "Rarity": 6,
     "Class": "Caster",
+    "Branch": "Phalanx",
     "Attack_Range": "Ranged",
     "Position": "High ground",
     "Gender": "Female",

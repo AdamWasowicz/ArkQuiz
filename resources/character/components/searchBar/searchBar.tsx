@@ -1,11 +1,13 @@
 "use client"
 import { ChangeEvent } from "react";
 import { CharacterHeaderMap, CharacterHeader } from "../../lib/types";
-import SearchBarResult from "./searchBarResult";
 import { useAppDispatch, useAppSelector } from "@/redux/hooks";
-import { addGuess, setCharacterGuessWon, setSearchBarValue } from "@/redux/features/app-slice";
+import { setSearchBarValue } from "@/redux/features/app-slice";
+import { addGuess, setGameWon } from '@/redux/features/character-slice';
 import { takeGuess } from "@/lib/api-access";
-import GuessResult from "../guessResult/guessResult";
+import SearchBarResult from "./searchBarResult";
+import styles from './searchBar.module.scss';
+import { store } from "@/redux/store";
 
 interface ISearchBar {
     characterHeaders: CharacterHeaderMap
@@ -13,8 +15,8 @@ interface ISearchBar {
 
 const SearchBar: React.FC<ISearchBar> = (props) => {
     const searchValue = useAppSelector(state => state.app.searchBarValue);
-    const guesses = useAppSelector(state => state.app.currentGuesses)
-    const guessWon = useAppSelector(state => state.app.characterGuessWon)
+    const guesses = useAppSelector(state => state.character.currentGuesses)
+    const guessWon = useAppSelector(state => state.character.gameWon)
     const dispatch = useAppDispatch();
 
     const handleInputContentChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -31,7 +33,7 @@ const SearchBar: React.FC<ISearchBar> = (props) => {
             dispatch(addGuess(res));
             
             if (res.isCorrect) {
-                dispatch(setCharacterGuessWon(res.isCorrect));
+                dispatch(setGameWon(res.isCorrect));
             }
         }
     }
@@ -61,6 +63,10 @@ const SearchBar: React.FC<ISearchBar> = (props) => {
         }
     }
 
+    const onClickHandler = (value: string) => {
+        dispatch(setSearchBarValue(value))
+    }
+
     const localUrl = typeof window != 'undefined' ? window.location.href : '';
     const charactersHeaders = filterCharactersHeaders();
 
@@ -79,15 +85,18 @@ const SearchBar: React.FC<ISearchBar> = (props) => {
                 Submit
             </button>
 
-            {
-                charactersHeaders.length > 0 &&
-                <SearchBarResult charactersHeaders={charactersHeaders}/>
-            }
-
-            {
-                guesses.length > 0 &&
-                <GuessResult guesses={guesses}/>
-            }
+            <div className={styles.searchResult}>
+                {
+                    charactersHeaders.length > 0 &&
+                    charactersHeaders.map((item, key) => {
+                        return <SearchBarResult 
+                            key={key} 
+                            characterHeader={item}
+                            onClick={onClickHandler}
+                        />
+                    })
+                }
+            </div>
         </div>
     )
 }

@@ -3,6 +3,7 @@
     "Name": "Mint",
     "Rarity": 5,
     "Class": "Caster",
+    "Branch": "Phalanx",
     "Attack_Range": "Ranged",
     "Position": "High ground",
     "Gender": "Female",

@@ -1,19 +1,12 @@
-import Image from "next/image";
-import { getCharacterIconRoute, getCharacterSplashRoute, getTodayCharacterId, getAllCharactersHeaderMap } from "@/resources/character/lib/utils";
-import SearchBar from "@/resources/character/components/searchBar/searchBar";
+import CharacterGuessPage from "@/components/character-guess/characterGuessPage";
+import { getAllCharactersHeaderMap } from "@/resources/character/lib/utils";
 
 const Home: React.FC= () => {
-  const todayId = getTodayCharacterId();
-  const r1 = getCharacterSplashRoute(todayId);
-  const r2 = getCharacterIconRoute(todayId);
   const headers = getAllCharactersHeaderMap();
-
-
+  
   return (
     <main>
-      
-    
-      <SearchBar characterHeaders={headers}/>
+      <CharacterGuessPage headers={headers}/>
     </main>
   )
 }

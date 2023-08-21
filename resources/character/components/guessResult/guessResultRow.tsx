@@ -3,12 +3,12 @@ import { Character } from "../../lib/types";
 import Image from "next/image";
 import styles from './guessResultRow.module.scss'
 
-interface IGuessResultRowProps {
+interface ICharacterGuessResultRowProps {
     characterData: Character,
     diffrenceArray: number[]
 }
 
-const GuessResultRow: React.FC<IGuessResultRowProps> = (props) => {
+const CharacterGuessResultRow: React.FC<ICharacterGuessResultRowProps> = (props) => {
     const { characterData, diffrenceArray } = props;
 
     const getClassName = (value: number): string => {
@@ -28,6 +28,7 @@ const GuessResultRow: React.FC<IGuessResultRowProps> = (props) => {
     const dataToDisplay = [
         characterData.Rarity,
         characterData.Class,
+        characterData.Branch,
         characterData.Attack_Range,
         characterData.Position,
         characterData.Gender,
@@ -36,13 +37,14 @@ const GuessResultRow: React.FC<IGuessResultRowProps> = (props) => {
     ]
 
     return (
-        <tr>
-            <td>
+        <tr className={styles.resultRow}>
+            <td className={styles.operatorColumn}>
                 <Image 
                     src={urlToIcon(window.location.href, characterData.Id)} 
                     alt={characterData.Id}
-                    width={50}
-                    height={50}
+                    height={100}
+                    width={100}
+                    className={styles.operatorColumn}
                 />
             </td>
             {
@@ -59,4 +61,4 @@ const GuessResultRow: React.FC<IGuessResultRowProps> = (props) => {
     )
 }
 
-export default GuessResultRow;
+export default CharacterGuessResultRow;

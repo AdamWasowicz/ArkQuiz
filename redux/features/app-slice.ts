@@ -19,20 +19,12 @@ const AppSlice = createSlice({
     reducers: {
         setSearchBarValue(state: IAppState, action: PayloadAction<string>) {
             state.searchBarValue = action.payload;
-        },
-
-        addGuess(state: IAppState, action: PayloadAction<CharacterComparisonResult>) {
-            state.currentGuesses = [action.payload, ...state.currentGuesses]
-        },
-
-        setCharacterGuessWon(state: IAppState, action: PayloadAction<boolean>) {
-            state.characterGuessWon = action.payload;
         }
     }
 })
 
 export const {
-    setSearchBarValue, addGuess, setCharacterGuessWon
+    setSearchBarValue
 } = AppSlice.actions;
 
 export default AppSlice.reducer;

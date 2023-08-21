@@ -1,5 +1,15 @@
-.searchBarResult {
+.searchBarResultItem {
     // Size and Position
-    width: 400px;
-    background-color: yellow;
+    width: 100%;
+
+    // Flex
+    display: flex;
+    flex-direction: row;
+
+    // Color
+    background-color: aqua;
+
+    &:hover {
+        background-color: red;
+    }
 }

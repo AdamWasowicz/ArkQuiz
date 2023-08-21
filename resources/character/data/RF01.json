@@ -3,6 +3,7 @@
     "Name": "Lava the Purgatory",
     "Rarity": 5,
     "Class": "Caster",
+    "Branch": "Splash",
     "Attack_Range": "Ranged",
     "Position": "High ground",
     "Gender": "Female",

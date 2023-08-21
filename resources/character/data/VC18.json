@@ -3,6 +3,7 @@
     "Name": "Rockrock",
     "Rarity": 5,
     "Class": "Caster",
+    "Branch": "Mech-Accord",
     "Attack_Range": "Ranged",
     "Position": "High ground",
     "Gender": "Female",

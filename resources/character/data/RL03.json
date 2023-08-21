@@ -3,6 +3,7 @@
     "Name": "Ifrit",
     "Rarity": 6,
     "Class": "Caster",
+    "Branch": "Blast",
     "Attack_Range": "Ranged",
     "Position": "High ground",
     "Gender": "Female",
