@@ -1,0 +1,11 @@
+{
+    "Id": "LN05",
+    "Name": "Ebenholz",
+    "Rarity": 6,
+    "Class": "Caster",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Male",
+    "Race": "Caprinae",
+    "Faction": "Leithanien"
+}

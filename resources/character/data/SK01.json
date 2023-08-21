@@ -1,0 +1,11 @@
+{
+    "Id": "SK01",
+    "Name": "Skyfire",
+    "Rarity": 5,
+    "Class": "Caster",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Feline",
+    "Faction": "Victoria"
+}

@@ -1,0 +1,11 @@
+{
+    "Id": "LM21",
+    "Name": "Lin",
+    "Rarity": 6,
+    "Class": "Caster",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Zalak",
+    "Faction": "Lungmen"
+}

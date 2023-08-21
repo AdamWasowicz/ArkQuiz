@@ -1,0 +1,11 @@
+{
+    "Id": "RF01",
+    "Name": "Lava the Purgatory",
+    "Rarity": 5,
+    "Class": "Caster",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Sarkaz",
+    "Faction": "Rhodes Island"
+}

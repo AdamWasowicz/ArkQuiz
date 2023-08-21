@@ -1,0 +1,11 @@
+{
+    "Id": "SI01",
+    "Name": "Gitano",
+    "Rarity": 4,
+    "Class": "Caster",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Elafia",
+    "Faction": "Sami"
+}

@@ -11,8 +11,7 @@ const Home: React.FC= () => {
 
   return (
     <main>
-      <Image src={`/${r1}`} alt={todayId} height={200} width={200}/>
-      <Image src={`/${r2}`} alt={todayId} height={100} width={100}/>
+      
     
       <SearchBar characterHeaders={headers}/>
     </main>

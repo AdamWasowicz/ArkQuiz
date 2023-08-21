@@ -1,0 +1,11 @@
+{
+    "Id": "R303",
+    "Name": "12F",
+    "Rarity": 2,
+    "Class": "Caster",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Male",
+    "Race": "Savara",
+    "Faction": "Rhodes Island"
+}

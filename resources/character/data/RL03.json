@@ -1,0 +1,11 @@
+{
+    "Id": "RL03",
+    "Name": "Ifrit",
+    "Rarity": 6,
+    "Class": "Caster",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Sarkaz",
+    "Faction": "Rhine Lab"
+}

@@ -1,0 +1,11 @@
+{
+    "Id": "VC08",
+    "Name": "Mint",
+    "Rarity": 5,
+    "Class": "Caster",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Feline",
+    "Faction": "Victoria" 
+}

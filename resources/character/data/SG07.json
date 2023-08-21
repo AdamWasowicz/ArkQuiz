@@ -1,0 +1,11 @@
+{
+    "Id": "SG07",
+    "Name": "Passenger",
+    "Rarity": 6,
+    "Class": "Caster",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Male",
+    "Race": "Liberi",
+    "Faction": "Sargon"
+}

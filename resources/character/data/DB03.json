@@ -1,0 +1,11 @@
+{
+    "Id": "DB03",
+    "Name": "Harmonie",
+    "Rarity": 5,
+    "Class": "Caster",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Feline",
+    "Faction": "Dublinn"
+}

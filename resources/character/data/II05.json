@@ -1,0 +1,11 @@
+{
+    "Id": "II05",
+    "Name": "Indigo",
+    "Rarity": 4,
+    "Class": "Caster",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Pythia",
+    "Faction": "Iberia"
+}

@@ -1,0 +1,11 @@
+{
+    "Id": "SG09",
+    "Name": "Minimalist",
+    "Rarity": 5,
+    "Class": "Caster",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Male",
+    "Race": "Durin",
+    "Faction": "Sargon"
+}

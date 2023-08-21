@@ -1,0 +1,11 @@
+{
+    "Id": "PA15",
+    "Name": "Lava",
+    "Rarity": 3,
+    "Class": "Caster",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Sarkaz",
+    "Faction": "Op Reserve A1"
+}

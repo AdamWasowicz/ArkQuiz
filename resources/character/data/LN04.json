@@ -1,0 +1,11 @@
+{
+    "Id": "LN04",
+    "Name": "Carnelian",
+    "Rarity": 6,
+    "Class": "Caster",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Caprinae",
+    "Faction": "Leithanien"
+}

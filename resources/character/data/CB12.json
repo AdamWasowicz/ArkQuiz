@@ -1,0 +1,11 @@
+{
+    "Id": "CB12",
+    "Name": "Corroserum",
+    "Rarity": 5,
+    "Class": "Caster",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Male",
+    "Race": "Pythia",
+    "Faction": "Columbia"
+}

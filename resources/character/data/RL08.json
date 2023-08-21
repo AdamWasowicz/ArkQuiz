@@ -1,0 +1,11 @@
+{
+    "Id": "RL08",
+    "Name": "Astgenne",
+    "Rarity": 5,
+    "Class": "Caster",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Liberi",
+    "Faction": "Rhine Lab"
+}

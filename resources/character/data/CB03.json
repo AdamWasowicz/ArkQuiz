@@ -1,0 +1,11 @@
+{
+    "Id": "CB03",
+    "Name": "Pudding",
+    "Rarity": 4,
+    "Class": "Caster",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Aegir",
+    "Faction": "Columbia"
+}

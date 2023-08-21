@@ -1,0 +1,11 @@
+{
+    "Id": "R147",
+    "Name": "Beeswax",
+    "Rarity": 5,
+    "Class": "Caster",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Caprinae",
+    "Faction": "Sargon"
+}

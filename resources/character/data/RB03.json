@@ -1,0 +1,11 @@
+{
+    "Id": "RB03",
+    "Name": "Leonhardt",
+    "Rarity": 5,
+    "Class": "Caster",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Male",
+    "Race": "Cautus",
+    "Faction": "Rim Billiton"
+}

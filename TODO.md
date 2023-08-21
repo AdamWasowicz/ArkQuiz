@@ -5,5 +5,11 @@
 - Add more characters
 
 ## Finished 
-- Casters (1/7)
+- Casters (7/7)
 - - Core
+- - Splash
+- - Blast
+- - Chain
+- - Phalanx
+- - Mystic
+- Defenders (0/7)
