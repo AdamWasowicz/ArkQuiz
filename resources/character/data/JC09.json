@@ -1,0 +1,12 @@
+{
+    "Id": "JC09",
+    "Name": "Aurora",
+    "Rarity": 5,
+    "Class": "Defender",
+    "Branch": "Duelist",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Ursus",
+    "Faction": "Karlan Trade"
+}

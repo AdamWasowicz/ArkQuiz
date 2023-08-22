@@ -1,0 +1,12 @@
+{
+    "Id": "VC07",
+    "Name": "Shalem",
+    "Rarity": 5,
+    "Class": "Defender",
+    "Branch": "Arts Protector",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Male",
+    "Race": "Pythia",
+    "Faction": "Victoria"
+}

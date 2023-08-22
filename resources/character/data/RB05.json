@@ -1,0 +1,12 @@
+{
+    "Id": "RB05",
+    "Name": "Asbestos",
+    "Rarity": 5,
+    "Class": "Defender",
+    "Branch": "Arts Protector",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Savra",
+    "Faction": "Rim Billiton"
+}

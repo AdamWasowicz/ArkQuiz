@@ -1,0 +1,12 @@
+{
+    "Id": "LM19",
+    "Name": "Hung",
+    "Rarity": 5,
+    "Class": "Defender",
+    "Branch": "Guardian",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Male",
+    "Race": "Perro",
+    "Faction": "Lee's Detective Agency"
+}

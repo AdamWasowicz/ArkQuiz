@@ -1,0 +1,12 @@
+{
+    "Id": "IU05",
+    "Name": "Cuora",
+    "Rarity": 4,
+    "Class": "Defender",
+    "Branch": "Protector",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Petram",
+    "Faction": "Columbia"
+}

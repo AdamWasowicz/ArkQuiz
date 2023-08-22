@@ -1,0 +1,12 @@
+{
+    "Id": "FO02",
+    "Name": "Nearl",
+    "Rarity": 5,
+    "Class": "Defender",
+    "Branch": "Guardian",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Kuranta",
+    "Faction": "Followers"
+}

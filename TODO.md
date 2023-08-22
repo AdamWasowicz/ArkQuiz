@@ -1,9 +1,3 @@
-# Imporant
-- Finish SearchBar
-
-## Not important
-- Add more characters
-
 ## Finished 
 - Casters (7/7)
 - - Core
@@ -12,4 +6,12 @@
 - - Chain
 - - Phalanx
 - - Mystic
-- Defenders (0/7)
+- Defenders (7/7)
+- - Sentinel Protector
+- - Fortress
+- - Duelist
+- - Arts Protector
+- - Juggernaut
+- - Guardian
+- - Protector
+- Guard (0/11)

@@ -1,0 +1,12 @@
+{
+    "Id": "LM05",
+    "Name": "Hoshiguma",
+    "Rarity": 6,
+    "Class": "Defender",
+    "Branch": "Protector",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Oni",
+    "Faction": "Lungmen Guard Department"
+}

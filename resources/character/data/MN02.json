@@ -1,0 +1,12 @@
+{
+    "Id": "MN02",
+    "Name": "Vulcan",
+    "Rarity": 5,
+    "Class": "Defender",
+    "Branch": "Juggernaut",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Forte",
+    "Faction": "Minos"
+}

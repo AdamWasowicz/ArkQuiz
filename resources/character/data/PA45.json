@@ -1,0 +1,12 @@
+{
+    "Id": "PA45",
+    "Name": "Cardigan",
+    "Rarity": 3,
+    "Class": "Defender",
+    "Branch": "Protector",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Perro",
+    "Faction": "Op Reserve A4"
+}

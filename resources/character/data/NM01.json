@@ -1,0 +1,12 @@
+{
+    "Id": "NM01",
+    "Name": "Nian",
+    "Rarity": 6,
+    "Class": "Defender",
+    "Branch": "Protector",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Feranmut",
+    "Faction": "Sui"
+}

@@ -1,0 +1,12 @@
+{
+    "Id": "R159",
+    "Name": "Mudrock",
+    "Rarity": 6,
+    "Class": "Defender",
+    "Branch": "Juggernaut",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Sarkaz",
+    "Faction": "Rhodes Island"
+}

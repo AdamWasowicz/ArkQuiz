@@ -1,0 +1,12 @@
+{
+    "Id": "VC16",
+    "Name": "Horn",
+    "Rarity": 6,
+    "Class": "Defender",
+    "Branch": "Fortress",
+    "Attack_Range": ["Melee", "Ranged"],
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Lupo",
+    "Faction": "Victoria"
+}

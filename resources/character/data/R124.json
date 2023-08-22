@@ -1,0 +1,12 @@
+{
+    "Id": "R124",
+    "Name": "Dur-nar",
+    "Rarity": 4,
+    "Class": "Defender",
+    "Branch": "Arts Protector",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Vulpo",
+    "Faction": "Rhodes Island"
+}

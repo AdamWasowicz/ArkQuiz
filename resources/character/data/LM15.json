@@ -1,0 +1,12 @@
+{
+    "Id": "LM15",
+    "Name": "Bison",
+    "Rarity": 5,
+    "Class": "Defender",
+    "Branch": "Protector",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Male",
+    "Race": "Forte",
+    "Faction": "Lungmen"
+}

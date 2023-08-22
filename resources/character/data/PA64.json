@@ -1,0 +1,12 @@
+{
+    "Id": "PA64",
+    "Name": "Spot",
+    "Rarity": 3,
+    "Class": "Defender",
+    "Branch": "Guardian",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Male",
+    "Race": "Rebbah",
+    "Faction": "Op Reserve A6"
+}

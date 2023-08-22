@@ -1,0 +1,12 @@
+{
+    "Id": "USS3",
+    "Name": "Gummy",
+    "Rarity": 4,
+    "Class": "Defender",
+    "Branch": "Guardian",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Ursus",
+    "Faction": "Ursus Student Self-Governing Group"
+}

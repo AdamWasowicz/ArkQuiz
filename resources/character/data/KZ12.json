@@ -1,0 +1,12 @@
+{
+    "Id": "KZ12",
+    "Name": "Ashlock",
+    "Rarity": 5,
+    "Class": "Defender",
+    "Branch": "Fortress",
+    "Attack_Range": ["Melee", "Ranged"],
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Zalak",
+    "Faction": "Pinus Sylvestris"
+}

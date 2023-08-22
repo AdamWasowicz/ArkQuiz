@@ -1,0 +1,12 @@
+{
+    "Id": "A43",
+    "Name": "Noir Corne",
+    "Rarity": 2,
+    "Class": "Defender",
+    "Branch": "Protector",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Male",
+    "Race": "Oni",
+    "Faction": "Op A4"
+}

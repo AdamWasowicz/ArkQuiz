@@ -1,0 +1,12 @@
+{
+    "Id": "JC03",
+    "Name": "Matterhorn",
+    "Rarity": 4,
+    "Class": "Defender",
+    "Branch": "Protector",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Male",
+    "Race": "Forte",
+    "Faction": "Karlan Trade"
+}

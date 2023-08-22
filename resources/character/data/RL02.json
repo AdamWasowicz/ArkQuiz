@@ -1,0 +1,12 @@
+{
+    "Id": "RL02",
+    "Name": "Saria",
+    "Rarity": 6,
+    "Class": "Defender",
+    "Branch": "Guardian",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Vouivre",
+    "Faction": "Rhine Lab"
+}

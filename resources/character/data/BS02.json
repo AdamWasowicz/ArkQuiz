@@ -1,0 +1,12 @@
+{
+    "Id": "BS02",
+    "Name": "Liskarm",
+    "Rarity": 5,
+    "Class": "Defender",
+    "Branch": "Sentinel Protector",
+    "Attack_Range": "Ranged",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Vouivre",
+    "Faction": "Blacksteel"
+}

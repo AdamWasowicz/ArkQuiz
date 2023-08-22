@@ -1,0 +1,12 @@
+{
+    "Id": "R146",
+    "Name": "Bubble",
+    "Rarity": 4,
+    "Class": "Defender",
+    "Branch": "Protector",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Cerato",
+    "Faction": "Sargon"
+}

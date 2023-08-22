@@ -1,0 +1,12 @@
+{
+    "Id": "SG03",
+    "Name": "Eunectes",
+    "Rarity": 6,
+    "Class": "Defender",
+    "Branch": "Duelist",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Pythia",
+    "Faction": "Sargon"
+}

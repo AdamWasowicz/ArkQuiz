@@ -1,0 +1,12 @@
+{
+    "Id": "PL04",
+    "Name": "Croissant",
+    "Rarity": 5,
+    "Class": "Defender",
+    "Branch": "Protector",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Forte",
+    "Faction": "Penguin Logistics"
+}

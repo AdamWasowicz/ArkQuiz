@@ -13,8 +13,8 @@ const CharacterGuessResult: React.FC<ICharacterGuessResultPorps> = (props) => {
         <table className={styles.table}>
             <tbody>
                 <tr className={styles.headerRow}>
-                    <th className={styles.smallSizedColumn}>Operator</th>
-                    <th>Rarity</th>
+                    <th className={styles.mediumSizedColumn}>Operator</th>
+                    <th className={styles.mediumSizedColumn}>Rarity</th>
                     <th className={styles.mediumSizedColumn}>Class</th>
                     <th className={styles.mediumSizedColumn}>Branch</th>
                     <th className={styles.mediumSizedColumn}>Attack Range</th>

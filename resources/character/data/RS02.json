@@ -1,0 +1,12 @@
+{
+    "Id": "RS02",
+    "Name": "Blitz",
+    "Rarity": 5,
+    "Class": "Defender",
+    "Branch": "Sentinel Protector",
+    "Attack_Range": "Ranged",
+    "Position": "Ground",
+    "Gender": "Male",
+    "Race": "Unknown",
+    "Faction": "Team Rainbow"
+}

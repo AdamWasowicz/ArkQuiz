@@ -1,0 +1,12 @@
+{
+    "Id": "SR35",
+    "Name": "Penance",
+    "Rarity": 6,
+    "Class": "Defender",
+    "Branch": "Juggernaut",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Lupo",
+    "Faction": "Siracusa"
+}

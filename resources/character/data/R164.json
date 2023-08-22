@@ -1,0 +1,12 @@
+{
+    "Id": "R164",
+    "Name": "Heavyrain",
+    "Rarity": 5,
+    "Class": "Defender",
+    "Branch": "Protector",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Kuranta",
+    "Faction": "Rhodes Island"
+}

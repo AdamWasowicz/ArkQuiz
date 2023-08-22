@@ -1,0 +1,12 @@
+{
+    "Id": "LN06",
+    "Name": "Czerny",
+    "Rarity": 5,
+    "Class": "Defender",
+    "Branch": "Arts Protector",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Male",
+    "Race": "Elafia",
+    "Faction": "Leithanien"
+}

@@ -1,0 +1,12 @@
+{
+    "Id": "RB09",
+    "Name": "Firewhistle",
+    "Rarity": 5,
+    "Class": "Defender",
+    "Branch": "Fortress",
+    "Attack_Range": ["Melee", "Ranged"],
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Liberi",
+    "Faction": "Rim Billiton"
+}
