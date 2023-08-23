@@ -1,0 +1,12 @@
+{
+    "Id": "IU04",
+    "Name": "Estelle",
+    "Rarity": 4,
+    "Class": "Guard",
+    "Branch": "Centurion",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Archosauria",
+    "Faction": "Sargon"
+}

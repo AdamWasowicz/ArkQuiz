@@ -1,0 +1,12 @@
+{
+    "Id": "JC01",
+    "Name": "SilverAsh",
+    "Rarity": 6,
+    "Class": "Guard",
+    "Branch": "Lord",
+    "Attack_Range": ["Melee", "Ranged"],
+    "Position": "Ground",
+    "Gender": "Male",
+    "Race": "Feline",
+    "Faction": "Karlan Trade"
+}

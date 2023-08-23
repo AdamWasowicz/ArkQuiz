@@ -1,0 +1,12 @@
+{
+    "Id": "RCX3",
+    "Name": "Castle-3",
+    "Rarity": 1,
+    "Class": "Guard",
+    "Branch": "Dreadnought",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Male",
+    "Race": "Robot",
+    "Faction": "Rhodes Island"
+}

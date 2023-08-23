@@ -1,0 +1,12 @@
+{
+    "Id": "R126",
+    "Name": "Sideroca",
+    "Rarity": 5,
+    "Class": "Guard",
+    "Branch": "Arts Fighter",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Forte",
+    "Faction": "Minos"
+}

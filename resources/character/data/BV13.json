@@ -1,0 +1,12 @@
+{
+    "Id": "BV13",
+    "Name": "La Pluma",
+    "Rarity": 5,
+    "Class": "Guard",
+    "Branch": "Reaper",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Liberi",
+    "Faction": "Bolívar"
+}

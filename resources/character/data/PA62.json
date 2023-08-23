@@ -1,0 +1,12 @@
+{
+    "Id": "PA62",
+    "Name": "Midnight",
+    "Rarity": 3,
+    "Class": "Guard",
+    "Branch": "Lord",
+    "Attack_Range": ["Melee", "Ranged"],
+    "Position": "Ground",
+    "Gender": "Male",
+    "Race": "Sarkaz",
+    "Faction": "Op Reserve A6"
+}

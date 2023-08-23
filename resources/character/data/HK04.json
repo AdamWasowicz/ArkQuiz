@@ -1,0 +1,12 @@
+{
+    "Id": "HK04",
+    "Name": "Akafuyu",
+    "Rarity": 5,
+    "Class": "Guard",
+    "Branch": "Musha",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Aegir",
+    "Faction": "Higashi"
+}

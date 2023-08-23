@@ -1,0 +1,12 @@
+{
+    "Id": "RR01",
+    "Name": "Astesia",
+    "Rarity": 5,
+    "Class": "Guard",
+    "Branch": "Arts Fighter",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Liberi",
+    "Faction": "Columbia"
+}

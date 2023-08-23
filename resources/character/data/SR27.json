@@ -1,0 +1,12 @@
+{
+    "Id": "SR27",
+    "Name": "Broca",
+    "Rarity": 5,
+    "Class": "Guard",
+    "Branch": "Centurion",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Male",
+    "Race": "Feline",
+    "Faction": "Chiave's Gang"
+}

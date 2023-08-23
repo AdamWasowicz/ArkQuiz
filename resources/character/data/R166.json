@@ -1,0 +1,12 @@
+{
+    "Id": "R166",
+    "Name": "Jackie",
+    "Rarity": 4,
+    "Class": "Guard",
+    "Branch": "Fighter",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Perro",
+    "Faction": "Columbia"
+}

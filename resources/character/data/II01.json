@@ -1,0 +1,12 @@
+{
+    "Id": "II01",
+    "Name": "Thorns",
+    "Rarity": 6,
+    "Class": "Guard",
+    "Branch": "Lord",
+    "Attack_Range": ["Melee", "Ranged"],
+    "Position": "Ground",
+    "Gender": "Male",
+    "Race": "Aegir",
+    "Faction": "Iberia"
+}

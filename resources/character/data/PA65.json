@@ -1,0 +1,12 @@
+{
+    "Id": "PA65",
+    "Name": "Popukar",
+    "Rarity": 3,
+    "Class": "Guard",
+    "Branch": "Centurion",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Cautus",
+    "Faction": "Op Reserve A6"
+}

@@ -1,0 +1,12 @@
+{
+    "Id": "KZ01",
+    "Name": "Nearl the Radiant Knight",
+    "Rarity": 6,
+    "Class": "Guard",
+    "Branch": "Dreadnought",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Kuranta",
+    "Faction": "Kazimierz"
+}

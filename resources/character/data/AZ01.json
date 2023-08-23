@@ -1,0 +1,12 @@
+{
+    "Id": "AZ01",
+    "Name": "Hellagur",
+    "Rarity": 6,
+    "Class": "Guard",
+    "Branch": "Musha",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Male",
+    "Race": "Liberi",
+    "Faction": "Ursus"
+}

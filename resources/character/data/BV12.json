@@ -1,0 +1,12 @@
+{
+    "Id": "BV12",
+    "Name": "Tequila",
+    "Rarity": 5,
+    "Class": "Guard",
+    "Branch": "Liberator",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Male",
+    "Race": "Perro",
+    "Faction": "Bolívar"
+}

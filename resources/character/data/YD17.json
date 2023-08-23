@@ -1,0 +1,12 @@
+{
+    "Id": "YD17",
+    "Name": "Wind Chimes",
+    "Rarity": 5,
+    "Class": "Guard",
+    "Branch": "Crusher",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Forte",
+    "Faction": "Yan"
+}

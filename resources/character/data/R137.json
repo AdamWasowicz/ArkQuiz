@@ -1,0 +1,12 @@
+{
+    "Id": "R137",
+    "Name": "Flamebringer",
+    "Rarity": 5,
+    "Class": "Guard",
+    "Branch": "Dreadnought",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Male",
+    "Race": "Sarkaz",
+    "Faction": "Rhodes Island"
+}

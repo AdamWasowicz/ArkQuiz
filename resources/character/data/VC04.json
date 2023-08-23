@@ -1,0 +1,12 @@
+{
+    "Id": "VC04",
+    "Name": "Mousse",
+    "Rarity": 4,
+    "Class": "Guard",
+    "Branch": "Arts Fighter",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Feline",
+    "Faction": "Victoria"
+}

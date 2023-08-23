@@ -1,0 +1,12 @@
+{
+    "Id": "CB05",
+    "Name": "Mountain",
+    "Rarity": 6,
+    "Class": "Guard",
+    "Branch": "Fighter",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Male",
+    "Race": "Feline",
+    "Faction": "Columbia"
+}

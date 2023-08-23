@@ -1,0 +1,12 @@
+{
+    "Id": "SR01",
+    "Name": "Lappland",
+    "Rarity": 5,
+    "Class": "Guard",
+    "Branch": "Lord",
+    "Attack_Range": ["Melee", "Ranged"],
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Lupo",
+    "Faction": "Siracusa"
+}

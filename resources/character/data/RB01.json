@@ -1,0 +1,12 @@
+{
+    "Id": "RB01",
+    "Name": "Savage",
+    "Rarity": 5,
+    "Class": "Guard",
+    "Branch": "Centurion",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Cautus",
+    "Faction": "Rim Billiton"
+}

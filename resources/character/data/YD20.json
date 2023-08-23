@@ -1,0 +1,12 @@
+{
+    "Id": "YD20",
+    "Name": "Qiubai",
+    "Rarity": 6,
+    "Class": "Guard",
+    "Branch": "Lord",
+    "Attack_Range": ["Melee", "Ranged"],
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Elafia",
+    "Faction": "Yan"
+}

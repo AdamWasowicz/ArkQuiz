@@ -1,0 +1,12 @@
+{
+    "Id": "MN01",
+    "Name": "Conviction",
+    "Rarity": 4,
+    "Class": "Guard",
+    "Branch": "Dreadnought",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Conviction",
+    "Race": "Unknown",
+    "Faction": "Minos"
+}

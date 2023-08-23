@@ -1,0 +1,12 @@
+{
+    "Id": "R161",
+    "Name": "Luo Xiaohei",
+    "Rarity": 4,
+    "Class": "Guard",
+    "Branch": "Lord",
+    "Attack_Range": ["Melee", "Ranged"],
+    "Position": "Ground",
+    "Gender": "Male",
+    "Race": "Feline",
+    "Faction": "Yan"
+}

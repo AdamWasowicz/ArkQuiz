@@ -23,7 +23,7 @@ const pathToCharacterIcon = path.join(...EXTERNAL_PATH_TO_CHARACTER_ICONS)
  * @param id is unique string for each character (ex. R001 is Amiya).
  * @returns Character with that id
  */
-export const findCharacterById = (id: string): Character => {
+export const getCharacterById = (id: string): Character => {
     const fileExist = doesFileExist(path.join(localPathToCharacters, id + characterDataFormat))
     if (fileExist == false) {
         throw new Error(`File ${id + characterDataFormat} not found`)
@@ -98,8 +98,7 @@ export const getAllCharactersFileNames = (): string[] => {
 /**
  * @returns Id of today character
  */
-export const getTodayCharacterId = (): string => {
-    const date = new Date();
+export const getTodayCharacterId = (date: Date): string => {
     const seed: number = date.getMonth() * date.getDate() + date.getDate()
 
     // Character data
@@ -133,10 +132,14 @@ export const getAllCharactersHeaderMap = (): CharacterHeaderMap => {
     return headerMap;
 }
 
+export const getCharacterHeaderById = (id: string): CharacterHeader => {
+    return getCharacterById(id).getCharacterHeader();
+}
+
 export const compareTwoCharacters = (originalId: string, comparedId: string): CharacterComparisonResult => {
     // Get characters data
-    const oc: Character = findCharacterById(originalId);
-    const cc: Character = findCharacterById(comparedId);
+    const oc: Character = getCharacterById(originalId);
+    const cc: Character = getCharacterById(comparedId);
 
     // Compare
     const differencesArray: number[] = [];

@@ -14,4 +14,16 @@
 - - Juggernaut
 - - Guardian
 - - Protector
-- Guard (0/11)
+- Guard (11/11)
+- - Crusher
+- - Reaper
+- - Liberator
+- - Musha
+- - Swordmaster
+- - Fighter
+- - Instructor
+- - Arts Fighter
+- - Lord
+- - Centurion
+- - Dreadnought
+- Medic (0/6)

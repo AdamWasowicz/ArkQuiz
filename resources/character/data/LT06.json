@@ -1,0 +1,12 @@
+{
+    "Id": "LT06",
+    "Name": "Arene",
+    "Rarity": 4,
+    "Class": "Guard",
+    "Branch": "Lord",
+    "Attack_Range": ["Melee", "Ranged"],
+    "Position": "Ground",
+    "Gender": "Male",
+    "Race": "Sankta",
+    "Faction": "Laterano"
+}

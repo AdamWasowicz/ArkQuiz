@@ -1,0 +1,12 @@
+{
+    "Id": "GG03",
+    "Name": "Indra",
+    "Rarity": 5,
+    "Class": "Guard",
+    "Branch": "Fighter",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Feline",
+    "Faction": "Glasgow"
+}

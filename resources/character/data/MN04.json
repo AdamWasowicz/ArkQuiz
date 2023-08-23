@@ -1,0 +1,12 @@
+{
+    "Id": "MN04",
+    "Name": "Pallas",
+    "Rarity": 6,
+    "Class": "Guard",
+    "Branch": "Instructor",
+    "Attack_Range": ["Melee", "Ranged"],
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Forte",
+    "Faction": "Minos"
+}

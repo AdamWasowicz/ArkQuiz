@@ -1,0 +1,12 @@
+{
+    "Id": "R138",
+    "Name": "Bibeak",
+    "Rarity": 5,
+    "Class": "Guard",
+    "Branch": "Swordmaster",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Liberi",
+    "Faction": "Sami"
+}

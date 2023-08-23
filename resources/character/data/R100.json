@@ -1,0 +1,12 @@
+{
+    "Id": "R100",
+    "Name": "Dobermann",
+    "Rarity": 4,
+    "Class": "Guard",
+    "Branch": "Instructor",
+    "Attack_Range": ["Melee", "Ranged"],
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Perro",
+    "Faction": "Rhodes Island"
+}

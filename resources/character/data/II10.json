@@ -1,0 +1,12 @@
+{
+    "Id": "II10",
+    "Name": "Highmore",
+    "Rarity": 5,
+    "Class": "Guard",
+    "Branch": "Reaper",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Aegir",
+    "Faction": "Iberia"
+}

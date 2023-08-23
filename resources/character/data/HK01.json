@@ -1,0 +1,12 @@
+{
+    "Id": "HK01",
+    "Name": "Matoimaru",
+    "Rarity": 4,
+    "Class": "Guard",
+    "Branch": "Dreadnought",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Oni",
+    "Faction": "Higashi"
+}

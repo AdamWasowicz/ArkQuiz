@@ -71,31 +71,38 @@ const SearchBar: React.FC<ISearchBar> = (props) => {
     const charactersHeaders = filterCharactersHeaders();
 
     return (
-        <div>
-            <input 
-                type='text'
-                onChange={handleInputContentChange}
-                value={searchValue}
-            />
+        <div className={styles.searchBar}>
+            <div className={styles.main}>
+                <div className={styles.topPart}>
+                    <input 
+                        type='text'
+                        className={styles.input}
+                        onChange={handleInputContentChange}
+                        value={searchValue}
+                    />
 
-            <button 
-                onClick={handleFormSubmit}
-                disabled={guessWon}
-            >
-                Submit
-            </button>
-
-            <div className={styles.searchResult}>
-                {
-                    charactersHeaders.length > 0 &&
-                    charactersHeaders.map((item, key) => {
-                        return <SearchBarResult 
-                            key={key} 
-                            characterHeader={item}
-                            onClick={onClickHandler}
-                        />
-                    })
-                }
+                    <button 
+                        className={styles.button}
+                        onClick={handleFormSubmit}
+                        disabled={guessWon}
+                    >
+                        Guess
+                    </button>
+                </div>
+                <div className={styles.searchResult}>
+                    <div className={styles.abs}>
+                    {
+                        charactersHeaders.length > 0 &&
+                        charactersHeaders.map((item, key) => {
+                            return <SearchBarResult 
+                                key={key} 
+                                characterHeader={item}
+                                onClick={onClickHandler}
+                            />
+                        })
+                    }
+                    </div>
+                </div>
             </div>
         </div>
     )

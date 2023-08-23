@@ -1,0 +1,12 @@
+{
+    "Id": "HK03",
+    "Name": "Utage",
+    "Rarity": 4,
+    "Class": "Guard",
+    "Branch": "Musha",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Unknown",
+    "Faction": "Higashi"
+}

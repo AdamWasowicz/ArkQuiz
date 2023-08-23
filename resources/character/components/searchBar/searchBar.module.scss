@@ -1,7 +1,94 @@
+.searchBar {
+    // Size and Position
+    width: 100%;
+
+    //background-color: red;
+}
+
+.main {
+    width: 60%;
+    //background-color: blue;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.topPart {
+    position: relative;
+    // Size and Position
+    width: 100%;
+
+    // Flexbox
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
 .searchResult {
+    width: 100%;
+    position: relative;
+}
+
+.abs {
+    width: 80%;
     position: absolute;
     background-color: #f6f6f6;
-    min-width: 230px;
     border: 1px solid #ddd;
     z-index: 1;
+}
+
+.input {
+    // Size and Position
+    width: 80%;
+    height: 75px;
+    padding: 10px 20px;
+
+    // Text
+    font-family: 'Lato';
+    font-weight: 400;
+    font-size: 28px;
+}
+.button {
+    display: inline-block;
+    height: 75px;
+    width: 20%;
+    align-items: center;
+    background-clip: padding-box;
+    background-color: #1fbbd0;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: 'Roboto';
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    justify-content: center;
+    line-height: 1.25;
+    margin: 0;
+    min-height: 3rem;
+    padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+    position: relative;
+    text-decoration: none;
+    transition: all 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+
+    &:hover, &:focus {
+        background-color: #00e1ff;
+        box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    }
+
+    &:active {
+        background-color: #00e1ff;
+        box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+    }
 }

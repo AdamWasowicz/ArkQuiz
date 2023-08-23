@@ -1,0 +1,12 @@
+{
+    "Id": "KZ07",
+    "Name": "Whislash",
+    "Rarity": 5,
+    "Class": "Guard",
+    "Branch": "Instructor",
+    "Attack_Range": ["Melee", "Ranged"],
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Kuranta",
+    "Faction": "Kazimierz"
+}

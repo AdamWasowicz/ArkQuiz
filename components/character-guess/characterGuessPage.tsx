@@ -16,9 +16,11 @@ const CharacterGuessPage: React.FC<ICharacterGuessPageProps> = (props) => {
 
     return (
         <div className={styles.page}>
-            <SearchBar characterHeaders={headers}/>
+            <div className={styles.search}>
+                <SearchBar characterHeaders={headers}/>
+            </div>
 
-            <div className={styles.center}>
+            <div className={styles.results}>
             {
                 guesses.length > 0 &&
                 <CharacterGuessResult guesses={guesses}/>

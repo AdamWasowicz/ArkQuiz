@@ -1,0 +1,12 @@
+{
+    "Id": "US10",
+    "Name": "Beehunter",
+    "Rarity": 4,
+    "Class": "Guard",
+    "Branch": "Fighter",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Ursus",
+    "Faction": "Ursus"
+}

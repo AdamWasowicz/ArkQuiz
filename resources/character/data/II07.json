@@ -1,0 +1,12 @@
+{
+    "Id": "II07",
+    "Name": "Irene",
+    "Rarity": 6,
+    "Class": "Guard",
+    "Branch": "Swordmaster",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Liberi",
+    "Faction": "Iberia"
+}

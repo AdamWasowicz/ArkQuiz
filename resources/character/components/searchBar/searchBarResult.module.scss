@@ -2,14 +2,53 @@
     // Size and Position
     width: 100%;
 
+    // Border
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+
     // Flex
     display: flex;
     flex-direction: row;
 
     // Color
-    background-color: aqua;
+    background-color: rgb(91, 93, 99);
+    
+    // Text
+    color: white;
+
+    // Other
+    transition: 0.2s;
 
     &:hover {
-        background-color: red;
+        transition: 0.2s;
+        background-color: rgb(109, 112, 123);
+        color: rgb(81, 172, 214);
     }
+}
+
+.image {
+    // Size and Position
+    width: 90px;
+    height: 90px;
+    margin-right: 20px;
+
+    background-color: white;
+}
+
+.p {
+    // Size and Position
+    width: 80%;
+
+    // Flex
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    // Text
+    font-size: 32px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    letter-spacing: 4px;
 }

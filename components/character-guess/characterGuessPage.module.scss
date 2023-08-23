@@ -2,11 +2,21 @@
     // Size and Position
     width: 100%;
     height: 100vh;
-
     margin: 10px
 }
 
-.center { 
+.search {
+    // Size and Position
+    width: 100%;
+    margin-bottom: 20px;
+
+    // Text
+    text-align: center;
+}
+
+.results { 
+    // Size and Position
+    width: 80%;
     margin-right: auto;
     margin-left: auto;
 }

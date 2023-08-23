@@ -1,0 +1,12 @@
+{
+    "Id": "R123",
+    "Name": "Frostleaf",
+    "Rarity": 4,
+    "Class": "Guard",
+    "Branch": "Lord",
+    "Attack_Range": ["Melee", "Ranged"],
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Vulpo",
+    "Faction": "Rhodes Island"
+}

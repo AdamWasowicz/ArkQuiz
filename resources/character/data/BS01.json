@@ -1,0 +1,12 @@
+{
+    "Id": "BS01",
+    "Name": "Franka",
+    "Rarity": 5,
+    "Class": "Guard",
+    "Branch": "Dreadnought",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Vulpo",
+    "Faction": "Blacksteel"
+}

@@ -1,0 +1,12 @@
+{
+    "Id": "AA02",
+    "Name": "Specter",
+    "Rarity": 5,
+    "Class": "Guard",
+    "Branch": "Centurion",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": ["Aegir", "Seaborn"],
+    "Faction": "Abyssal Hunters"
+}

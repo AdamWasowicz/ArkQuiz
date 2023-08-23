@@ -1,0 +1,12 @@
+{
+    "Id": "SG06",
+    "Name": "Flint",
+    "Rarity": 5,
+    "Class": "Guard",
+    "Branch": "Fighter",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Liberi",
+    "Faction": "Sargon"
+}

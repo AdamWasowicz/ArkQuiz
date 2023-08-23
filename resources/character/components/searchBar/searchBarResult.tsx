@@ -18,13 +18,14 @@ const SearchBarResult: React.FC<ISearchBarResultProps> = (props) => {
     return (
         <div className={styles.searchBarResultItem} onClick={onClickHandler}>
             <Image
+                className={styles.image}
                 src={urlToIcon(window.location.href, characterHeader.Id)}
                 alt={characterHeader.Name}
-                width={50}
-                height={50}
+                width={75}
+                height={75}
             />
-
-            <p>{characterHeader.Name}</p>
+            
+            <p className={styles.p}>{characterHeader.Name}</p>
         </div>
     )
 }

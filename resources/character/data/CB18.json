@@ -1,0 +1,12 @@
+{
+    "Id": "CB18",
+    "Name": "Quartz",
+    "Rarity": 4,
+    "Class": "Guard",
+    "Branch": "Crusher",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Lupo",
+    "Faction": "Columbia"
+}

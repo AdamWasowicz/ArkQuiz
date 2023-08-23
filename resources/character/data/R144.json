@@ -1,0 +1,12 @@
+{
+    "Id": "R144",
+    "Name": "Cutter",
+    "Rarity": 4,
+    "Class": "Guard",
+    "Branch": "Swordmaster",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Vulpo",
+    "Faction": "Columbia"
+}

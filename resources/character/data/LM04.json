@@ -1,0 +1,12 @@
+{
+    "Id": "LM04",
+    "Name": "Ch'en",
+    "Rarity": 6,
+    "Class": "Guard",
+    "Branch": "Swordmaster",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Lung",
+    "Faction": "Lungmen Guard Department"
+}

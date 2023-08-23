@@ -1,0 +1,12 @@
+{
+    "Id": "NM04",
+    "Name": "Chongyue",
+    "Rarity": 6,
+    "Class": "Guard",
+    "Branch": "Fighter",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Male",
+    "Race": "Feranmut",
+    "Faction": "Sui"
+}

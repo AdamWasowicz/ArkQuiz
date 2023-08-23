@@ -1,0 +1,12 @@
+{
+    "Id": "RS04",
+    "Name": "Tachanka",
+    "Rarity": 5,
+    "Class": "Guard",
+    "Branch": "Swordmaster",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Male",
+    "Race": "Unknown ",
+    "Faction": "Team Rainbow"
+}

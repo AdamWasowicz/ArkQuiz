@@ -1,0 +1,12 @@
+{
+    "Id": "LM08",
+    "Name": "Swire",
+    "Rarity": 5,
+    "Class": "Guard",
+    "Branch": "Instructor",
+    "Attack_Range": ["Melee", "Ranged"],
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Feline",
+    "Faction": "Lungmen Guard Department"
+}
