@@ -1,0 +1,12 @@
+{
+    "Id": "PA13",
+    "Name": "Hibiscus",
+    "Rarity": 3,
+    "Class": "Medic",
+    "Branch": "Medic",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Sarkaz",
+    "Faction": "Op Reserve A1"
+}

@@ -1,0 +1,12 @@
+{
+    "Id": "R107",
+    "Name": "Sussurro",
+    "Rarity": 4,
+    "Class": "Medic",
+    "Branch": "Medic",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Vulpo",
+    "Faction": "Rhodes Island"
+}

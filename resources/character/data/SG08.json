@@ -1,0 +1,12 @@
+{
+    "Id": "SG08",
+    "Name": "Tuye",
+    "Rarity": 5,
+    "Class": "Medic",
+    "Branch": "Medic",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Forte",
+    "Faction": "Sargon"
+}

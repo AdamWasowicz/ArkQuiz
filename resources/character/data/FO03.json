@@ -1,0 +1,12 @@
+{
+    "Id": "FO03",
+    "Name": "Nightingale",
+    "Rarity": 6,
+    "Class": "Medic",
+    "Branch": "Multi-target",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Sarkaz",
+    "Faction": "Followers"
+}

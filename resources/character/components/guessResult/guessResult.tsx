@@ -4,13 +4,14 @@ import styles from './guessResult.module.scss';
 
 interface ICharacterGuessResultPorps {
     guesses: CharacterComparisonResult[]
+    className?: string | string[]
 }
 
 const CharacterGuessResult: React.FC<ICharacterGuessResultPorps> = (props) => {
     const { guesses } = props;
 
     return (
-        <table className={styles.table}>
+        <table className={`${styles.table} ${props.className}`}>
             <tbody>
                 <tr className={styles.headerRow}>
                     <th className={styles.mediumSizedColumn}>Operator</th>

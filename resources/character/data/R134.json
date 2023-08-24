@@ -1,0 +1,12 @@
+{
+    "Id": "R134",
+    "Name": "Chestnut",
+    "Rarity": 4,
+    "Class": "Medic",
+    "Branch": "Wandering",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Male",
+    "Race": "Durin",
+    "Faction": "Rhodes Island"
+}

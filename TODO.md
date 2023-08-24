@@ -1,29 +1,41 @@
+## Pending
+- Finsish rest of the operators
+- Create some good UI (now it's just a placeholder)
+- Clean up code (there are some artifacts from early stages of development)
+
 ## Finished 
 - Casters (7/7)
-- - Core
-- - Splash
-- - Blast
-- - Chain
-- - Phalanx
-- - Mystic
+  - Core
+  - Splash
+  - Blast
+  - Chain
+  - Phalanx
+  - Mystic
 - Defenders (7/7)
-- - Sentinel Protector
-- - Fortress
-- - Duelist
-- - Arts Protector
-- - Juggernaut
-- - Guardian
-- - Protector
+  - Sentinel Protector
+  - Fortress
+  - Duelist
+  - Arts Protector
+  - Juggernaut
+  - Guardian
+  - Protector
 - Guard (11/11)
-- - Crusher
-- - Reaper
-- - Liberator
-- - Musha
-- - Swordmaster
-- - Fighter
-- - Instructor
-- - Arts Fighter
-- - Lord
-- - Centurion
-- - Dreadnought
-- Medic (0/6)
+  - Crusher
+  - Reaper
+  - Liberator
+  - Musha
+  - Swordmaster
+  - Fighter
+  - Instructor
+  - Arts Fighter
+  - Lord
+  - Centurion
+  - Dreadnought
+- Medic (6/6)
+  - Chain
+  - Incantation
+  - Wandering
+  - Therapist
+  - Multi-target
+  - Medic
+- Sniper (0/7)

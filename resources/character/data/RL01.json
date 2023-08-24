@@ -1,0 +1,12 @@
+{
+    "Id": "RL01",
+    "Name": "Silence",
+    "Rarity": 5,
+    "Class": "Medic",
+    "Branch": "Medic",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Liberi",
+    "Faction": "Rhine Lab"
+}

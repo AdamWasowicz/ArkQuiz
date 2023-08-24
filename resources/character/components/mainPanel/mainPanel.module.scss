@@ -1,0 +1,74 @@
+.mainPanel {
+    // Size and Position
+    width: 60%;
+    padding: 10px 20px;
+
+    background-color: rgb(132, 143, 160);
+}
+
+.header {
+    // Size and Position
+    margin-bottom: 24px;
+
+    // Text
+    font-family: 'Roboto';
+    font-size: 64px;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.result {
+    text-align: center;
+}
+
+.image {
+    // Size and Position
+    width: 180px;
+    height: 180px;
+
+    background-color: white;
+    border: 2px solid black;
+}
+
+.resultHeader {
+    // Size and Position
+    margin: 24px;
+
+    // Text
+    font-family: 'Lato';
+    font-size: 40px;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.operatorName {
+    // Text
+    font-family: 'Lato';
+    font-size: 36px;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.resultP {
+    // Text
+    font-family: 'Lato';
+    font-size: 20px;
+    font-weight: 400;
+    color: rgb(129, 218, 245);
+    text-align: center;
+}
+
+.amountOfGuesses {
+    // Text
+    font-family: 'Lato';
+    font-size: 28px;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}

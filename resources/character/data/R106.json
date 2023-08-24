@@ -1,0 +1,12 @@
+{
+    "Id": "R106",
+    "Name": "Warfarin",
+    "Rarity": 5,
+    "Class": "Medic",
+    "Branch": "Medic",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Sarkaz",
+    "Faction": "Rhodes Island"
+}

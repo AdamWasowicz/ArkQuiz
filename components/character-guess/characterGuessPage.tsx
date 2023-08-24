@@ -5,6 +5,7 @@ import SearchBar from "@/resources/character/components/searchBar/searchBar";
 import CharacterGuessResult from "@/resources/character/components/guessResult/guessResult";
 import { useAppSelector } from "@/redux/hooks";
 import styles from './characterGuessPage.module.scss';
+import MainPanel from "@/resources/character/components/mainPanel/mainPanel";
 
 interface ICharacterGuessPageProps {
     headers: CharacterHeaderMap
@@ -16,6 +17,8 @@ const CharacterGuessPage: React.FC<ICharacterGuessPageProps> = (props) => {
 
     return (
         <div className={styles.page}>
+            <MainPanel className={styles.mainPanel}/>
+
             <div className={styles.search}>
                 <SearchBar characterHeaders={headers}/>
             </div>

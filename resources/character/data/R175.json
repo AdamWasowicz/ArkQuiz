@@ -1,0 +1,12 @@
+{
+    "Id": "R175",
+    "Name": "Paprika",
+    "Rarity": 5,
+    "Class": "Medic",
+    "Branch": "Chain",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Sarkaz",
+    "Faction": "Rhodes Island"
+}

@@ -1,0 +1,12 @@
+{
+    "Id": "MN03",
+    "Name": "Perfumer",
+    "Rarity": 4,
+    "Class": "Medic",
+    "Branch": "Multi-target",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Vulpo",
+    "Faction": "Rhodes Island"
+}

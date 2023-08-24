@@ -1,0 +1,12 @@
+{
+    "Id": "RB06",
+    "Name": "Honeyberry",
+    "Rarity": 5,
+    "Class": "Medic",
+    "Branch": "Wandering",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Zalak",
+    "Faction": "Rim Billiton"
+}

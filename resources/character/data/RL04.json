@@ -1,0 +1,12 @@
+{
+    "Id": "RL04",
+    "Name": "Ptilopsis",
+    "Rarity": 5,
+    "Class": "Medic",
+    "Branch": "Multi-target",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Liberi",
+    "Faction": "Rhine Lab"
+}

@@ -1,0 +1,12 @@
+{
+    "Id": "SS01",
+    "Name": "Ceylon",
+    "Rarity": 5,
+    "Class": "Medic",
+    "Branch": "Therapist",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Liberi",
+    "Faction": "Siesta"
+}

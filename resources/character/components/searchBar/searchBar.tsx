@@ -76,6 +76,7 @@ const SearchBar: React.FC<ISearchBar> = (props) => {
                 <div className={styles.topPart}>
                     <input 
                         type='text'
+                        disabled={guessWon}
                         className={styles.input}
                         onChange={handleInputContentChange}
                         value={searchValue}

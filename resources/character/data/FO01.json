@@ -1,0 +1,12 @@
+{
+    "Id": "FO01",
+    "Name": "Shining",
+    "Rarity": 6,
+    "Class": "Medic",
+    "Branch": "Medic",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Sarkaz",
+    "Faction": "Followers"
+}

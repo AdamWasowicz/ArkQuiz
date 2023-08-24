@@ -1,0 +1,12 @@
+{
+    "Id": "RCX2",
+    "Name": "Lancet-2",
+    "Rarity": 1,
+    "Class": "Medic",
+    "Branch": "Medic",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Robot",
+    "Faction": "Rhodes Island"
+}

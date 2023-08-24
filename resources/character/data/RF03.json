@@ -1,0 +1,12 @@
+{
+    "Id": "RF03",
+    "Name": "Hibiscus the Purifier",
+    "Rarity": 5,
+    "Class": "Medic",
+    "Branch": "Incantation",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Sarkaz",
+    "Faction": "Rhodes Island"
+}

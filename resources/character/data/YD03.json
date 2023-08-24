@@ -1,0 +1,12 @@
+{
+    "Id": "YD03",
+    "Name": "Mulberry",
+    "Rarity": 5,
+    "Class": "Medic",
+    "Branch": "Wandering",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Liberi",
+    "Faction": "Yan"
+}

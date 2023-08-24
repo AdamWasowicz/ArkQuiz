@@ -1,0 +1,12 @@
+{
+    "Id": "PA43",
+    "Name": "Ansel",
+    "Rarity": 3,
+    "Class": "Medic",
+    "Branch": "Medic",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Male",
+    "Race": "Cautus",
+    "Faction": "Op Reserve A4"
+}

@@ -1,0 +1,12 @@
+{
+    "Id": "IU07",
+    "Name": "Gavial",
+    "Rarity": 4,
+    "Class": "Medic",
+    "Branch": "Medic",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Archosauria",
+    "Faction": "Rhodes Island"
+}
