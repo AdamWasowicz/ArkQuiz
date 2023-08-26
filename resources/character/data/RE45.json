@@ -1,0 +1,12 @@
+{
+    "Id": "RE45",
+    "Name": "Rosmontis",
+    "Rarity": 6,
+    "Class": "Sniper",
+    "Branch": "Flinger",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Feline",
+    "Faction": "Elite Op"
+}

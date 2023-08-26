@@ -1,0 +1,12 @@
+{
+    "Id": "LT02",
+    "Name": "Ambriel",
+    "Rarity": 4,
+    "Class": "Sniper",
+    "Branch": "Deadeye",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Sankta",
+    "Faction": "Laterano"
+}

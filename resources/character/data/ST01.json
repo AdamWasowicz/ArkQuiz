@@ -1,0 +1,12 @@
+{
+    "Id": "ST01",
+    "Name": "Firewatch",
+    "Rarity": 5,
+    "Class": "Sniper",
+    "Branch": "Deadeye",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Elafia",
+    "Faction": "Rhodes Island"
+}

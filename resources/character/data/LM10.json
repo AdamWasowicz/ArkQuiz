@@ -1,0 +1,12 @@
+{
+    "Id": "LM10",
+    "Name": "Shirayuki",
+    "Rarity": 4,
+    "Class": "Sniper",
+    "Branch": "Artilleryman",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Anaty",
+    "Faction": "Higashi"
+}

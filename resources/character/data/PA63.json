@@ -1,0 +1,12 @@
+{
+    "Id": "PA63",
+    "Name": "Catapult",
+    "Rarity": 3,
+    "Class": "Sniper",
+    "Branch": "Artilleryman",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Kuranta",
+    "Faction": "Op Reserve A6"
+}

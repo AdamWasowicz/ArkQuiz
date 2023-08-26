@@ -1,0 +1,12 @@
+{
+    "Id": "SS02",
+    "Name": "Schwarz",
+    "Rarity": 6,
+    "Class": "Sniper",
+    "Branch": "Heavyshooter",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Feline",
+    "Faction": "Siesta"
+}

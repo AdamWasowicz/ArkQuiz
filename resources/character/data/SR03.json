@@ -1,0 +1,12 @@
+{
+    "Id": "SR03",
+    "Name": "Provence",
+    "Rarity": 5,
+    "Class": "Sniper",
+    "Branch": "Heavyshooter",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Lupo",
+    "Faction": "Siracusa"
+}

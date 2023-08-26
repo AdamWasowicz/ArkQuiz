@@ -1,0 +1,12 @@
+{
+    "Id": "KZ15",
+    "Name": "Justice Knight",
+    "Rarity": 1,
+    "Class": "Sniper",
+    "Branch": "Marksman",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Robot",
+    "Faction": "Pinus Sylvestris"
+}

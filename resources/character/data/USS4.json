@@ -1,0 +1,12 @@
+{
+    "Id": "USS4",
+    "Name": "Rosa",
+    "Rarity": 6,
+    "Class": "Sniper",
+    "Branch": "Besieger",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Ursus",
+    "Faction": "Ursus Student Self-Governing Group"
+}

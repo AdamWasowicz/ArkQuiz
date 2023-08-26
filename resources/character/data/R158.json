@@ -1,0 +1,12 @@
+{
+    "Id": "R158",
+    "Name": "Sesa",
+    "Rarity": 5,
+    "Class": "Sniper",
+    "Branch": "Artilleryman",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Male",
+    "Race": "Vouivre",
+    "Faction": "Sargon"
+}

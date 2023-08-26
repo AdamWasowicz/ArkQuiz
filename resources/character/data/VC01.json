@@ -1,0 +1,12 @@
+{
+    "Id": "VC01",
+    "Name": "May",
+    "Rarity": 4,
+    "Class": "Sniper",
+    "Branch": "Marksman",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Liberi",
+    "Faction": "Victoria"
+}

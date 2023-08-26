@@ -1,0 +1,12 @@
+{
+    "Id": "VC11",
+    "Name": "Toddifons",
+    "Rarity": 5,
+    "Class": "Sniper",
+    "Branch": "Besieger",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Vouivre",
+    "Faction": "Victoria"
+}

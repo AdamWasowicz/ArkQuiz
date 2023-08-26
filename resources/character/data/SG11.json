@@ -1,0 +1,12 @@
+{
+    "Id": "SG11",
+    "Name": "Totter",
+    "Rarity": 4,
+    "Class": "Sniper",
+    "Branch": "Besieger",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Male",
+    "Race": "Liberi",
+    "Faction": "Sargon"
+}

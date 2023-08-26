@@ -1,0 +1,12 @@
+{
+    "Id": "MN07",
+    "Name": "Erato",
+    "Rarity": 5,
+    "Class": "Sniper",
+    "Branch": "Besieger",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Liberi",
+    "Faction": "Minos"
+}

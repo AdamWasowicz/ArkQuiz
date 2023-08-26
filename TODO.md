@@ -38,4 +38,12 @@
   - Therapist
   - Multi-target
   - Medic
-- Sniper (0/7)
+- Sniper (7/7)
+  - Flinger
+  - Besieger
+  - Spreadshooter
+  - Heavyshooter
+  - Deadeye
+  - Artilleryman
+  - Marksman
+- Specialist (0/8)

@@ -1,0 +1,12 @@
+{
+    "Id": "SR28",
+    "Name": "Aosta",
+    "Rarity": 5,
+    "Class": "Sniper",
+    "Branch": "Spreadshooter",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Male",
+    "Race": "Lupo",
+    "Faction": "Chiave's Gang"
+}

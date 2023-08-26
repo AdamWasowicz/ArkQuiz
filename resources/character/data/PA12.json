@@ -1,0 +1,12 @@
+{
+    "Id": "PA12",
+    "Name": "Kroos",
+    "Rarity": 3,
+    "Class": "Sniper",
+    "Branch": "Marksman",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Cautus",
+    "Faction": "Op Reserve A1"
+}
