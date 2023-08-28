@@ -1,0 +1,12 @@
+{
+    "Id": "LN01",
+    "Name": "Earthspirit",
+    "Rarity": 4,
+    "Class": "Supporter",
+    "Branch": "Decel Binder",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Caprinae",
+    "Faction": "Leithanien"
+}

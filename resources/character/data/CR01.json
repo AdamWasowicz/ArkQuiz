@@ -1,0 +1,12 @@
+{
+    "Id": "CR01",
+    "Name": "Skadi the Corrupting Heart",
+    "Rarity": 6,
+    "Class": "Supporter",
+    "Branch": "Bard",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": ["Aegir", "Seaborn"],
+    "Faction": "Aegir"
+}

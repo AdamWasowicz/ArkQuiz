@@ -1,0 +1,12 @@
+{
+    "Id": "RL06",
+    "Name": "Magallan",
+    "Rarity": 6,
+    "Class": "Supporter",
+    "Branch": "Summoner",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Liberi",
+    "Faction": "Rhine Lab"
+}

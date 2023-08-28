@@ -1,0 +1,12 @@
+{
+    "Id": "CB19",
+    "Name": "Windflit",
+    "Rarity": 5,
+    "Class": "Supporter",
+    "Branch": "Artificer",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Male",
+    "Race": "Perro",
+    "Faction": "Columbia"
+}

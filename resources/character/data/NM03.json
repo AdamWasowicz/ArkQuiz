@@ -1,0 +1,12 @@
+{
+    "Id": "NM03",
+    "Name": "Ling",
+    "Rarity": 6,
+    "Class": "Supporter",
+    "Branch": "Summoner",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Feranmut",
+    "Faction": "Sui"
+}

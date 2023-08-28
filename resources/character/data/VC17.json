@@ -1,0 +1,12 @@
+{
+    "Id": "VC17",
+    "Name": "Stainless",
+    "Rarity": 6,
+    "Class": "Supporter",
+    "Branch": "Artificer",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Male",
+    "Race": "Feline",
+    "Faction": "Victoria"
+}

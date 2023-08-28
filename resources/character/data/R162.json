@@ -1,0 +1,12 @@
+{
+    "Id": "R162",
+    "Name": "Scene",
+    "Rarity": 5,
+    "Class": "Supporter",
+    "Branch": "Summoner",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Pilosa",
+    "Faction": "Sargon"
+}

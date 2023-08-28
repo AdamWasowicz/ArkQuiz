@@ -1,0 +1,12 @@
+{
+    "Id": "CB11",
+    "Name": "Roberta",
+    "Rarity": 4,
+    "Class": "Supporter",
+    "Branch": "Artificer",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Anaty",
+    "Faction": "Columbia"
+}

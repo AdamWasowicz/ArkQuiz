@@ -1,0 +1,12 @@
+{
+    "Id": "VC19",
+    "Name": "Heidi",
+    "Rarity": 5,
+    "Class": "Supporter",
+    "Branch": "Bard",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Feline",
+    "Faction": "Victoria"
+}

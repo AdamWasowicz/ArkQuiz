@@ -46,4 +46,19 @@
   - Deadeye
   - Artilleryman
   - Marksman
-- Specialist (0/8)
+- Specialist (8/8)
+  - Dollkeeper
+  - Trapmaster
+  - Merchant
+  - Geek
+  - Ambusher
+  - Executor
+  - Hookmaster
+  - Push Stroker
+- Supporter (6/6)
+  - Artificer
+  - Abjurer
+  - Bard
+  - Hexer
+  - Summoner
+  - Decel Binder

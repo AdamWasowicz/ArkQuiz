@@ -1,0 +1,12 @@
+{
+    "Id": "R128",
+    "Name": "Glaucus",
+    "Rarity": 5,
+    "Class": "Supporter",
+    "Branch": "Decel Binder",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Aegir",
+    "Faction": "Iberia"
+}

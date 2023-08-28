@@ -1,0 +1,12 @@
+{
+    "Id": "RL05",
+    "Name": "Mayer",
+    "Rarity": 5,
+    "Class": "Supporter",
+    "Branch": "Summoner",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Anaty",
+    "Faction": "Rhine Lab"
+}

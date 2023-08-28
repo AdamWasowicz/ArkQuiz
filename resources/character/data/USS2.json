@@ -1,0 +1,12 @@
+{
+    "Id": "USS2",
+    "Name": "Istina",
+    "Rarity": 5,
+    "Class": "Supporter",
+    "Branch": "Decel Binder",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Ursus",
+    "Faction": "Ursus Student Self-Governing Group"
+}

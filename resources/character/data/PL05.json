@@ -1,0 +1,12 @@
+{
+    "Id": "PL05",
+    "Name": "Sora",
+    "Rarity": 5,
+    "Class": "Supporter",
+    "Branch": "Bard",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Unknown",
+    "Faction": "Penguin Logistics"
+}

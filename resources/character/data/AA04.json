@@ -1,0 +1,12 @@
+{
+    "Id": "AA04",
+    "Name": "Deepcolor",
+    "Rarity": 4,
+    "Class": "Supporter",
+    "Branch": "Summoner",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": ["Aegir", "Seaborn"],
+    "Faction": "Aegir"
+}
