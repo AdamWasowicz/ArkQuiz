@@ -1,0 +1,12 @@
+{
+    "Id": "AA05",
+    "Name": "Gladiia",
+    "Rarity": 6,
+    "Class": "Specialist",
+    "Branch": "Hookmaster" ,
+    "Attack_Range": "Ranged",
+    "Position": ["High ground","Ground"],
+    "Gender": "Female",
+    "Race": ["Aegir", "Seaborn"],
+    "Faction": "Abyssal Hunters"
+}

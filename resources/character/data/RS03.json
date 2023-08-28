@@ -1,0 +1,12 @@
+{
+    "Id": "RS03",
+    "Name": "Frost",
+    "Rarity": 5,
+    "Class": "Specialist",
+    "Branch": "Trapmaster" ,
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Unknown",
+    "Faction": "Team Rainbow"
+}

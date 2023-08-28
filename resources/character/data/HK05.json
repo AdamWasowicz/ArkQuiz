@@ -1,0 +1,12 @@
+{
+    "Id": "HK05",
+    "Name": "Kirara",
+    "Rarity": 5,
+    "Class": "Specialist",
+    "Branch": "Ambusher" ,
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Aegir",
+    "Faction": "Higashi"
+}

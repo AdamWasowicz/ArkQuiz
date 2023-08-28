@@ -1,0 +1,12 @@
+{
+    "Id": "CB08",
+    "Name": "Robin",
+    "Rarity": 5,
+    "Class": "Specialist",
+    "Branch": "Trapmaster" ,
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Anaty",
+    "Faction": "Columbia"
+}

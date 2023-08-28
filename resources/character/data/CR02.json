@@ -1,0 +1,12 @@
+{
+    "Id": "CR02",
+    "Name": "Specter the Unchained",
+    "Rarity": 6,
+    "Class": "Specialist",
+    "Branch": "Dollkeeper" ,
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": ["Aegir", "Seaborn"],
+    "Faction": "Abyssal Hunters"
+}

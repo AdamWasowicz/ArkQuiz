@@ -1,0 +1,12 @@
+{
+    "Id": "R117",
+    "Name": "Weedy",
+    "Rarity": 6,
+    "Class": "Specialist",
+    "Branch": "Push stroker" ,
+    "Attack_Range": "Melee",
+    "Position": ["High ground","Ground"],
+    "Gender": "Female",
+    "Race": "Aegir",
+    "Faction": "Rhodes Island"
+}

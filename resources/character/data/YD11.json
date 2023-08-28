@@ -1,0 +1,12 @@
+{
+    "Id": "YD11",
+    "Name": "Mr. Nothing",
+    "Rarity": 5,
+    "Class": "Specialist",
+    "Branch": "Merchant" ,
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Male",
+    "Race": "Liberi",
+    "Faction": "Yan"
+}

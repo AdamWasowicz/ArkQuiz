@@ -1,0 +1,12 @@
+{
+    "Id": "LM16",
+    "Name": "Snowsant",
+    "Rarity": 5,
+    "Class": "Specialist",
+    "Branch": "Hookmaster" ,
+    "Attack_Range": "Ranged",
+    "Position": ["High ground","Ground"],
+    "Gender": "Female",
+    "Race": "Liberi",
+    "Faction": "Lungmen"
+}

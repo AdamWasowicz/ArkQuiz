@@ -1,0 +1,12 @@
+{
+    "Id": "YD01",
+    "Name": "FEater",
+    "Rarity": 5,
+    "Class": "Specialist",
+    "Branch": "Push stroker" ,
+    "Attack_Range": "Melee",
+    "Position": ["High ground","Ground"],
+    "Gender": "Female",
+    "Race": "Ursus",
+    "Faction": "Lungmen"
+}

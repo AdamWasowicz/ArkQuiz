@@ -1,0 +1,12 @@
+{
+    "Id": "R130",
+    "Name": "Ethan",
+    "Rarity": 4,
+    "Class": "Specialist",
+    "Branch": "Ambusher" ,
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Male",
+    "Race": "Savra",
+    "Faction": "Rhodes Island"
+}

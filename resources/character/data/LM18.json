@@ -1,0 +1,12 @@
+{
+    "Id": "LM18",
+    "Name": "Lee",
+    "Rarity": 6,
+    "Class": "Specialist",
+    "Branch": "Merchant" ,
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Male",
+    "Race": "Lung",
+    "Faction": "Lee's Detective Agency"
+}

@@ -1,0 +1,12 @@
+{
+    "Id": "RCX4",
+    "Name": "THRM-EX",
+    "Rarity": 1,
+    "Class": "Specialist",
+    "Branch": "Executor" ,
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Male",
+    "Race": "Robot",
+    "Faction": "Rhodes Island"
+}

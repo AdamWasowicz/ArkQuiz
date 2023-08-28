@@ -1,0 +1,12 @@
+{
+    "Id": "LM12",
+    "Name": "Waai Fu",
+    "Rarity": 5,
+    "Class": "Specialist",
+    "Branch": "Executor" ,
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Feline",
+    "Faction": "Lee's Detective Agency"
+}

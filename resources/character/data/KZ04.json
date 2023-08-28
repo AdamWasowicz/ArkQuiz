@@ -1,0 +1,12 @@
+{
+    "Id": "KZ04",
+    "Name": "Gravel",
+    "Rarity": 4,
+    "Class": "Specialist",
+    "Branch": "Executor" ,
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Zalak",
+    "Faction": "Kazimierz"
+}

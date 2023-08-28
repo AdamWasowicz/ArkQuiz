@@ -1,0 +1,12 @@
+{
+    "Id": "LM20",
+    "Name": "Aak",
+    "Rarity": 6,
+    "Class": "Specialist",
+    "Branch": "Geek" ,
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Male",
+    "Race": "Feline",
+    "Faction": "Lee's Detective Agency"
+}

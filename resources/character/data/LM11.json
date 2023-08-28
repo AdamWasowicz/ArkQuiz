@@ -1,0 +1,12 @@
+{
+    "Id": "LM11",
+    "Name": "Shaw",
+    "Rarity": 4,
+    "Class": "Specialist",
+    "Branch": "Push stroker" ,
+    "Attack_Range": "Melee",
+    "Position": ["High ground","Ground"],
+    "Gender": "Female",
+    "Race": "Zalak",
+    "Faction": "Lungmen"
+}

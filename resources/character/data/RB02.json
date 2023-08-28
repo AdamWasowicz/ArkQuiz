@@ -1,0 +1,12 @@
+{
+    "Id": "RB02",
+    "Name": "Rope",
+    "Rarity": 4,
+    "Class": "Specialist",
+    "Branch": "Hookmaster" ,
+    "Attack_Range": "Ranged",
+    "Position": ["High ground","Ground"],
+    "Gender": "Female",
+    "Race": "Cautus",
+    "Faction": "Lungmen"
+}

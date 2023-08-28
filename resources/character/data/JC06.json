@@ -1,0 +1,12 @@
+{
+    "Id": "JC06",
+    "Name": "Cliffheart",
+    "Rarity": 5,
+    "Class": "Specialist",
+    "Branch": "Hookmaster" ,
+    "Attack_Range": "Ranged",
+    "Position": ["High ground","Ground"],
+    "Gender": "Female",
+    "Race": "Feline",
+    "Faction": "Karlan Trade"
+}

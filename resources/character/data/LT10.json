@@ -1,0 +1,12 @@
+{
+    "Id": "LT10",
+    "Name": "Enforcer",
+    "Rarity": 5,
+    "Class": "Specialist",
+    "Branch": "Push stroker" ,
+    "Attack_Range": "Melee",
+    "Position": ["High ground","Ground"],
+    "Gender": "Male",
+    "Race": "Sankta",
+    "Faction": "Laterano"
+}

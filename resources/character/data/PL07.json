@@ -1,0 +1,12 @@
+{
+    "Id": "PL07",
+    "Name": "Texas the Omertosa",
+    "Rarity": 6,
+    "Class": "Specialist",
+    "Branch": "Executor" ,
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Lupo",
+    "Faction": "Penguin Logistics"
+}

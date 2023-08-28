@@ -1,0 +1,12 @@
+{
+    "Id": "HK09",
+    "Name": "Kazemaru",
+    "Rarity": 5,
+    "Class": "Specialist",
+    "Branch": "Dollkeeper" ,
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Feline",
+    "Faction": "Higashi"
+}

@@ -1,0 +1,12 @@
+{
+    "Id": "LM14",
+    "Name": "Jaye",
+    "Rarity": 4,
+    "Class": "Specialist",
+    "Branch": "Merchant" ,
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Male",
+    "Race": "Ursus",
+    "Faction": "Lungmen"
+}

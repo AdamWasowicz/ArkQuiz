@@ -1,0 +1,12 @@
+{
+    "Id": "R109",
+    "Name": "Phantom",
+    "Rarity": 6,
+    "Class": "Specialist",
+    "Branch": "Executor" ,
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Male",
+    "Race": "Feline",
+    "Faction": "Victoria"
+}
