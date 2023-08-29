@@ -1,10 +1,10 @@
 import { urlToIcon } from "@/lib/api-access"
-import { CharacterHeader } from "../../lib/types"
+import { OperatorHeader } from "../../lib/types"
 import Image from "next/image";
 import styles from './searchBarResult.module.scss';
 
 interface ISearchBarResultProps {
-    characterHeader: CharacterHeader
+    characterHeader: OperatorHeader
     onClick: (id: string) => void
 }
 

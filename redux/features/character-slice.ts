@@ -1,8 +1,8 @@
-import { CharacterComparisonResult } from '@/resources/character/lib/types';
+import { OperatorComparisonResult } from '@/resources/character/lib/types';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 export interface ICharacterState {
-    currentGuesses: CharacterComparisonResult[],
+    currentGuesses: OperatorComparisonResult[],
     gameWon: boolean
 }
 
@@ -15,7 +15,7 @@ const CharacterSlice  = createSlice({
     name: 'character',
     initialState,
     reducers: {
-        addGuess(state: ICharacterState, action: PayloadAction<CharacterComparisonResult>) {
+        addGuess(state: ICharacterState, action: PayloadAction<OperatorComparisonResult>) {
             state.currentGuesses = [action.payload, ...state.currentGuesses]
         },
 

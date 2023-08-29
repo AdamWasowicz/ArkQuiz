@@ -1,9 +1,9 @@
-export interface CharacterHeader {
+export interface OperatorHeader {
     Id: string,
     Name: string
 }
 
-export interface CharacterData {
+export interface OperatorData {
     Rarity: number,
     Class: string,
     Branch: string
@@ -14,7 +14,7 @@ export interface CharacterData {
     Faction: string
 }
 
-export class Character implements CharacterHeader, CharacterData{
+export class Operator implements OperatorHeader, OperatorData{
     Id: string = "";
     Name: string = "";
 
@@ -27,14 +27,14 @@ export class Character implements CharacterHeader, CharacterData{
     Race: string | string[] = [];
     Faction: string = "";
 
-    public getCharacterHeader = (): CharacterHeader => {
+    public getOperatorHeader = (): OperatorHeader => {
         return {
             Id: this.Id,
             Name: this.Name
         }
     }
 
-    public getCharacterData = (): CharacterData => {
+    public getOperatorData = (): OperatorData => {
         return {
             Rarity: this.Rarity,
             Class: this.Class,
@@ -48,10 +48,10 @@ export class Character implements CharacterHeader, CharacterData{
     }
 }
 
-export type CharacterHeaderMap = Map<string, CharacterHeader[]>
+export type OperatorHeaderMap = Map<string, OperatorHeader[]>
 
-export type CharacterComparisonResult = {
-    character: Character;
+export type OperatorComparisonResult = {
+    operator: Operator;
     isCorrect: boolean;
     differences: number[]
 }

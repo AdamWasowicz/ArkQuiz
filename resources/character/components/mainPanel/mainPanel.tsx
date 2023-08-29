@@ -22,13 +22,13 @@ const MainPanel: React.FC<IMainPanelProps> = (props) => {
 
                     <Image
                         className={styles.image}
-                        src={urlToIcon(window.location.href,guesses[0].character.Id)}
-                        alt={guesses[0].character.Id}
+                        src={urlToIcon(window.location.href,guesses[0].operator.Id)}
+                        alt={guesses[0].operator.Id}
                         width={180}
                         height={180}
                     />
 
-                    <h4 className={styles.operatorName}>{guesses[0].character.Name}</h4>
+                    <h4 className={styles.operatorName}>{guesses[0].operator.Name}</h4>
 
                     <p className={styles.resultP}>This operator took you {guesses.length} guesses</p>
                 </div>

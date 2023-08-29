@@ -1,10 +1,10 @@
 import { urlToIcon } from "@/lib/api-access";
-import { Character } from "../../lib/types";
+import { Operator } from "../../lib/types";
 import Image from "next/image";
 import styles from './guessResultRow.module.scss'
 
 interface ICharacterGuessResultRowProps {
-    characterData: Character,
+    characterData: Operator,
     diffrenceArray: number[]
 }
 

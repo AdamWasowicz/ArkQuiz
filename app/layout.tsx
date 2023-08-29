@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import React from 'react'
 import '../styles/globals.scss'
 import Footer from '@/components/footer/footer'
+import Director from '@/components/director/director'
 
 export const metadata: Metadata = {
   title: 'ArkQuiz',
@@ -13,9 +14,13 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <html lang="en">
       <body>
-        <ReduxProvider>{children}</ReduxProvider>
+        <ReduxProvider>
+          <Director>
+            {children}
 
-        <Footer/>
+            <Footer/>
+          </Director>
+        </ReduxProvider>
       </body>
     </html>
   )

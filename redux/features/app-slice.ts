@@ -1,9 +1,9 @@
-import { CharacterComparisonResult } from '@/resources/character/lib/types';
+import { OperatorComparisonResult } from '@/resources/character/lib/types';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 export interface IAppState {
     searchBarValue: string,
-    currentGuesses: CharacterComparisonResult[],
+    currentGuesses: OperatorComparisonResult[],
     characterGuessWon: boolean
 }
 

@@ -1,11 +1,9 @@
-import { Character, CharacterHeader, CharacterHeaderMap, CharacterComparisonResult } from "./types";
+import { Operator, OperatorHeader, OperatorHeaderMap, OperatorComparisonResult } from "./types";
 import path from 'path';
 import { getAllFileNamesInDirectory, readJson, doesFileExist } from "@/lib/filesystem";
 import { 
     EXTERNAL_PATH_TO_CHARACTER_ICONS,
     LOCAL_PATH_TO_CHARACTER_ICONS, 
-    EXTERNAL_PATH_TO_CHARACTER_SPLASH, 
-    LOCAL_PATH_TO_CHARACTER_SPLASH,
     PATH_TO_CHARACTER_DATA, 
 } from "@/lib/paths";
 
@@ -13,7 +11,6 @@ import {
 const imageFormat = '.webp';
 const characterDataFormat = '.json';
 const localPathToCharacters = path.join(process.cwd(), ...PATH_TO_CHARACTER_DATA);
-const pathToCharacterSplash = path.join(...EXTERNAL_PATH_TO_CHARACTER_SPLASH)
 const pathToCharacterIcon = path.join(...EXTERNAL_PATH_TO_CHARACTER_ICONS)
 
 
@@ -23,27 +20,27 @@ const pathToCharacterIcon = path.join(...EXTERNAL_PATH_TO_CHARACTER_ICONS)
  * @param id is unique string for each character (ex. R001 is Amiya).
  * @returns Character with that id
  */
-export const getCharacterById = (id: string): Character => {
+export const getOperatorById = (id: string): Operator => {
     const fileExist = doesFileExist(path.join(localPathToCharacters, id + characterDataFormat))
     if (fileExist == false) {
         throw new Error(`File ${id + characterDataFormat} not found`)
     }
 
-    const character = readJson(path.join(localPathToCharacters, id + characterDataFormat)) as Character;
+    const character = readJson(path.join(localPathToCharacters, id + characterDataFormat)) as Operator;
     return character;
 }
 
 /**
  * @returns array of CharacterHeader for all characters.
  */
-export const getAllCharacterHeaders = (): CharacterHeader[] => {
+export const getAllOperatorHeaders = (): OperatorHeader[] => {
     const fileNames: string[] = getAllFileNamesInDirectory(localPathToCharacters);
 
-    const characterHeaders: CharacterHeader[] = [];
+    const characterHeaders: OperatorHeader[] = [];
     fileNames.forEach(file => {
-        const character = readJson(path.join(localPathToCharacters, file)) as Character;
+        const character = readJson(path.join(localPathToCharacters, file)) as Operator;
 
-        const ch: CharacterHeader = {
+        const ch: OperatorHeader = {
             Id: character.Id,
             Name: character.Name,
         }
@@ -57,26 +54,9 @@ export const getAllCharacterHeaders = (): CharacterHeader[] => {
 /**
  * 
  * @param id is unique string for each character (ex. R001 is Amiya).
- * @returns route for character splash art, you may need to add '/' for nextjs's Image component
- */
-export const getCharacterSplashRoute = (id: string): string => {
-    const fullPath = path.join(process.cwd(), pathToCharacterSplash, id + imageFormat)
-    const fileExist = doesFileExist(fullPath)
-    
-    if (fileExist == false) {
-        throw new Error(`Splash ${fullPath} not found`)
-    }
-
-    const route = path.join(...LOCAL_PATH_TO_CHARACTER_SPLASH, id + imageFormat);
-    return route;
-}
-
-/**
- * 
- * @param id is unique string for each character (ex. R001 is Amiya).
  * @returns route for character icon art, you may need to add '/' for nextjs's Image component
  */
-export const getCharacterIconRoute = (id: string): string => {
+export const getRouteToOperatorIcon = (id: string): string => {
     const fileExist = doesFileExist(path.join(process.cwd(), pathToCharacterIcon, id + imageFormat))
     
     if (fileExist == false) {
@@ -90,7 +70,7 @@ export const getCharacterIconRoute = (id: string): string => {
 /**
  * @returns array of FileNames, they are in format `ID.json`
  */
-export const getAllCharactersFileNames = (): string[] => {
+export const getAllOperatorFileNames = (): string[] => {
     const fileNames: string[] = getAllFileNamesInDirectory(localPathToCharacters);
     return fileNames;
 }
@@ -98,11 +78,11 @@ export const getAllCharactersFileNames = (): string[] => {
 /**
  * @returns Id of today character
  */
-export const getTodayCharacterId = (date: Date): string => {
+export const getDayOperatorId = (date: Date): string => {
     const seed: number = date.getMonth() * date.getDate() + date.getDate()
 
     // Character data
-    const characters: string[] = getAllCharactersFileNames();
+    const characters: string[] = getAllOperatorFileNames();
     const amountOfCharacters = characters.length;
 
     const indexOfCharacterArray = seed % amountOfCharacters;
@@ -112,9 +92,9 @@ export const getTodayCharacterId = (date: Date): string => {
     return id;
 }
 
-export const getAllCharactersHeaderMap = (): CharacterHeaderMap => {
-    const headerMap: CharacterHeaderMap = new Map<string, CharacterHeader[]>();
-    const charactersHeaders = getAllCharacterHeaders();
+export const getOperatorHeaderMap = (): OperatorHeaderMap => {
+    const headerMap: OperatorHeaderMap = new Map<string, OperatorHeader[]>();
+    const charactersHeaders = getAllOperatorHeaders();
 
     charactersHeaders.forEach(header => {
         const firstLetterOfName = header.Name[0]
@@ -132,14 +112,14 @@ export const getAllCharactersHeaderMap = (): CharacterHeaderMap => {
     return headerMap;
 }
 
-export const getCharacterHeaderById = (id: string): CharacterHeader => {
-    return getCharacterById(id).getCharacterHeader();
+export const getOperatorHeader = (id: string): OperatorHeader => {
+    return getOperatorById(id).getOperatorHeader();
 }
 
-export const compareTwoCharacters = (originalId: string, comparedId: string): CharacterComparisonResult => {
+export const compareTwoOperators = (originalId: string, comparedId: string): OperatorComparisonResult => {
     // Get characters data
-    const oc: Character = getCharacterById(originalId);
-    const cc: Character = getCharacterById(comparedId);
+    const oc: Operator = getOperatorById(originalId);
+    const cc: Operator = getOperatorById(comparedId);
 
     // Compare
     const differencesArray: number[] = [];
@@ -149,14 +129,14 @@ export const compareTwoCharacters = (originalId: string, comparedId: string): Ch
 
     keys.forEach((key) => {
         if (key != 'Id' && key !== 'Name') {
-            differencesArray.push(compareTwoCharactersComparer(data1.get(key as string), data2.get(key as string)))
+            differencesArray.push(compareTwoOperatorsComparer(data1.get(key as string), data2.get(key as string)))
         }
     })
 
     const indexOfNotCorrectAnswer = differencesArray.findIndex((item) => {return item < 1});
 
-    const outputObj: CharacterComparisonResult = {
-        character: cc,
+    const outputObj: OperatorComparisonResult = {
+        operator: cc,
         differences: differencesArray,
         isCorrect: indexOfNotCorrectAnswer === -1 ? true : false
     }
@@ -164,7 +144,7 @@ export const compareTwoCharacters = (originalId: string, comparedId: string): Ch
     return outputObj;
 }
 
-const compareTwoCharactersComparer = (t1: unknown, t2: unknown): number => {
+const compareTwoOperatorsComparer = (t1: unknown, t2: unknown): number => {
     //  1 means correct
     //  0 means partial
     // -1 means wrong
