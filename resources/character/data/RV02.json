@@ -1,0 +1,12 @@
+{
+    "Id": "RV02",
+    "Name": "Bagpipe",
+    "Rarity": 6,
+    "Class": "Vanguard",
+    "Branch": "Charger",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Vouivre",
+    "Faction": "Victoria"
+}

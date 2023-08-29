@@ -1,0 +1,12 @@
+{
+    "Id": "HT03",
+    "Name": "Reed",
+    "Rarity": 5,
+    "Class": "Vanguard",
+    "Branch": "Charger",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Draco",
+    "Faction": "Victoria"
+}

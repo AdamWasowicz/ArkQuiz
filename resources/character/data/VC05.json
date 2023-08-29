@@ -1,0 +1,12 @@
+{
+    "Id": "VC05",
+    "Name": "Grani",
+    "Rarity": 5,
+    "Class": "Vanguard",
+    "Branch": "Charger",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Kuranta",
+    "Faction": "Victoria"
+}

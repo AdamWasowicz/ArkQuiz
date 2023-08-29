@@ -1,0 +1,12 @@
+{
+    "Id": "SW02",
+    "Name": "Scavenger",
+    "Rarity": 4,
+    "Class": "Vanguard",
+    "Branch": "Pioneer",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Zalak",
+    "Faction": "S.W.E.E.P."
+}

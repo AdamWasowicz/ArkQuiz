@@ -1,0 +1,12 @@
+{
+    "Id": "LT05",
+    "Name": "Plume",
+    "Rarity": 3,
+    "Class": "Vanguard",
+    "Branch": "Charger",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Liberi",
+    "Faction": "Laterano"
+}

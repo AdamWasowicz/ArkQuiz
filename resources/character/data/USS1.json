@@ -1,0 +1,12 @@
+{
+    "Id": "USS1",
+    "Name": "Zima",
+    "Rarity": 5,
+    "Class": "Vanguard",
+    "Branch": "Pioneer",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Ursus",
+    "Faction": "Ursus Student Self-Governing Group"
+}

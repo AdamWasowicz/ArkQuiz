@@ -1,0 +1,12 @@
+{
+    "Id": "RB12",
+    "Name": "Blacknight",
+    "Rarity": 5,
+    "Class": "Vanguard",
+    "Branch": "Tactician",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Savra",
+    "Faction": "Rim Billiton"
+}

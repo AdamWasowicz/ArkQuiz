@@ -1,0 +1,12 @@
+{
+    "Id": "PA11",
+    "Name": "Fang",
+    "Rarity": 3,
+    "Class": "Vanguard",
+    "Branch": "Pioneer",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Kuranta",
+    "Faction": "Op Reserve A1"
+}

@@ -1,0 +1,12 @@
+{
+    "Id": "SR26",
+    "Name": "Chiave",
+    "Rarity": 5,
+    "Class": "Vanguard",
+    "Branch": "Pioneer",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Male",
+    "Race": "Vulpo",
+    "Faction": "Chiave's Gang"
+}

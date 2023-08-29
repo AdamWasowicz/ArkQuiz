@@ -1,0 +1,12 @@
+{
+    "Id": "JC04",
+    "Name": "Courier",
+    "Rarity": 4,
+    "Class": "Vanguard",
+    "Branch": "Pioneer",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Male",
+    "Race": "Itra",
+    "Faction": "Karlan Trade"
+}

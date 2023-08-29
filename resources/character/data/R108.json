@@ -1,0 +1,12 @@
+{
+    "Id": "R108",
+    "Name": "Myrtle",
+    "Rarity": 4,
+    "Class": "Vanguard",
+    "Branch": "Standard Bearer",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Durin",
+    "Faction": "Rhodes Island"
+}

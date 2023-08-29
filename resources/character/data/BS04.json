@@ -1,0 +1,12 @@
+{
+    "Id": "BS04",
+    "Name": "Vanilla",
+    "Rarity": 3,
+    "Class": "Vanguard",
+    "Branch": "Pioneer",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Vouivre",
+    "Faction": "Blacksteel"
+}

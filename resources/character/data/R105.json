@@ -1,0 +1,12 @@
+{
+    "Id": "R105",
+    "Name": "Vigna",
+    "Rarity": 4,
+    "Class": "Vanguard",
+    "Branch": "Charger",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Sarkaz",
+    "Faction": "Columbia"
+}

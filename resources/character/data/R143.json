@@ -1,0 +1,12 @@
+{
+    "Id": "R143",
+    "Name": "Cantabile",
+    "Rarity": 5,
+    "Class": "Vanguard",
+    "Branch": "Agent",
+    "Attack_Range": ["Melee", "Ranged"],
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Liberi",
+    "Faction": "Rhodes Island"
+}

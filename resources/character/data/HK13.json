@@ -1,0 +1,12 @@
+{
+    "Id": "HK13",
+    "Name": "Saga",
+    "Rarity": 6,
+    "Class": "Vanguard",
+    "Branch": "Pioneer",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Perro",
+    "Faction": "Higashi"
+}

@@ -1,0 +1,12 @@
+{
+    "Id": "KZ11",
+    "Name": "Flametail",
+    "Rarity": 6,
+    "Class": "Vanguard",
+    "Branch": "Pioneer",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Zalak",
+    "Faction": "Pinus Sylvestris"
+}

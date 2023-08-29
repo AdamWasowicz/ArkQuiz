@@ -1,0 +1,12 @@
+{
+    "Id": "GG01",
+    "Name": "Siege",
+    "Rarity": 6,
+    "Class": "Vanguard",
+    "Branch": "Pioneer",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Aslan",
+    "Faction": "Glasgow"
+}

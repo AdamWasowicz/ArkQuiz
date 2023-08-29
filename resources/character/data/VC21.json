@@ -1,0 +1,12 @@
+{
+    "Id": "VC21",
+    "Name": "Puzzle",
+    "Rarity": 5,
+    "Class": "Vanguard",
+    "Branch": "Agent",
+    "Attack_Range": ["Melee", "Ranged"],
+    "Position": "Ground",
+    "Gender": "Male",
+    "Race": "Vouivre",
+    "Faction": "Victoria"
+}

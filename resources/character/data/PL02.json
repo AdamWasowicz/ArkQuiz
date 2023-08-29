@@ -1,0 +1,12 @@
+{
+    "Id": "PL02",
+    "Name": "Texas",
+    "Rarity": 5,
+    "Class": "Vanguard",
+    "Branch": "Pioneer",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Lupo",
+    "Faction": "Penguin Logistics"
+}

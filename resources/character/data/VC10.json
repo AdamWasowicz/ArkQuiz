@@ -1,0 +1,12 @@
+{
+    "Id": "VC10",
+    "Name": "Saileach",
+    "Rarity": 6,
+    "Class": "Vanguard",
+    "Branch": "Standard Bearer",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Vouivre",
+    "Faction": "Victoria"
+}
