@@ -1,15 +1,15 @@
-import { urlToIcon } from "@/lib/api-access";
+import { urlToIcon } from "@/lib/apiAccess";
 import { Operator } from "../../lib/types";
 import Image from "next/image";
 import styles from './guessResultRow.module.scss'
 
-interface ICharacterGuessResultRowProps {
-    characterData: Operator,
+interface IOperatorGuessResultRowProps {
+    operatorData: Operator,
     diffrenceArray: number[]
 }
 
-const CharacterGuessResultRow: React.FC<ICharacterGuessResultRowProps> = (props) => {
-    const { characterData, diffrenceArray } = props;
+const OperatorGuessResultRow: React.FC<IOperatorGuessResultRowProps> = (props) => {
+    const { operatorData, diffrenceArray } = props;
 
     const getClassName = (value: number): string => {
         if (value === 1) return styles.correct;
@@ -26,22 +26,22 @@ const CharacterGuessResultRow: React.FC<ICharacterGuessResultRowProps> = (props)
     }
 
     const dataToDisplay = [
-        characterData.Rarity,
-        characterData.Class,
-        characterData.Branch,
-        characterData.Attack_Range,
-        characterData.Position,
-        characterData.Gender,
-        characterData.Race,
-        characterData.Faction
+        operatorData.Rarity,
+        operatorData.Class,
+        operatorData.Branch,
+        operatorData.Attack_Range,
+        operatorData.Position,
+        operatorData.Gender,
+        operatorData.Race,
+        operatorData.Faction
     ]
 
     return (
         <tr className={styles.resultRow}>
             <td className={styles.operatorColumn}>
                 <Image 
-                    src={urlToIcon(window.location.href, characterData.Id)} 
-                    alt={characterData.Id}
+                    src={urlToIcon(window.location.href, operatorData.Id)} 
+                    alt={operatorData.Id}
                     height={100}
                     width={100}
                     className={styles.operatorColumn}
@@ -61,4 +61,4 @@ const CharacterGuessResultRow: React.FC<ICharacterGuessResultRowProps> = (props)
     )
 }
 
-export default CharacterGuessResultRow;
+export default OperatorGuessResultRow;

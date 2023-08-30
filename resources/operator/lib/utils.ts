@@ -2,68 +2,68 @@ import { Operator, OperatorHeader, OperatorHeaderMap, OperatorComparisonResult }
 import path from 'path';
 import { getAllFileNamesInDirectory, readJson, doesFileExist } from "@/lib/filesystem";
 import { 
-    EXTERNAL_PATH_TO_CHARACTER_ICONS,
-    LOCAL_PATH_TO_CHARACTER_ICONS, 
-    PATH_TO_CHARACTER_DATA, 
+    EXTERNAL_PATH_TO_OPERATOR_ICONS,
+    LOCAL_PATH_TO_OPERATOR_ICONS, 
+    PATH_TO_OPERATOR_DATA, 
 } from "@/lib/paths";
 
 // Const
 const imageFormat = '.webp';
-const characterDataFormat = '.json';
-const localPathToCharacters = path.join(process.cwd(), ...PATH_TO_CHARACTER_DATA);
-const pathToCharacterIcon = path.join(...EXTERNAL_PATH_TO_CHARACTER_ICONS)
+const operatorDataFormat = '.json';
+const localPathToOperators = path.join(process.cwd(), ...PATH_TO_OPERATOR_DATA);
+const pathToOperatorIcon = path.join(...EXTERNAL_PATH_TO_OPERATOR_ICONS)
 
 
 // Functions
 /**
  * 
- * @param id is unique string for each character (ex. R001 is Amiya).
- * @returns Character with that id
+ * @param id is unique string for each operator (ex. R001 is Amiya).
+ * @returns Operator with that id
  */
 export const getOperatorById = (id: string): Operator => {
-    const fileExist = doesFileExist(path.join(localPathToCharacters, id + characterDataFormat))
+    const fileExist = doesFileExist(path.join(localPathToOperators, id + operatorDataFormat))
     if (fileExist == false) {
-        throw new Error(`File ${id + characterDataFormat} not found`)
+        throw new Error(`File ${id + operatorDataFormat} not found`)
     }
 
-    const character = readJson(path.join(localPathToCharacters, id + characterDataFormat)) as Operator;
-    return character;
+    const operator = readJson(path.join(localPathToOperators, id + operatorDataFormat)) as Operator;
+    return operator;
 }
 
 /**
- * @returns array of CharacterHeader for all characters.
+ * @returns array of OperatorHeader for all operators.
  */
 export const getAllOperatorHeaders = (): OperatorHeader[] => {
-    const fileNames: string[] = getAllFileNamesInDirectory(localPathToCharacters);
+    const fileNames: string[] = getAllFileNamesInDirectory(localPathToOperators);
 
-    const characterHeaders: OperatorHeader[] = [];
+    const operatorHeaders: OperatorHeader[] = [];
     fileNames.forEach(file => {
-        const character = readJson(path.join(localPathToCharacters, file)) as Operator;
+        const operator = readJson(path.join(localPathToOperators, file)) as Operator;
 
         const ch: OperatorHeader = {
-            Id: character.Id,
-            Name: character.Name,
+            Id: operator.Id,
+            Name: operator.Name,
         }
 
-        characterHeaders.push(ch);
+        operatorHeaders.push(ch);
     })
 
-    return characterHeaders;
+    return operatorHeaders;
 }
 
 /**
  * 
- * @param id is unique string for each character (ex. R001 is Amiya).
- * @returns route for character icon art, you may need to add '/' for nextjs's Image component
+ * @param id is unique string for each operator (ex. R001 is Amiya).
+ * @returns route for operator icon art, you may need to add '/' for nextjs's Image component
  */
 export const getRouteToOperatorIcon = (id: string): string => {
-    const fileExist = doesFileExist(path.join(process.cwd(), pathToCharacterIcon, id + imageFormat))
+    const fileExist = doesFileExist(path.join(process.cwd(), pathToOperatorIcon, id + imageFormat))
     
     if (fileExist == false) {
         throw new Error(`Icon ${id + imageFormat} not found`)
     }
 
-    const route = path.join(...LOCAL_PATH_TO_CHARACTER_ICONS, id + imageFormat);
+    const route = path.join(...LOCAL_PATH_TO_OPERATOR_ICONS, id + imageFormat);
     return route;
 }
 
@@ -71,41 +71,41 @@ export const getRouteToOperatorIcon = (id: string): string => {
  * @returns array of FileNames, they are in format `ID.json`
  */
 export const getAllOperatorFileNames = (): string[] => {
-    const fileNames: string[] = getAllFileNamesInDirectory(localPathToCharacters);
+    const fileNames: string[] = getAllFileNamesInDirectory(localPathToOperators);
     return fileNames;
 }
 
 /**
- * @returns Id of today character
+ * @returns Id of that day operator
  */
 export const getDayOperatorId = (date: Date): string => {
     const seed: number = date.getMonth() * date.getDate() + date.getDate()
 
-    // Character data
-    const characters: string[] = getAllOperatorFileNames();
-    const amountOfCharacters = characters.length;
+    // Operator data
+    const operator: string[] = getAllOperatorFileNames();
+    const amountOfOperators = operator.length;
 
-    const indexOfCharacterArray = seed % amountOfCharacters;
-    // characters array has filenames in ID.json format so we need ignore .json
-    const id = characters[indexOfCharacterArray].split('.')[0];
+    const indexOfOperatorArray = seed % amountOfOperators;
+    // Operator array has filenames in ID.json format so we need ignore .json
+    const id = operator[indexOfOperatorArray].split('.')[0];
 
     return id;
 }
 
 export const getOperatorHeaderMap = (): OperatorHeaderMap => {
     const headerMap: OperatorHeaderMap = new Map<string, OperatorHeader[]>();
-    const charactersHeaders = getAllOperatorHeaders();
+    const operatorHeaders = getAllOperatorHeaders();
 
-    charactersHeaders.forEach(header => {
+    operatorHeaders.forEach(header => {
         const firstLetterOfName = header.Name[0]
-        const characterHeaderArray = headerMap.get(firstLetterOfName)
+        const operatorHeaderArray = headerMap.get(firstLetterOfName)
 
         // If there is no array yet, then create it and populate with first header.
-        if (typeof characterHeaderArray === 'undefined') {
+        if (typeof operatorHeaderArray === 'undefined') {
             headerMap.set(firstLetterOfName, [header])
         }
         else {
-            characterHeaderArray.push(header);
+            operatorHeaderArray.push(header);
         }
     })
 
@@ -117,7 +117,7 @@ export const getOperatorHeader = (id: string): OperatorHeader => {
 }
 
 export const compareTwoOperators = (originalId: string, comparedId: string): OperatorComparisonResult => {
-    // Get characters data
+    // Get operator data
     const oc: Operator = getOperatorById(originalId);
     const cc: Operator = getOperatorById(comparedId);
 

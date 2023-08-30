@@ -1,13 +1,13 @@
 "use client"
-import { OperatorHeaderMap } from "@/resources/character/lib/types";
+import { OperatorHeaderMap } from "@/resources/operator/lib/types";
 import SearchBar from "../search-bar/searchBar";
-import CharacterGuessResult from "@/resources/character/components/guessResult/guessResult";
+import OperatorGuessResult from "@/resources/operator/components/guess-result/guessResult";
 import { useAppDispatch, useAppSelector } from "@/redux/hooks";
 import styles from './operatorGuessPage.module.scss';
-import MainPanel from "@/resources/character/components/mainPanel/mainPanel";
+import MainPanel from "@/resources/operator/components/main-panel/mainPanel";
 import { ChangeEvent, useEffect, useState } from "react";
-import { submitCharacterGuess } from "@/lib/api-access";
-import { addGuess, setGameWon, setGuesses } from "@/redux/features/character-slice";
+import { submitOperatorGuess } from "@/lib/apiAccess";
+import { addGuess, setGameWon, setGuesses } from "@/redux/features/operator-slice";
 import useUtils from "./operatorGuessPage.utils";
 
 interface IOperatorGuessPageProps {
@@ -17,8 +17,8 @@ interface IOperatorGuessPageProps {
 const OperatorGuessPage: React.FC<IOperatorGuessPageProps> = (props) => {
     const { operatorHeaderMap } = props;
 
-    const guesses = useAppSelector(state => state.character.currentGuesses)
-    const operatorGuessWon = useAppSelector(state => state.character.gameWon);
+    const guesses = useAppSelector(state => state.operator.currentGuesses)
+    const operatorGuessWon = useAppSelector(state => state.operator.gameWon);
     const dispatch = useAppDispatch();
     const utils = useUtils();
     
@@ -27,11 +27,11 @@ const OperatorGuessPage: React.FC<IOperatorGuessPageProps> = (props) => {
     const onFormSubmit = async (event: React.MouseEvent<HTMLElement>) => {
         event.preventDefault();
         
-        const selectedCharacterHeader = operatorHeaderMap.get(textInputValue.toUpperCase()[0])?.find(item => item.Name.toUpperCase() === textInputValue.toUpperCase())
+        const selectedOperatorHeader = operatorHeaderMap.get(textInputValue.toUpperCase()[0])?.find(item => item.Name.toUpperCase() === textInputValue.toUpperCase())
         
-        if (typeof selectedCharacterHeader !== 'undefined') {
+        if (typeof selectedOperatorHeader !== 'undefined') {
             utils.saveOperatorDateToStorage();
-            const res = await submitCharacterGuess(selectedCharacterHeader.Id)
+            const res = await submitOperatorGuess(selectedOperatorHeader.Id)
             setTextInputValue('')
 
             await utils.saveCurrentGuessesToStorage([res ,...guesses]);
@@ -97,7 +97,7 @@ const OperatorGuessPage: React.FC<IOperatorGuessPageProps> = (props) => {
             <div className={styles.results}>
             {
                 guesses.length > 0 &&
-                <CharacterGuessResult guesses={guesses}/>
+                <OperatorGuessResult guesses={guesses}/>
             }
             </div>
         </div>

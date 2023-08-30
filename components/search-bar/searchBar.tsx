@@ -1,9 +1,9 @@
 // EXPERIMENTAL
 "use client"
-import { OperatorHeader, OperatorHeaderMap } from "@/resources/character/lib/types"
+import { OperatorHeader, OperatorHeaderMap } from "@/resources/operator/lib/types"
 import styles from './searchBar.module.scss';
 import { ChangeEvent } from "react";
-import SearchBarResult from "@/resources/character/components/searchBar/searchBarResult";
+import SearchBarResult from "@/resources/operator/components/search-bar/searchBarResult";
 
 interface ISearchBar {
     operatorHeadersMap: OperatorHeaderMap,
@@ -23,7 +23,7 @@ const SearchBar: React.FC<ISearchBar> = (props) => {
         onResultClick 
     } = props;
 
-    const filterCharactersHeaders = (chm: OperatorHeaderMap): OperatorHeader[] => {
+    const filterOperatorHeaders = (chm: OperatorHeaderMap): OperatorHeader[] => {
         if (inputTextValue.length > 0) {
 
             const values = chm.get(inputTextValue[0].toUpperCase())
@@ -35,9 +35,9 @@ const SearchBar: React.FC<ISearchBar> = (props) => {
                 filteredValues = [];
             }
 
-            const guessedCharactersNames = currentGuessedOperatorNames
+            const guessedOperatorNames = currentGuessedOperatorNames
             filteredValues = filteredValues.filter((item) => {
-                return guessedCharactersNames.includes(item.Name)
+                return guessedOperatorNames.includes(item.Name)
                     ? false
                     : true;
             })
@@ -50,7 +50,7 @@ const SearchBar: React.FC<ISearchBar> = (props) => {
     }
 
 
-    const filteredCharacterHeaders = filterCharactersHeaders(operatorHeadersMap);
+    const filteredOperatorHeaders = filterOperatorHeaders(operatorHeadersMap);
 
     return (
         <div className={styles.searchBar}>
@@ -75,11 +75,11 @@ const SearchBar: React.FC<ISearchBar> = (props) => {
                 <div className={styles.searchResult}>
                     <div className={styles.abs}>
                     {
-                        filteredCharacterHeaders.length > 0 &&
-                        filteredCharacterHeaders.map((item, key) => {
+                        filteredOperatorHeaders.length > 0 &&
+                        filteredOperatorHeaders.map((item, key) => {
                             return <SearchBarResult 
                                 key={key} 
-                                characterHeader={item}
+                                operatorHeader={item}
                                 onClick={onResultClick}
                             />
                         })

@@ -1,4 +1,4 @@
-import { OperatorComparisonResult } from "@/resources/character/lib/types"
+import { OperatorComparisonResult } from "@/resources/operator/lib/types"
 
 const useUtils = () => {
     const OPERATOR_CURRENT_GUESSES = "OPERATOR_CURRENT_GUESSES";

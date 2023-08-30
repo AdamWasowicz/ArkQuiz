@@ -1,13 +1,13 @@
-import CharacterGuessResultRow from "./guessResultRow";
+import OperatorGuessResultRow from "./guessResultRow";
 import { OperatorComparisonResult } from "../../lib/types";
 import styles from './guessResult.module.scss';
 
-interface ICharacterGuessResultPorps {
+interface IOperatorGuessResultProps {
     guesses: OperatorComparisonResult[]
     className?: string | string[]
 }
 
-const CharacterGuessResult: React.FC<ICharacterGuessResultPorps> = (props) => {
+const OperatorGuessResult: React.FC<IOperatorGuessResultProps> = (props) => {
     const { guesses } = props;
 
     return (
@@ -28,8 +28,8 @@ const CharacterGuessResult: React.FC<ICharacterGuessResultPorps> = (props) => {
                 {
                     guesses.length > 0 &&
                     guesses.map((item, key) => {
-                        return <CharacterGuessResultRow
-                            characterData={item.operator}
+                        return <OperatorGuessResultRow
+                            operatorData={item.operator}
                             diffrenceArray={item.differences}
                             key={key}
                         />
@@ -40,4 +40,4 @@ const CharacterGuessResult: React.FC<ICharacterGuessResultPorps> = (props) => {
     )
 }
 
-export default CharacterGuessResult;
+export default OperatorGuessResult;

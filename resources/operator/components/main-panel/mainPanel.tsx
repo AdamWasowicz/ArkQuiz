@@ -1,6 +1,6 @@
 import { useAppSelector } from '@/redux/hooks';
 import styles from './mainPanel.module.scss';
-import { urlToIcon } from '@/lib/api-access';
+import { urlToIcon } from '@/lib/apiAccess';
 import Image from 'next/image';
 
 interface IMainPanelProps {
@@ -8,8 +8,8 @@ interface IMainPanelProps {
 }
 
 const MainPanel: React.FC<IMainPanelProps> = (props) => {
-    const guesses = useAppSelector(state => state.character.currentGuesses);
-    const gameWon = useAppSelector(state => state.character.gameWon)
+    const guesses = useAppSelector(state => state.operator.currentGuesses);
+    const gameWon = useAppSelector(state => state.operator.gameWon)
 
     return (
         <div className={`${styles.mainPanel} ${props.className}`}>

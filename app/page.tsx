@@ -1,5 +1,5 @@
 import OperatorGuessPage from "@/components/operator-guess/operatorGuessPage";
-import { getOperatorHeaderMap } from "@/resources/character/lib/utils";
+import { getOperatorHeaderMap } from "@/resources/operator/lib/utils";
 
 const Home: React.FC= () => {
   const headers = getOperatorHeaderMap();
