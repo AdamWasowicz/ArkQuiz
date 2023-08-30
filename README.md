@@ -16,7 +16,7 @@ Start dev server using ```npm run dev``` inside project main directory. After de
 ### Operator quiz
 Try to guess the operator with as little guesses as possible. You will get indicator if you have right, wrong or partial thing in each column.
 To make a guess write the name of operator inside input field at the top of screen, you can click operators that satisfy name writen inside input field to auto complete that operator name. After that click button with caption "Guess" to check if you got the right one.
-Game ends when correct operatos was guessed, in that case whole row will be green and button will be disabled.
+Game ends when correct operatos was guessed, in that case whole row will be green.
 
 #### Important
 Game operates on one per day basis, so if you open app again during the same day then operator won't change. Game uses you local day, month and year to determine that day's operator.

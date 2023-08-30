@@ -6,7 +6,7 @@ import { ChangeEvent } from "react";
 import SearchBarResult from "@/resources/character/components/searchBar/searchBarResult";
 
 interface ISearchBar {
-    characterHeadersMap: OperatorHeaderMap,
+    operatorHeadersMap: OperatorHeaderMap,
     guessWon: boolean,
     onInputChange: (event: ChangeEvent<HTMLInputElement>) => void,
     inputTextValue: string
@@ -17,7 +17,7 @@ interface ISearchBar {
 
 const SearchBar: React.FC<ISearchBar> = (props) => {
     const { 
-        characterHeadersMap, guessWon, 
+        operatorHeadersMap, guessWon, 
         onInputChange, inputTextValue, 
         onFormSubmit, currentGuessedOperatorNames,
         onResultClick 
@@ -50,7 +50,7 @@ const SearchBar: React.FC<ISearchBar> = (props) => {
     }
 
 
-    const filteredCharacterHeaders = filterCharactersHeaders(characterHeadersMap);
+    const filteredCharacterHeaders = filterCharactersHeaders(operatorHeadersMap);
 
     return (
         <div className={styles.searchBar}>

@@ -1,4 +1,4 @@
-import CharacterGuessPage from "@/components/character-guess/characterGuessPage";
+import OperatorGuessPage from "@/components/operator-guess/operatorGuessPage";
 import { getOperatorHeaderMap } from "@/resources/character/lib/utils";
 
 const Home: React.FC= () => {
@@ -6,7 +6,7 @@ const Home: React.FC= () => {
   
   return (
     <main>
-      <CharacterGuessPage characterHeaderMap={headers}/>
+      <OperatorGuessPage operatorHeaderMap={headers}/>
     </main>
   )
 }

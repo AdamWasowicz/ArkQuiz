@@ -16,7 +16,11 @@ const CharacterSlice  = createSlice({
     initialState,
     reducers: {
         addGuess(state: ICharacterState, action: PayloadAction<OperatorComparisonResult>) {
-            state.currentGuesses = [action.payload, ...state.currentGuesses]
+            state.currentGuesses = [action.payload, ...state.currentGuesses];
+        },
+
+        setGuesses(state: ICharacterState, action: PayloadAction<OperatorComparisonResult[]>) {
+            state.currentGuesses = action.payload;
         },
 
         setGameWon(state: ICharacterState, action: PayloadAction<boolean>) {
@@ -26,7 +30,7 @@ const CharacterSlice  = createSlice({
 })
 
 export const {
-    addGuess, setGameWon
+    addGuess, setGameWon, setGuesses
 } = CharacterSlice.actions;
 
 export default CharacterSlice.reducer;

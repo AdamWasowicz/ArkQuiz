@@ -26,7 +26,7 @@ export const urlToIcon = (baseUrl: string, id: string): string => {
     return `${baseUrl}${API_ICON_ROUTE}/${id}`
 }
 
-export const submitCharacterGuess = async (id: string, baseUrl: string = window.location.href): Promise<OperatorComparisonResult> => {
+export const submitCharacterGuess = async (id: string, timestamp: Date = new Date(), baseUrl: string = window.location.href): Promise<OperatorComparisonResult> => {
     const axiosClient = axios.create({
         baseURL: baseUrl,
         headers: {
@@ -34,6 +34,6 @@ export const submitCharacterGuess = async (id: string, baseUrl: string = window.
         }
     })
 
-    const response = await axiosClient.post<OperatorComparisonResult>(API_CHARACTER_GUESS, {id: id,})
+    const response = await axiosClient.post<OperatorComparisonResult>(API_CHARACTER_GUESS, {id: id, timestamp: timestamp.toString()})
     return response.data;
 }

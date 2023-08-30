@@ -47,9 +47,11 @@ export const GET_Splash = async (_: Request, { params }: { params: { id: string 
 }
 
 export const POST_Character_Guess = async (req: NextRequest, _: NextResponse): Promise<NextResponse> => {
-    const todayId = getDayOperatorId(new Date());
     const body = await req.json();
     const guess = body.id;
+    const timestamp = body.timestamp;
+
+    const todayId = getDayOperatorId(new Date(timestamp));
 
     if (todayId === guess) {
         const response = new NextResponse(JSON.stringify(compareTwoOperators(todayId, guess)), 
