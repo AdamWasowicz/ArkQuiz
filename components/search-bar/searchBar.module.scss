@@ -1,24 +1,51 @@
 .searchBar {
     // Size and Position
     width: 100%;
+    font-size: 100px;
+    margin-left: auto;
+    margin-right: auto;
 
-    //background-color: red;
+    @media (max-width: 1200px) {
+        //background-color: red;
+        font-size: 90px;
+    }
+    @media (max-width: 1050px) {
+        //background-color: blue;
+        font-size: 80px;
+    }
+    @media (max-width: 900px) {
+        //background-color: green;
+        font-size: 70px;
+    }
 }
 
 .main {
-    width: 60%;
+    width: 70%;
     //background-color: blue;
     margin-left: auto;
     margin-right: auto;
 
     display: flex;
     flex-direction: column;
+
+    @media (max-width: 1200px) {
+        //background-color: red;
+        width: 65%;
+    }
+    @media (max-width: 1050px) {
+        //background-color: blue;
+        width: 75%;
+    }
+    @media (max-width: 900px) {
+        //background-color: green;
+        width: 95%;
+    }
 }
 
 .topPart {
-    position: relative;
     // Size and Position
     width: 100%;
+    position: relative;
 
     // Flexbox
     display: flex;
@@ -33,7 +60,7 @@
 }
 
 .abs {
-    width: 80%;
+    width: 100%;
     max-height: 55vh;
     overflow-y: scroll;
     position: absolute;
@@ -49,17 +76,26 @@
     padding: 10px 20px;
 
     // Text
-    font-family: 'Lato';
+    font-family: var(--TextFont);
     font-weight: 400;
-    font-size: 28px;
+    font-size: 0.28em;
+
+    // Flex
+    flex: 100;
+
+    &:focus {
+        outline: none;
+        border: 2px solid var(--primary-300);
+    }
 }
+
 .button {
     display: inline-block;
     height: 75px;
     width: 20%;
     align-items: center;
     background-clip: padding-box;
-    background-color: #1fbbd0;
+    background-color: var(--primary-500);
     border: 1px solid transparent;
     border-radius: .25rem;
     box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
@@ -68,7 +104,7 @@
     cursor: pointer;
     display: inline-flex;
     font-family: 'Roboto';
-    font-size: 24px;
+    font-size: 0.24em;
     font-weight: 400;
     letter-spacing: 3px;
     justify-content: center;
@@ -84,13 +120,16 @@
     touch-action: manipulation;
     vertical-align: baseline;
 
+    // Flex
+    flex-grow: 10;
+
     &:hover, &:focus {
-        background-color: #00e1ff;
+        background-color: var(--primary-400);
         box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
     }
 
     &:active {
-        background-color: #00e1ff;
+        background-color: var(--primary-400);
         box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
     }
 

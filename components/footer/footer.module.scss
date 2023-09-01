@@ -8,5 +8,7 @@
     text-align: center;
     color: white;
 
-    background-color: rgb(98, 106, 116);
+    // Color
+    background-color: var(--gray-800);
+    border-top: 2px solid var(--primary-900);
 }

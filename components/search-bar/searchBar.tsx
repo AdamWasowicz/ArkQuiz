@@ -3,7 +3,7 @@
 import { OperatorHeader, OperatorHeaderMap } from "@/resources/operator/lib/types"
 import styles from './searchBar.module.scss';
 import { ChangeEvent } from "react";
-import SearchBarResult from "@/resources/operator/components/search-bar/searchBarResult";
+import SearchBarResult from "@/components/search-bar/search-bar-result/searchBarResult";
 
 interface ISearchBar {
     operatorHeadersMap: OperatorHeaderMap,

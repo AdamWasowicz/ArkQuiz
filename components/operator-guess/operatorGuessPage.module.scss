@@ -3,6 +3,11 @@
     width: 100%;
     min-height: 100vh;
     padding: 24px 12px 48px 12px;
+    background: linear-gradient(
+        180deg, 
+        var(--gray-700) 0%,
+        var(--primary-800) 85%, 
+        var(--gray-700) 100%);
 }
 
 .search {
@@ -16,9 +21,14 @@
 
 .results { 
     // Size and Position
-    width: 80%;
+    width: 90%;
     margin-right: auto;
     margin-left: auto;
+
+    @media (max-width: 1200px) {
+        //background-color: red;
+        width: 100%;
+    }
 }
 
 .mainPanel {

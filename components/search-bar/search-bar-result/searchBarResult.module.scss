@@ -12,18 +12,19 @@
     flex-direction: row;
 
     // Color
-    background-color: rgb(91, 93, 99);
+    background-color: var(--gray-700);
     
     // Text
     color: white;
+    font-size: 100px;
 
     // Other
     transition: 0.2s;
 
     &:hover {
         transition: 0.2s;
-        background-color: rgb(109, 112, 123);
-        color: rgb(81, 172, 214);
+        background-color: var(--gray-600);
+        color: var(--primary-500);
     }
 }
 
@@ -47,7 +48,7 @@
     align-items: center;
 
     // Text
-    font-size: 32px;
+    font-size: 0.36em;
     font-family: 'Roboto';
     font-weight: 400;
     letter-spacing: 4px;

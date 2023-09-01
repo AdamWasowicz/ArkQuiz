@@ -2,11 +2,18 @@
     font-family: var(--TextFont);
     font-size: 100px;
     font-weight: 400;
-    max-height: 75px;
 
-    @media (max-width: 600px) {
+    @media (max-width: 1200px) {
+        //background-color: red;
+        font-size: 90px;
+    }
+    @media (max-width: 1050px) {
+        //background-color: blue;
+        font-size: 80px;
+    }
+    @media (max-width: 900px) {
         //background-color: green;
-        font-size: 50px;
+        font-size: 70px;
     }
 }
 
@@ -20,24 +27,20 @@
         background-color: white;
         object-fit: cover;
     }
-
-    @media (max-width: 600px) {
-        //background-color: green;
-        height: 45px;
-    }
 }
 
 .column {
-    // Text
-    font-size: 0.20em;
-    font-weight: 400;
-    max-height: 75px;
-    padding: 10px;
-    overflow-y: hidden;
+    font-size: 0.2em;
 
-    @media (max-width: 600px) {
+    @media (max-width: 1200px) {
+        //background-color: red;
+
+    }
+    @media (max-width: 1050px) {
+        //background-color: blue;
+    }
+    @media (max-width: 900px) {
         //background-color: green;
-        height: 45px;
     }
 }
 

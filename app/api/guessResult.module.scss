@@ -1,15 +1,11 @@
 .table {
     // Size and position
     width: 100%;
-
-    // Color
-    background-color: var(--gray-600);
-    border: 3px solid var(--gray-500);
+    background-color: rgb(70, 65, 65);
+    font-size: 100px;
 
     // Text
     text-align: center;
-    font-size: 100px;
-
 
     @media (max-width: 1200px) {
         //background-color: red;
@@ -26,16 +22,14 @@
 }
 
 .headerRow {
-    // Size and Position
-    height: 40px;
-    width: 20%;
-
     // Text
     color: white;
     font-family: var(--HeaderFont);
-    letter-spacing: 2px;
     font-size: 0.16em;
     font-weight: 300;
+
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
 }
 
 .smallSizedColumn {

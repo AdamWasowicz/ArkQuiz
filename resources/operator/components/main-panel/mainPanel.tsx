@@ -36,7 +36,9 @@ const MainPanel: React.FC<IMainPanelProps> = (props) => {
 
             {
                 gameWon == false &&
-                <h3 className={styles.amountOfGuesses}>Current amount of guesses: <span>{guesses.length}</span></h3>
+                <h3 className={styles.amountOfGuesses}>
+                    Current amount of guesses: <span>{guesses.length}</span>
+                </h3>
             }
         </div>
     )

@@ -1,5 +1,5 @@
 import { urlToIcon } from "@/lib/apiAccess"
-import { OperatorHeader } from "../../lib/types"
+import { OperatorHeader } from "../../../resources/operator/lib/types"
 import Image from "next/image";
 import styles from './searchBarResult.module.scss';
 

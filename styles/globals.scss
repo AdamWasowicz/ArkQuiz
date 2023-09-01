@@ -1,11 +1,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
 :root {
-  --Merriweather: 'Merriweather Sans', sans-serif;
-  --Lato: 'Lato', sans-serif;
+  // Fonts
+  --TitleFont: 'Roboto';
+  --HeaderFont: 'Merriweather Sans';
+  --TextFont: 'Lato';
 
   --disabled: rgb(112, 115, 125);
+
+  // Colors
+  /// Primary
+  --primary-1000: #091532;
+  --primary-900: #122a65;
+  --primary-800: #1b3e97;
+  --primary-700: #2453ca;
+  --primary-600: #2d68fc;
+  --primary-500: #4277fc;
+  --primary-400: #6c95fd;
+  --primary-300: #81a4fd;
+  --primary-200: #abc3fe;
+  --primary-100: #d5e1fe;
+
+  // Gray
+  --gray-1000: #0a0a0a;
+  --gray-900: #141414;
+  --gray-800: #1f1f1f;
+  --gray-700: #292929;
+  --gray-600: #333333;
+  --gray-500: #474747;
+  --gray-400: #707070;
+  --gray-300: #999999;
+  --gray-200: #c2c2c2;
+  --gray-100: #ebebeb;
+
+  // Blue Gray
+  --blueGray-1000: #11111a;
+  --blueGray-900: #212234;
+  --blueGray-800: #32344f;
+  --blueGray-700: #424569;
+  --blueGray-600: #535683;
+  --blueGray-500: #64678f;
+  --blueGray-400: #8789a8;
+  --blueGray-300: #a9abc1;
+  --blueGray-200: #cbccda;
+
+  // Accent
+
+  // Other
+  --correct: #32CD32;
+  --wrong: #FF5349;
+  --partial: #FFA500;
 }
 
 * {

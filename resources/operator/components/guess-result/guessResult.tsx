@@ -14,14 +14,14 @@ const OperatorGuessResult: React.FC<IOperatorGuessResultProps> = (props) => {
         <table className={`${styles.table} ${props.className}`}>
             <tbody>
                 <tr className={styles.headerRow}>
-                    <th className={styles.mediumSizedColumn}>Operator</th>
-                    <th className={styles.mediumSizedColumn}>Rarity</th>
+                    <th className={styles.smallSizedColumn}>Operator</th>
+                    <th className={styles.smallSizedColumn}>Rarity</th>
                     <th className={styles.mediumSizedColumn}>Class</th>
                     <th className={styles.mediumSizedColumn}>Branch</th>
-                    <th className={styles.mediumSizedColumn}>Attack Range</th>
+                    <th className={styles.bigSizedColumn}>Attack Range</th>
                     <th className={styles.mediumSizedColumn}>Position</th>
                     <th className={styles.mediumSizedColumn}>Gender</th>
-                    <th className={styles.bigSizedColumn}>Race</th>
+                    <th className={styles.mediumSizedColumn}>Race</th>
                     <th className={styles.bigSizedColumn}>Faction</th>
                 </tr>
 

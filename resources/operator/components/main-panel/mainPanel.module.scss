@@ -1,9 +1,28 @@
 .mainPanel {
     // Size and Position
     width: 60%;
-    padding: 10px 20px;
+    padding: 20px;
+    font-size: 100px;
 
-    background-color: rgb(132, 143, 160);
+    // Color
+    background-color: var(--gray-600);
+    border: 2px solid var(--gray-500);
+
+    @media (max-width: 1200px) {
+        //background-color: red;
+        font-size: 90px;
+        width: 65%;
+    }
+    @media (max-width: 1050px) {
+        //background-color: blue;
+        font-size: 80px;
+        width: 75%;
+    }
+    @media (max-width: 900px) {
+        //background-color: green;
+        font-size: 70px;
+        width: 95%;
+    }
 }
 
 .header {
@@ -11,8 +30,8 @@
     margin-bottom: 24px;
 
     // Text
-    font-family: 'Roboto';
-    font-size: 64px;
+    font-family: var(--HeaderFont);
+    font-size: 0.64em;
     font-weight: 400;
     color: white;
     text-align: center;
@@ -37,9 +56,9 @@
     margin: 24px;
 
     // Text
-    font-family: 'Lato';
-    font-size: 40px;
-    font-weight: 400;
+    font-family: var(--HeaderFont);
+    font-size: 0.2em;
+    font-weight: 300;
     color: rgb(255, 255, 255);
     text-align: center;
     letter-spacing: 3px;
@@ -47,8 +66,8 @@
 
 .operatorName {
     // Text
-    font-family: 'Lato';
-    font-size: 36px;
+    font-family: var(--TextFont);
+    font-size: 0.36em;
     font-weight: 400;
     color: rgb(255, 255, 255);
     text-align: center;
@@ -57,18 +76,19 @@
 
 .resultP {
     // Text
-    font-family: 'Lato';
-    font-size: 20px;
+    font-family: var(--TextFont);
+    font-size: 0.2em;
     font-weight: 400;
-    color: rgb(129, 218, 245);
+    //color: rgb(129, 218, 245);
+    color: var(--primary-400);
     text-align: center;
 }
 
 .amountOfGuesses {
     // Text
-    font-family: 'Lato';
-    font-size: 28px;
+    font-family: var(--TextFont);
+    font-size: 0.28em;
     font-weight: 400;
-    color: rgb(255, 255, 255);
+    color: var(--primary-400);
     text-align: center;
 }
