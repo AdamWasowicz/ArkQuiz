@@ -1,5 +1,7 @@
 const path = require('path');
 
+const environment = process.env.NODE_ENV || 'development';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -7,6 +9,8 @@ const nextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },
+
+  output: 'export',
 
   images: {
     remotePatterns: [
@@ -20,18 +24,12 @@ const nextConfig = {
         hostname: "**",
       },
     ],
+
+    unoptimized: true,
   },
 
-  webpack(config, { nextRuntime }) { 
-    if (typeof nextRuntime === "undefined") {
-      config.resolve.fallback = {
-                ...config.resolve.fallback,
-                fs: false,
-         };  
-    }
-
-    return config;
-  },
+  basePath: environment === 'development' ? undefined : 'ArkQuiz',
+  assetPrefix: environment === 'development' ? undefined : 'https://adamwasowicz.github.io/ArkQuiz'
 }
 
 module.exports = nextConfig;
