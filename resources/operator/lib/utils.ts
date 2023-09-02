@@ -75,6 +75,11 @@ export const getAllOperatorFileNames = (): string[] => {
     return fileNames;
 }
 
+export const handleOperatorGuess = (id: string): OperatorComparisonResult => {
+    const todayId = getDayOperatorId(new Date());
+    return compareTwoOperators(todayId, id);
+}
+
 /**
  * @returns Id of that day operator
  */

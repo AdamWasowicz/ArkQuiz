@@ -1,7 +1,7 @@
 import { OperatorComparisonResult, OperatorHeader } from '@/resources/operator/lib/types';
 import axios from 'axios';
 
-const API_ICON_ROUTE = 'api/operator/image/icon';
+const API_ICON_ROUTE = 'images/operator/icon';
 const API_OPERATOR_GUESS = 'api/operator';
 
 export const fetchAllOperatorHeaders = async (siteUrl: string): Promise<OperatorHeader[]> => {
@@ -23,7 +23,7 @@ export const fetchAllOperatorHeaders = async (siteUrl: string): Promise<Operator
 }
 
 export const urlToIcon = (baseUrl: string, id: string): string => {
-    return `${baseUrl}${API_ICON_ROUTE}/${id}`
+    return `${API_ICON_ROUTE}/${id}.webp`
 }
 
 export const submitOperatorGuess = async (id: string, timestamp: Date = new Date(), baseUrl: string = window.location.href): Promise<OperatorComparisonResult> => {

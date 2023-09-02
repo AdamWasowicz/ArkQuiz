@@ -10,8 +10,6 @@ const nextConfig = {
     includePaths: [path.join(__dirname, 'styles')],
   },
 
-  output: 'export',
-
   images: {
     remotePatterns: [
       {
@@ -29,7 +27,6 @@ const nextConfig = {
   },
 
   basePath: environment === 'development' ? undefined : '/ArkQuiz',
-  assetPrefix: environment === 'development' ? undefined : 'https://adamwasowicz.github.io/ArkQuiz'
 }
 
 module.exports = nextConfig;
