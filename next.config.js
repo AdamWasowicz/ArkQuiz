@@ -1,6 +1,6 @@
 const path = require('path');
 
-const environment = process.env.NODE_ENV || 'development';
+const environment = process.env.NODE_ENV;
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -28,7 +28,7 @@ const nextConfig = {
     unoptimized: true,
   },
 
-  basePath: environment === 'development' ? undefined : 'ArkQuiz',
+  basePath: environment === 'development' ? undefined : '/ArkQuiz',
   assetPrefix: environment === 'development' ? undefined : 'https://adamwasowicz.github.io/ArkQuiz'
 }
 
