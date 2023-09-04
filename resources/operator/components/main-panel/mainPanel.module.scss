@@ -47,7 +47,10 @@
     width: 180px;
     height: 180px;
 
-    background-color: white;
+    background: linear-gradient(
+            180deg, 
+            var(--primary-200) 0%,
+            var(--gray-800) 100%);
     border: 2px solid black;
 }
 

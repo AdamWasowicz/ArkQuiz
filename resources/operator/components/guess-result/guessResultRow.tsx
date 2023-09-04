@@ -1,4 +1,4 @@
-import { urlToIcon } from "@/lib/apiAccess";
+import { getUrlToOperatorIcon } from "@/lib/apiAccess";
 import { Operator } from "../../lib/types";
 import Image from "next/image";
 import styles from './guessResultRow.module.scss'
@@ -40,7 +40,7 @@ const OperatorGuessResultRow: React.FC<IOperatorGuessResultRowProps> = (props) =
         <tr className={styles.resultRow}>
             <td className={styles.operatorColumn}>
                 <Image 
-                    src={urlToIcon(window.location.href, operatorData.Id)} 
+                    src={getUrlToOperatorIcon(operatorData.Id)} 
                     alt={operatorData.Id}
                     height={100}
                     width={100}

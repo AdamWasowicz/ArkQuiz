@@ -1,6 +1,6 @@
 import { useAppSelector } from '@/redux/hooks';
 import styles from './mainPanel.module.scss';
-import { urlToIcon } from '@/lib/apiAccess';
+import { getUrlToOperatorIcon } from '@/lib/apiAccess';
 import Image from 'next/image';
 
 interface IMainPanelProps {
@@ -22,7 +22,7 @@ const MainPanel: React.FC<IMainPanelProps> = (props) => {
 
                     <Image
                         className={styles.image}
-                        src={urlToIcon(window.location.href,guesses[0].operator.Id)}
+                        src={getUrlToOperatorIcon(guesses[0].operator.Id)}
                         alt={guesses[0].operator.Id}
                         width={180}
                         height={180}
@@ -37,7 +37,7 @@ const MainPanel: React.FC<IMainPanelProps> = (props) => {
             {
                 gameWon == false &&
                 <h3 className={styles.amountOfGuesses}>
-                    Current amount of guesses: <span>{guesses.length}</span>
+                    Current number of guesses: <span>{guesses.length}</span>
                 </h3>
             }
         </div>

@@ -1,5 +1,6 @@
 import { OperatorComparisonResult } from "@/resources/operator/lib/types"
 
+// Helper for localStorage
 const useUtils = () => {
     const OPERATOR_CURRENT_GUESSES = "OPERATOR_CURRENT_GUESSES";
     const OPERATOR_STATUS = "OPERATOR_STATUS";

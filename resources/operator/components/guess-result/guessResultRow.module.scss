@@ -17,7 +17,10 @@
     display: block;
 
     & > img {
-        background-color: white;
+        background: linear-gradient(
+            180deg, 
+            var(--gray-100) 0%,
+            var(--gray-500) 100%);
         object-fit: cover;
     }
 

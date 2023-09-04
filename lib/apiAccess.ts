@@ -1,20 +1,20 @@
 import { OperatorComparisonResult, OperatorHeader } from '@/resources/operator/lib/types';
 import axios from 'axios';
+import { LOCAL_PATH_TO_OPERATOR_ICONS } from './paths';
+import path from 'path';
 
-const API_ICON_ROUTE = 'images/operator/icon';
 const API_OPERATOR_GUESS = 'api/operator';
+const API_OPERATOR_HEADERS = 'api/operator/headers'
 
-export const fetchAllOperatorHeaders = async (siteUrl: string): Promise<OperatorHeader[]> => {
-    const apiEndpointRoute = 'api/operator/headers';
+export const fetchAllOperatorHeaders = async (): Promise<OperatorHeader[]> => {
     const axiosClient = axios.create({
-        baseURL: siteUrl,
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         }
     })
 
-    const response = await axiosClient.get<OperatorHeader[]>(apiEndpointRoute);
+    const response = await axiosClient.get<OperatorHeader[]>(API_OPERATOR_HEADERS);
     if (response.status != 200) {
         throw new Error('Cannot get operator headers')
     }
@@ -22,18 +22,26 @@ export const fetchAllOperatorHeaders = async (siteUrl: string): Promise<Operator
     return response.data;
 }
 
-export const urlToIcon = (baseUrl: string, id: string): string => {
-    return `${API_ICON_ROUTE}/${id}.webp`
+export const getUrlToOperatorIcon = (id: string): string => {
+    return `${path.join(...LOCAL_PATH_TO_OPERATOR_ICONS)}/${id}.webp`
 }
 
-export const submitOperatorGuess = async (id: string, timestamp: Date = new Date(), baseUrl: string = window.location.href): Promise<OperatorComparisonResult> => {
+export const submitOperatorGuess = async (id: string, timestamp: Date = new Date(), ): Promise<OperatorComparisonResult> => {
     const axiosClient = axios.create({
-        baseURL: baseUrl,
         headers: {
             'Content-Type': 'application/json'
         }
     })
 
-    const response = await axiosClient.post<OperatorComparisonResult>(API_OPERATOR_GUESS, {id: id, timestamp: timestamp.toString()})
+    console.log(window.location)
+
+    const response = await axiosClient.post<OperatorComparisonResult>(
+        API_OPERATOR_GUESS, 
+        {
+            id: id, 
+            timestamp: timestamp.toString()
+        }
+    )
+
     return response.data;
 }
