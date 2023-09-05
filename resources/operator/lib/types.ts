@@ -56,3 +56,7 @@ export type OperatorComparisonResult = {
     differences: number[]
 }
 
+export type OperatorRaceDescription = {
+    Race: string,
+    Description: string
+}

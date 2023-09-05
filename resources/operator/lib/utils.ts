@@ -1,22 +1,23 @@
-import { Operator, OperatorHeader, OperatorHeaderMap, OperatorComparisonResult } from "./types";
+import { Operator, OperatorHeader, OperatorHeaderMap, OperatorComparisonResult, OperatorRaceDescription } from "./types";
 import path from 'path';
 import { getAllFileNamesInDirectory, readJson, doesFileExist } from "@/lib/filesystem";
 import { 
     EXTERNAL_PATH_TO_OPERATOR_ICONS,
     LOCAL_PATH_TO_OPERATOR_ICONS, 
-    PATH_TO_OPERATOR_DATA, 
+    PATH_TO_OPERATOR_DATA,
+    PATH_TO_OPERATOR_RACE, 
 } from "@/lib/paths";
 
 // Const
 const imageFormat = '.webp';
 const operatorDataFormat = '.json';
 const localPathToOperators = path.join(process.cwd(), ...PATH_TO_OPERATOR_DATA);
+const localPathToRaces = path.join(process.cwd(), ...PATH_TO_OPERATOR_RACE)
 const pathToOperatorIcon = path.join(...EXTERNAL_PATH_TO_OPERATOR_ICONS)
 
 
 // Functions
 /**
- * 
  * @param id is unique string for each operator (ex. R001 is Amiya).
  * @returns Operator with that id
  */
@@ -52,7 +53,6 @@ export const getAllOperatorHeaders = (): OperatorHeader[] => {
 }
 
 /**
- * 
  * @param id is unique string for each operator (ex. R001 is Amiya).
  * @returns route for operator icon art, you may need to add '/' for nextjs's Image component
  */
@@ -134,7 +134,7 @@ export const compareTwoOperators = (originalId: string, comparedId: string): Ope
 
     keys.forEach((key) => {
         if (key != 'Id' && key !== 'Name') {
-            differencesArray.push(compareTwoOperatorsComparer(data1.get(key as string), data2.get(key as string)))
+            differencesArray.push(__compareTwoOperatorsComparer(data1.get(key as string), data2.get(key as string)))
         }
     })
 
@@ -149,7 +149,7 @@ export const compareTwoOperators = (originalId: string, comparedId: string): Ope
     return outputObj;
 }
 
-const compareTwoOperatorsComparer = (t1: unknown, t2: unknown): number => {
+const __compareTwoOperatorsComparer = (t1: unknown, t2: unknown): number => {
     //  1 means correct
     //  0 means partial
     // -1 means wrong
@@ -188,4 +188,39 @@ const compareTwoOperatorsComparer = (t1: unknown, t2: unknown): number => {
     if (sameCounter === 0) return -1;
     if (te1.length === te2.length && sameCounter === te1.length) return 1;
     return 0;
+}
+
+// Health checks
+
+
+// Helpers
+export const getAllRaces = (): string[] => {
+    const headers: OperatorHeader[] = getAllOperatorHeaders();
+    let races: string[] = []
+    headers.forEach((item) => 
+        {
+            const race: string | string[] = getOperatorById(item.Id).Race;
+            if (typeof race === 'object') {
+                races = [...races, ...race];
+            }
+            else {
+                races = [...races, race];
+            }
+        }
+    );
+    
+    const uniq = races.filter((value, index, array) => array.indexOf(value) === index);
+    return uniq.sort();
+}
+
+// All info was taken from arknights fandom wiki
+// href: https://arknights.fandom.com/wiki/Arknights_Wiki
+export const getOperatorRaceDescription = (raceName: string): OperatorRaceDescription => {
+    const fileExist = doesFileExist(path.join(localPathToRaces, raceName + operatorDataFormat))
+    if (fileExist == false) {
+        throw new Error(`File ${raceName + operatorDataFormat} not found`)
+    }
+
+    const raceDescription = readJson(path.join(localPathToRaces, raceName + operatorDataFormat)) as OperatorRaceDescription;
+    return raceDescription;
 }

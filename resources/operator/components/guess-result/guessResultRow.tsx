@@ -1,7 +1,12 @@
-import { getUrlToOperatorIcon } from "@/lib/apiAccess";
+import { getUrlToOperatorIcon } from "@/lib/serverFunctions";
 import { Operator } from "../../lib/types";
 import Image from "next/image";
-import styles from './guessResultRow.module.scss'
+import { useEffect } from 'react';
+import styles from './guessResultRow.module.scss';
+import { useAppDispatch, useAppSelector } from "@/redux/hooks";
+import { addRaceToArray } from "@/redux/features/operator-slice";
+import useUtils  from "./guessResultRow.utils";
+
 
 interface IOperatorGuessResultRowProps {
     operatorData: Operator,
@@ -10,20 +15,10 @@ interface IOperatorGuessResultRowProps {
 
 const OperatorGuessResultRow: React.FC<IOperatorGuessResultRowProps> = (props) => {
     const { operatorData, diffrenceArray } = props;
-
-    const getClassName = (value: number): string => {
-        if (value === 1) return styles.correct;
-        if (value === 0) return styles.partial;
-        return styles.wrong;
-    }
-
-    const formatValue = (value: unknown): string => {
-        if (typeof value === 'object') {
-            return (value as string[]).join(', ')
-        }
-
-        return value as string;
-    }
+    const dispatch = useAppDispatch();
+    const raceArray = useAppSelector(state => state.operator.raceDescriptionArray);
+    const currentGuesses = useAppSelector(state => state.operator.currentGuesses);
+    const u = useUtils();
 
     const dataToDisplay = [
         operatorData.Rarity,
@@ -32,9 +27,18 @@ const OperatorGuessResultRow: React.FC<IOperatorGuessResultRowProps> = (props) =
         operatorData.Attack_Range,
         operatorData.Position,
         operatorData.Gender,
-        operatorData.Race,
-        operatorData.Faction
+        // Moved to separate declarations
+        //operatorData.Race,
+        //operatorData.Faction
     ]
+
+    useEffect(() => {
+        u.getRaceData(operatorData.Race).then((res) => {
+            dispatch(addRaceToArray(res))
+        })
+    }, [currentGuesses])
+
+    let keyOutside: number = 0;
 
     return (
         <tr className={styles.resultRow}>
@@ -47,16 +51,26 @@ const OperatorGuessResultRow: React.FC<IOperatorGuessResultRowProps> = (props) =
                     className={styles.operatorColumn}
                 />
             </td>
+
             {
                 dataToDisplay.map((value, key) => {
+                    keyOutside = key;
                     return <td 
                             key={key}
-                            className={getClassName(diffrenceArray[key])}
+                            className={u.getClassName(diffrenceArray[key])}
                         >
-                            {formatValue(value)}
+                            {u.formatValue(value)}
                         </td>
                 })
             }
+            
+            <td className={u.getClassName(diffrenceArray[++keyOutside])} key={keyOutside}>
+                { u.getRaceDescription(operatorData.Race, raceArray) }
+            </td>
+
+            <td className={u.getClassName(diffrenceArray[++keyOutside])} key={keyOutside}>
+                { operatorData.Faction }
+            </td>
         </tr>
     )
 }

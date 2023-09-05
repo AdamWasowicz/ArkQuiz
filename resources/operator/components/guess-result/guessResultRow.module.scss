@@ -58,3 +58,9 @@
     @extend .column;
     background-color: var(--wrong);
 }
+
+.span {
+    &:hover {
+        cursor: pointer;
+    }
+}

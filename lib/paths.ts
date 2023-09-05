@@ -1,3 +1,4 @@
-export const PATH_TO_OPERATOR_DATA = ['resources', 'operator', 'data']
+export const PATH_TO_OPERATOR_DATA = ['resources', 'operator', 'data', 'operator']
+export const PATH_TO_OPERATOR_RACE = ['resources', 'operator', 'data', 'race']
 export const EXTERNAL_PATH_TO_OPERATOR_ICONS = ['public', 'images', 'operator', 'icon']
 export const LOCAL_PATH_TO_OPERATOR_ICONS = ['images', 'operator', 'icon']

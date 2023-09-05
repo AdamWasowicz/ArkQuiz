@@ -72,20 +72,23 @@ const SearchBar: React.FC<ISearchBar> = (props) => {
                         Guess
                     </button>
                 </div>
-                <div className={styles.searchResult}>
-                    <div className={styles.abs}>
-                    {
-                        filteredOperatorHeaders.length > 0 &&
-                        filteredOperatorHeaders.map((item, key) => {
-                            return <SearchBarResult 
-                                key={key} 
-                                operatorHeader={item}
-                                onClick={onResultClick}
-                            />
-                        })
-                    }
+                {
+                    filteredOperatorHeaders.length > 0 &&
+                    <div className={styles.searchResult}>
+                        <div className={styles.abs}>
+                        {
+                            filteredOperatorHeaders.length > 0 &&
+                            filteredOperatorHeaders.map((item, key) => {
+                                return <SearchBarResult 
+                                    key={key} 
+                                    operatorHeader={item}
+                                    onClick={onResultClick}
+                                />
+                            })
+                        }
+                        </div>
                     </div>
-                </div>
+                }
             </div>
         </div>
     )

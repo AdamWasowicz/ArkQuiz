@@ -6,7 +6,7 @@ import { useAppDispatch, useAppSelector } from "@/redux/hooks";
 import styles from './operatorGuessPage.module.scss';
 import MainPanel from "@/resources/operator/components/main-panel/mainPanel";
 import { ChangeEvent, useEffect, useState } from "react";
-import { submitOperatorGuess } from "@/lib/apiAccess";
+import { submitOperatorGuess } from "@/lib/serverFunctions";
 import { addGuess, setGameWon, setGuesses } from "@/redux/features/operator-slice";
 import useUtils from "./operatorGuessPage.utils";
 
