@@ -1,0 +1,12 @@
+{
+    "Id": "MH03",
+    "Name": "Rathalos S Noir Corne",
+    "Rarity": 5,
+    "Class": "Guard",
+    "Branch": "Musha",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Male",
+    "Race": "Oni",
+    "Faction": "Op A4"
+}

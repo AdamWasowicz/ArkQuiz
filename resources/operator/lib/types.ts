@@ -8,7 +8,7 @@ export interface OperatorData {
     Class: string,
     Branch: string
     Attack_Range: string | string[],
-    Position: string,
+    Position: string | string[],
     Gender: string,
     Race: string | string[],
     Faction: string
@@ -22,7 +22,7 @@ export class Operator implements OperatorHeader, OperatorData{
     Class: string = "";
     Branch: string = "Unknown";
     Attack_Range: string | string[] = [];
-    Position: string = "";
+    Position: string | string[] = [];
     Gender: string = "";
     Race: string | string[] = [];
     Faction: string = "";
@@ -59,4 +59,10 @@ export type OperatorComparisonResult = {
 export type OperatorRaceDescription = {
     Race: string,
     Description: string
+}
+
+export type OperatorHealthcheckResult = {
+    errorsOperators: string[],
+    errorsOperatorRace: string[],
+    errorsOperatorIcon: string[],
 }

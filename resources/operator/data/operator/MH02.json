@@ -1,0 +1,12 @@
+{
+    "Id": "MH02",
+    "Name": "Kirin R Yato",
+    "Rarity": 6,
+    "Class": "Specialist",
+    "Branch": "Executor",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Oni",
+    "Faction": "Op A4"
+}

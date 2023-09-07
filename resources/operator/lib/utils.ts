@@ -1,4 +1,4 @@
-import { Operator, OperatorHeader, OperatorHeaderMap, OperatorComparisonResult, OperatorRaceDescription } from "./types";
+import { Operator, OperatorHeader, OperatorHeaderMap, OperatorComparisonResult, OperatorRaceDescription, OperatorHealthcheckResult } from "./types";
 import path from 'path';
 import { getAllFileNamesInDirectory, readJson, doesFileExist } from "@/lib/filesystem";
 import { 
@@ -56,14 +56,14 @@ export const getAllOperatorHeaders = (): OperatorHeader[] => {
  * @param id is unique string for each operator (ex. R001 is Amiya).
  * @returns route for operator icon art, you may need to add '/' for nextjs's Image component
  */
-export const getRouteToOperatorIcon = (id: string): string => {
+export const getAbsolutePathToIcon = (id: string): string => {
     const fileExist = doesFileExist(path.join(process.cwd(), pathToOperatorIcon, id + imageFormat))
     
     if (fileExist == false) {
         throw new Error(`Icon ${id + imageFormat} not found`)
     }
 
-    const route = path.join(...LOCAL_PATH_TO_OPERATOR_ICONS, id + imageFormat);
+    const route = path.join(process.cwd(),'/public/',...LOCAL_PATH_TO_OPERATOR_ICONS, id + imageFormat);
     return route;
 }
 
@@ -223,4 +223,249 @@ export const getOperatorRaceDescription = (raceName: string): OperatorRaceDescri
 
     const raceDescription = readJson(path.join(localPathToRaces, raceName + operatorDataFormat)) as OperatorRaceDescription;
     return raceDescription;
+}
+
+// Healthchecks
+export const doHealthCheck = (): OperatorHealthcheckResult => {
+    const output: OperatorHealthcheckResult = {
+        errorsOperators: __doHealthCheck_Operator(),
+        errorsOperatorIcon: __doHealthCheck_Icon(),
+        errorsOperatorRace: __doHealthCheck_Race()
+    }
+
+    return output;
+}
+
+// HC - Operator
+const __doHealthCheck_Operator = (): string[] => {
+    const errors: string[] = [];
+
+    const allOperatorHeaders: OperatorHeader[] = getAllOperatorHeaders();
+    allOperatorHeaders.forEach((header) => {
+        const operatorData: Operator = getOperatorById(header.Id);
+        // Id: string
+        // 1. Is empty
+        if (_isEmptyOrNull(operatorData.Id)) {
+            errors.push(`File ${header.Id} has empty Id`);
+        }
+        // 2. Id does not match
+        else if (header.Id !== operatorData.Id) {
+            errors.push(`File ${header.Id} has not matching Id`);
+        }
+
+        // Name: string
+        // 1. Is empty
+        if (_isEmptyOrNull(operatorData.Name)) {
+            errors.push(`File ${header.Id} has empty Name`);
+        }
+        // 2. Has whitespaces
+        else if (_hasWhitespaces(operatorData.Name)) {
+            errors.push(`File ${header.Id} has whitespaces in Name`);
+        }
+        
+        // Rarity: number
+        // 1. Is empty
+        if (_isNull(operatorData.Rarity)) {
+            errors.push(`File ${header.Id} has empty Rarity`);
+        }
+        // 2. Is not withing 1->6 range
+        else if (operatorData.Rarity < 1 || operatorData.Rarity > 6) {
+            errors.push(`File ${header.Id} has invalid Rarity`);
+        }
+
+        // Class: string
+        // 1. Is empty
+        if (_isEmptyOrNull(operatorData.Class)) {
+            errors.push(`File ${header.Id} has empty Class`);
+        }   
+        // 2. Has whitespaces
+        else if (_hasWhitespaces(operatorData.Class)) {
+            errors.push(`File ${header.Id} has whitespaces in Class`);
+        }
+        // 3. Invalid class name
+        else if (_hasInvalidOperatorClass(operatorData.Class)){
+            errors.push(`File ${header.Id} has invalid Class`);
+        }
+
+        // Branch: string
+        // 1. Is empty
+        if (_isEmptyOrNull(operatorData.Branch)) {
+            errors.push(`File ${header.Id} has empty Branch`);
+        }   
+        // 2. Has whitespaces
+        else if (_hasWhitespaces(operatorData.Branch)) {
+            errors.push(`File ${header.Id} has whitespaces in Branch`);
+        }
+
+        // Attack_Range: string | string[]
+        // 1. Is empty
+        if (operatorData.Attack_Range === null || operatorData.Attack_Range.length === 0) {
+            errors.push(`File ${header.Id} has empty Attack_Range`);
+        }
+        // 2. Invalid attack range
+        else if (_hasInvalidAttackRange(operatorData.Attack_Range)) {
+            errors.push(`File ${header.Id} has invalid Attack_Range`);
+        }
+
+        // Position: string | string[]
+        // 1. Is empty
+        if (operatorData.Position === null || operatorData.Position.length === 0) {
+            errors.push(`File ${header.Id} has empty Position`);
+        }
+        // 2. Invalid position
+        else if (_hasInvalidPosition(operatorData.Position)) {
+            errors.push(`File ${header.Id} has invalid Position`);
+        }    
+
+        // Gender: string
+        // 1. Is empty
+        if (_isEmptyOrNull(operatorData.Gender)) {
+            errors.push(`File ${header.Id} has empty Gender`);
+        }
+        // 2. Invalid gender
+        else if (_hasInvalidGender(operatorData.Gender)) {
+            errors.push(`File ${header.Id} has invalid Gender`);
+        }
+
+        // Race: string | string[]
+        // 1. Is empty
+        if (operatorData.Race === null || operatorData.Race.length === 0) {
+            errors.push(`File ${header.Id} has empty Race`);
+        }
+        // 2. Has whitespaces
+        else if (_hasWhitespaces(operatorData.Race)) {
+            errors.push(`File ${header.Id} has whitespaces in Race`);
+        }
+
+        // Faction: string
+        // 1. Is empty
+        if (_isEmptyOrNull(operatorData.Faction)) {
+            errors.push(`File ${header.Id} has empty Faction`);
+        }
+        // 2. Has whitespaces
+        else if (_hasWhitespaces(operatorData.Race)) {
+            errors.push(`File ${header.Id} has whitespaces in Faction`);
+        }
+
+    })
+
+    return errors;
+}
+const _toArray = (value: string | string[]): string[] => {
+    let arr: string[] = [];
+    if (typeof value === 'object') {
+        arr = [...value];
+    } 
+    else {
+        arr = [value];
+    }
+
+    return arr;
+}
+const _hasWhitespaces = (value: string | string[]) => {
+    let arr = _toArray(value);
+
+    let isError: boolean = false;
+    arr.forEach((ar) => {
+        if (ar.trim().length < ar.length) {
+            isError = true;
+        }
+    })
+
+    return isError;
+}
+const _isEmptyOrNull = (value: string): boolean => value === null || value.length === 0
+const _isNull = (value: unknown): boolean => value === null
+const _hasInvalidOperatorClass = (value: string): boolean => {
+    const validOperatorClasses = [
+        "Caster",
+        "Defender",
+        "Guard",
+        "Medic",
+        "Sniper",
+        "Specialist",
+        "Supporter",
+        "Vanguard",
+    ]
+
+    return validOperatorClasses.findIndex(oc => oc === value) === -1;
+}
+const _hasInvalidAttackRange = (value: string | string[]): boolean => {
+    const validAttackRanges = [
+        "Melee",
+        "Ranged"
+    ]
+
+    let arr = _toArray(value);
+
+    let isError: boolean = false;
+    arr.forEach((ar) => {
+        if (validAttackRanges.findIndex((r) => {return ar === r}) === -1) {
+            isError = true;
+        }
+    })
+
+    return isError;
+}
+const _hasInvalidPosition = (value: string | string[]): boolean =>{
+    const validPositions = [
+        "High ground",
+        "Ground"
+    ]
+
+    let arr = _toArray(value);
+
+    let isError: boolean = false;
+    arr.forEach((ar) => {
+        if (validPositions.findIndex((r) => {return ar === r}) === -1) {
+            console.log('Position: ', ar)
+            isError = true;
+        }
+    })
+
+    return isError;
+}
+const _hasInvalidGender = (value: string): boolean => {
+    const validGenders = [
+        "Male",
+        "Female",
+        "Conviction",
+        'Unknown',
+        'Undisclosed'
+    ]
+
+    return validGenders.findIndex((vg) => value === vg) === -1;
+}
+
+// HC - Icon
+const __doHealthCheck_Icon = (): string[] => {
+    const errors: string[] = [];
+
+    const allOperatorHeaders: OperatorHeader[] = getAllOperatorHeaders();
+    allOperatorHeaders.forEach((header) => {
+        const route = getAbsolutePathToIcon(header.Id);
+        if (doesFileExist(route) === false) {
+            errors.push(`Operator with Id ${header.Id} does not have icon`)
+        }
+    })
+
+    return errors;
+}
+// HC - Race
+const __doHealthCheck_Race = (): string[] => {
+    const errors: string[] = [];
+
+    const allOperatorHeaders: OperatorHeader[] = getAllOperatorHeaders();
+    allOperatorHeaders.forEach((header) => {
+        const operator = getOperatorById(header.Id);
+        const races = _toArray(operator.Race);
+        races.forEach((race) => {
+            const raceFile = getOperatorRaceDescription(race);
+            if (raceFile === null) {
+                errors.push(`There is no race description for ${race}`);
+            }
+        })
+    })
+
+    return errors;
 }
