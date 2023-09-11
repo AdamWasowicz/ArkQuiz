@@ -1,4 +1,4 @@
-import { getUrlToOperatorIcon } from "@/lib/serverFunctions"
+import { getUrlToOperatorIcon } from "@/src/lib/serverFunctions"
 import { OperatorHeader } from "../../../resources/operator/lib/types"
 import Image from "next/image";
 import styles from './searchBarResult.module.scss';

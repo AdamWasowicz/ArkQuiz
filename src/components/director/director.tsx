@@ -1,5 +1,5 @@
 import { Fragment } from "react"
-import { doHealthCheck } from "@/resources/operator/lib/utils"
+import { doHealthCheck } from "@/src/resources/operator/lib/utils"
 
 interface IDirectorProps {
     children: React.ReactNode

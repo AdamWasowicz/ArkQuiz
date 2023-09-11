@@ -1,10 +1,10 @@
-import ReduxProvider from '@/redux/provider'
+import ReduxProvider from '@/src/redux/provider'
 import type { Metadata } from 'next'
 import React from 'react'
-import '../styles/globals.scss'
-import Footer from '@/components/footer/footer'
-import Director from '@/components/director/director'
-import Navigation from '@/components/navigation/navigation'
+import '../src/styles/globals.scss'
+import Footer from '@/src/components/footer/footer'
+import Director from '@/src/components/director/director'
+import Navigation from '@/src/components/navigation/navigation'
 
 export const metadata: Metadata = {
   title: 'ArkQuiz',

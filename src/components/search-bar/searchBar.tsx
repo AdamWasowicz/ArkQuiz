@@ -1,9 +1,9 @@
 // EXPERIMENTAL
 "use client"
-import { OperatorHeader, OperatorHeaderMap } from "@/resources/operator/lib/types"
+import { OperatorHeader, OperatorHeaderMap } from "@/src/resources/operator/lib/types"
 import styles from './searchBar.module.scss';
 import { ChangeEvent } from "react";
-import SearchBarResult from "@/components/search-bar/search-bar-result/searchBarResult";
+import SearchBarResult from "@/src/components/search-bar/search-bar-result/searchBarResult";
 
 interface ISearchBar {
     operatorHeadersMap: OperatorHeaderMap,

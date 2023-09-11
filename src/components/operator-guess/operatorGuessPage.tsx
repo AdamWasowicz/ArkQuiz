@@ -1,13 +1,13 @@
 "use client"
-import { OperatorHeaderMap } from "@/resources/operator/lib/types";
+import { OperatorHeaderMap } from "@/src/resources/operator/lib/types";
 import SearchBar from "../search-bar/searchBar";
-import OperatorGuessResult from "@/resources/operator/components/guess-result/guessResult";
-import { useAppDispatch, useAppSelector } from "@/redux/hooks";
+import OperatorGuessResult from "@/src/resources/operator/components/guess-result/guessResult";
+import { useAppDispatch, useAppSelector } from "@/src/redux/hooks";
 import styles from './operatorGuessPage.module.scss';
-import MainPanel from "@/resources/operator/components/main-panel/mainPanel";
+import MainPanel from "@/src/resources/operator/components/main-panel/mainPanel";
 import { ChangeEvent, useEffect, useState } from "react";
-import { submitOperatorGuess } from "@/lib/serverFunctions";
-import { addGuess, setGameWon, setGuesses } from "@/redux/features/operator-slice";
+import { submitOperatorGuess } from "@/src/lib/serverFunctions";
+import { addGuess, setGameWon, setGuesses } from "@/src/redux/features/operator-slice";
 import useUtils from "./operatorGuessPage.utils";
 
 interface IOperatorGuessPageProps {

@@ -1,6 +1,6 @@
-import { useAppSelector } from '@/redux/hooks';
+import { useAppSelector } from '@/src/redux/hooks';
 import styles from './mainPanel.module.scss';
-import { getUrlToOperatorIcon } from '@/lib/serverFunctions';
+import { getUrlToOperatorIcon } from '@/src/lib/serverFunctions';
 import Image from 'next/image';
 
 interface IMainPanelProps {

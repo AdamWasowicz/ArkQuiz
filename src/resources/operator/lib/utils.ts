@@ -1,12 +1,12 @@
 import { Operator, OperatorHeader, OperatorHeaderMap, OperatorComparisonResult, OperatorRaceDescription, OperatorHealthcheckResult } from "./types";
 import path from 'path';
-import { getAllFileNamesInDirectory, readJson, doesFileExist } from "@/lib/filesystem";
+import { getAllFileNamesInDirectory, readJson, doesFileExist } from "@/src/lib/filesystem";
 import { 
     EXTERNAL_PATH_TO_OPERATOR_ICONS,
     LOCAL_PATH_TO_OPERATOR_ICONS, 
     PATH_TO_OPERATOR_DATA,
     PATH_TO_OPERATOR_RACE, 
-} from "@/lib/paths";
+} from "@/src/lib/paths";
 
 // Const
 const imageFormat = '.webp';

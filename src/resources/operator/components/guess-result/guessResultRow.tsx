@@ -1,10 +1,10 @@
-import { getUrlToOperatorIcon } from "@/lib/serverFunctions";
+import { getUrlToOperatorIcon } from "@/src/lib/serverFunctions";
 import { Operator } from "../../lib/types";
 import Image from "next/image";
 import { useEffect } from 'react';
 import styles from './guessResultRow.module.scss';
-import { useAppDispatch, useAppSelector } from "@/redux/hooks";
-import { addRaceToArray } from "@/redux/features/operator-slice";
+import { useAppDispatch, useAppSelector } from "@/src/redux/hooks";
+import { addRaceToArray } from "@/src/redux/features/operator-slice";
 import useUtils  from "./guessResultRow.utils";
 
 

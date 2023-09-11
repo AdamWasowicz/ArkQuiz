@@ -1,4 +1,4 @@
-import { OperatorComparisonResult, OperatorHeader, OperatorRaceDescription } from '@/resources/operator/lib/types';
+import { OperatorComparisonResult, OperatorHeader, OperatorRaceDescription } from '@/src/resources/operator/lib/types';
 import axios from 'axios';
 import { LOCAL_PATH_TO_OPERATOR_ICONS } from './paths';
 import path from 'path';

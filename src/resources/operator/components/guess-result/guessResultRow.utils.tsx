@@ -1,4 +1,4 @@
-import { getOperatorRaceDescription } from "@/lib/serverFunctions";
+import { getOperatorRaceDescription } from "@/src/lib/serverFunctions";
 import { OperatorRaceDescription } from "../../lib/types";
 import styles from './guessResultRow.module.scss';
 import { Fragment } from 'react';
