@@ -1,6 +1,6 @@
 "use client"
 import { OperatorHeaderMap } from "@/src/resources/operator/lib/types";
-import SearchBar from "../search-bar/searchBar";
+import SearchBar from "@/src/components/search-bar/searchBar";
 import OperatorGuessResult from "@/src/resources/operator/components/guess-result/guessResult";
 import { useAppDispatch, useAppSelector } from "@/src/redux/hooks";
 import styles from './operatorGuessPage.module.scss';

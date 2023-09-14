@@ -1,10 +1,11 @@
 import styles from './navigation.module.scss';
+import Link from 'next/link';
 
 const Navigation: React.FC = () => {
     
     return (
         <nav className={styles.navigation}>
-            <h1>Arkquiz</h1>
+            <Link className={styles.logo} href='/'><h1>Arkquiz</h1></Link>
         </nav>
     )
 }

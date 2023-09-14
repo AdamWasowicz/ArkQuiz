@@ -27,10 +27,10 @@ export class Operator implements OperatorHeader, OperatorData{
     Race: string | string[] = [];
     Faction: string = "";
 
-    public getOperatorHeader = (): OperatorHeader => {
+    static getOperatorHeader = (operator: Operator): OperatorHeader => {
         return {
-            Id: this.Id,
-            Name: this.Name
+            Id: operator.Id,
+            Name: operator.Name
         }
     }
 

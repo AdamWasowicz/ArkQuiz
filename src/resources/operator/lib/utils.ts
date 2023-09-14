@@ -67,6 +67,10 @@ export const getAbsolutePathToIcon = (id: string): string => {
     return route;
 }
 
+export const routeToOperatorIcon = (id: string) => {
+    return `${path.join(...LOCAL_PATH_TO_OPERATOR_ICONS)}/${id}.${imageFormat}`
+}
+
 /**
  * @returns array of FileNames, they are in format `ID.json`
  */
@@ -75,10 +79,10 @@ export const getAllOperatorFileNames = (): string[] => {
     return fileNames;
 }
 
-export const handleOperatorGuess = (id: string): OperatorComparisonResult => {
-    const todayId = getDayOperatorId(new Date());
-    return compareTwoOperators(todayId, id);
-}
+// export const handleOperatorGuess = (id: string): OperatorComparisonResult => {
+//     const todayId = getDayOperatorId(new Date());
+//     return compareTwoOperators(todayId, id);
+// }
 
 /**
  * @returns Id of that day operator
@@ -117,9 +121,9 @@ export const getOperatorHeaderMap = (): OperatorHeaderMap => {
     return headerMap;
 }
 
-export const getOperatorHeader = (id: string): OperatorHeader => {
-    return getOperatorById(id).getOperatorHeader();
-}
+// export const getOperatorHeader = (id: string): OperatorHeader => {
+//     return getOperatorById(id).getOperatorHeader();
+// }
 
 export const compareTwoOperators = (originalId: string, comparedId: string): OperatorComparisonResult => {
     // Get operator data

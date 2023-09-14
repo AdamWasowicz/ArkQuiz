@@ -1,4 +1,4 @@
-import { OperatorComparisonResult } from "@/resources/operator/lib/types"
+import { OperatorComparisonResult } from "@/src/resources/operator/lib/types";
 
 // Helper for localStorage
 const useUtils = () => {

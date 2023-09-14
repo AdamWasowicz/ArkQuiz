@@ -1,0 +1,19 @@
+{
+    "Id": "R155",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "\"Really Cold Axe\""
+        },
+
+        {
+            "Number": 2,
+            "Name": "\"Really Hot Knives\""
+        },
+
+        {
+            "Number": 3,
+            "Name": "\"Really Heavy Spear\""
+        }
+    ]
+}

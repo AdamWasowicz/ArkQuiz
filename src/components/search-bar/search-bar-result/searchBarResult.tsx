@@ -1,4 +1,4 @@
-import { getUrlToOperatorIcon } from "@/src/lib/serverFunctions"
+import { routeToOperatorIcon } from "@/src/lib/serverFunctions"
 import { OperatorHeader } from "../../../resources/operator/lib/types"
 import Image from "next/image";
 import styles from './searchBarResult.module.scss';
@@ -19,7 +19,7 @@ const SearchBarResult: React.FC<ISearchBarResultProps> = (props) => {
         <div className={styles.searchBarResultItem} onClick={onClickHandler}>
             <Image
                 className={styles.image}
-                src={getUrlToOperatorIcon(operatorHeader.Id)}
+                src={routeToOperatorIcon(operatorHeader.Id)}
                 alt={operatorHeader.Name}
                 width={75}
                 height={75}

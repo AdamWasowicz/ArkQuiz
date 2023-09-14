@@ -1,0 +1,19 @@
+{
+    "Id": "LN02",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Duetto"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Ignition"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Volcano"
+        }
+    ]
+}

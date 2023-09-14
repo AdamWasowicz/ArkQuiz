@@ -1,4 +1,4 @@
-import { OperatorComparisonResult, OperatorRaceDescription } from '@/resources/operator/lib/types';
+import { OperatorComparisonResult, OperatorRaceDescription } from '@/src/resources/operator/lib/types';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 export interface IOperatorState {
@@ -13,7 +13,7 @@ const initialState: IOperatorState = {
     raceDescriptionArray: []
 }
 
-const OperatorSlice  = createSlice({
+const OperatorSlice = createSlice({
     name: 'operator',
     initialState,
     reducers: {

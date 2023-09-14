@@ -1,0 +1,14 @@
+{
+    "Id": "US11",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Enforcement Mode"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Ultimatum"
+        }
+    ]
+}

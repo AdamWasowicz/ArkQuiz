@@ -1,0 +1,14 @@
+{
+    "Id": "SG05",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Tribal Techniques"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Gavial's Protection Plan"
+        }
+    ]
+}

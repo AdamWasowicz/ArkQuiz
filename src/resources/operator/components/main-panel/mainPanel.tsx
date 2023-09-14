@@ -1,6 +1,6 @@
 import { useAppSelector } from '@/src/redux/hooks';
 import styles from './mainPanel.module.scss';
-import { getUrlToOperatorIcon } from '@/src/lib/serverFunctions';
+import { routeToOperatorIcon } from '@/src/lib/serverFunctions';
 import Image from 'next/image';
 
 interface IMainPanelProps {
@@ -22,7 +22,7 @@ const MainPanel: React.FC<IMainPanelProps> = (props) => {
 
                     <Image
                         className={styles.image}
-                        src={getUrlToOperatorIcon(guesses[0].operator.Id)}
+                        src={routeToOperatorIcon(guesses[0].operator.Id)}
                         alt={guesses[0].operator.Id}
                         width={180}
                         height={180}

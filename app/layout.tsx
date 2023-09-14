@@ -19,7 +19,9 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
           <Director>
             <Navigation/>
 
-            {children}
+            <main>
+              {children}
+            </main>
 
             <Footer/>
           </Director>

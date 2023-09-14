@@ -1,0 +1,22 @@
+.table {
+    background-color: aqua;
+}
+
+.resultRow {
+    // Size and Position
+    width: 400px;
+}
+
+.guessRight {
+    @extend .resultRow;
+
+    // Background
+    background-color: var(--correct);
+}
+
+.guessWrong {
+    @extend .resultRow;
+
+    // Background
+    background-color: var(--wrong);
+}
