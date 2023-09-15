@@ -48,7 +48,8 @@ export const getDaySkill  = (date: Date): SkillHeader => {
         const osd_s: SkillHeader[] = osd.Skills.map(s => (
             {
                 Id: osd.Id, 
-                Number: s.Number
+                Number: s.Number,
+                Name: s.Name
 
             } satisfies SkillHeader)
         );

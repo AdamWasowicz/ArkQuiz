@@ -1,11 +1,58 @@
 .navigation {
     // Size And Position
     width: 100%;
-    padding: 20px 30px;
     
-    // Color
+    // background
     background-color: var(--gray-800);
     border-bottom: 2px solid var(--gray-600);
+}
+
+.content {
+    // Size and position
+    padding: 20px 40px;
+
+    // Flex
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links {
+    // Flex
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 36px;
+}
+
+.link {
+    // Size and Position
+    padding: 16px;
+
+    // Text
+    text-decoration: none;
+    color: #fff;
+    font-family: var(--HeaderFont);
+    letter-spacing: 2px;
+    font-size: 24px;
+
+    // Background
+    border-bottom: 2px solid transparent;
+
+    // Other
+    transition: 0.2s;
+
+    &:hover {
+        // Text
+        color: var(--primary-500);
+
+        // Background
+        border-bottom: 2px solid var(--primary-500);
+
+        // Other
+        transition: 0.2s;
+    }
 }
 
 .logo {

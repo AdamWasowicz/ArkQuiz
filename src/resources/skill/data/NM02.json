@@ -1,0 +1,19 @@
+{
+    "Id": "NM02",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Transcendental Stroke"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Flowing Ink"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Image Over Form"
+        }
+    ]
+}

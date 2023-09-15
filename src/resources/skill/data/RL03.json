@@ -1,0 +1,19 @@
+{
+    "Id": "RL03",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Fanaticism"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Pyroclasm"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Scorched Earth"
+        }
+    ]
+}

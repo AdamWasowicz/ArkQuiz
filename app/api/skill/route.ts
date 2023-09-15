@@ -1,3 +1,4 @@
-import { POST_Skill_Guess } from "@/src/resources/skill/lib/api";
+import { GET_Skill_Guess, POST_Skill_Guess } from "@/src/resources/skill/lib/api";
 
 export const POST = POST_Skill_Guess;
+export const GET = GET_Skill_Guess;

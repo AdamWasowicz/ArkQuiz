@@ -15,10 +15,24 @@ export const POST_Skill_Guess = async (req: NextRequest, _: NextResponse): Promi
     const header = Operator.getOperatorHeader(operator);
 
     const responseData: SkillComparisonResult = {
-        Header: header,
+        OperatorHeader: header,
         IsCorrect: daySkill.Id === guess
     }
     const response = new NextResponse(JSON.stringify(responseData), 
+        {
+            status: 200,
+            headers: {
+                'content-type': 'application/json',
+            },
+        }
+    );
+    return response;
+}
+
+export const GET_Skill_Guess = async (req: NextRequest, _: NextResponse): Promise<NextResponse> => {
+    const daySkill = getDaySkill(new Date());
+
+    const response = new NextResponse(JSON.stringify(daySkill), 
         {
             status: 200,
             headers: {

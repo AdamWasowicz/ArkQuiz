@@ -1,0 +1,14 @@
+{
+    "Id": "VC12",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Fairytale Guardian"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Dreamland's Cradle"
+        }
+    ]
+}

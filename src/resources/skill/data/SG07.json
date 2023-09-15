@@ -1,0 +1,19 @@
+{
+    "Id": "SG07",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Touch of Static"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Focus Command"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Glorious Shards"
+        }
+    ]
+}

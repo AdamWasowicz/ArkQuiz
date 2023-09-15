@@ -1,0 +1,99 @@
+.mainPanel {
+    // Size and Position
+    width: 60%;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 24px;
+
+    // Text
+    font-size: 100px;
+    text-align: center;
+
+    // Background
+    background-color: var(--gray-600);
+    border: 2px solid var(--gray-500);
+
+    @media (max-width: 1200px) {
+        font-size: 90px;
+        width: 65%;
+    }
+    @media (max-width: 1050px) {
+        font-size: 80px;
+        width: 75%;
+    }
+    @media (max-width: 900px) {
+        font-size: 70px;
+        width: 95%;
+    }
+}
+
+.header {
+    // Size and Position
+    margin-bottom: 24px;
+
+    // Text
+    font-family: var(--HeaderFont);
+    font-size: 0.64em;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.result {
+    text-align: center;
+}
+
+.image {
+    // Size and Position
+    width: 150px;
+    height: 150px;
+
+    border: 2px solid black;
+}
+
+.resultHeader {
+    // Size and Position
+    margin: 8px;
+
+    // Text
+    font-family: var(--HeaderFont);
+    font-size: 0.2em;
+    font-weight: 300;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.skillName {
+    // Size and Position
+    margin-bottom: 24px;
+
+    // Text
+    font-family: var(--TextFont);
+    font-size: 0.36em;
+    font-weight: 400;
+    color: var(--primary-600);
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.resultP {
+    // Text
+    font-family: var(--TextFont);
+    font-size: 0.2em;
+    font-weight: 400;
+    //color: rgb(129, 218, 245);
+    color: var(--primary-400);
+    text-align: center;
+}
+
+.amountOfGuesses {
+    // Text
+    font-family: var(--TextFont);
+    font-size: 0.28em;
+    font-weight: 400;
+    color: var(--primary-400);
+    text-align: center;
+}

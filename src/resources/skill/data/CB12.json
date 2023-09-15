@@ -1,0 +1,14 @@
+{
+    "Id": "CB12",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Focus Overload"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Conductive Corrosive Blast"
+        }
+    ]
+}

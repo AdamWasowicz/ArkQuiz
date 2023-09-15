@@ -1,0 +1,19 @@
+{
+    "Id": "LN04",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Sandstorm Guardian"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Sand Fetters"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Mark of Gluttony"
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "Id": "LN05",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Quickening Presto"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Desolate Echoes"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Sound of Silence"
+        }
+    ]
+}

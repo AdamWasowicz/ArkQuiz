@@ -9,6 +9,7 @@ import { useAppDispatch, useAppSelector } from "@/src/redux/hooks";
 import { ChangeEvent, useState } from "react";
 import { addGuess, setGameWon } from "@/src/redux/features/skill-slice";
 import GuessResult from "@/src/resources/skill/components/guess-result/guessResult";
+import MainPanel from "@/src/resources/skill/components/main-panel/mainPanel";
 
 interface ISkillGuessPage {
     operatorHeaderMap: OperatorHeaderMap
@@ -53,7 +54,7 @@ const SkillGuessPage: React.FC<ISkillGuessPage> = (props) => {
 
     return (
         <div className={styles.page}>
-            <h1>Main panel here</h1>
+            <MainPanel/>
 
             {
                 guessWon == false &&
@@ -61,7 +62,7 @@ const SkillGuessPage: React.FC<ISkillGuessPage> = (props) => {
                     <SearchBar
                         operatorHeadersMap={operatorHeaderMap}
                         currentGuessedOperatorNames={guesses.map(item => {
-                            return (item.Header.Name)
+                            return (item.OperatorHeader.Name)
                         })}
                         guessWon={guessWon}
                         inputTextValue={textInputValue}

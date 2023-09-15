@@ -1,0 +1,19 @@
+{
+    "Id": "VC09",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Scattering Sparks"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Surging Current"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Crystalline Shine"
+        }
+    ]
+}

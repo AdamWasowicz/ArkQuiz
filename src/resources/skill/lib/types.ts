@@ -8,6 +8,7 @@ export interface Skill {
 export interface SkillHeader{
     Id: string,
     Number: number,
+    Name: string
 }
 
 export interface OperatorSkillsData {
@@ -16,6 +17,6 @@ export interface OperatorSkillsData {
 } 
 
 export interface SkillComparisonResult {
-    Header: OperatorHeader,
+    OperatorHeader: OperatorHeader,
     IsCorrect: boolean
 }

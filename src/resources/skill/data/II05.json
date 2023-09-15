@@ -1,0 +1,14 @@
+{
+    "Id": "II05",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Lighthouse Guardian"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Labyrinth of Light"
+        }
+    ]
+}

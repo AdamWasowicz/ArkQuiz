@@ -1,0 +1,14 @@
+{
+    "Id": "R147",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Growing Sandstorm"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Guardian Obelisk"
+        }
+    ]
+}

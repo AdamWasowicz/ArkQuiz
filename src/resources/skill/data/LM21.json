@@ -1,0 +1,19 @@
+{
+    "Id": "LM21",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Elegance"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Shelter"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Riving Lighttails"
+        }
+    ]
+}

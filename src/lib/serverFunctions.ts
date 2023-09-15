@@ -81,3 +81,14 @@ export const submitSkillGuess = async (id: string, timestamp: Date = new Date(),
 
     return response.data;
 }
+
+export const fetchTodaySkillHeader = async (): Promise<SkillHeader> => {
+    const axiosClient = axios.create({
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+
+    const response = await axiosClient.get<SkillHeader>(SERVER_ROUTE_TO_SKILL_GUESS)
+    return response.data;
+}
