@@ -1,0 +1,19 @@
+{
+    "Id": "SG03",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Tomahawk"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Menacing Slash"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Iron Will"
+        }
+    ]
+}

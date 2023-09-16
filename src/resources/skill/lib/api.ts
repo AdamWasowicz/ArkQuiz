@@ -10,7 +10,6 @@ export const POST_Skill_Guess = async (req: NextRequest, _: NextResponse): Promi
     const timestamp = body.timestamp;
 
     const daySkill = getDaySkill(new Date(timestamp));
-    console.log(daySkill);
     const operator = getOperatorById(guess);
     const header = Operator.getOperatorHeader(operator);
 

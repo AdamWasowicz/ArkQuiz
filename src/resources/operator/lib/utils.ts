@@ -422,7 +422,6 @@ const _hasInvalidPosition = (value: string | string[]): boolean =>{
     let isError: boolean = false;
     arr.forEach((ar) => {
         if (validPositions.findIndex((r) => {return ar === r}) === -1) {
-            console.log('Position: ', ar)
             isError = true;
         }
     })

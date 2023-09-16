@@ -1,0 +1,19 @@
+{
+    "Id": "KZ09",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Surging Brilliance"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Deterring Radiance"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Divine Avatar"
+        }
+    ]
+}

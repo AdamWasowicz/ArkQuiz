@@ -1,0 +1,14 @@
+{
+    "Id": "RB05",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Resilient Mode"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Thermal Power Mode"
+        }
+    ]
+}

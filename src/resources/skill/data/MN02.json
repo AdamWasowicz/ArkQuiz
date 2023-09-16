@@ -1,0 +1,14 @@
+{
+    "Id": "MN02",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Guardian Mode"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Combat Mode"
+        }
+    ]
+}

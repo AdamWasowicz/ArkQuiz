@@ -1,0 +1,14 @@
+{
+    "Id": "LM19",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Treatment Countermeasure"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Medical Mode Countermeasure"
+        }
+    ]
+}

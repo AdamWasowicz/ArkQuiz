@@ -1,0 +1,14 @@
+{
+    "Id": "JC03",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Stamina Enhancement"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Cold Resistance"
+        }
+    ]
+}

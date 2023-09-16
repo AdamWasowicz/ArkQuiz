@@ -1,0 +1,19 @@
+{
+    "Id": "LM05",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Warpath"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Thorns"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Saw of Strength"
+        }
+    ]
+}

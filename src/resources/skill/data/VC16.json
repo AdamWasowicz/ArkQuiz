@@ -1,0 +1,19 @@
+{
+    "Id": "VC16",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Flare Grenade"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Tempest Command"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Ultimate Line of Defense"
+        }
+    ]
+}

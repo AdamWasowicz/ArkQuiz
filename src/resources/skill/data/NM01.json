@@ -1,0 +1,19 @@
+{
+    "Id": "NM01",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Tin Burning"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Copper Seal"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Iron Defense"
+        }
+    ]
+}

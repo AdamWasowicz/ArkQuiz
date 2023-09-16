@@ -1,0 +1,19 @@
+{
+    "Id": "SR35",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Last Word"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Stoic Atonement"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Trial of Thorns"
+        }
+    ]
+}

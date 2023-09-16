@@ -1,0 +1,14 @@
+{
+    "Id": "PL04",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Auto Defense"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Magnetic Hammer"
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "Id": "RS02",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Flash Shield"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Shield Bash"
+        }
+    ]
+}

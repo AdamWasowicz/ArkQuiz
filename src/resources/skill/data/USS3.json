@@ -1,0 +1,14 @@
+{
+    "Id": "USS3",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Provisions"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Cooking"
+        }
+    ]
+}
