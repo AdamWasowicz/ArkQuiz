@@ -1,0 +1,14 @@
+{
+    "Id": "BV12",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Decisive Action"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Esoteric Bladework"
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "Id": "AZ01",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Crescent Moon"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Half Moon"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Full Moon"
+        }
+    ]
+}

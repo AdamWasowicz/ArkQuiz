@@ -1,0 +1,19 @@
+{
+    "Id": "MN04",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Strikes of Victory"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Whip of Conviction"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Blessing of Heroism"
+        }
+    ]
+}

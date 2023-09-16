@@ -1,0 +1,19 @@
+{
+    "Id": "RF22",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Precise Thrashing"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Chainsaw Assault"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Soul of the Jungle"
+        }
+    ]
+}

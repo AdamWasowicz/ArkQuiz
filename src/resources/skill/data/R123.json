@@ -1,0 +1,14 @@
+{
+    "Id": "R123",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Frost Tomahawk"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Ice Tomahawk"
+        }
+    ]
+}

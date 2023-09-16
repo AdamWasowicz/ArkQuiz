@@ -1,0 +1,19 @@
+{
+    "Id": "NM04",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Abundant"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Whisk"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Anatta"
+        }
+    ]
+}

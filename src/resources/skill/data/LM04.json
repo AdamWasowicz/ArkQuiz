@@ -1,0 +1,19 @@
+{
+    "Id": "LM04",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Sheathed Strike"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Chi Xiao - Unsheath"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Chi Xiao - Shadowless"
+        }
+    ]
+}

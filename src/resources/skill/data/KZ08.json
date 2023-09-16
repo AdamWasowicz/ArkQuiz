@@ -1,0 +1,19 @@
+{
+    "Id": "KZ08",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Unvoiced Anger"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Unresolved Sorrow"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Unbrilliant Glory"
+        }
+    ]
+}

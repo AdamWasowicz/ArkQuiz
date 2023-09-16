@@ -1,0 +1,19 @@
+{
+    "Id": "CB05",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Left Hook"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Sweeping Stance"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Earth-Shattering Smash"
+        }
+    ]
+}

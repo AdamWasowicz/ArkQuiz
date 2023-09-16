@@ -1,0 +1,19 @@
+{
+    "Id": "YD20",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Halting Feather"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Holding Shadow"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Questioning Snow"
+        }
+    ]
+}

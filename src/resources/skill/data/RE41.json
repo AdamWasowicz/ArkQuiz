@@ -1,0 +1,14 @@
+{
+    "Id": "RE41",
+    "Skills": [
+        {
+            "Number": 2,
+            "Name": "Chainsaw Extension Module"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Boiling Burst"
+        }
+    ]
+}

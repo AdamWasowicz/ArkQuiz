@@ -1,0 +1,19 @@
+{
+    "Id": "R111",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Laevatain"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Molten Giant"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Twilight"
+        }
+    ]
+}

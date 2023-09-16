@@ -1,0 +1,14 @@
+{
+    "Id": "GG03",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Armorcrusher"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Sundered Soul"
+        }
+    ]
+}

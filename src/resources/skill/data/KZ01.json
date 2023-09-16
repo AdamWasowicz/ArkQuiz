@@ -1,0 +1,19 @@
+{
+    "Id": "KZ01",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Flaming Edge"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Night-scouring Gleam"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Blazing Sun's Obeisance"
+        }
+    ]
+}

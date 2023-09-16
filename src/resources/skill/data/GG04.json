@@ -1,0 +1,14 @@
+{
+    "Id": "GG04",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Counter Technique"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Search and Destroy"
+        }
+    ]
+}

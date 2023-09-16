@@ -1,0 +1,14 @@
+{
+    "Id": "SR27",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Galvanize"
+        },
+
+        {
+            "Number": 2,
+            "Name": "High-Voltage Current"
+        }
+    ]
+}

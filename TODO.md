@@ -4,14 +4,15 @@
 
 ## Working on it
 Skill:
-- Guard
+- Medic
 
 ## Finished
 Skill:
 - Caster
 - Defender
+- Guard
 
-Operators:
+Operator:
 - Caster
 - Defender
 - Guard

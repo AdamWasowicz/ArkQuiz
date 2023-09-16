@@ -1,0 +1,14 @@
+{
+    "Id": "RB04",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Shrapnel Burst"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Activate Phase Blades"
+        }
+    ]
+}

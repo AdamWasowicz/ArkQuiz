@@ -1,0 +1,14 @@
+{
+    "Id": "LM08",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Command and Dispatch"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Cooperative Combat"
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "Id": "MH03",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Iai Spirit Slash"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Spirit Helm Breaker"
+        }
+    ]
+}

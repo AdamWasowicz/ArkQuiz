@@ -1,0 +1,19 @@
+{
+    "Id": "II07",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Gust"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Shattertide"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Judgment"
+        }
+    ]
+}
