@@ -1,0 +1,14 @@
+{
+    "Id": "VC01",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Paralyzing Shell"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Binding Shock"
+        }
+    ]
+}

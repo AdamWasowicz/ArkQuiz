@@ -1,0 +1,19 @@
+{
+    "Id": "B214",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "King of Hearts"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Jack in the Box"
+        },
+
+        {
+            "Number": 3,
+            "Name": "D12"
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "Id": "SR37",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Time to Hunt"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Umbral Ambush"
+        }
+    ]
+}

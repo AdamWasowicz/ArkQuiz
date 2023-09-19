@@ -1,0 +1,19 @@
+{
+    "Id": "RS01",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Supporting Fire"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Assault Tactics"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Breaching Rounds"
+        }
+    ]
+}

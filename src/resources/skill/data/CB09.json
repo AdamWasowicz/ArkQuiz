@@ -1,0 +1,14 @@
+{
+    "Id": "CB09",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "RMA Spikes"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Electrical Overcharge"
+        }
+    ]
+}

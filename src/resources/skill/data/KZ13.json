@@ -1,0 +1,14 @@
+{
+    "Id": "KZ13",
+    "Skills": [
+        {
+            "Number": 2,
+            "Name": "Ally Support"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Feathershine Arrows"
+        }
+    ]
+}

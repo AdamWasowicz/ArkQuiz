@@ -1,0 +1,19 @@
+{
+    "Id": "PL03",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Charging Mode"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Shooting Mode"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Overloading Mode"
+        }
+    ]
+}

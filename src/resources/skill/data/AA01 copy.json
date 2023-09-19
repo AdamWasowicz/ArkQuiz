@@ -1,0 +1,19 @@
+{
+    "Id": "RE45",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Expanded Cognition"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Nociceptor Inhibition"
+        },
+
+        {
+            "Number": 3,
+            "Name": "\"As You Wish\""
+        }
+    ]
+}

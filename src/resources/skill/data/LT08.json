@@ -1,0 +1,19 @@
+{
+    "Id": "LT08",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Dispersing Arrows"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Pursuing Arrows"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Thundering Arrows"
+        }
+    ]
+}

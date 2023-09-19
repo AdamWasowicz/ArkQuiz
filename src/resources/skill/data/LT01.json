@@ -1,0 +1,14 @@
+{
+    "Id": "LT01",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Muzzle's Elegy"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Final Journey"
+        }
+    ]
+}

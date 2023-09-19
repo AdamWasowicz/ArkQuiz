@@ -1,0 +1,19 @@
+{
+    "Id": "LT11",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "\"Provocate\""
+        },
+
+        {
+            "Number": 2,
+            "Name": "\"Paenitete\""
+        },
+
+        {
+            "Number": 3,
+            "Name": "\"Reponite\""
+        }
+    ]
+}

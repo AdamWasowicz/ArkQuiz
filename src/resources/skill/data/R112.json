@@ -1,0 +1,19 @@
+{
+    "Id": "R112",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "High-Pressure Splash"
+        },
+
+        {
+            "Number": 2,
+            "Name": "\"Night of Violet\""
+        },
+
+        {
+            "Number": 3,
+            "Name": "\"Holiday Storm\""
+        }
+    ]
+}

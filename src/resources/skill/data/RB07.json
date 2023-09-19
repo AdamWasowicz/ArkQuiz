@@ -1,0 +1,14 @@
+{
+    "Id": "RB07",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Precise Shooting"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Flexible Camouflage"
+        }
+    ]
+}

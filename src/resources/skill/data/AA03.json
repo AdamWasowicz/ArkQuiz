@@ -1,0 +1,14 @@
+{
+    "Id": "AA03",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Twinshot - Auto"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Venom Spray"
+        }
+    ]
+}

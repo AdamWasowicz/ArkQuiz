@@ -1,0 +1,14 @@
+{
+    "Id": "USS4",
+    "Skills": [
+        {
+            "Number": 2,
+            "Name": "Split Shot"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Avalanche Breaker"
+        }
+    ]
+}

@@ -4,7 +4,7 @@
 
 ## Working on it
 Skill:
-- Sniper
+- Specialist
 
 ## Finished
 Skill:
@@ -12,6 +12,7 @@ Skill:
 - Defender
 - Guard
 - Medic
+- Sniper
 
 Operator:
 - Caster

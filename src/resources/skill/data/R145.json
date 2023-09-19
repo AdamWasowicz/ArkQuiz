@@ -1,0 +1,19 @@
+{
+    "Id": "R145",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Iamb"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Précis"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Opprobrium"
+        }
+    ]
+}
