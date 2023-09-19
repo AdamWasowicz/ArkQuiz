@@ -1,0 +1,14 @@
+{
+    "Id": "SG08",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Aqua Loop"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Cardiac Stimulant"
+        }
+    ]
+}

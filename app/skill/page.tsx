@@ -1,4 +1,4 @@
-import SkillGuessPage from "@/src/pages/skill-page/skillGuessPage";
+import SkillGuessPage from "@/src/page/skill-page/skillGuessPage";
 import { getOperatorHeaderMap } from "@/src/resources/operator/lib/utils";
 
 const SkillPage: React.FC = () => {

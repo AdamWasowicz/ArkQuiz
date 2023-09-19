@@ -1,0 +1,14 @@
+{
+    "Id": "IU07",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Vitality Restoration"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Vitality Restoration - Wide Range"
+        }
+    ]
+}

@@ -1,4 +1,4 @@
-import OperatorGuessPage from "@/src/pages/operator-page/operatorGuessPage";
+import OperatorGuessPage from "@/src/page/operator-page/operatorGuessPage";
 import { getOperatorHeaderMap } from "@/src/resources/operator/lib/utils";
 
 const OperatorPage: React.FC= () => {

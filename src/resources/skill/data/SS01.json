@@ -1,0 +1,14 @@
+{
+    "Id": "SS01",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Concentrated Hydrotherapy"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Water Blessing"
+        }
+    ]
+}

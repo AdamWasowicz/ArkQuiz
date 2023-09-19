@@ -1,0 +1,14 @@
+{
+    "Id": "R106",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Emergency Triage"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Unstable Plasma"
+        }
+    ]
+}

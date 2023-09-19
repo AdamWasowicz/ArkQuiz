@@ -1,0 +1,14 @@
+{
+    "Id": "DB02",
+    "Skills": [
+        {
+            "Number": 2,
+            "Name": "Wither and Thrive"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Ember of Life"
+        }
+    ]
+}

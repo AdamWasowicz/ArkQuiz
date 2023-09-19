@@ -1,0 +1,14 @@
+{
+    "Id": "FO03",
+    "Skills": [
+        {
+            "Number": 2,
+            "Name": "Arts Shield"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Sanctuary"
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "Id": "R133",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Max-Dosage Infusion"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Compound Drug Shell"
+        }
+    ]
+}

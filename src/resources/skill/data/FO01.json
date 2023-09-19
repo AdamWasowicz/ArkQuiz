@@ -1,0 +1,19 @@
+{
+    "Id": "FO01",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Creed"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Auto Protect"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Creed Field"
+        }
+    ]
+}

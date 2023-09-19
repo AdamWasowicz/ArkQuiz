@@ -1,0 +1,14 @@
+{
+    "Id": "R163",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Oriented Diagnosis"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Pain Suppression"
+        }
+    ]
+}

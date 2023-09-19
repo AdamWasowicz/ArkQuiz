@@ -1,0 +1,19 @@
+{
+    "Id": "B003",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Command: Structural Fortification"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Command: Tactical Coordination"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Command: Meltdown"
+        }
+    ]
+}
