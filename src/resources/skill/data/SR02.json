@@ -1,0 +1,19 @@
+{
+    "Id": "SR02",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Arcane Staff - Quick Charge Mode"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Arcane Staff - Particle Mode"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Arcane Staff - Anti-Gravity Mode"
+        }
+    ]
+}

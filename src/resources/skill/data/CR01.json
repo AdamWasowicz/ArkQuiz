@@ -1,0 +1,19 @@
+{
+    "Id": "CR01",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Chant of Returning by Varied Paths"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Wish of Burial Beyond the Light"
+        },
+
+        {
+            "Number": 3,
+            "Name": "\"The Tide Surges, The Tide Recedes\""
+        }
+    ]
+}

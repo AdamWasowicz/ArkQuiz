@@ -1,0 +1,19 @@
+{
+    "Id": "VC17",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Extreme Firepower"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Efficient Resupply"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Prototype of Feist's Metal Crab"
+        }
+    ]
+}

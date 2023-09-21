@@ -1,0 +1,14 @@
+{
+    "Id": "PL05",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Hymn of Respite"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Hymn of Battle"
+        }
+    ]
+}

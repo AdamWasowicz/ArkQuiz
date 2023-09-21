@@ -1,0 +1,14 @@
+{
+    "Id": "R128",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Binary Reload"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Counter EMP"
+        }
+    ]
+}

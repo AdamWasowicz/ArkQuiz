@@ -1,0 +1,14 @@
+{
+    "Id": "KZ10",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Dispute Litigation"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Prevailing Argument"
+        }
+    ]
+}

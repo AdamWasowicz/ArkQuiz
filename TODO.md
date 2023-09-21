@@ -4,7 +4,7 @@
 
 ## Working on it
 Skill:
-- Supporter
+- Vanguard
 
 ## Finished
 Skill:
@@ -14,6 +14,7 @@ Skill:
 - Medic
 - Sniper
 - Specialist
+- Supporter
 
 Operator:
 - Caster

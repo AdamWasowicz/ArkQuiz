@@ -1,0 +1,14 @@
+{
+    "Id": "R162",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Protective Camouflage"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Panoramic Overload"
+        }
+    ]
+}

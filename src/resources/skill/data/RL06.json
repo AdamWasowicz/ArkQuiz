@@ -1,0 +1,19 @@
+{
+    "Id": "RL06",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "High-Efficiency Freezing Module"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Laser Mining Module"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Armed Combat Module"
+        }
+    ]
+}

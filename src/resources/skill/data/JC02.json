@@ -1,0 +1,19 @@
+{
+    "Id": "JC02",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "High-Speed Cogitation"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Zero-Point Burst"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Hypothermia"
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "Id": "CB19",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Machine Rapport"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Energy Rapport"
+        }
+    ]
+}

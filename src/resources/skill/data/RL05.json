@@ -1,0 +1,14 @@
+{
+    "Id": "RL05",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Bionic Device"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Detonate and Recycle"
+        }
+    ]
+}

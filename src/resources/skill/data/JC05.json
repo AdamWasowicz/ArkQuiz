@@ -1,0 +1,14 @@
+{
+    "Id": "JC05",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Echolocation"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Natural Deterrent"
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "Id": "VC19",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Tale of Fiction: A Warrior's Anger"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Tale of Fiction: Rust"
+        }
+    ]
+}
