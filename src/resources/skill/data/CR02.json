@@ -1,0 +1,19 @@
+{
+    "Id": "CR02",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "The Skill to Survive"
+        },
+
+        {
+            "Number": 2,
+            "Name": "The Thirst to Survive"
+        },
+
+        {
+            "Number": 3,
+            "Name": "The Pressure to Survive"
+        }
+    ]
+}

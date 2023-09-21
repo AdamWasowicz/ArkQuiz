@@ -1,0 +1,14 @@
+{
+    "Id": "SG01",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Scorpion Venom"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Toxic Overload"
+        }
+    ]
+}

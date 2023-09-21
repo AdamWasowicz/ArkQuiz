@@ -1,0 +1,19 @@
+{
+    "Id": "PL07",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Silent Drizzle"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Unrelenting Downpour"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Torrential Sword Rain"
+        }
+    ]
+}

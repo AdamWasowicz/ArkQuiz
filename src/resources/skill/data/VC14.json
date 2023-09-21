@@ -1,0 +1,14 @@
+{
+    "Id": "VC14",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Fervent Trimming"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Rapid Trimming"
+        }
+    ]
+}

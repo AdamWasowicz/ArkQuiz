@@ -1,0 +1,19 @@
+{
+    "Id": "LM20",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Rapid Fire"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Type-y Stimpack"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Durian-Flavored Stimpack"
+        }
+    ]
+}

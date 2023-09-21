@@ -1,0 +1,14 @@
+{
+    "Id": "CB08",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Binding \"Clip\""
+        },
+
+        {
+            "Number": 2,
+            "Name": "Launching \"Clip\""
+        }
+    ]
+}

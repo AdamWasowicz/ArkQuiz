@@ -1,0 +1,19 @@
+{
+    "Id": "AA05",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Waterless Parting of the Great Ocean"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Waterless Grasp of the Raging Seas"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Waterless Dance of the Shattered Maelstrom"
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "Id": "SW01",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Execution Mode"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Wolfpack"
+        }
+    ]
+}

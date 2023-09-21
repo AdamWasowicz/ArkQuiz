@@ -1,0 +1,19 @@
+{
+    "Id": "R117",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Barrel Burst"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Hydraulics Mode"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Liquid Nitrogen Cannon"
+        }
+    ]
+}

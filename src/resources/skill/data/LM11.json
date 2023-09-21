@@ -1,0 +1,14 @@
+{
+    "Id": "LM11",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Steam Pump"
+        },
+
+        {
+            "Number": 2,
+            "Name": "High-Pressure Water Cannon"
+        }
+    ]
+}

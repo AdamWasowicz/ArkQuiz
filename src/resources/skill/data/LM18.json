@@ -1,0 +1,19 @@
+{
+    "Id": "LM18",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Stern Admonishment"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Exorcise Evil"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Honored Guest"
+        }
+    ]
+}

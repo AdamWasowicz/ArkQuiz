@@ -1,0 +1,14 @@
+{
+    "Id": "YD01",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Raging Iron Fist"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Destructive Fist"
+        }
+    ]
+}

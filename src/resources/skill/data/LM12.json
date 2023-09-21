@@ -1,0 +1,14 @@
+{
+    "Id": "LM12",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "One-inch Punch"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Seven-styles Kick"
+        }
+    ]
+}

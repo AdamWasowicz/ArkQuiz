@@ -1,0 +1,19 @@
+{
+    "Id": "R109",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Phantom of the Night"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Bloody Opus"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Night Raid"
+        }
+    ]
+}

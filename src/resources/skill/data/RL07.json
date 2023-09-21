@@ -1,0 +1,19 @@
+{
+    "Id": "RL07",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Dangerous Entity Removal"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Quicksand Generation"
+        },
+
+        {
+            "Number": 3,
+            "Name": "High-speed Resonating Troubleshooter"
+        }
+    ]
+}

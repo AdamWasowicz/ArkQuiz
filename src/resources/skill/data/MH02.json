@@ -1,0 +1,19 @@
+{
+    "Id": "MH02",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Demon Mode"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Blade Dance"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Midair Spinning Blade Dance"
+        }
+    ]
+}

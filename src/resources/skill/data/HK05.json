@@ -1,0 +1,14 @@
+{
+    "Id": "HK05",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Anchor Strike"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Anchor Point Snap"
+        }
+    ]
+}

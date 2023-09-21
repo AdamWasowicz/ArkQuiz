@@ -1,0 +1,19 @@
+{
+    "Id": "HK07",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Awaken"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Prisoner's Dilemma"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Moon in the Water"
+        }
+    ]
+}

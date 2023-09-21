@@ -1,0 +1,14 @@
+{
+    "Id": "HK09",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Origami Art - Swift Strike"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Origami Art - Twin Shadows"
+        }
+    ]
+}
