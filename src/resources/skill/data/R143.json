@@ -1,0 +1,14 @@
+{
+    "Id": "R143",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Penetrating Gaze"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Specular Reflection"
+        }
+    ]
+}

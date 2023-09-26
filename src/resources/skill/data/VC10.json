@@ -1,0 +1,14 @@
+{
+    "Id": "VC10",
+    "Skills": [
+        {
+            "Number": 2,
+            "Name": "Inheritance of Faith"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Glorious Banner"
+        }
+    ]
+}

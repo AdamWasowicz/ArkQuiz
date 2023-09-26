@@ -1,0 +1,14 @@
+{
+    "Id": "RV02",
+    "Skills": [
+        {
+            "Number": 2,
+            "Name": "High-Impact Assault"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Locked Breech Burst"
+        }
+    ]
+}

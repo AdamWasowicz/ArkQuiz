@@ -3,8 +3,7 @@
 - Clean up code (there are some artifacts from early stages of development)
 
 ## Working on it
-Skill:
-- Vanguard
+using localstorage with Skill gamemode
 
 ## Finished
 Skill:
@@ -15,6 +14,7 @@ Skill:
 - Sniper
 - Specialist
 - Supporter
+- Vanguard
 
 Operator:
 - Caster

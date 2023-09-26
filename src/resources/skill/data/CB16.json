@@ -1,0 +1,14 @@
+{
+    "Id": "CB16",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Sentinel Command"
+        },
+
+        {
+            "Number": 2,
+            "Name": "\"Everyone Together!\""
+        }
+    ]
+}

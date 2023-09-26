@@ -1,0 +1,19 @@
+{
+    "Id": "KZ11",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Quick Intuition"
+        },
+
+        {
+            "Number": 2,
+            "Name": "\"Pinus Sylvestris\""
+        },
+
+        {
+            "Number": 3,
+            "Name": "Flameheart"
+        }
+    ]
+}

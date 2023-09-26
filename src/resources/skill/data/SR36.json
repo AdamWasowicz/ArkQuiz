@@ -1,0 +1,19 @@
+{
+    "Id": "SR36",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Packleader's Call"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Packleader's Gift"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Packleader's Dignity"
+        }
+    ]
+}
