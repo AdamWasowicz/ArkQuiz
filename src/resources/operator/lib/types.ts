@@ -66,3 +66,9 @@ export type OperatorHealthcheckResult = {
     errorsOperatorRace: string[],
     errorsOperatorIcon: string[],
 }
+
+export type OperatorHeaderComposite = {
+    WhenCreated: Date,
+    Version: string,
+    Data: OperatorHeader[]
+}

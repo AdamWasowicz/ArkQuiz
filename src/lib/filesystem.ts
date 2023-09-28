@@ -21,3 +21,8 @@ export const readJson = (fullPath: string): unknown => {
 
     return json;
 }
+
+export const saveJson = (data: object, fullPath: string) => {
+    const json = JSON.stringify(data);
+    fs.writeFileSync(fullPath, json, 'utf8')
+}

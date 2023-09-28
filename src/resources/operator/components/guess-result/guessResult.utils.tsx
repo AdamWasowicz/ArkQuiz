@@ -1,6 +1,6 @@
 import { getOperatorRaceDescription } from "@/src/lib/serverFunctions";
 import { OperatorRaceDescription } from "../../lib/types";
-import styles from './guessResultRow.module.scss';
+import styles from './guessResult.module.scss';
 import { Fragment } from 'react';
 
 const useUtils = () => {

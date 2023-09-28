@@ -20,3 +20,14 @@ export interface SkillComparisonResult {
     OperatorHeader: OperatorHeader,
     IsCorrect: boolean
 }
+
+export type SkillHeaderComposite = {
+    WhenCreated: Date,
+    Version: string,
+    Data: SkillHeader[]
+}
+
+export interface SkillHealthCheckResult {
+    errorsSkill: string[]
+    errorSkillIcon: string[]
+}

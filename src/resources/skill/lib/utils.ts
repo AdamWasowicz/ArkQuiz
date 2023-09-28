@@ -1,15 +1,17 @@
-import { OperatorSkillsData, SkillHeader } from "./types";
+import { OperatorSkillsData, SkillHeader, SkillHeaderComposite } from "./types";
 import { 
     EXTERNAL_PATH_TO_SKILL_ICONS, 
     PATH_TO_SKILL_DATA
 } from "@/src/lib/paths";
-import { getAllFileNamesInDirectory, readJson, doesFileExist } from "@/src/lib/filesystem";
+import { getAllFileNamesInDirectory, readJson, doesFileExist, saveJson } from "@/src/lib/filesystem";
 import path from 'path';
+import packageDotJson from '@/package.json'; 
 
 const imageFormat = '.webp';
 const skillDataFormat = '.json';
 const pathToSkillIcon = path.join(...EXTERNAL_PATH_TO_SKILL_ICONS);
 const pathToSkillData = path.join(process.cwd(), ...PATH_TO_SKILL_DATA)
+const skillHeadersLocation = path.join(process.cwd(), ...['src' ,'resources', 'skill', 'lib', 'SkillHeaders.json']);
 
 export const getOperatorSkillData = (id: string): OperatorSkillsData => {
     const fileExist = doesFileExist(path.join(pathToSkillData, id + skillDataFormat))
@@ -33,6 +35,32 @@ export const getAllOperatorSkillData = (): OperatorSkillsData[] => {
     return skillsData;
 }
 
+export const getAllSkillHeaders = (): SkillHeader[] => {
+    // Composite headers
+    let skills: SkillHeader[] = [];
+    const compositeHeaders = getSkillHeaderComposite();
+    if (compositeHeaders !== undefined) {
+        skills = compositeHeaders;
+    }
+    else {
+        const data: OperatorSkillsData[] = getAllOperatorSkillData();
+        skills = [];
+        data.forEach(osd => {
+            const osd_s: SkillHeader[] = osd.Skills.map(s => (
+                {
+                    Id: osd.Id, 
+                    Number: s.Number,
+                    Name: s.Name
+
+                } satisfies SkillHeader)
+            );
+            skills.push(...osd_s);
+        }) 
+    }
+
+    return skills;
+}
+
 export const getAllFileNames = (): string[] => {
     const fileNames: string[] = getAllFileNamesInDirectory(pathToSkillData);
     return fileNames;
@@ -41,24 +69,85 @@ export const getAllFileNames = (): string[] => {
 export const getDaySkill  = (date: Date): SkillHeader => {
     const seed: number = date.getMonth() * date.getDate() + date.getDate()
 
-    // Skill data
-    const data: OperatorSkillsData[] = getAllOperatorSkillData();
-    const skills: SkillHeader[] = [];
-    data.forEach(osd => {
-        const osd_s: SkillHeader[] = osd.Skills.map(s => (
-            {
-                Id: osd.Id, 
-                Number: s.Number,
-                Name: s.Name
-
-            } satisfies SkillHeader)
-        );
-        skills.push(...osd_s);
-    })
+    // Composite headers
+    let skills: SkillHeader[] = getAllSkillHeaders();
 
     const amountOfSkills = skills.length;
     const index = seed % amountOfSkills;
     const selectedSkill = skills[index];
 
     return selectedSkill;
+}
+
+// Composite files
+export const generateSkillHeaderCompositeFile = () => {
+    const fullPath = skillHeadersLocation;
+
+    // Check if file already exists
+    let fileExists: boolean = true;
+    try {
+        fileExists = doesFileExist(fullPath);
+    }
+    catch {
+        fileExists = false;
+    }
+
+    if (fileExists) {
+        const data = readJson(fullPath) as SkillHeaderComposite;
+        // File exists and is current
+        if (data.Version === packageDotJson.version) {
+            return;
+        }
+    }
+
+    // Read all headers
+    const data: OperatorSkillsData[] = getAllOperatorSkillData();
+
+    const skillArray: SkillHeader[] = [];
+    data.forEach((item) => {
+        item.Skills.forEach((skill) => {
+            const sh: SkillHeader = {
+                Id: item.Id,
+                Name: skill.Name,
+                Number: skill.Number
+            }
+
+            skillArray.push(sh);
+        })
+    })
+
+    const output: SkillHeaderComposite = {
+        Version: packageDotJson.version,
+        WhenCreated: new Date(),
+        Data: skillArray
+    }
+
+    // Save it
+    saveJson(
+        output,
+        fullPath
+    );
+}
+
+export const getSkillHeaderComposite = (): SkillHeader[] | undefined => {
+    const fullPath = skillHeadersLocation;
+
+    // Check if file already exists
+    let fileExists: boolean = true;
+    try {
+        fileExists = doesFileExist(fullPath);
+    }
+    catch {
+        fileExists = false;
+    }
+
+    if (fileExists) {
+        const data = readJson(fullPath) as SkillHeaderComposite;
+        // File exists and is current
+        if (data.Version === packageDotJson.version) {
+            return data.Data;
+        }
+    }
+
+    return undefined;
 }

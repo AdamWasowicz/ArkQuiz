@@ -1,12 +1,13 @@
-import { Operator, OperatorHeader, OperatorHeaderMap, OperatorComparisonResult, OperatorRaceDescription, OperatorHealthcheckResult } from "./types";
+import { Operator, OperatorHeader, OperatorHeaderMap, OperatorComparisonResult, OperatorRaceDescription, OperatorHeaderComposite } from "./types";
 import path from 'path';
-import { getAllFileNamesInDirectory, readJson, doesFileExist } from "@/src/lib/filesystem";
+import { getAllFileNamesInDirectory, readJson, doesFileExist, saveJson } from "@/src/lib/filesystem";
 import { 
     EXTERNAL_PATH_TO_OPERATOR_ICONS,
     LOCAL_PATH_TO_OPERATOR_ICONS, 
     PATH_TO_OPERATOR_DATA,
     PATH_TO_OPERATOR_RACE, 
 } from "@/src/lib/paths";
+import packageDotJson from '@/package.json'; 
 
 // Const
 const imageFormat = '.webp';
@@ -14,6 +15,7 @@ const operatorDataFormat = '.json';
 const localPathToOperators = path.join(process.cwd(), ...PATH_TO_OPERATOR_DATA);
 const localPathToRaces = path.join(process.cwd(), ...PATH_TO_OPERATOR_RACE)
 const pathToOperatorIcon = path.join(...EXTERNAL_PATH_TO_OPERATOR_ICONS)
+const operatorHeadersLocation = path.join(process.cwd(), ...['src' ,'resources', 'operator', 'lib', 'OperatorHeaders.json']);
 
 
 // Functions
@@ -37,6 +39,13 @@ export const getOperatorById = (id: string): Operator => {
 export const getAllOperatorHeaders = (): OperatorHeader[] => {
     const fileNames: string[] = getAllFileNamesInDirectory(localPathToOperators);
 
+    // Composite headers
+    const compositeHeaders = getOperatorHeaderComposite();
+    if (compositeHeaders !== undefined) {
+        return compositeHeaders;
+    }
+
+    // Get headers using default method
     const operatorHeaders: OperatorHeader[] = [];
     fileNames.forEach(file => {
         const operator = readJson(path.join(localPathToOperators, file)) as Operator;
@@ -79,11 +88,6 @@ export const getAllOperatorFileNames = (): string[] => {
     return fileNames;
 }
 
-// export const handleOperatorGuess = (id: string): OperatorComparisonResult => {
-//     const todayId = getDayOperatorId(new Date());
-//     return compareTwoOperators(todayId, id);
-// }
-
 /**
  * @returns Id of that day operator
  */
@@ -120,10 +124,6 @@ export const getOperatorHeaderMap = (): OperatorHeaderMap => {
 
     return headerMap;
 }
-
-// export const getOperatorHeader = (id: string): OperatorHeader => {
-//     return getOperatorById(id).getOperatorHeader();
-// }
 
 export const compareTwoOperators = (originalId: string, comparedId: string): OperatorComparisonResult => {
     // Get operator data
@@ -194,29 +194,6 @@ const __compareTwoOperatorsComparer = (t1: unknown, t2: unknown): number => {
     return 0;
 }
 
-// Health checks
-
-
-// Helpers
-export const getAllRaces = (): string[] => {
-    const headers: OperatorHeader[] = getAllOperatorHeaders();
-    let races: string[] = []
-    headers.forEach((item) => 
-        {
-            const race: string | string[] = getOperatorById(item.Id).Race;
-            if (typeof race === 'object') {
-                races = [...races, ...race];
-            }
-            else {
-                races = [...races, race];
-            }
-        }
-    );
-    
-    const uniq = races.filter((value, index, array) => array.indexOf(value) === index);
-    return uniq.sort();
-}
-
 // All info was taken from arknights fandom wiki
 // href: https://arknights.fandom.com/wiki/Arknights_Wiki
 export const getOperatorRaceDescription = (raceName: string): OperatorRaceDescription => {
@@ -229,246 +206,61 @@ export const getOperatorRaceDescription = (raceName: string): OperatorRaceDescri
     return raceDescription;
 }
 
-// Healthchecks
-export const doHealthCheck = (): OperatorHealthcheckResult => {
-    const output: OperatorHealthcheckResult = {
-        errorsOperators: __doHealthCheck_Operator(),
-        errorsOperatorIcon: __doHealthCheck_Icon(),
-        errorsOperatorRace: __doHealthCheck_Race()
+// Composite files
+export const generateOperatorHeaderCompositeFile = () => {
+    const fullPath = operatorHeadersLocation;
+
+    // Check if file already exists
+    let fileExists: boolean = true;
+    try {
+        fileExists = doesFileExist(fullPath);
+    }
+    catch {
+        fileExists = false;
     }
 
-    return output;
-}
-
-// HC - Operator
-const __doHealthCheck_Operator = (): string[] => {
-    const errors: string[] = [];
-
-    const allOperatorHeaders: OperatorHeader[] = getAllOperatorHeaders();
-    allOperatorHeaders.forEach((header) => {
-        const operatorData: Operator = getOperatorById(header.Id);
-        // Id: string
-        // 1. Is empty
-        if (_isEmptyOrNull(operatorData.Id)) {
-            errors.push(`File ${header.Id} has empty Id`);
+    if (fileExists) {
+        const data = readJson(fullPath) as OperatorHeaderComposite;
+        // File exists and is current
+        if (data.Version === packageDotJson.version) {
+            return;
         }
-        // 2. Id does not match
-        else if (header.Id !== operatorData.Id) {
-            errors.push(`File ${header.Id} has not matching Id`);
-        }
-
-        // Name: string
-        // 1. Is empty
-        if (_isEmptyOrNull(operatorData.Name)) {
-            errors.push(`File ${header.Id} has empty Name`);
-        }
-        // 2. Has whitespaces
-        else if (_hasWhitespaces(operatorData.Name)) {
-            errors.push(`File ${header.Id} has whitespaces in Name`);
-        }
-        
-        // Rarity: number
-        // 1. Is empty
-        if (_isNull(operatorData.Rarity)) {
-            errors.push(`File ${header.Id} has empty Rarity`);
-        }
-        // 2. Is not withing 1->6 range
-        else if (operatorData.Rarity < 1 || operatorData.Rarity > 6) {
-            errors.push(`File ${header.Id} has invalid Rarity`);
-        }
-
-        // Class: string
-        // 1. Is empty
-        if (_isEmptyOrNull(operatorData.Class)) {
-            errors.push(`File ${header.Id} has empty Class`);
-        }   
-        // 2. Has whitespaces
-        else if (_hasWhitespaces(operatorData.Class)) {
-            errors.push(`File ${header.Id} has whitespaces in Class`);
-        }
-        // 3. Invalid class name
-        else if (_hasInvalidOperatorClass(operatorData.Class)){
-            errors.push(`File ${header.Id} has invalid Class`);
-        }
-
-        // Branch: string
-        // 1. Is empty
-        if (_isEmptyOrNull(operatorData.Branch)) {
-            errors.push(`File ${header.Id} has empty Branch`);
-        }   
-        // 2. Has whitespaces
-        else if (_hasWhitespaces(operatorData.Branch)) {
-            errors.push(`File ${header.Id} has whitespaces in Branch`);
-        }
-
-        // Attack_Range: string | string[]
-        // 1. Is empty
-        if (operatorData.Attack_Range === null || operatorData.Attack_Range.length === 0) {
-            errors.push(`File ${header.Id} has empty Attack_Range`);
-        }
-        // 2. Invalid attack range
-        else if (_hasInvalidAttackRange(operatorData.Attack_Range)) {
-            errors.push(`File ${header.Id} has invalid Attack_Range`);
-        }
-
-        // Position: string | string[]
-        // 1. Is empty
-        if (operatorData.Position === null || operatorData.Position.length === 0) {
-            errors.push(`File ${header.Id} has empty Position`);
-        }
-        // 2. Invalid position
-        else if (_hasInvalidPosition(operatorData.Position)) {
-            errors.push(`File ${header.Id} has invalid Position`);
-        }    
-
-        // Gender: string
-        // 1. Is empty
-        if (_isEmptyOrNull(operatorData.Gender)) {
-            errors.push(`File ${header.Id} has empty Gender`);
-        }
-        // 2. Invalid gender
-        else if (_hasInvalidGender(operatorData.Gender)) {
-            errors.push(`File ${header.Id} has invalid Gender`);
-        }
-
-        // Race: string | string[]
-        // 1. Is empty
-        if (operatorData.Race === null || operatorData.Race.length === 0) {
-            errors.push(`File ${header.Id} has empty Race`);
-        }
-        // 2. Has whitespaces
-        else if (_hasWhitespaces(operatorData.Race)) {
-            errors.push(`File ${header.Id} has whitespaces in Race`);
-        }
-
-        // Faction: string
-        // 1. Is empty
-        if (_isEmptyOrNull(operatorData.Faction)) {
-            errors.push(`File ${header.Id} has empty Faction`);
-        }
-        // 2. Has whitespaces
-        else if (_hasWhitespaces(operatorData.Race)) {
-            errors.push(`File ${header.Id} has whitespaces in Faction`);
-        }
-
-    })
-
-    return errors;
-}
-const _toArray = (value: string | string[]): string[] => {
-    let arr: string[] = [];
-    if (typeof value === 'object') {
-        arr = [...value];
-    } 
-    else {
-        arr = [value];
     }
 
-    return arr;
-}
-const _hasWhitespaces = (value: string | string[]) => {
-    let arr = _toArray(value);
+    // Read all headers
+    const headers = getAllOperatorHeaders();
+    const output: OperatorHeaderComposite = {
+        Version: packageDotJson.version,
+        WhenCreated: new Date(),
+        Data: headers
+    }
 
-    let isError: boolean = false;
-    arr.forEach((ar) => {
-        if (ar.trim().length < ar.length) {
-            isError = true;
+    // Save it
+    saveJson(
+        output,
+        fullPath
+    );
+}
+
+export const getOperatorHeaderComposite = (): OperatorHeader[] | undefined => {
+    const fullPath = operatorHeadersLocation;
+
+    // Check if file already exists
+    let fileExists: boolean = true;
+    try {
+        fileExists = doesFileExist(fullPath);
+    }
+    catch {
+        fileExists = false;
+    }
+
+    if (fileExists) {
+        const data = readJson(fullPath) as OperatorHeaderComposite;
+        // File exists and is current
+        if (data.Version === packageDotJson.version) {
+            return data.Data;
         }
-    })
+    }
 
-    return isError;
-}
-const _isEmptyOrNull = (value: string): boolean => value === null || value.length === 0
-const _isNull = (value: unknown): boolean => value === null
-const _hasInvalidOperatorClass = (value: string): boolean => {
-    const validOperatorClasses = [
-        "Caster",
-        "Defender",
-        "Guard",
-        "Medic",
-        "Sniper",
-        "Specialist",
-        "Supporter",
-        "Vanguard",
-    ]
-
-    return validOperatorClasses.findIndex(oc => oc === value) === -1;
-}
-const _hasInvalidAttackRange = (value: string | string[]): boolean => {
-    const validAttackRanges = [
-        "Melee",
-        "Ranged"
-    ]
-
-    let arr = _toArray(value);
-
-    let isError: boolean = false;
-    arr.forEach((ar) => {
-        if (validAttackRanges.findIndex((r) => {return ar === r}) === -1) {
-            isError = true;
-        }
-    })
-
-    return isError;
-}
-const _hasInvalidPosition = (value: string | string[]): boolean =>{
-    const validPositions = [
-        "High ground",
-        "Ground"
-    ]
-
-    let arr = _toArray(value);
-
-    let isError: boolean = false;
-    arr.forEach((ar) => {
-        if (validPositions.findIndex((r) => {return ar === r}) === -1) {
-            isError = true;
-        }
-    })
-
-    return isError;
-}
-const _hasInvalidGender = (value: string): boolean => {
-    const validGenders = [
-        "Male",
-        "Female",
-        "Conviction",
-        'Unknown',
-        'Undisclosed'
-    ]
-
-    return validGenders.findIndex((vg) => value === vg) === -1;
-}
-
-// HC - Icon
-const __doHealthCheck_Icon = (): string[] => {
-    const errors: string[] = [];
-
-    const allOperatorHeaders: OperatorHeader[] = getAllOperatorHeaders();
-    allOperatorHeaders.forEach((header) => {
-        const route = getAbsolutePathToIcon(header.Id);
-        if (doesFileExist(route) === false) {
-            errors.push(`Operator with Id ${header.Id} does not have icon`)
-        }
-    })
-
-    return errors;
-}
-// HC - Race
-const __doHealthCheck_Race = (): string[] => {
-    const errors: string[] = [];
-
-    const allOperatorHeaders: OperatorHeader[] = getAllOperatorHeaders();
-    allOperatorHeaders.forEach((header) => {
-        const operator = getOperatorById(header.Id);
-        const races = _toArray(operator.Race);
-        races.forEach((race) => {
-            const raceFile = getOperatorRaceDescription(race);
-            if (raceFile === null) {
-                errors.push(`There is no race description for ${race}`);
-            }
-        })
-    })
-
-    return errors;
+    return undefined;
 }

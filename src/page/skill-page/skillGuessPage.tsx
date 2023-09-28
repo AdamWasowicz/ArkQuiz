@@ -1,15 +1,16 @@
 "use client"
 import { OperatorHeaderMap } from "@/src/resources/operator/lib/types";
-import { routeToSkillIcon, submitSkillGuess } from "@/src/lib/serverFunctions";
-import Image from "next/image";
-import { getDaySkill } from "@/src/resources/skill/lib/utils";
+import { submitSkillGuess } from "@/src/lib/serverFunctions";
 import styles from './skillGuessPage.module.scss';
 import SearchBar from "@/src/components/search-bar/searchBar";
 import { useAppDispatch, useAppSelector } from "@/src/redux/hooks";
 import { ChangeEvent, useState } from "react";
-import { addGuess, setGameWon } from "@/src/redux/features/skill-slice";
+import { addGuess, setGameWon, setGuesses } from "@/src/redux/features/skill-slice";
 import GuessResult from "@/src/resources/skill/components/guess-result/guessResult";
 import MainPanel from "@/src/resources/skill/components/main-panel/mainPanel";
+import { SkillComparisonResult } from "@/src/resources/skill/lib/types";
+import useLocalstorage from './skillGuessPage.utils';
+import { useEffect } from "react";
 
 interface ISkillGuessPage {
     operatorHeaderMap: OperatorHeaderMap
@@ -18,9 +19,10 @@ interface ISkillGuessPage {
 const SkillGuessPage: React.FC<ISkillGuessPage> = (props) => {
     const { operatorHeaderMap } = props;
 
-    const guesses = useAppSelector(state => state.skill.currentGuesses);
-    const guessWon = useAppSelector(state => state.skill.gameWon);
+    const guesses: SkillComparisonResult[] = useAppSelector(state => state.skill.currentGuesses);
+    const guessWon: boolean = useAppSelector(state => state.skill.gameWon);
     const dispatch = useAppDispatch();
+    const localstorage = useLocalstorage();
 
     const [textInputValue, setTextInputValue] = useState<string>('');
 
@@ -30,15 +32,15 @@ const SkillGuessPage: React.FC<ISkillGuessPage> = (props) => {
         const selectedOperatorHeader = operatorHeaderMap.get(textInputValue.toUpperCase()[0])?.find(item => item.Name.toUpperCase() === textInputValue.toUpperCase())
         
         if (typeof selectedOperatorHeader !== 'undefined') {
-            //utils.saveOperatorDateToStorage();
+            localstorage.saveSkillDateToStorage();
             const res = await submitSkillGuess(selectedOperatorHeader.Id)
             setTextInputValue('')
 
-            //await utils.saveCurrentGuessesToStorage([res ,...guesses]);
+            localstorage.saveCurrentGuessesToStorage([res ,...guesses]);
             dispatch(addGuess(res));
             
             if (res.IsCorrect) {
-                //await utils.saveStatusToStorage(res.isCorrect)
+                localstorage.saveStatusToStorage(res.IsCorrect)
                 dispatch(setGameWon(res.IsCorrect));
             }
         }
@@ -51,6 +53,26 @@ const SkillGuessPage: React.FC<ISkillGuessPage> = (props) => {
     const onResultClick = (value: string) => {
         setTextInputValue(value);
     }
+
+    // Load data from localstorage
+    useEffect(() => {
+        // Check if data is outdated
+        // if so then delete current stored data
+        if (localstorage.isDataOutdated()) {
+            localstorage.removeCurrentGuessesFromStorage();
+            localstorage.removeStatusFromStorage();
+            localstorage.removeSkillDateFromStorage();
+            return;
+        }
+
+        // Guesses
+        const data = localstorage.getCurrentGuessesFromStorage();
+        dispatch(setGuesses(data));
+
+        //Status
+        const status = localstorage.getStatusFromStorage();
+        dispatch(setGameWon(status))
+    }, [])
 
     return (
         <div className={styles.page}>
