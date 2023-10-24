@@ -1,0 +1,14 @@
+{
+    "Id": "RB11",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Surmount Seam"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Solidifying Structure"
+        }
+    ]
+}

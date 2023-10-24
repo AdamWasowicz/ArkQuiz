@@ -1,0 +1,12 @@
+{
+    "Id": "GG02",
+    "Name": "Morgan",
+    "Rarity": 5,
+    "Class": "Guard",
+    "Branch": "Dreadnought",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Feline",
+    "Faction": "Glasgow"
+}

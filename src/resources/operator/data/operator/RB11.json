@@ -1,0 +1,12 @@
+{
+    "Id": "RB11",
+    "Name": "Cement",
+    "Rarity": 5,
+    "Class": "Defender",
+    "Branch": "Duelist",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Zalak",
+    "Faction": "Rim Billiton"
+}

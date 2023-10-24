@@ -1,0 +1,12 @@
+{
+    "Id": "R171",
+    "Name": "Humus",
+    "Rarity": 4,
+    "Class": "Guard",
+    "Branch": "Reaper",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Male",
+    "Race": "Forte",
+    "Faction": "Rhodes Island"
+}

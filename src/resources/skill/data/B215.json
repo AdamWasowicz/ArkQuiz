@@ -1,0 +1,19 @@
+{
+    "Id": "B215",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Shadow Ambush"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Darkness in Night"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Lone Return"
+        }
+    ]
+}
