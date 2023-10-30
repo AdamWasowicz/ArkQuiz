@@ -1,7 +1,6 @@
 import { doesFileExist } from "@/src/lib/filesystem";
 import { OperatorSkillsData, SkillHealthCheckResult } from "./types";
 import { getAllOperatorSkillData, getAllSkillHeaders } from "./utils";
-import { error } from "console";
 import path from "path";
 import { EXTERNAL_PATH_TO_SKILL_ICONS } from "@/src/lib/paths";
 

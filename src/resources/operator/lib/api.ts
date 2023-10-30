@@ -3,7 +3,7 @@ import { compareTwoOperators, getOperatorRaceDescription } from "./utils";
 import { getDayOperatorId } from "./utils";
 
 
-export const POST_Operator_Guess = async (req: NextRequest, _: NextResponse): Promise<NextResponse> => {
+export const POST_Operator_Guess = async (req: NextRequest): Promise<NextResponse> => {
     const body = await req.json();
     const guess = body.id;
     const timestamp = body.timestamp;

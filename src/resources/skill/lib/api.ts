@@ -4,7 +4,7 @@ import { SkillComparisonResult } from "./types";
 import { getOperatorById } from "../../operator/lib/utils";
 import { Operator } from "../../operator/lib/types";
 
-export const POST_Skill_Guess = async (req: NextRequest, _: NextResponse): Promise<NextResponse> => {
+export const POST_Skill_Guess = async (req: NextRequest): Promise<NextResponse> => {
     const body = await req.json();
     const guess = body.id;
     const timestamp = body.timestamp;
@@ -28,7 +28,7 @@ export const POST_Skill_Guess = async (req: NextRequest, _: NextResponse): Promi
     return response;
 }
 
-export const GET_Skill_Guess = async (req: NextRequest, _: NextResponse): Promise<NextResponse> => {
+export const GET_Skill_Guess = async (): Promise<NextResponse> => {
     const daySkill = getDaySkill(new Date());
 
     const response = new NextResponse(JSON.stringify(daySkill), 

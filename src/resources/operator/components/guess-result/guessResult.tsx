@@ -55,7 +55,7 @@ const OperatorGuessResultRow: React.FC<IOperatorGuessResultRowProps> = (props) =
     const dispatch = useAppDispatch();
     const raceArray = useAppSelector(state => state.operator.raceDescriptionArray);
     const currentGuesses = useAppSelector(state => state.operator.currentGuesses);
-    const u = useUtils();
+    const utils = useUtils();
 
     const dataToDisplay = [
         operatorData.Rarity,
@@ -67,9 +67,12 @@ const OperatorGuessResultRow: React.FC<IOperatorGuessResultRowProps> = (props) =
     ]
 
     useEffect(() => {
-        u.getRaceData(operatorData.Race).then((res) => {
+        const getRaceData = () => utils.getRaceData(operatorData.Race).then((res) => {
             dispatch(addRaceToArray(res))
         })
+
+        getRaceData();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [currentGuesses])
 
     let keyOutside: number = 0;
@@ -91,18 +94,18 @@ const OperatorGuessResultRow: React.FC<IOperatorGuessResultRowProps> = (props) =
                     keyOutside = key;
                     return <td 
                             key={key}
-                            className={u.getClassName(diffrenceArray[key])}
+                            className={utils.getClassName(diffrenceArray[key])}
                         >
-                            {u.formatValue(value)}
+                            {utils.formatValue(value)}
                         </td>
                 })
             }
             
-            <td className={u.getClassName(diffrenceArray[++keyOutside])} key={keyOutside}>
-                { u.getRaceDescription(operatorData.Race, raceArray) }
+            <td className={utils.getClassName(diffrenceArray[++keyOutside])} key={keyOutside}>
+                { utils.getRaceDescription(operatorData.Race, raceArray) }
             </td>
 
-            <td className={u.getClassName(diffrenceArray[++keyOutside])} key={keyOutside}>
+            <td className={utils.getClassName(diffrenceArray[++keyOutside])} key={keyOutside}>
                 { operatorData.Faction }
             </td>
         </tr>

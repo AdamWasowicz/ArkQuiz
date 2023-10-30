@@ -70,7 +70,7 @@ const OperatorGuessPage: React.FC<IOperatorGuessPageProps> = (props) => {
         //Status
         const status = utils.getStatusFromStorage();
         dispatch(setGameWon(status))
-    }, [])
+    })
 
 
     return (

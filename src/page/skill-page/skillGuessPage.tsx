@@ -72,7 +72,7 @@ const SkillGuessPage: React.FC<ISkillGuessPage> = (props) => {
         //Status
         const status = localstorage.getStatusFromStorage();
         dispatch(setGameWon(status))
-    }, [])
+    })
 
     return (
         <div className={styles.page}>

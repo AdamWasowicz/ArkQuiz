@@ -161,7 +161,7 @@ const _toArray = (value: string | string[]): string[] => {
     return arr;
 }
 const _hasWhitespaces = (value: string | string[]) => {
-    let arr = _toArray(value);
+    const arr = _toArray(value);
 
     let isError: boolean = false;
     arr.forEach((ar) => {
@@ -194,7 +194,7 @@ const _hasInvalidAttackRange = (value: string | string[]): boolean => {
         "Ranged"
     ]
 
-    let arr = _toArray(value);
+    const arr = _toArray(value);
 
     let isError: boolean = false;
     arr.forEach((ar) => {
@@ -211,7 +211,7 @@ const _hasInvalidPosition = (value: string | string[]): boolean =>{
         "Ground"
     ]
 
-    let arr = _toArray(value);
+    const arr = _toArray(value);
 
     let isError: boolean = false;
     arr.forEach((ar) => {

@@ -31,7 +31,7 @@ const useUtils = () => {
     }
 
     const getRaceData = async (data: string | string[]) => {
-        let dataAsArray = getFieldAsArray(data);
+        const dataAsArray = getFieldAsArray(data);
 
         const promises: Promise<OperatorRaceDescription>[]  = dataAsArray.map((item) => {
                 return getOperatorRaceDescription(item)
@@ -45,7 +45,7 @@ const useUtils = () => {
         // Author node:
         // All that because one operator has two races (maybe in the future there will be more)
         // At least it was fun to solve this problem
-        let dataAsArray = getFieldAsArray(data);
+        const dataAsArray = getFieldAsArray(data);
 
         const components: JSX.Element[] = dataAsArray.map((item, key) => {
             const description = raceArray.find((obj) => {return obj.Race === item})?.Description

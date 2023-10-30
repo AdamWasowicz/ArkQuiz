@@ -1,15 +1,10 @@
 import { OperatorSkillsData, SkillHeader, SkillHeaderComposite } from "./types";
-import { 
-    EXTERNAL_PATH_TO_SKILL_ICONS, 
-    PATH_TO_SKILL_DATA
-} from "@/src/lib/paths";
+import { PATH_TO_SKILL_DATA } from "@/src/lib/paths";
 import { getAllFileNamesInDirectory, readJson, doesFileExist, saveJson } from "@/src/lib/filesystem";
 import path from 'path';
 import packageDotJson from '@/package.json'; 
 
-const imageFormat = '.webp';
 const skillDataFormat = '.json';
-const pathToSkillIcon = path.join(...EXTERNAL_PATH_TO_SKILL_ICONS);
 const pathToSkillData = path.join(process.cwd(), ...PATH_TO_SKILL_DATA)
 const skillHeadersLocation = path.join(process.cwd(), ...['src' ,'resources', 'skill', 'lib', 'SkillHeaders.json']);
 
@@ -70,7 +65,7 @@ export const getDaySkill  = (date: Date): SkillHeader => {
     const seed: number = date.getMonth() * date.getDate() + date.getDate()
 
     // Composite headers
-    let skills: SkillHeader[] = getAllSkillHeaders();
+    const skills: SkillHeader[] = getAllSkillHeaders();
 
     const amountOfSkills = skills.length;
     const index = seed % amountOfSkills;
