@@ -1,4 +1,4 @@
-import { OperatorComparisonResult } from "@/src/resources/operator/lib/types";
+import { OperatorComparisonResultV2 } from "@/src/resources/operator/lib/types";
 
 // Helper for localStorage
 const useUtils = () => {
@@ -6,17 +6,17 @@ const useUtils = () => {
     const OPERATOR_STATUS = "OPERATOR_STATUS";
     const OPERATOR_DATE = "OPERATOR_DATE";
 
-    const saveCurrentGuessesToStorage = (data: OperatorComparisonResult[]) => {
+    const saveCurrentGuessesToStorage = (data: OperatorComparisonResultV2[]) => {
         localStorage.setItem(OPERATOR_CURRENT_GUESSES, JSON.stringify(data));
     }
 
-    const getCurrentGuessesFromStorage = (): OperatorComparisonResult[] => {
+    const getCurrentGuessesFromStorage = (): OperatorComparisonResultV2[] => {
         const data =  localStorage.getItem(OPERATOR_CURRENT_GUESSES);
         if (data === null) {
             return []
         }
         else {
-            const out: OperatorComparisonResult[] = JSON.parse(data);
+            const out: OperatorComparisonResultV2[] = JSON.parse(data);
             return out;
         }
     }

@@ -1,5 +1,5 @@
 import { useAppDispatch, useAppSelector } from "@/src/redux/hooks";
-import { Operator, OperatorComparisonResult } from "../../lib/types";
+import { Operator, OperatorComparisonDiffrenceV2, OperatorComparisonResultV2 } from "../../lib/types";
 import styles from './guessResult.module.scss';
 import { routeToOperatorIcon } from "@/src/lib/serverFunctions";
 import Image from "next/image";
@@ -8,7 +8,7 @@ import { useEffect } from "react";
 import { addRaceToArray } from "@/src/redux/features/operator-slice";
 
 interface IOperatorGuessResultProps {
-    guesses: OperatorComparisonResult[]
+    guesses: OperatorComparisonResultV2[]
     className?: string | string[]
 }
 
@@ -35,7 +35,7 @@ const OperatorGuessResult: React.FC<IOperatorGuessResultProps> = (props) => {
                     guesses.map((item, key) => {
                         return <OperatorGuessResultRow
                             operatorData={item.operator}
-                            diffrenceArray={item.differences}
+                            diffrences={item.diffrences}
                             key={key}
                         />
                     })
@@ -47,11 +47,11 @@ const OperatorGuessResult: React.FC<IOperatorGuessResultProps> = (props) => {
 
 interface IOperatorGuessResultRowProps {
     operatorData: Operator,
-    diffrenceArray: number[]
+    diffrences: OperatorComparisonDiffrenceV2
 }
 
 const OperatorGuessResultRow: React.FC<IOperatorGuessResultRowProps> = (props) => {
-    const { operatorData, diffrenceArray } = props;
+    const { operatorData, diffrences } = props;
     const dispatch = useAppDispatch();
     const raceArray = useAppSelector(state => state.operator.raceDescriptionArray);
     const currentGuesses = useAppSelector(state => state.operator.currentGuesses);
@@ -65,6 +65,8 @@ const OperatorGuessResultRow: React.FC<IOperatorGuessResultRowProps> = (props) =
         operatorData.Position,
         operatorData.Gender,
     ]
+
+    const diffrencesValues: number[] = Object.values(diffrences);
 
     useEffect(() => {
         const getRaceData = () => utils.getRaceData(operatorData.Race).then((res) => {
@@ -94,18 +96,18 @@ const OperatorGuessResultRow: React.FC<IOperatorGuessResultRowProps> = (props) =
                     keyOutside = key;
                     return <td 
                             key={key}
-                            className={utils.getClassName(diffrenceArray[key])}
+                            className={utils.getClassName(diffrencesValues[key])}
                         >
                             {utils.formatValue(value)}
                         </td>
                 })
             }
             
-            <td className={utils.getClassName(diffrenceArray[++keyOutside])} key={keyOutside}>
+            <td className={utils.getClassName(diffrencesValues[++keyOutside])} key={keyOutside}>
                 { utils.getRaceDescription(operatorData.Race, raceArray) }
             </td>
 
-            <td className={utils.getClassName(diffrenceArray[++keyOutside])} key={keyOutside}>
+            <td className={utils.getClassName(diffrencesValues[++keyOutside])} key={keyOutside}>
                 { operatorData.Faction }
             </td>
         </tr>

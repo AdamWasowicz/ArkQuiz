@@ -1,8 +1,8 @@
-import { OperatorComparisonResult, OperatorRaceDescription } from '@/src/resources/operator/lib/types';
+import { OperatorComparisonResultV2, OperatorRaceDescription } from '@/src/resources/operator/lib/types';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 export interface IOperatorState {
-    currentGuesses: OperatorComparisonResult[],
+    currentGuesses: OperatorComparisonResultV2[],
     gameWon: boolean,
     raceDescriptionArray: OperatorRaceDescription[]
 }
@@ -17,11 +17,11 @@ const OperatorSlice = createSlice({
     name: 'operator',
     initialState,
     reducers: {
-        addGuess(state: IOperatorState, action: PayloadAction<OperatorComparisonResult>) {
+        addGuess(state: IOperatorState, action: PayloadAction<OperatorComparisonResultV2>) {
             state.currentGuesses = [action.payload, ...state.currentGuesses];
         },
 
-        setGuesses(state: IOperatorState, action: PayloadAction<OperatorComparisonResult[]>) {
+        setGuesses(state: IOperatorState, action: PayloadAction<OperatorComparisonResultV2[]>) {
             state.currentGuesses = action.payload;
         },
 

@@ -22,7 +22,7 @@ const SkillGuessPage: React.FC<ISkillGuessPage> = (props) => {
     const guesses: SkillComparisonResult[] = useAppSelector(state => state.skill.currentGuesses);
     const guessWon: boolean = useAppSelector(state => state.skill.gameWon);
     const dispatch = useAppDispatch();
-    const localstorage = useLocalstorage();
+    const localstorageHook = useLocalstorage();
 
     const [textInputValue, setTextInputValue] = useState<string>('');
 
@@ -32,15 +32,15 @@ const SkillGuessPage: React.FC<ISkillGuessPage> = (props) => {
         const selectedOperatorHeader = operatorHeaderMap.get(textInputValue.toUpperCase()[0])?.find(item => item.Name.toUpperCase() === textInputValue.toUpperCase())
         
         if (typeof selectedOperatorHeader !== 'undefined') {
-            localstorage.saveSkillDateToStorage();
+            localstorageHook.saveSkillDateToStorage();
             const res = await submitSkillGuess(selectedOperatorHeader.Id)
             setTextInputValue('')
 
-            localstorage.saveCurrentGuessesToStorage([res ,...guesses]);
+            localstorageHook.saveCurrentGuessesToStorage([res ,...guesses]);
             dispatch(addGuess(res));
             
             if (res.IsCorrect) {
-                localstorage.saveStatusToStorage(res.IsCorrect)
+                localstorageHook.saveStatusToStorage(res.IsCorrect)
                 dispatch(setGameWon(res.IsCorrect));
             }
         }
@@ -58,21 +58,21 @@ const SkillGuessPage: React.FC<ISkillGuessPage> = (props) => {
     useEffect(() => {
         // Check if data is outdated
         // if so then delete current stored data
-        if (localstorage.isDataOutdated()) {
-            localstorage.removeCurrentGuessesFromStorage();
-            localstorage.removeStatusFromStorage();
-            localstorage.removeSkillDateFromStorage();
+        if (localstorageHook.isDataOutdated()) {
+            localstorageHook.removeCurrentGuessesFromStorage();
+            localstorageHook.removeStatusFromStorage();
+            localstorageHook.removeSkillDateFromStorage();
             return;
         }
 
         // Guesses
-        const data = localstorage.getCurrentGuessesFromStorage();
+        const data = localstorageHook.getCurrentGuessesFromStorage();
         dispatch(setGuesses(data));
 
         //Status
-        const status = localstorage.getStatusFromStorage();
+        const status = localstorageHook.getStatusFromStorage();
         dispatch(setGameWon(status))
-    })
+    }, [])
 
     return (
         <div className={styles.page}>

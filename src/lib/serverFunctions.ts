@@ -1,4 +1,4 @@
-import { OperatorComparisonResult, OperatorHeader, OperatorRaceDescription } from '@/src/resources/operator/lib/types';
+import { OperatorComparisonResultV2, OperatorHeader, OperatorRaceDescription } from '@/src/resources/operator/lib/types';
 import axios from 'axios';
 import { LOCAL_PATH_TO_OPERATOR_ICONS, LOCAL_PATH_TO_SKILL_ICONS } from './paths';
 import path from 'path';
@@ -33,14 +33,14 @@ export const routeToSkillIcon = (header: SkillHeader): string => {
     return `${path.join(...LOCAL_PATH_TO_SKILL_ICONS)}/${header.Id}_${header.Number}.webp`
 }
 
-export const submitOperatorGuess = async (id: string, timestamp: Date = new Date(), ): Promise<OperatorComparisonResult> => {
+export const submitOperatorGuess = async (id: string, timestamp: Date = new Date(), ): Promise<OperatorComparisonResultV2> => {
     const axiosClient = axios.create({
         headers: {
             'Content-Type': 'application/json'
         }
     })
 
-    const response = await axiosClient.post<OperatorComparisonResult>(
+    const response = await axiosClient.post<OperatorComparisonResultV2>(
         SERVER_ROUTE_TO_OPERATOR_GUESS, 
         {
             id: id, 

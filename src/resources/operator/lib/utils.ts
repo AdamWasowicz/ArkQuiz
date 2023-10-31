@@ -1,4 +1,4 @@
-import { Operator, OperatorHeader, OperatorHeaderMap, OperatorComparisonResult, OperatorRaceDescription, OperatorHeaderComposite } from "./types";
+import { Operator, OperatorHeader, OperatorHeaderMap, OperatorComparisonResult, OperatorRaceDescription, OperatorHeaderComposite, OperatorComparisonResultV2, OperatorComparisonDiffrenceV2 } from "./types";
 import path from 'path';
 import { getAllFileNamesInDirectory, readJson, doesFileExist, saveJson } from "@/src/lib/filesystem";
 import { 
@@ -151,6 +151,35 @@ export const compareTwoOperators = (originalId: string, comparedId: string): Ope
     }
 
     return outputObj;
+}
+
+export const compareTwoOperatorsV2 = (originalId: string, comparedId: string): OperatorComparisonResultV2 => {
+    // Get operator data
+    const oc: Operator = getOperatorById(originalId);
+    const cc: Operator = getOperatorById(comparedId);
+
+    // Compare
+    const diffrences: OperatorComparisonDiffrenceV2 | object = {};
+    const data1 = new Map<string, unknown>(Object.entries(oc));
+    const data2 = new Map<string, unknown>(Object.entries(cc));
+    const keys = Array.from(data1.keys())
+    let isCorrect: boolean = true;
+
+    keys.forEach((key) => {
+        if (key != 'Id' && key !== 'Name') {
+            const result = __compareTwoOperatorsComparer(data1.get(key as string), data2.get(key as string))
+            if (result != 1) { isCorrect = false; }
+            Object.defineProperty(diffrences, key, {value: result, writable: true, enumerable: true});
+        }
+    })
+
+    const output: OperatorComparisonResultV2 = {
+        diffrences: diffrences as OperatorComparisonDiffrenceV2,
+        operator: cc,
+        isCorrect: isCorrect
+    }
+    
+    return output;
 }
 
 const __compareTwoOperatorsComparer = (t1: unknown, t2: unknown): number => {

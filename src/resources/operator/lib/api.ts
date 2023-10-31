@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { compareTwoOperators, getOperatorRaceDescription } from "./utils";
+import { compareTwoOperatorsV2, getOperatorRaceDescription } from "./utils";
 import { getDayOperatorId } from "./utils";
 
 
@@ -9,7 +9,7 @@ export const POST_Operator_Guess = async (req: NextRequest): Promise<NextRespons
     const timestamp = body.timestamp;
 
     const todayId = getDayOperatorId(new Date(timestamp));
-    const response = new NextResponse(JSON.stringify(compareTwoOperators(todayId, guess)), 
+    const response = new NextResponse(JSON.stringify(compareTwoOperatorsV2(todayId, guess)), 
         {
             status: 200,
             headers: {

@@ -56,6 +56,26 @@ export type OperatorComparisonResult = {
     differences: number[]
 }
 
+export type OperatorComparisonResultV2 = {
+    operator: Operator;
+    isCorrect: boolean
+    diffrences: OperatorComparisonDiffrenceV2
+}
+
+export type OperatorComparisonDiffrenceV2 = {
+    //  1 means correct
+    //  0 means partial
+    // -1 means wrong
+    Rarity: number,
+    Class: number,
+    Branch: number,
+    Attack_Range: number,
+    Position: number,
+    Gender: number
+    Race: number
+    Faction: number
+}
+
 export type OperatorRaceDescription = {
     Race: string,
     Description: string
