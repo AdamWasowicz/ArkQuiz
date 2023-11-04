@@ -5,7 +5,7 @@ import styles from './skillGuessPage.module.scss';
 import SearchBar from "@/src/components/search-bar/searchBar";
 import { useAppDispatch, useAppSelector } from "@/src/redux/hooks";
 import { ChangeEvent, useState } from "react";
-import { addGuess, setGameWon, setGuesses } from "@/src/redux/features/skill-slice";
+import { addGuess, setGameWon, setGuesses, setIsWorking } from "@/src/redux/features/skill-slice";
 import GuessResult from "@/src/resources/skill/components/guess-result/guessResult";
 import MainPanel from "@/src/resources/skill/components/main-panel/mainPanel";
 import { SkillComparisonResult } from "@/src/resources/skill/lib/types";
@@ -21,15 +21,24 @@ const SkillGuessPage: React.FC<ISkillGuessPage> = (props) => {
 
     const guesses: SkillComparisonResult[] = useAppSelector(state => state.skill.currentGuesses);
     const guessWon: boolean = useAppSelector(state => state.skill.gameWon);
+    const isWorking: boolean = useAppSelector(state => state.skill.isWorking);
+
     const dispatch = useAppDispatch();
     const localstorageHook = useLocalstorage();
 
     const [textInputValue, setTextInputValue] = useState<string>('');
 
+
     const onFormSubmit = async (event: React.MouseEvent<HTMLElement>) => {
         event.preventDefault();
+
+        // isWorking
+        if (isWorking === true) { return; }
+        else { dispatch(setIsWorking(true)); }
         
-        const selectedOperatorHeader = operatorHeaderMap.get(textInputValue.toUpperCase()[0])?.find(item => item.Name.toUpperCase() === textInputValue.toUpperCase())
+        const selectedOperatorHeader = operatorHeaderMap
+            .get(textInputValue.toUpperCase()[0])
+                ?.find(item => item.Name.toUpperCase() === textInputValue.toUpperCase())
         
         if (typeof selectedOperatorHeader !== 'undefined') {
             localstorageHook.saveSkillDateToStorage();
@@ -37,6 +46,8 @@ const SkillGuessPage: React.FC<ISkillGuessPage> = (props) => {
             setTextInputValue('')
 
             localstorageHook.saveCurrentGuessesToStorage([res ,...guesses]);
+
+            dispatch(setIsWorking(false));
             dispatch(addGuess(res));
             
             if (res.IsCorrect) {
@@ -72,6 +83,8 @@ const SkillGuessPage: React.FC<ISkillGuessPage> = (props) => {
         //Status
         const status = localstorageHook.getStatusFromStorage();
         dispatch(setGameWon(status))
+        
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     return (
@@ -86,7 +99,7 @@ const SkillGuessPage: React.FC<ISkillGuessPage> = (props) => {
                         currentGuessedOperatorNames={guesses.map(item => {
                             return (item.OperatorHeader.Name)
                         })}
-                        guessWon={guessWon}
+                        isFormDisabled={guessWon}
                         inputTextValue={textInputValue}
                         onFormSubmit={onFormSubmit}
                         onInputChange={onInputChange}

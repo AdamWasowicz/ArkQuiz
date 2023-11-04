@@ -1,7 +1,7 @@
 import { OperatorComparisonResultV2 } from "@/src/resources/operator/lib/types";
 
 // Helper for localStorage
-const useUtils = () => {
+const useLocalStorage = () => {
     const OPERATOR_CURRENT_GUESSES = "OPERATOR_CURRENT_GUESSES";
     const OPERATOR_STATUS = "OPERATOR_STATUS";
     const OPERATOR_DATE = "OPERATOR_DATE";
@@ -97,4 +97,4 @@ const useUtils = () => {
     }
 }
 
-export default useUtils;
+export default useLocalStorage;

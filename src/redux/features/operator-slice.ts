@@ -2,12 +2,16 @@ import { OperatorComparisonResultV2, OperatorRaceDescription } from '@/src/resou
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 export interface IOperatorState {
+    isWorking: boolean,
+
     currentGuesses: OperatorComparisonResultV2[],
     gameWon: boolean,
     raceDescriptionArray: OperatorRaceDescription[]
 }
 
 const initialState: IOperatorState = {
+    isWorking: false,
+
     currentGuesses: [],
     gameWon: false,
     raceDescriptionArray: []
@@ -17,6 +21,10 @@ const OperatorSlice = createSlice({
     name: 'operator',
     initialState,
     reducers: {
+        setIsWorking(state: IOperatorState, action: PayloadAction<boolean>) {
+            state.isWorking = action.payload;
+        },
+
         addGuess(state: IOperatorState, action: PayloadAction<OperatorComparisonResultV2>) {
             state.currentGuesses = [action.payload, ...state.currentGuesses];
         },
@@ -41,6 +49,7 @@ const OperatorSlice = createSlice({
 })
 
 export const {
+    setIsWorking,
     addGuess, setGameWon, setGuesses,
     addRaceToArray
 } = OperatorSlice.actions;

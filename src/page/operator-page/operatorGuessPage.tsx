@@ -7,8 +7,8 @@ import styles from './operatorGuessPage.module.scss';
 import MainPanel from "@/src/resources/operator/components/main-panel/mainPanel";
 import { ChangeEvent, useEffect, useState } from "react";
 import { submitOperatorGuess } from "@/src/lib/serverFunctions";
-import { addGuess, setGameWon, setGuesses } from "@/src/redux/features/operator-slice";
-import useUtils from "./operatorGuessPage.utils";
+import { addGuess, setGameWon, setGuesses, setIsWorking } from "@/src/redux/features/operator-slice";
+import useLocalStorage from "./operatorGuessPage.utils";
 
 interface IOperatorGuessPageProps {
     operatorHeaderMap: OperatorHeaderMap
@@ -17,28 +17,39 @@ interface IOperatorGuessPageProps {
 const OperatorGuessPage: React.FC<IOperatorGuessPageProps> = (props) => {
     const { operatorHeaderMap } = props;
 
-    const guesses = useAppSelector(state => state.operator.currentGuesses)
+    const guesses = useAppSelector(state => state.operator.currentGuesses);
+    const isWorking = useAppSelector(state => state.operator.isWorking);
     const operatorGuessWon = useAppSelector(state => state.operator.gameWon);
+
     const dispatch = useAppDispatch();
-    const utils = useUtils();
+    const utils_ls = useLocalStorage();
     
     const [textInputValue, setTextInputValue] = useState<string>('');
 
+
     const onFormSubmit = async (event: React.MouseEvent<HTMLElement>) => {
         event.preventDefault();
+
+        // isWorking
+        if (isWorking === true) { return; }
+        else { dispatch(setIsWorking(true)); }
         
-        const selectedOperatorHeader = operatorHeaderMap.get(textInputValue.toUpperCase()[0])?.find(item => item.Name.toUpperCase() === textInputValue.toUpperCase())
+        const selectedOperatorHeader = operatorHeaderMap
+            .get(textInputValue.toUpperCase()[0])
+                ?.find(item => item.Name.toUpperCase() === textInputValue.toUpperCase())
         
         if (typeof selectedOperatorHeader !== 'undefined') {
-            utils.saveOperatorDateToStorage();
+            utils_ls.saveOperatorDateToStorage();
             const res = await submitOperatorGuess(selectedOperatorHeader.Id)
             setTextInputValue('')
 
-            await utils.saveCurrentGuessesToStorage([res ,...guesses]);
+            await utils_ls.saveCurrentGuessesToStorage([res ,...guesses]);
+
+            dispatch(setIsWorking(false));
             dispatch(addGuess(res));
             
             if (res.isCorrect) {
-                await utils.saveStatusToStorage(res.isCorrect)
+                await utils_ls.saveStatusToStorage(res.isCorrect)
                 dispatch(setGameWon(res.isCorrect));
             }
         }
@@ -56,19 +67,19 @@ const OperatorGuessPage: React.FC<IOperatorGuessPageProps> = (props) => {
     useEffect(() => {
         // Check if data is outdated
         // if so then delete current stored data
-        if (utils.isDataOutdated()) {
-            utils.removeCurrentGuessesFromStorage();
-            utils.removeStatusFromStorage();
-            utils.removeOeratorDateFromStorage();
+        if (utils_ls.isDataOutdated()) {
+            utils_ls.removeCurrentGuessesFromStorage();
+            utils_ls.removeStatusFromStorage();
+            utils_ls.removeOeratorDateFromStorage();
             return;
         }
 
         // Guesses
-        const data = utils.getCurrentGuessesFromStorage();
+        const data = utils_ls.getCurrentGuessesFromStorage();
         dispatch(setGuesses(data));
 
         //Status
-        const status = utils.getStatusFromStorage();
+        const status = utils_ls.getStatusFromStorage();
         dispatch(setGameWon(status))
     }, [])
 
@@ -85,7 +96,7 @@ const OperatorGuessPage: React.FC<IOperatorGuessPageProps> = (props) => {
                         currentGuessedOperatorNames={guesses.map(item => {
                             return (item.operator.Name)
                         })}
-                        guessWon={operatorGuessWon}
+                        isFormDisabled={operatorGuessWon}
                         inputTextValue={textInputValue}
                         onFormSubmit={onFormSubmit}
                         onInputChange={onInputChange}

@@ -7,7 +7,7 @@ import SearchBarResult from "@/src/components/search-bar/search-bar-result/searc
 
 interface ISearchBar {
     operatorHeadersMap: OperatorHeaderMap,
-    guessWon: boolean,
+    isFormDisabled: boolean,
     onInputChange: (event: ChangeEvent<HTMLInputElement>) => void,
     inputTextValue: string
     onFormSubmit: (event: React.MouseEvent<HTMLElement>) => void,
@@ -17,7 +17,7 @@ interface ISearchBar {
 
 const SearchBar: React.FC<ISearchBar> = (props) => {
     const { 
-        operatorHeadersMap, guessWon, 
+        operatorHeadersMap, isFormDisabled, 
         onInputChange, inputTextValue, 
         onFormSubmit, currentGuessedOperatorNames,
         onResultClick 
@@ -58,7 +58,7 @@ const SearchBar: React.FC<ISearchBar> = (props) => {
                 <div className={styles.topPart}>
                     <input 
                         type='text'
-                        disabled={guessWon}
+                        disabled={isFormDisabled}
                         className={styles.input}
                         onChange={onInputChange}
                         value={inputTextValue}
@@ -67,7 +67,7 @@ const SearchBar: React.FC<ISearchBar> = (props) => {
                     <button 
                         className={styles.button}
                         onClick={onFormSubmit}
-                        disabled={guessWon}
+                        disabled={isFormDisabled}
                     >
                         Guess
                     </button>
