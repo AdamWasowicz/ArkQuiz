@@ -1,0 +1,19 @@
+{
+    "Id": "CB88",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "In Search of Reason"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Meandering Stars"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Well-Read Ravings"
+        }
+    ]
+}

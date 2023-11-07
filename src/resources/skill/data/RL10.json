@@ -1,0 +1,19 @@
+{
+    "Id": "RL10",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Enterprise"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Bird's Eye Horizon"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Dreadnought Protocol"
+        }
+    ]
+}

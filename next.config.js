@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-unused-vars, @typescript-eslint/no-var-requires
 const path = require('path');
 
 const environment = process.env.NODE_ENV;

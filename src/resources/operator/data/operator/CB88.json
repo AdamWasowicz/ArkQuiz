@@ -1,0 +1,12 @@
+{
+    "Id": "CB88",
+    "Name": "Ho'olheyak",
+    "Rarity": 6,
+    "Class": "Caster",
+    "Branch": "Core",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": ["Pythia", "Liberi"],
+    "Faction": "Columbia"
+}

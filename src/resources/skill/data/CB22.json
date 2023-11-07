@@ -1,0 +1,14 @@
+{
+    "Id": "CB22",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Saturated Pulse"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Critical Burst"
+        }
+    ]
+}

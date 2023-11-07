@@ -1,0 +1,12 @@
+{
+    "Id": "CB22",
+    "Name": "Melanite",
+    "Rarity": 5,
+    "Class": "Sniper",
+    "Branch": "Heavyshooter",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Pythia",
+    "Faction": "Columbia"
+}

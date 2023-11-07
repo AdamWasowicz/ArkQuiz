@@ -1,0 +1,19 @@
+{
+    "Id": "RL09",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Progresive Moisturization"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Ecologicial Interaction"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Superficial Regulation"
+        }
+    ]
+}
