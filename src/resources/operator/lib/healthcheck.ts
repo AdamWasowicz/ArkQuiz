@@ -4,6 +4,9 @@ import { getAbsolutePathToIcon, getAllOperatorHeaders, getOperatorById, getOpera
 
 
 // Helpers
+/**
+ * @returns array of all races in app
+ */
 export const getAllRaces = (): string[] => {
     const headers: OperatorHeader[] = getAllOperatorHeaders();
     let races: string[] = []
@@ -24,6 +27,9 @@ export const getAllRaces = (): string[] => {
 }
 
 // Healthchecks
+/**
+ * @returns object of type {@link OperatorHealthcheckResult} with results
+ */
 export const doHealthCheck = (): OperatorHealthcheckResult => {
     const output: OperatorHealthcheckResult = {
         errorsOperators: __doHealthCheck_Operator(),
@@ -35,6 +41,9 @@ export const doHealthCheck = (): OperatorHealthcheckResult => {
 }
 
 // HC - Operator
+/**
+ * @returns array of erros with operator data
+ */
 const __doHealthCheck_Operator = (): string[] => {
     const errors: string[] = [];
 
@@ -149,6 +158,12 @@ const __doHealthCheck_Operator = (): string[] => {
 
     return errors;
 }
+
+/**
+ * Converts value to string array
+ * @param value can be string or string[]
+ * @returns array of string values
+ */
 const _toArray = (value: string | string[]): string[] => {
     let arr: string[] = [];
     if (typeof value === 'object') {
@@ -160,7 +175,11 @@ const _toArray = (value: string | string[]): string[] => {
 
     return arr;
 }
-const _hasWhitespaces = (value: string | string[]) => {
+
+/**
+ * @returns true if has whitespaces else it return false
+ */
+const _hasWhitespaces = (value: string | string[]): boolean => {
     const arr = _toArray(value);
 
     let isError: boolean = false;
@@ -172,8 +191,15 @@ const _hasWhitespaces = (value: string | string[]) => {
 
     return isError;
 }
+
 const _isEmptyOrNull = (value: string): boolean => value === null || value.length === 0
+
 const _isNull = (value: unknown): boolean => value === null
+
+/**
+ * @param value operator class name
+ * @returns true if class name is invalid
+ */
 const _hasInvalidOperatorClass = (value: string): boolean => {
     const validOperatorClasses = [
         "Caster",
@@ -188,6 +214,11 @@ const _hasInvalidOperatorClass = (value: string): boolean => {
 
     return validOperatorClasses.findIndex(oc => oc === value) === -1;
 }
+
+/**
+ * @param value operator attack range
+ * @returns true if attack range is invalid
+ */
 const _hasInvalidAttackRange = (value: string | string[]): boolean => {
     const validAttackRanges = [
         "Melee",
@@ -205,6 +236,11 @@ const _hasInvalidAttackRange = (value: string | string[]): boolean => {
 
     return isError;
 }
+
+/**
+ * @param value operator position
+ * @returns true if position is invalid
+ */
 const _hasInvalidPosition = (value: string | string[]): boolean =>{
     const validPositions = [
         "High ground",
@@ -222,6 +258,11 @@ const _hasInvalidPosition = (value: string | string[]): boolean =>{
 
     return isError;
 }
+
+/**
+ * @param value gender of operator
+ * @returns True if gender is invalid
+ */
 const _hasInvalidGender = (value: string): boolean => {
     const validGenders = [
         "Male",
@@ -235,6 +276,9 @@ const _hasInvalidGender = (value: string): boolean => {
 }
 
 // HC - Icon
+/**
+ * @returns array of erros with icons
+ */
 const __doHealthCheck_Icon = (): string[] => {
     const errors: string[] = [];
 
@@ -249,6 +293,9 @@ const __doHealthCheck_Icon = (): string[] => {
     return errors;
 }
 // HC - Race
+/**
+ * @returns array of erros with race
+ */
 const __doHealthCheck_Race = (): string[] => {
     const errors: string[] = [];
 

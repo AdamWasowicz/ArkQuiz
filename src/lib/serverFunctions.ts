@@ -9,7 +9,8 @@ const SERVER_ROUTE_TO_OPERATOR_HEADERS = 'api/operator/headers';
 const SERVER_ROUTE_TO_OPERATOR_RACE = 'api/operator/race';
 const SERVER_ROUTE_TO_SKILL_GUESS = 'api/skill';
 
-export const fetchAllOperatorHeaders = async (): Promise<OperatorHeader[]> => {
+/** Try fetching all Operator headers  */
+export const fetchAllOperatorHeaders = async (): Promise<OperatorHeader[] | undefined> => {
     const axiosClient = axios.create({
         headers: {
             'Accept': 'application/json',
@@ -19,7 +20,7 @@ export const fetchAllOperatorHeaders = async (): Promise<OperatorHeader[]> => {
 
     const response = await axiosClient.get<OperatorHeader[]>(SERVER_ROUTE_TO_OPERATOR_HEADERS);
     if (response.status != 200) {
-        throw new Error('Cannot get operator headers')
+        return undefined;
     }
 
     return response.data;
@@ -33,7 +34,12 @@ export const routeToSkillIcon = (header: SkillHeader): string => {
     return `${path.join(...LOCAL_PATH_TO_SKILL_ICONS)}/${header.Id}_${header.Number}.webp`
 }
 
-export const submitOperatorGuess = async (id: string, timestamp: Date = new Date(), ): Promise<OperatorComparisonResultV2> => {
+/** 
+ * Try submiting Operator guiz guess 
+ * @param id Id of operator
+ * @param timestamp (optional) answer for that time
+ * */
+export const submitOperatorGuess = async (id: string, timestamp: Date = new Date(), ): Promise<OperatorComparisonResultV2 | undefined> => {
     const axiosClient = axios.create({
         headers: {
             'Content-Type': 'application/json'
@@ -48,10 +54,19 @@ export const submitOperatorGuess = async (id: string, timestamp: Date = new Date
         }
     )
 
+    if (response.status !== 200) {
+        return undefined;
+    }
+
     return response.data;
 }
 
-export const getOperatorRaceDescription = async (raceIn: string): Promise<OperatorRaceDescription> => {
+/**
+ * Try getting Operator race data
+ * @param raceName name of race
+ * @returns promise of type {@link OperatorRaceDescription} or undefined
+ */
+export const getOperatorRaceDescription = async (raceName: string): Promise<OperatorRaceDescription | undefined> => {
     const axiosClient = axios.create({
         headers: {
             'Content-Type': 'application/json'
@@ -59,12 +74,21 @@ export const getOperatorRaceDescription = async (raceIn: string): Promise<Operat
     })
 
     const response = await axiosClient.get<OperatorRaceDescription>(
-        SERVER_ROUTE_TO_OPERATOR_RACE + `/${raceIn}`);
+        SERVER_ROUTE_TO_OPERATOR_RACE + `/${raceName}`);
+
+    if (response.status !== 200) {
+        return undefined;
+    }
 
     return response.data;
 }
 
-export const submitSkillGuess = async (id: string, timestamp: Date = new Date(), ): Promise<SkillComparisonResult> => {
+/** 
+ * Try submiting Skill guiz guess 
+ * @param id Id of operator
+ * @param timestamp (optional) answer for that time
+ */
+export const submitSkillGuess = async (id: string, timestamp: Date = new Date(), ): Promise<SkillComparisonResult | undefined> => {
     const axiosClient = axios.create({
         headers: {
             'Content-Type': 'application/json'
@@ -79,10 +103,18 @@ export const submitSkillGuess = async (id: string, timestamp: Date = new Date(),
         }
     )
 
+    if (response.status !== 200) {
+        return undefined;
+    }
+
     return response.data;
 }
 
-export const fetchTodaySkillHeader = async (): Promise<SkillHeader> => {
+/**
+ * Try fetching today skill header
+ * @returns promise of type {@link SkillHeader} or undefined
+ */
+export const fetchTodaySkillHeader = async (): Promise<SkillHeader | undefined> => {
     const axiosClient = axios.create({
         headers: {
             'Content-Type': 'application/json'
@@ -90,5 +122,10 @@ export const fetchTodaySkillHeader = async (): Promise<SkillHeader> => {
     })
 
     const response = await axiosClient.get<SkillHeader>(SERVER_ROUTE_TO_SKILL_GUESS)
+
+    if (response.status !== 200) {
+        return undefined;
+    }
+
     return response.data;
 }

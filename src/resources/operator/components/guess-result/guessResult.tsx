@@ -7,11 +7,20 @@ import useUtils from "./guessResult.utils";
 import { useEffect } from "react";
 import { addRaceToArray } from "@/src/redux/features/operator-slice";
 
+/**
+ * @param guesses contains comparison results and is type {@link OperatorComparisonResultV2}
+ * @param className (optional) css class name for root container
+ */
 interface IOperatorGuessResultProps {
     guesses: OperatorComparisonResultV2[]
     className?: string | string[]
 }
 
+/**
+ * Is parent component, renders table with operator comparison results
+ * Headers are handled in this component and the rest of rows are handled 
+ * by {@link OperatorGuessResultRow}
+ */
 const OperatorGuessResult: React.FC<IOperatorGuessResultProps> = (props) => {
     const { guesses } = props;
 
@@ -45,11 +54,18 @@ const OperatorGuessResult: React.FC<IOperatorGuessResultProps> = (props) => {
     )
 }
 
+/**
+ * @param operatorData contains data for that row Operator and is type {@link Operator}
+ * @param diffrences contains diffrences, is type {@link OperatorComparisonDiffrenceV2}
+ */
 interface IOperatorGuessResultRowProps {
     operatorData: Operator,
     diffrences: OperatorComparisonDiffrenceV2
 }
 
+/**
+ * Renders row for comparison table
+ */
 const OperatorGuessResultRow: React.FC<IOperatorGuessResultRowProps> = (props) => {
     const { operatorData, diffrences } = props;
     const dispatch = useAppDispatch();
@@ -98,7 +114,7 @@ const OperatorGuessResultRow: React.FC<IOperatorGuessResultRowProps> = (props) =
                             key={key}
                             className={utils.getClassName(diffrencesValues[key])}
                         >
-                            {utils.formatValue(value)}
+                            {utils.getFieldAsString(value)}
                         </td>
                 })
             }

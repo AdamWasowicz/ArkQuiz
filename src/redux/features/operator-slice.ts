@@ -2,16 +2,21 @@ import { OperatorComparisonResultV2, OperatorRaceDescription } from '@/src/resou
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 export interface IOperatorState {
+    /** Indicates that action is in progress */
     isWorking: boolean,
 
+    /** Array of current guesses in form of {@link OperatorComparisonResultV2} */
     currentGuesses: OperatorComparisonResultV2[],
+
+    /** Indicates that guiz has concluded */
     gameWon: boolean,
+
+    /** Array of races descriptions */
     raceDescriptionArray: OperatorRaceDescription[]
 }
 
 const initialState: IOperatorState = {
     isWorking: false,
-
     currentGuesses: [],
     gameWon: false,
     raceDescriptionArray: []

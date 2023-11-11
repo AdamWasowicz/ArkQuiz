@@ -5,8 +5,13 @@ import skillReducer from '@/src/redux/features/skill-slice';
 
 export const store = configureStore({
     reducer: {
+      /** Reducer for Operator quiz */
       operator: operatorReducer,
+      
+      /** Reducer for Skill quiz */
       skill: skillReducer,
+
+      /** Reducer for App */
       app: appReducer   
     }
 })

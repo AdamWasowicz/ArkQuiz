@@ -1,8 +1,10 @@
+/** Represents only Operator data used for identification */
 export interface OperatorHeader {
     Id: string,
     Name: string
 }
 
+/** Operator data */
 export interface OperatorData {
     Rarity: number,
     Class: string,
@@ -14,6 +16,7 @@ export interface OperatorData {
     Faction: string
 }
 
+/** Full Operator data */
 export class Operator implements OperatorHeader, OperatorData{
     Id: string = "";
     Name: string = "";
@@ -48,20 +51,24 @@ export class Operator implements OperatorHeader, OperatorData{
     }
 }
 
+/** Contains key-value pairs of Operator name and its header */
 export type OperatorHeaderMap = Map<string, OperatorHeader[]>
 
+/** (DEPRACTED) Represents single guess result */
 export type OperatorComparisonResult = {
     operator: Operator;
     isCorrect: boolean;
     differences: number[]
 }
 
+/** Represents single guess result */
 export type OperatorComparisonResultV2 = {
     operator: Operator;
     isCorrect: boolean
     diffrences: OperatorComparisonDiffrenceV2
 }
 
+/** Represents diffrences in Operator comparison */
 export type OperatorComparisonDiffrenceV2 = {
     //  1 means correct
     //  0 means partial
@@ -76,17 +83,20 @@ export type OperatorComparisonDiffrenceV2 = {
     Faction: number
 }
 
+/** Object for Operator race description  */
 export type OperatorRaceDescription = {
     Race: string,
     Description: string
 }
 
+/** Object agregating healthchecks errors */
 export type OperatorHealthcheckResult = {
     errorsOperators: string[],
     errorsOperatorRace: string[],
     errorsOperatorIcon: string[],
 }
 
+/** Header of composite file */
 export type OperatorHeaderComposite = {
     WhenCreated: Date,
     Version: string,

@@ -3,10 +3,16 @@ import styles from './mainPanel.module.scss';
 import { routeToOperatorIcon } from '@/src/lib/serverFunctions';
 import Image from 'next/image';
 
+/**
+ * @param className (optional) additional css class name for root contanier
+ */
 interface IMainPanelProps {
     className?: string | string[]
 }
 
+/**
+ * Top part of that quiz, displays name of quiz, answer if guessed correctly, number of tries and hints
+ */
 const MainPanel: React.FC<IMainPanelProps> = (props) => {
     const guesses = useAppSelector(state => state.operator.currentGuesses);
     const gameWon = useAppSelector(state => state.operator.gameWon)

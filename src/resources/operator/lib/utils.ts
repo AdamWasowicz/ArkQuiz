@@ -89,7 +89,7 @@ export const getAllOperatorFileNames = (): string[] => {
 }
 
 /**
- * @returns Id of that day operator
+ * @returns Id of selected day operator
  */
 export const getDayOperatorId = (date: Date): string => {
     const seed: number = date.getMonth() * date.getDate() + date.getDate()
@@ -105,6 +105,7 @@ export const getDayOperatorId = (date: Date): string => {
     return id;
 }
 
+/** Creates Operator header map */
 export const getOperatorHeaderMap = (): OperatorHeaderMap => {
     const headerMap: OperatorHeaderMap = new Map<string, OperatorHeader[]>();
     const operatorHeaders = getAllOperatorHeaders();
@@ -125,6 +126,12 @@ export const getOperatorHeaderMap = (): OperatorHeaderMap => {
     return headerMap;
 }
 
+/**
+ * @deprecated Makes compariosn of two operators data
+ * @param originalId Id of first operator
+ * @param comparedId Id of second operator
+ * @returns comparison result of type {@link OperatorComparisonResultV2}
+ */
 export const compareTwoOperators = (originalId: string, comparedId: string): OperatorComparisonResult => {
     // Get operator data
     const oc: Operator = getOperatorById(originalId);
@@ -153,6 +160,12 @@ export const compareTwoOperators = (originalId: string, comparedId: string): Ope
     return outputObj;
 }
 
+/**
+ * Makes compariosn of two operators data
+ * @param originalId Id of first operator
+ * @param comparedId Id of second operator
+ * @returns comparison result of type {@link OperatorComparisonResultV2}
+ */
 export const compareTwoOperatorsV2 = (originalId: string, comparedId: string): OperatorComparisonResultV2 => {
     // Get operator data
     const oc: Operator = getOperatorById(originalId);
@@ -182,6 +195,14 @@ export const compareTwoOperatorsV2 = (originalId: string, comparedId: string): O
     return output;
 }
 
+/**
+ * 1 means correct,
+ * 0 means partial,
+ * -1 means wrong
+ * @param t1 can be anything
+ * @param t2 can be anything
+ * @returns number representing comparison result
+ */
 const __compareTwoOperatorsComparer = (t1: unknown, t2: unknown): number => {
     //  1 means correct
     //  0 means partial
@@ -225,6 +246,11 @@ const __compareTwoOperatorsComparer = (t1: unknown, t2: unknown): number => {
 
 // All info was taken from arknights fandom wiki
 // href: https://arknights.fandom.com/wiki/Arknights_Wiki
+/**
+ * Returns Operator race description object
+ * @param raceName name of race
+ * @returns object containing Operator race data of type {@link OperatorRaceDescription}
+ */
 export const getOperatorRaceDescription = (raceName: string): OperatorRaceDescription => {
     const fileExist = doesFileExist(path.join(localPathToRaces, raceName + operatorDataFormat))
     if (fileExist == false) {
@@ -236,7 +262,8 @@ export const getOperatorRaceDescription = (raceName: string): OperatorRaceDescri
 }
 
 // Composite files
-export const generateOperatorHeaderCompositeFile = () => {
+/** Generates composite file of Operator data */
+export const generateOperatorHeaderCompositeFile = (): void => {
     const fullPath = operatorHeadersLocation;
 
     // Check if file already exists
@@ -271,6 +298,7 @@ export const generateOperatorHeaderCompositeFile = () => {
     );
 }
 
+/** Try getting OperatorHeaderComposite file */
 export const getOperatorHeaderComposite = (): OperatorHeader[] | undefined => {
     const fullPath = operatorHeadersLocation;
 

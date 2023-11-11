@@ -124,6 +124,7 @@ export const generateSkillHeaderCompositeFile = () => {
     );
 }
 
+/** Create skill composite file */
 export const getSkillHeaderComposite = (): SkillHeader[] | undefined => {
     const fullPath = skillHeadersLocation;
 

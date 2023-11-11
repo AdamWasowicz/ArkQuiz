@@ -3,6 +3,10 @@ import { compareTwoOperatorsV2, getOperatorRaceDescription } from "./utils";
 import { getDayOperatorId } from "./utils";
 
 
+/**
+ * @param req is of type {@link NextRequest}
+ * @returns NextResponse of type {@link OperatorComparisonResultV2}
+ */
 export const POST_Operator_Guess = async (req: NextRequest): Promise<NextResponse> => {
     const body = await req.json();
     const guess = body.id;
@@ -20,6 +24,10 @@ export const POST_Operator_Guess = async (req: NextRequest): Promise<NextRespons
     return response;
 }
 
+
+/**
+ * @returns NextResponse of type {@link String}
+ */
 export const GET_Operator_Race = async (_: Request, { params }: { params: { race: string } }): Promise<NextResponse> => {
     const race = params.race
 
