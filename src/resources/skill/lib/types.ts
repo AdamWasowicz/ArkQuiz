@@ -11,7 +11,7 @@ export interface SkillHeader{
     Name: string
 }
 
-export interface OperatorSkillsData {
+export interface OperatorSkills {
     Id: string,
     Skills: Skill[]
 } 

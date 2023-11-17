@@ -1,6 +1,6 @@
 import { doesFileExist } from "@/src/lib/filesystem";
 import { Operator, OperatorHeader, OperatorHealthcheckResult } from "./types";
-import { getAbsolutePathToIcon, getAllOperatorHeaders, getOperatorById, getOperatorRaceDescription } from "./utils";
+import { getAbsolutePathToIcon, getAllOperatorHeaders, getOperatorById, getRaceDescription } from "./utils";
 
 
 // Helpers
@@ -304,7 +304,7 @@ const __doHealthCheck_Race = (): string[] => {
         const operator = getOperatorById(header.Id);
         const races = _toArray(operator.Race);
         races.forEach((race) => {
-            const raceFile = getOperatorRaceDescription(race);
+            const raceFile = getRaceDescription(race);
             if (raceFile === null) {
                 errors.push(`There is no race description for ${race}`);
             }

@@ -1,5 +1,5 @@
 import { getOperatorRaceDescription } from "@/src/lib/serverFunctions";
-import { OperatorRaceDescription } from "../../lib/types";
+import { RaceDescription } from "../../lib/types";
 import styles from './guessResult.module.scss';
 import { Fragment } from 'react';
 
@@ -42,12 +42,12 @@ const useUtils = () => {
 
     /**
      * @param data contains race or races of given operator
-     * @returns array of {@link OperatorRaceDescription} or empty array
+     * @returns array of {@link RaceDescription} or empty array
      */
-    const getRaceData = async (data: string | string[]): Promise<OperatorRaceDescription[]> => {
+    const getRaceData = async (data: string | string[]): Promise<RaceDescription[]> => {
         const dataAsArray = getFieldAsArray(data);
 
-        const promises: Promise<OperatorRaceDescription>[]  = dataAsArray.map((item) => {
+        const promises: Promise<RaceDescription>[]  = dataAsArray.map((item) => {
                 return getOperatorRaceDescription(item)
         })
 
@@ -66,14 +66,14 @@ const useUtils = () => {
      * @param raceArray Races description
      * @returns JSX.Element representing races
      */
-    const getRaceDescription = (data: string | string[], raceArray: OperatorRaceDescription[]): JSX.Element => {
+    const getRaceDescription = (data: string | string[], raceArray: RaceDescription[]): JSX.Element => {
         // Author node:
         // All that because one operator has two races (maybe in the future there will be more)
         // At least it was fun to solve this problem
         const dataAsArray = getFieldAsArray(data);
 
         const components: JSX.Element[] = dataAsArray.map((item, key) => {
-            const description = raceArray.find((obj) => {return obj.Race === item})?.Description
+            const description = raceArray.find((obj) => {return obj.Name === item})?.Description
             return <span className={styles.span} key={key} title={description}>
                 {item}
             </span>

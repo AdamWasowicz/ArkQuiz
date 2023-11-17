@@ -28,11 +28,15 @@ export const doesFileExist = (fullPath: string): boolean => {
  * @param fullPath absolute path to file
  * @returns JSON
  */
-export const readJson = (fullPath: string): object => {
-    const rawData = fs.readFileSync(fullPath, 'utf-8');
-    const json = JSON.parse(rawData);
-
-    return json;
+export const readJson = (fullPath: string): object | undefined => {
+    try {
+        const rawData = fs.readFileSync(fullPath, 'utf-8');
+        const json = JSON.parse(rawData);
+        return json;
+    }
+    catch (exception) {
+        return undefined;
+    }
 }
 
 /**

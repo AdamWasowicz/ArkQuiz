@@ -9,6 +9,7 @@ interface IGuessResult {
     className?: string
 }
 
+/** Container component, contains rows with guesses */
 const GuessResult: React.FC<IGuessResult> = (props) => {
     return (
         <div className={styles.table}>

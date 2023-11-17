@@ -1,4 +1,4 @@
-import { OperatorSkillsData, SkillHeader, SkillHeaderComposite } from "./types";
+import { OperatorSkills, SkillHeader, SkillHeaderComposite } from "./types";
 import { PATH_TO_SKILL_DATA } from "@/src/lib/paths";
 import { getAllFileNamesInDirectory, readJson, doesFileExist, saveJson } from "@/src/lib/filesystem";
 import path from 'path';
@@ -8,28 +8,43 @@ const skillDataFormat = '.json';
 const pathToSkillData = path.join(process.cwd(), ...PATH_TO_SKILL_DATA)
 const skillHeadersLocation = path.join(process.cwd(), ...['src' ,'resources', 'skill', 'lib', 'SkillHeaders.json']);
 
-export const getOperatorSkillData = (id: string): OperatorSkillsData => {
+/**
+ * Get skill data for operator with selected Id
+ * @param id of operator
+ * @returns object of type {@link OperatorSkills} or undefined
+ */
+export const getOperatorSkillsData = (id: string): OperatorSkills | undefined => {
     const fileExist = doesFileExist(path.join(pathToSkillData, id + skillDataFormat))
     if (fileExist == false) {
-        throw new Error(`File ${id + skillDataFormat} not found`)
+        return undefined;
     }
 
-    const skillData = readJson(path.join(pathToSkillData, id + skillDataFormat)) as OperatorSkillsData;
-    return skillData;
+    const json = readJson(path.join(pathToSkillData, id + skillDataFormat)) as OperatorSkills | undefined;
+    return json;
 }
 
-export const getAllOperatorSkillData = (): OperatorSkillsData[] => {
+/**
+ * Get all operator skills data
+ * @returns array of all {@link OperatorSkillData} in app
+ */
+export const getAllOperatorSkillsData = (): OperatorSkills[] => {
     const fileNames: string[] = getAllFileNames();
 
-    const skillsData: OperatorSkillsData[] = [];
+    const skillsData: OperatorSkills[] = [];
     fileNames.forEach(file => {
-        const sd = readJson(path.join(pathToSkillData, file)) as OperatorSkillsData;
-        skillsData.push(sd);
+        const json = readJson(path.join(pathToSkillData, file)) as OperatorSkills | undefined;
+        if (json !== undefined) {
+            skillsData.push(json);
+        }  
     })
 
     return skillsData;
 }
 
+/**
+ * Get all operator skills data headers
+ * @returns array of all {@link SkillHeader}
+ */
 export const getAllSkillHeaders = (): SkillHeader[] => {
     // Composite headers
     let skills: SkillHeader[] = [];
@@ -38,7 +53,7 @@ export const getAllSkillHeaders = (): SkillHeader[] => {
         skills = compositeHeaders;
     }
     else {
-        const data: OperatorSkillsData[] = getAllOperatorSkillData();
+        const data: OperatorSkills[] = getAllOperatorSkillsData();
         skills = [];
         data.forEach(osd => {
             const osd_s: SkillHeader[] = osd.Skills.map(s => (
@@ -56,12 +71,21 @@ export const getAllSkillHeaders = (): SkillHeader[] => {
     return skills;
 }
 
+/**
+ * Get all names of files containing skill data
+ * @returns array of all files names
+ */
 export const getAllFileNames = (): string[] => {
     const fileNames: string[] = getAllFileNamesInDirectory(pathToSkillData);
     return fileNames;
 }
 
-export const getDaySkill  = (date: Date): SkillHeader => {
+/**
+ * Get skill of selected day
+ * @param date for selecting skill
+ * @returns object of type {@link SkillHeader}
+ */
+export const getSkillByDate  = (date: Date): SkillHeader => {
     const seed: number = date.getMonth() * date.getDate() + date.getDate()
 
     // Composite headers
@@ -75,6 +99,7 @@ export const getDaySkill  = (date: Date): SkillHeader => {
 }
 
 // Composite files
+/** Create composite file of all skill headers */
 export const generateSkillHeaderCompositeFile = () => {
     const fullPath = skillHeadersLocation;
 
@@ -96,7 +121,7 @@ export const generateSkillHeaderCompositeFile = () => {
     }
 
     // Read all headers
-    const data: OperatorSkillsData[] = getAllOperatorSkillData();
+    const data: OperatorSkills[] = getAllOperatorSkillsData();
 
     const skillArray: SkillHeader[] = [];
     data.forEach((item) => {

@@ -5,7 +5,7 @@ import styles from './skillGuessPage.module.scss';
 import SearchBar from "@/src/components/search-bar/searchBar";
 import { useAppDispatch, useAppSelector } from "@/src/redux/hooks";
 import { ChangeEvent, useState } from "react";
-import { addGuess, setGameWon, setGuesses, setIsWorking } from "@/src/redux/features/skill-slice";
+import { addGuess, setErrorMsg, setGameWon, setGuesses, setIsWorking } from "@/src/redux/features/skill-slice";
 import GuessResult from "@/src/resources/skill/components/guess-result/guessResult";
 import MainPanel from "@/src/resources/skill/components/main-panel/mainPanel";
 import { SkillComparisonResult } from "@/src/resources/skill/lib/types";
@@ -18,14 +18,11 @@ interface ISkillGuessPage {
 
 const SkillGuessPage: React.FC<ISkillGuessPage> = (props) => {
     const { operatorHeaderMap } = props;
-
     const guesses: SkillComparisonResult[] = useAppSelector(state => state.skill.currentGuesses);
     const guessWon: boolean = useAppSelector(state => state.skill.gameWon);
     const isWorking: boolean = useAppSelector(state => state.skill.isWorking);
-
     const dispatch = useAppDispatch();
     const localstorageHook = useLocalstorage();
-
     const [textInputValue, setTextInputValue] = useState<string>('');
 
 
@@ -33,8 +30,13 @@ const SkillGuessPage: React.FC<ISkillGuessPage> = (props) => {
         event.preventDefault();
 
         // isWorking
-        if (isWorking === true) { return; }
-        else { dispatch(setIsWorking(true)); }
+        if (isWorking === true) { 
+            return; 
+        }
+        else { 
+            dispatch(setErrorMsg(""));
+            dispatch(setIsWorking(true)); 
+        }
         
         const selectedOperatorHeader = operatorHeaderMap
             .get(textInputValue.toUpperCase()[0])
@@ -43,10 +45,15 @@ const SkillGuessPage: React.FC<ISkillGuessPage> = (props) => {
         if (typeof selectedOperatorHeader !== 'undefined') {
             localstorageHook.saveSkillDateToStorage();
             const res = await submitSkillGuess(selectedOperatorHeader.Id)
+
+            if (res === undefined) {
+                dispatch(setErrorMsg(`Error occured while submiting guess for Operator with Id: ${selectedOperatorHeader.Id}`))
+                dispatch(setIsWorking(false));
+                return;
+            }
+
             setTextInputValue('')
-
             localstorageHook.saveCurrentGuessesToStorage([res ,...guesses]);
-
             dispatch(setIsWorking(false));
             dispatch(addGuess(res));
             
@@ -86,6 +93,7 @@ const SkillGuessPage: React.FC<ISkillGuessPage> = (props) => {
         
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
+
 
     return (
         <div className={styles.page}>

@@ -2,6 +2,7 @@ import { SkillComparisonResult } from "@/src/resources/skill/lib/types";
 
 
 // Helper for localStorage
+/** Hook for saving quiz data to localstorage */
 const useLocalstorage = () => {
     const SKILL_CURRENT_GUESSES = "SKILL_CURRENT_GUESSES";
     const SKILL_STATUS = "SKILL_STATUS";

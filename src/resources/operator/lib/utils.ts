@@ -1,4 +1,4 @@
-import { Operator, OperatorHeader, OperatorHeaderMap, OperatorComparisonResult, OperatorRaceDescription, OperatorHeaderComposite, OperatorComparisonResultV2, OperatorComparisonDiffrenceV2 } from "./types";
+import { Operator, OperatorHeader, OperatorHeaderMap, RaceDescription, OperatorHeaderComposite, OperatorComparisonResultV2, OperatorComparisonDiffrenceV2 } from "./types";
 import path from 'path';
 import { getAllFileNamesInDirectory, readJson, doesFileExist, saveJson } from "@/src/lib/filesystem";
 import { 
@@ -21,16 +21,17 @@ const operatorHeadersLocation = path.join(process.cwd(), ...['src' ,'resources',
 // Functions
 /**
  * @param id is unique string for each operator (ex. R001 is Amiya).
- * @returns Operator with that id
+ * @returns object of type {@link Operator} or undefined
  */
-export const getOperatorById = (id: string): Operator => {
+export const getOperatorById = (id: string): Operator | undefined => {
     const fileExist = doesFileExist(path.join(localPathToOperators, id + operatorDataFormat))
     if (fileExist == false) {
-        throw new Error(`File ${id + operatorDataFormat} not found`)
+        console.log(`File ${id + operatorDataFormat} not found`)
+        return undefined
     }
 
-    const operator = readJson(path.join(localPathToOperators, id + operatorDataFormat)) as Operator;
-    return operator;
+    const json = readJson(path.join(localPathToOperators, id + operatorDataFormat)) as Operator | undefined;
+    return json;
 }
 
 /**
@@ -48,14 +49,15 @@ export const getAllOperatorHeaders = (): OperatorHeader[] => {
     // Get headers using default method
     const operatorHeaders: OperatorHeader[] = [];
     fileNames.forEach(file => {
-        const operator = readJson(path.join(localPathToOperators, file)) as Operator;
-
-        const ch: OperatorHeader = {
-            Id: operator.Id,
-            Name: operator.Name,
+        const json = readJson(path.join(localPathToOperators, file)) as Operator | undefined;
+        if (json !== undefined) {
+            const ch: OperatorHeader = {
+                Id: json.Id,
+                Name: json.Name,
+            }
+    
+            operatorHeaders.push(ch);
         }
-
-        operatorHeaders.push(ch);
     })
 
     return operatorHeaders;
@@ -63,13 +65,14 @@ export const getAllOperatorHeaders = (): OperatorHeader[] => {
 
 /**
  * @param id is unique string for each operator (ex. R001 is Amiya).
- * @returns route for operator icon art, you may need to add '/' for nextjs's Image component
+ * @returns route for operator icon art, you may need to add '/' for nextjs's Image component or undefined
  */
-export const getAbsolutePathToIcon = (id: string): string => {
+export const getAbsolutePathToIcon = (id: string): string | undefined => {
     const fileExist = doesFileExist(path.join(process.cwd(), pathToOperatorIcon, id + imageFormat))
     
     if (fileExist == false) {
-        throw new Error(`Icon ${id + imageFormat} not found`)
+        console.log(`Icon ${id + imageFormat} not found`)
+        return undefined;
     }
 
     const route = path.join(process.cwd(),'/public/',...LOCAL_PATH_TO_OPERATOR_ICONS, id + imageFormat);
@@ -126,39 +129,6 @@ export const getOperatorHeaderMap = (): OperatorHeaderMap => {
     return headerMap;
 }
 
-/**
- * @deprecated Makes compariosn of two operators data
- * @param originalId Id of first operator
- * @param comparedId Id of second operator
- * @returns comparison result of type {@link OperatorComparisonResultV2}
- */
-export const compareTwoOperators = (originalId: string, comparedId: string): OperatorComparisonResult => {
-    // Get operator data
-    const oc: Operator = getOperatorById(originalId);
-    const cc: Operator = getOperatorById(comparedId);
-
-    // Compare
-    const differencesArray: number[] = [];
-    const data1 = new Map<string, unknown>(Object.entries(oc));
-    const data2 = new Map<string, unknown>(Object.entries(cc));
-    const keys = Array.from(data1.keys())
-
-    keys.forEach((key) => {
-        if (key != 'Id' && key !== 'Name') {
-            differencesArray.push(__compareTwoOperatorsComparer(data1.get(key as string), data2.get(key as string)))
-        }
-    })
-
-    const indexOfNotCorrectAnswer = differencesArray.findIndex((item) => {return item < 1});
-
-    const outputObj: OperatorComparisonResult = {
-        operator: cc,
-        differences: differencesArray,
-        isCorrect: indexOfNotCorrectAnswer === -1 ? true : false
-    }
-
-    return outputObj;
-}
 
 /**
  * Makes compariosn of two operators data
@@ -168,8 +138,12 @@ export const compareTwoOperators = (originalId: string, comparedId: string): Ope
  */
 export const compareTwoOperatorsV2 = (originalId: string, comparedId: string): OperatorComparisonResultV2 => {
     // Get operator data
-    const oc: Operator = getOperatorById(originalId);
-    const cc: Operator = getOperatorById(comparedId);
+    const oc: Operator | undefined = getOperatorById(originalId);
+    const cc: Operator | undefined = getOperatorById(comparedId);
+
+    if (oc == undefined || cc == undefined) {
+        throw new Error('One of given operators does not exist')
+    }
 
     // Compare
     const diffrences: OperatorComparisonDiffrenceV2 | object = {};
@@ -249,16 +223,17 @@ const __compareTwoOperatorsComparer = (t1: unknown, t2: unknown): number => {
 /**
  * Returns Operator race description object
  * @param raceName name of race
- * @returns object containing Operator race data of type {@link OperatorRaceDescription}
+ * @returns object containing race data of type {@link RaceDescription} or undefied
  */
-export const getOperatorRaceDescription = (raceName: string): OperatorRaceDescription => {
+export const getRaceDescription = (raceName: string): RaceDescription | undefined => {
     const fileExist = doesFileExist(path.join(localPathToRaces, raceName + operatorDataFormat))
     if (fileExist == false) {
-        throw new Error(`File ${raceName + operatorDataFormat} not found`)
+        //throw new Error(`File ${raceName + operatorDataFormat} not found`)
+        return undefined;
     }
 
-    const raceDescription = readJson(path.join(localPathToRaces, raceName + operatorDataFormat)) as OperatorRaceDescription;
-    return raceDescription;
+    const json = readJson(path.join(localPathToRaces, raceName + operatorDataFormat)) as RaceDescription | undefined;
+    return json;
 }
 
 // Composite files

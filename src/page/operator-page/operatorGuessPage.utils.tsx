@@ -1,6 +1,7 @@
 import { OperatorComparisonResultV2 } from "@/src/resources/operator/lib/types";
 
 // Helper for localStorage
+/** Hook for saving quiz data to localstorage */
 const useLocalStorage = () => {
     const OPERATOR_CURRENT_GUESSES = "OPERATOR_CURRENT_GUESSES";
     const OPERATOR_STATUS = "OPERATOR_STATUS";

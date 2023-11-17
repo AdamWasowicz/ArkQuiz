@@ -84,8 +84,8 @@ export type OperatorComparisonDiffrenceV2 = {
 }
 
 /** Object for Operator race description  */
-export type OperatorRaceDescription = {
-    Race: string,
+export type RaceDescription = {
+    Name: string,
     Description: string
 }
 

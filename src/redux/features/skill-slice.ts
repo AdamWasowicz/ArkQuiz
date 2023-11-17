@@ -2,16 +2,23 @@ import { SkillComparisonResult } from '@/src/resources/skill/lib/types';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 export interface ISkillState {
+    /** Indicates that action is in progress */
     isWorking: boolean,
 
+     /** Array of current guesses in form of array of {@link SkillComparisonResult} */
     currentGuesses: SkillComparisonResult[],
+
+    /** Contains text content of error */
+    errorMsg: string,
+
+    /** Indicates that guiz has concluded */
     gameWon: boolean,
 }
 
 const initialState: ISkillState = {
     isWorking: false,
-
     currentGuesses: [],
+    errorMsg: "",
     gameWon: false
 }
 
@@ -31,6 +38,10 @@ const SkillSlice = createSlice({
             state.currentGuesses = action.payload;
         },
 
+        setErrorMsg(state: ISkillState, action: PayloadAction<string>) {
+            state.errorMsg = action.payload
+        },
+
         setGameWon(state: ISkillState, action: PayloadAction<boolean>) {
             state.gameWon = action.payload;
         }
@@ -38,7 +49,7 @@ const SkillSlice = createSlice({
 })
 
 export const {
-    setIsWorking,
+    setIsWorking, setErrorMsg,
     addGuess, setGuesses, setGameWon
 } = SkillSlice.actions;
 

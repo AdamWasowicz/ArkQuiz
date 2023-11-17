@@ -9,6 +9,7 @@ interface IMainPanel {
     className?: string
 }
 
+/** Main panel of skill quiz */
 const MainPanel: React.FC<IMainPanel> = (props) => {
     const guesses = useAppSelector(state => state.skill.currentGuesses);
     const gameWon = useAppSelector(state => state.skill.gameWon)

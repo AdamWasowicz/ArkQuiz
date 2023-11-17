@@ -1,4 +1,4 @@
-import { OperatorComparisonResultV2, OperatorHeader, OperatorRaceDescription } from '@/src/resources/operator/lib/types';
+import { OperatorComparisonResultV2, OperatorHeader, RaceDescription } from '@/src/resources/operator/lib/types';
 import axios from 'axios';
 import { LOCAL_PATH_TO_OPERATOR_ICONS, LOCAL_PATH_TO_SKILL_ICONS } from './paths';
 import path from 'path';
@@ -64,16 +64,16 @@ export const submitOperatorGuess = async (id: string, timestamp: Date = new Date
 /**
  * Try getting Operator race data
  * @param raceName name of race
- * @returns promise of type {@link OperatorRaceDescription} or undefined
+ * @returns promise of type {@link RaceDescription} or undefined
  */
-export const getOperatorRaceDescription = async (raceName: string): Promise<OperatorRaceDescription | undefined> => {
+export const getOperatorRaceDescription = async (raceName: string): Promise<RaceDescription | undefined> => {
     const axiosClient = axios.create({
         headers: {
             'Content-Type': 'application/json'
         }
     })
 
-    const response = await axiosClient.get<OperatorRaceDescription>(
+    const response = await axiosClient.get<RaceDescription>(
         SERVER_ROUTE_TO_OPERATOR_RACE + `/${raceName}`);
 
     if (response.status !== 200) {

@@ -1,10 +1,14 @@
 import { doesFileExist } from "@/src/lib/filesystem";
-import { OperatorSkillsData, SkillHealthCheckResult } from "./types";
-import { getAllOperatorSkillData, getAllSkillHeaders } from "./utils";
+import { OperatorSkills, SkillHealthCheckResult } from "./types";
+import { getAllOperatorSkillsData, getAllSkillHeaders } from "./utils";
 import path from "path";
 import { EXTERNAL_PATH_TO_SKILL_ICONS } from "@/src/lib/paths";
 
 // Healthchecks
+/**
+ * Root function for skill healtchecks
+ * @returns object contaning arrays of diffrent error types
+ */
 export const doHealthCheck = (): SkillHealthCheckResult => {
     const output: SkillHealthCheckResult = {
         errorsSkill: __doHealthCheck_Skill(),
@@ -15,8 +19,12 @@ export const doHealthCheck = (): SkillHealthCheckResult => {
 }
 
 // Skill
+/**
+ * Checks if skills data is correct, calls other functions
+ * @returns array of errors
+ */
 const __doHealthCheck_Skill = (): string[] => {
-    const skillData: OperatorSkillsData[] = getAllOperatorSkillData();
+    const skillData: OperatorSkills[] = getAllOperatorSkillsData();
 
     const skillErrors: string[] = [];
     skillData.forEach((item) => 
@@ -26,7 +34,12 @@ const __doHealthCheck_Skill = (): string[] => {
     return skillErrors;
 }
 
-const _checkSkills = (item: OperatorSkillsData): string[] => {
+/**
+ * 
+ * @param item takes object of type {@link OperatorSkillData} and checks for errors
+ * @returns array of errors
+ */
+const _checkSkills = (item: OperatorSkills): string[] => {
     const errors: string[] = [];
 
     const skillNumbers: number[] = item.Skills.map((skill) => {
@@ -56,6 +69,10 @@ const _checkSkills = (item: OperatorSkillsData): string[] => {
 }
 
 // Icon
+/**
+ * Checks if all skills have icons, and there if there is icon without skill
+ * @returns array of errors
+ */
 const __doHealthCheck_SkillIcon = (): string[] => {
     const errors: string[] = []
 
