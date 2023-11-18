@@ -1,0 +1,49 @@
+.root {
+    // Size and Position
+    width: 400px;
+    padding: 16px;
+    margin-top: 48px;
+    margin-left: auto;
+    margin-right: auto;
+
+    // Flex
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    // Background
+    background-color: var(--gray-600);
+    border: 2px solid var(--gray-500);
+}
+
+.text {
+    // Text
+    font-family: var(--HeaderFont);
+    font-size: 48px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: white;
+}
+
+.icon {
+    // Size and Position
+    padding: 12px;
+
+    // Text
+    font-size: 64px;
+    color: white;
+
+    // Background
+    background-color: var(--primary-500);
+    border-radius: 100%;
+    border: 2px solid var(--primary-700);
+
+    // Other
+    transition: 0.3s;
+
+    &:hover {
+        background-color: var(--primary-400);
+        transition: 0.3s;
+    }
+}

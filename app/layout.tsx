@@ -5,6 +5,10 @@ import '../src/styles/globals.scss'
 import Footer from '@/src/components/footer/footer'
 import Director from '@/src/components/director/director'
 import Navigation from '@/src/components/navigation/navigation'
+// FontAwesome
+import { config } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+config.autoAddCss = false;
 
 export const metadata: Metadata = {
   title: 'ArkQuiz',

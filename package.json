@@ -1,6 +1,6 @@
 {
   "name": "arkquiz",
-  "version": "0.7.6",
+  "version": "0.7.7",
   "private": true,
   "author": "Adam Wąsowicz",
   "license": "MIT",
@@ -11,6 +11,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.2",
+    "@fortawesome/free-brands-svg-icons": "^6.4.2",
+    "@fortawesome/free-regular-svg-icons": "^6.4.2",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@reduxjs/toolkit": "^1.9.5",
     "@types/node": "20.5.0",
     "@types/react": "18.2.20",
