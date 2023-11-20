@@ -1,0 +1,9 @@
+{
+    "OperatorId": "RF01",
+    "Talents": [
+        {
+            "Name": "Spell Formation",
+            "Description": "Immediately obtains 30 SP after first deployment. On each deployment, grants SP +4 to other Caster allies on the field. When deployed, other Caster allies obtain +4 SP after deployment" 
+        }
+    ]
+}

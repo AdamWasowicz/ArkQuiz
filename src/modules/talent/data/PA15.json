@@ -1,0 +1,9 @@
+{
+    "OperatorId": "PA15",
+    "Talents": [
+        {
+            "Name": "Quick Skill Usage",
+            "Description": "Immediately obtains 30 Skill Points after deployment" 
+        }
+    ]
+}

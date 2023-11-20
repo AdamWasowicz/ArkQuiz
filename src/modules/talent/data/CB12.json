@@ -1,0 +1,9 @@
+{
+    "OperatorId": "CB12",
+    "Talents": [
+        {
+            "Name": "Tactical Readjustment",
+            "Description": "After not attacking for 4 seconds, own SP recovery rate +0.45/second" 
+        }
+    ]
+}

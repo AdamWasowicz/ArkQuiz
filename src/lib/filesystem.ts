@@ -1,21 +1,21 @@
 import fs from 'fs';
 
 /** 
- * @param location absolute path to directory
+ * @param absolutePath absolute path to directory
  * @returns array of all files in specified location 
  * */
-export const getAllFileNamesInDirectory = (location: string): string[] => {
-    const fileNamesList: string[] = fs.readdirSync(location);
+export const getAllFileNamesInDirectory = (absolutePath: string): string[] => {
+    const fileNamesList: string[] = fs.readdirSync(absolutePath);
     return fileNamesList;
 }
 
 /**
- * @param fullPath absolute path to file
+ * @param absolutePath absolute path to file
  * @returns true if file under specfied path exists
  */
-export const doesFileExist = (fullPath: string): boolean => {
+export const doesFileExist = (absolutePath: string): boolean => {
     try {
-        fs.accessSync(fullPath);
+        fs.accessSync(absolutePath);
         return true;
     }
     catch {
@@ -25,12 +25,12 @@ export const doesFileExist = (fullPath: string): boolean => {
 
 /**
  * Reads file and parses it to JSON format
- * @param fullPath absolute path to file
+ * @param absolutePath absolute path to file
  * @returns JSON
  */
-export const readJson = (fullPath: string): object | undefined => {
+export const readJson = (absolutePath: string): object | undefined => {
     try {
-        const rawData = fs.readFileSync(fullPath, 'utf-8');
+        const rawData = fs.readFileSync(absolutePath, 'utf-8');
         const json = JSON.parse(rawData);
         return json;
     }
@@ -42,9 +42,9 @@ export const readJson = (fullPath: string): object | undefined => {
 /**
  * Saves object as JSON in specified location
  * @param data data to be saved
- * @param fullPath absolute path with name of the file
+ * @param absolutePath absolute path with name of the file
  */
-export const saveJson = (data: object, fullPath: string) => {
+export const saveJson = (data: object, absolutePath: string) => {
     const json = JSON.stringify(data);
-    fs.writeFileSync(fullPath, json, 'utf8')
+    fs.writeFileSync(absolutePath, json, 'utf8')
 }

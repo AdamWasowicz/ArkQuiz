@@ -1,0 +1,14 @@
+{
+    "OperatorId": "VC16",
+    "Talents": [
+        {
+            "Name": "Military Fortress",
+            "Description": "When this unit is on the field, Defender Operators gain +20% ATK" 
+        },
+
+        {
+            "Name": "Bloodbath",
+            "Description": "Instead of retreating when defeated, recover HP to the max and gain -50% Max HP, +18 ASPD, and +18% DEF (triggers once per deployment)" 
+        }
+    ]
+}

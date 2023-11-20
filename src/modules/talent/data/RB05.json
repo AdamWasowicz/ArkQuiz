@@ -1,0 +1,9 @@
+{
+    "OperatorId": "RB05",
+    "Talents": [
+        {
+            "Name": "Moist Skin",
+            "Description": "RES +10, restores 3 extra SP when hit by an enemy's normal Arts attack" 
+        }
+    ]
+}

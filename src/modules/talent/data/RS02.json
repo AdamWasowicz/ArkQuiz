@@ -1,0 +1,14 @@
+{
+    "OperatorId": "RS02",
+    "Talents": [
+        {
+            "Name": "Shielded Shooting",
+            "Description": "Prioritize Stunned enemies; Increase ATK to 160% when attacking Stunned enemies" 
+        },
+
+        {
+            "Name": "Bunker Defense",
+            "Description": "When there is a High Ground tile beside or behind this operator, gain 25% chance to shrug off physical damage" 
+        }
+    ]
+}

@@ -1,8 +1,8 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # Project specific
-/src/resources/operator/lib/OperatorHeaders.json
-/src/resources/skill/lib/SkillHeaders.json
+/src/modules/operator/lib/OperatorHeaders.json
+/src/modules/skill/lib/SkillHeaders.json
 
 # dependencies
 /node_modules

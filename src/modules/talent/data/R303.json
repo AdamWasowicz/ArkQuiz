@@ -1,0 +1,9 @@
+{
+    "OperatorId": "R303",
+    "Talents": [
+        {
+            "Name": "Dodge Rate Up",
+            "Description": "50% Physical Dodge" 
+        }
+    ]
+}

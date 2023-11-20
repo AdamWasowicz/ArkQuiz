@@ -1,0 +1,14 @@
+{
+    "OperatorId": "SR35",
+    "Talents": [
+        {
+            "Name": "Guardian of the Law",
+            "Description": "After deployment, immediately gains a Barrier equal to 50% Max HP; When defeating an enemy, gains a Barrier equal to 10% Max HP (Cannot exceed 300% Max HP)" 
+        },
+
+        {
+            "Name": "Wreathed in Thorns",
+            "Description": "Each time this unit is attacked while under the effect of her own Barrier, deals 50% ATK as Arts damage to the attacker" 
+        }
+    ]
+}

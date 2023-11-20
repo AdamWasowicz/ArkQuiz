@@ -1,4 +1,4 @@
-import { OperatorComparisonResultV2 } from "@/src/resources/operator/lib/types";
+import { OperatorComparisonResultV2 } from "@/src/modules/operator/lib/types";
 
 // Helper for localStorage
 /** Hook for saving quiz data to localstorage */

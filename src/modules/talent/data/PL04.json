@@ -1,0 +1,9 @@
+{
+    "OperatorId": "PL04",
+    "Talents": [
+        {
+            "Name": "Miracle Field",
+            "Description": "Has a 20% chance to resist Physical and Arts Damage. The allies in the four surrounding grids obtain half of the effect" 
+        }
+    ]
+}

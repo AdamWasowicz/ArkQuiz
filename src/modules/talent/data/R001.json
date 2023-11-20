@@ -1,0 +1,9 @@
+{
+    "OperatorId": "R001",
+    "Talents": [
+        {
+            "Name": "Emotional Absorption",
+            "Description": "Restores 2 extra Skill Points when damaging an enemy and 8 extra Skill Points when killing an enemy" 
+        }
+    ]
+}

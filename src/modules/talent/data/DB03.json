@@ -1,0 +1,9 @@
+{
+    "OperatorId": "DB03",
+    "Talents": [
+        {
+            "Name": "Unexpected Arrive",
+            "Description": "Deals 17% more damage when attacking blocked enemies" 
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "OperatorId": "VC07",
+    "Talents": [
+        {
+            "Name": "Land of Memories",
+            "Description": "In [Phantom & Crimson Solitaire], ATK +15% and ASPD +30" 
+        },
+
+        {
+            "Name": "Proclamation of Doom",
+            "Description": "Attacks have a 20% chance to reduce the target's RES by 25% for 3 seconds" 
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "OperatorId": "LN04",
+    "Talents": [
+        {
+            "Name": "Meal of Life",
+            "Description": "Restores 40% Max HP when skill is activated; Effect is doubled when Charged" 
+        },
+
+        {
+            "Name": "Poised for Action",
+            "Description": "Improves own SP recovery rate by +0.6/second when SP is above the limit" 
+        }
+    ]
+}

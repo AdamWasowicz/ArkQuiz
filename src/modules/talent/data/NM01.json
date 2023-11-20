@@ -1,0 +1,14 @@
+{
+    "OperatorId": "NM01",
+    "Talents": [
+        {
+            "Name": "Tectonic Armor",
+            "Description": "When this unit is in the squad, all Defenders gain +16% Max HP" 
+        },
+
+        {
+            "Name": "Clairvoyance",
+            "Description": "After deployment, immediately gains 3 Shields" 
+        }
+    ]
+}

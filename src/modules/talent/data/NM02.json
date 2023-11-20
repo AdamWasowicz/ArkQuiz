@@ -1,0 +1,14 @@
+{
+    "OperatorId": "NM02",
+    "Talents": [
+        {
+            "Name": "Sublimity",
+            "Description": "When <Operator Name> or a \"Freeling\" defeats an enemy, <Operator Name> gains ATK +2%, stacking up to 15 times" 
+        },
+
+        {
+            "Name": "Finishing Touch",
+            "Description": "The first attack after deployment will summon a \"Freeling\" (lasts for 25 seconds) at the target's location (only on deployable ground tiles)" 
+        }
+    ]
+}

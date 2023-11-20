@@ -1,0 +1,9 @@
+{
+    "OperatorId": "R119",
+    "Talents": [
+        {
+            "Name": "Electrostatic Field",
+            "Description": "Slows the target for 0.6 seconds when attacking" 
+        }
+    ]
+}

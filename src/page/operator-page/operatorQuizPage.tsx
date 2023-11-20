@@ -1,10 +1,10 @@
 "use client"
-import { OperatorHeaderMap } from "@/src/resources/operator/lib/types";
+import { OperatorHeaderMap } from "@/src/modules/operator/lib/types";
 import SearchBar from "@/src/components/search-bar/searchBar";
-import OperatorGuessResult from "@/src/resources/operator/components/guess-result/guessResult";
+import OperatorGuessResult from "@/src/modules/operator/components/guess-result/guessResult";
 import { useAppDispatch, useAppSelector } from "@/src/redux/hooks";
 import styles from './operatorQuizPage.module.scss';
-import MainPanel from "@/src/resources/operator/components/main-panel/mainPanel";
+import MainPanel from "@/src/modules/operator/components/main-panel/mainPanel";
 import { ChangeEvent, useEffect, useState } from "react";
 import { submitOperatorGuess } from "@/src/lib/serverFunctions";
 import { addGuess, setErrorMsg, setGameWon, setGuesses, setIsWorking } from "@/src/redux/features/operator-slice";
@@ -100,18 +100,6 @@ const OperatorQuizPage: React.FC<IOperatorQuizPage> = (props) => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
-    // Scroll to next quiz button
-    useEffect(() => {
-        if (quizWon === true) {
-            const button = document.getElementById('nextQuizButton');
-            if (button !== null) {
-                button.scrollIntoView({
-                    behavior: "smooth"
-                })
-            }
-        }
-    }, [quizWon])
-
 
     return (
         <div className={styles.page}>
@@ -134,17 +122,17 @@ const OperatorQuizPage: React.FC<IOperatorQuizPage> = (props) => {
                 </div>
             }
 
+            {
+                quizWon &&
+                <NextQuizButton onClick={toNextQuiz} id={'nextQuizButton'}/>
+            }
+
             <div className={styles.results}>
                 {
                     guesses.length > 0 &&
                     <OperatorGuessResult guesses={guesses}/>
                 }
             </div>
-
-            {
-                quizWon &&
-                <NextQuizButton onClick={toNextQuiz} id={'nextQuizButton'}/>
-            }
         </div>
     )
 }

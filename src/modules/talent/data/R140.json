@@ -1,0 +1,9 @@
+{
+    "OperatorId": "R140",
+    "Talents": [
+        {
+            "Name": "Coordinated",
+            "Description": "<Operator Name> and her Drones gain +12 ASPD" 
+        }
+    ]
+}

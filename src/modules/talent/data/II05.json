@@ -1,0 +1,9 @@
+{
+    "OperatorId": "II05",
+    "Talents": [
+        {
+            "Name": "Gentle Binding Gaze",
+            "Description": "When attacking, has a 18% chance to Bind the target for 4 seconds. Will not target Bound enemies" 
+        }
+    ]
+}

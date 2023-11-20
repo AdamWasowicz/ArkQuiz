@@ -1,0 +1,9 @@
+{
+    "OperatorId": "LM19",
+    "Talents": [
+        {
+            "Name": "Gatekeeper",
+            "Description": "DEF +6%, if the tile behind this unit is an elevated tile, the unit deployed on the elevated tile receives +75% healing" 
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "OperatorId": "KZ09",
+    "Talents": [
+        {
+            "Name": "Knight of Sword and Shield",
+            "Description": "When deployed, allies that have a Defensive Recovery skill also gain 1 SP when attacking" 
+        },
+
+        {
+            "Name": "Mercy",
+            "Description": "<Operator Name> can attack and will prioritize Sleeping enemies; Increase ATK to 140% when attacking Sleeping enemies" 
+        }
+    ]
+}

@@ -1,4 +1,4 @@
-import { OperatorComparisonResultV2, RaceDescription } from '@/src/resources/operator/lib/types';
+import { OperatorComparisonResultV2, RaceDescription } from '@/src/modules/operator/lib/types';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 export interface IOperatorState {

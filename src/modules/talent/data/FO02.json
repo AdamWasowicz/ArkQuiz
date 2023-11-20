@@ -1,0 +1,9 @@
+{
+    "OperatorId": "FO02",
+    "Talents": [
+        {
+            "Name": "Pegasus's Halo",
+            "Description": "Increases the healing effect received by all allies in battlefield by 10% when deployed" 
+        }
+    ]
+}

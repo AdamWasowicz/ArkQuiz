@@ -1,0 +1,14 @@
+{
+    "OperatorId": "LM21",
+    "Talents": [
+        {
+            "Name": "Foolproof Plan",
+            "Description": "A Crystal Barrier blocks all damage, shattering when 200 or more damage is taken from a single source, dealing 100% of <Operator Name>'s ATK as Arts damage to all enemies within attack range and stunning them for 1s, reforms after 8s" 
+        },
+
+        {
+            "Name": "Shrouded Strength",
+            "Description": "50% chance to recover 1 SP when attacked" 
+        }
+    ]
+}

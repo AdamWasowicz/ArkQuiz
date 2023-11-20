@@ -1,0 +1,14 @@
+{
+    "OperatorId": "LM05",
+    "Talents": [
+        {
+            "Name": "Tactical Armor",
+            "Description": "25% chance to resist Physical and Arts damage" 
+        },
+
+        {
+            "Name": "Special Operation Strategy",
+            "Description": "Increases DEF of all Defenders by 6%" 
+        }
+    ]
+}

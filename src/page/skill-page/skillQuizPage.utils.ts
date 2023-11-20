@@ -1,4 +1,4 @@
-import { SkillComparisonResult } from "@/src/resources/skill/lib/types";
+import { SkillComparisonResult } from "@/src/modules/skill/lib/types";
 
 
 // Helper for localStorage

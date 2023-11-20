@@ -1,0 +1,9 @@
+{
+    "OperatorId": "VC18",
+    "Talents": [
+        {
+            "Name": "Firm Foundation",
+            "Description": "+4% ATK for every 15 seconds this unit remains on the battlefield, stacking up to 4 times" 
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "OperatorId": "RL03",
+    "Talents": [
+        {
+            "Name": "Spiritual Dissolution",
+            "Description": "RES of enemies within range -40%" 
+        },
+
+        {
+            "Name": "Rhine Loop",
+            "Description": "Restores 2 extra Skill Points every 6 seconds" 
+        }
+    ]
+}

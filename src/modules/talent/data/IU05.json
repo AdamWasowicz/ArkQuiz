@@ -1,0 +1,9 @@
+{
+    "OperatorId": "IU05",
+    "Talents": [
+        {
+            "Name": "Defense Specialist",
+            "Description": "DEF +12%" 
+        }
+    ]
+}

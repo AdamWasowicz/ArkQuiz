@@ -1,0 +1,9 @@
+{
+    "OperatorId": "KZ12",
+    "Talents": [
+        {
+            "Name": "Bombardment Studies",
+            "Description": "ATK +8%. If the four adjacent tiles are ground tiles, ATK +16% instead" 
+        }
+    ]
+}

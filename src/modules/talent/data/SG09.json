@@ -1,0 +1,9 @@
+{
+    "OperatorId": "SG09",
+    "Talents": [
+        {
+            "Name": "Flash of Insight",
+            "Description": "When attacking, has a 25% chance to increase that ATK to 150%" 
+        }
+    ]
+}

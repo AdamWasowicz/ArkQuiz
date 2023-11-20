@@ -1,8 +1,8 @@
-import { OperatorComparisonResultV2, OperatorHeader, RaceDescription } from '@/src/resources/operator/lib/types';
+import { OperatorComparisonResultV2, OperatorHeader, RaceDescription } from '@/src/modules/operator/lib/types';
 import axios from 'axios';
 import { LOCAL_PATH_TO_OPERATOR_ICONS, LOCAL_PATH_TO_SKILL_ICONS } from './paths';
 import path from 'path';
-import { SkillComparisonResult, SkillHeader } from '../resources/skill/lib/types';
+import { SkillComparisonResult, SkillHeader } from '../modules/skill/lib/types';
 
 const SERVER_ROUTE_TO_OPERATOR_GUESS = 'api/operator';
 const SERVER_ROUTE_TO_OPERATOR_HEADERS = 'api/operator/headers';

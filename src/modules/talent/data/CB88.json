@@ -1,0 +1,14 @@
+{
+    "OperatorId": "CB88",
+    "Talents": [
+        {
+            "Name": "Terminus of Legends",
+            "Description": "When attacking aerial enemies, increase ATK to 120% and disables the target's special abilities for 3 seconds" 
+        },
+
+        {
+            "Name": "One Who Once Bore Wings",
+            "Description": "Inflicts Weightless on enemies within attack range whose HP is above 80%" 
+        }
+    ]
+}

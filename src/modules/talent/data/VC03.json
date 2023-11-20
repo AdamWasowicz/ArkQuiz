@@ -1,0 +1,9 @@
+{
+    "OperatorId": "VC03",
+    "Talents": [
+        {
+            "Name": "Dual Personality",
+            "Description": "Obtains 40% Physical and Arts Dodge when equipped with skill 1; Obtains 15% ATK when equipped with skill 2" 
+        }
+    ]
+}

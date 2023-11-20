@@ -1,0 +1,9 @@
+{
+    "OperatorId": "US11",
+    "Talents": [
+        {
+            "Name": "Enforcer",
+            "Description": "Increases damage dealt to enemies below 40% HP by 24%" 
+        }
+    ]
+}

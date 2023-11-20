@@ -1,0 +1,9 @@
+{
+    "OperatorId": "JC00",
+    "Talents": [
+        {
+            "Name": "Deference",
+            "Description": "ATK +10%, when there are two or more ground tiles within Attack Range, the effect becomes ATK +16%" 
+        }
+    ]
+}

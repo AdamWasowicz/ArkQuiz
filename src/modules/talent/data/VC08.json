@@ -1,0 +1,9 @@
+{
+    "OperatorId": "VC08",
+    "Talents": [
+        {
+            "Name": "Geologist",
+            "Description": "When this unit's skill is not active, adjacent allies gain +10% DEF; When this unit's skill is active, become less likely to be targeted by enemies" 
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "OperatorId": "PA45",
+    "Talents": [
+        {
+            "Name": "Max HP Up",
+            "Description": "Max HP +12%" 
+        }
+    ]
+}

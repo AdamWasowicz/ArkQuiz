@@ -1,0 +1,9 @@
+{
+    "OperatorId": "R164",
+    "Talents": [
+        {
+            "Name": "Striped Camouflage",
+            "Description": "<Operator Name> and allies on high ground tiles within the 8 surrounding tiles gain 20% Physical Dodge" 
+        }
+    ]
+}

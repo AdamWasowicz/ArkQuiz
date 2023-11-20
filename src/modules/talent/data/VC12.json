@@ -1,0 +1,9 @@
+{
+    "OperatorId": "Sealed Treasure",
+    "Talents": [
+        {
+            "Name": "Gentle Binding Gaze",
+            "Description": "Stored attacks deal 130% damage" 
+        }
+    ]
+}

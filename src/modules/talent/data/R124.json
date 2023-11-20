@@ -1,0 +1,9 @@
+{
+    "OperatorId": "R124",
+    "Talents": [
+        {
+            "Name": "Sword and Shield",
+            "Description": "ATK +7%, DEF +7%" 
+        }
+    ]
+}

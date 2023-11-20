@@ -1,0 +1,14 @@
+{
+    "OperatorId": "LN05",
+    "Talents": [
+        {
+            "Name": "Dynamics",
+            "Description": "Stored attacks deal 135% damage; Can store 1 extra charge that is only used when attacking elite or boss enemies" 
+        },
+
+        {
+            "Name": "Appoggiatura",
+            "Description": "If there are no other enemies near the target, attacks deal an additional 15% ATK as Arts damage" 
+        }
+    ]
+}

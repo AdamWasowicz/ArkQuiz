@@ -1,0 +1,14 @@
+{
+    "OperatorId": "LN02",
+    "Talents": [
+        {
+            "Name": "Pyrobreath",
+            "Description": "All [Caster] Operators' ATK +14% when <Operator Name> is deployed" 
+        },
+
+        {
+            "Name": "Wild Fire",
+            "Description": "Immediately obtains a small random number of Skill Points after deployment" 
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "OperatorId": "SI03",
+    "Talents": [
+        {
+            "Name": "Tundra Survival",
+            "Description": "Inflicts 20% Arts Fragility on all Aerial units within range" 
+        }
+    ]
+}

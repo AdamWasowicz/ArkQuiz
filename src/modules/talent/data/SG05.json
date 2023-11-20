@@ -1,0 +1,9 @@
+{
+    "OperatorId": "SG05",
+    "Talents": [
+        {
+            "Name": "Arts of the Wild",
+            "Description": "Range reduces, attacks now deal Physical damage (only to ground enemies), ATK +100% when this skill is activated" 
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "OperatorId": "SI01",
+    "Talents": [
+        {
+            "Name": "Divination",
+            "Description": "Obtains one of the following buffs permanently when deployed: ATK +13%, ASPD +13, or Max HP +20%" 
+        }
+    ]
+}

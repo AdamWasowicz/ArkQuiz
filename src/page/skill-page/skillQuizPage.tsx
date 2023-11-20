@@ -1,14 +1,14 @@
 "use client"
-import { OperatorHeaderMap } from "@/src/resources/operator/lib/types";
+import { OperatorHeaderMap } from "@/src/modules/operator/lib/types";
 import { submitSkillGuess } from "@/src/lib/serverFunctions";
 import styles from './skillQuizPage.module.scss';
 import SearchBar from "@/src/components/search-bar/searchBar";
 import { useAppDispatch, useAppSelector } from "@/src/redux/hooks";
 import { ChangeEvent, useState } from "react";
 import { addGuess, setErrorMsg, setGameWon, setGuesses, setIsWorking } from "@/src/redux/features/skill-slice";
-import GuessResult from "@/src/resources/skill/components/guess-result/guessResult";
-import MainPanel from "@/src/resources/skill/components/main-panel/mainPanel";
-import { SkillComparisonResult } from "@/src/resources/skill/lib/types";
+import GuessResult from "@/src/modules/skill/components/guess-result/guessResult";
+import MainPanel from "@/src/modules/skill/components/main-panel/mainPanel";
+import { SkillComparisonResult } from "@/src/modules/skill/lib/types";
 import useLocalstorage from './skillQuizPage.utils';
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";

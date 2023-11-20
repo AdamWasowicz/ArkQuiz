@@ -1,0 +1,9 @@
+{
+    "OperatorId": "LN06",
+    "Talents": [
+        {
+            "Name": "Reverberation",
+            "Description": "RES +10. Deals 80% of <Operator Name>'s ATK as Arts damage to the attacker whenever <Operator Name> receives Arts attacks" 
+        }
+    ]
+}

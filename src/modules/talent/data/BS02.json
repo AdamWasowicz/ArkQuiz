@@ -1,0 +1,14 @@
+{
+    "OperatorId": "BS02",
+    "Talents": [
+        {
+            "Name": "Tactical Defense",
+            "Description": "Restores 1 Skill Point to this Operator and a random ally in the surrounding grids when attacked" 
+        },
+
+        {
+            "Name": "Thunder Resistance",
+            "Description": "RES +10" 
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "OperatorId": "LM15",
+    "Talents": [
+        {
+            "Name": "Interlocked Shield",
+            "Description": "DEF +50; If a Vanguard or Guard is deployed behind <Operator Name>, that Vanguard or Guard gains the same effect." 
+        }
+    ]
+}

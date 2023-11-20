@@ -1,0 +1,14 @@
+{
+    "OperatorId": "LT77",
+    "Talents": [
+        {
+            "Name": "Skill Aura - Caster",
+            "Description": "When deployed, increases the SP recovery rate of all Casters by +0.4/second (only the highest effect of this type takes place)" 
+        },
+
+        {
+            "Name": "Subjective Time Dilation",
+            "Description": "Slows the movement speed of enemies within this unit's attack range by 15%" 
+        }
+    ]
+}

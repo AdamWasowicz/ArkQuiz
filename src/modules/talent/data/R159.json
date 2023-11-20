@@ -1,0 +1,14 @@
+{
+    "OperatorId": "R159",
+    "Talents": [
+        {
+            "Name": "Ward of the Fertile Soil",
+            "Description": "Every 9 seconds, gains 1 Shield (Can have up to 3 stacks, with 1 stack granted immediately when deployed). When a Shield is broken, restores 20% of Max HP" 
+        },
+
+        {
+            "Name": "Unshakable Solidarity",
+            "Description": "Takes 30% less damage from Sarkaz enemies" 
+        }
+    ]
+}

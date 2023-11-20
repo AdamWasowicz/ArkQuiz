@@ -1,5 +1,5 @@
 import OperatorQuizPage from "@/src/page/operator-page/operatorQuizPage";
-import { getOperatorHeaderMap } from "@/src/resources/operator/lib/utils";
+import { getOperatorHeaderMap } from "@/src/modules/operator/lib/utils";
 
 const OperatorPage: React.FC= () => {
   const headers = getOperatorHeaderMap();

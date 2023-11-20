@@ -1,0 +1,9 @@
+{
+    "OperatorId": "MN02",
+    "Talents": [
+        {
+            "Name": "Self-Defense",
+            "Description": "Restores HP by 4% of Max HP per second and obtains 25% Physical Melee Dodge when the skill is activated" 
+        }
+    ]
+}

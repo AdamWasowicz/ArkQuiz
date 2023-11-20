@@ -1,0 +1,9 @@
+{
+    "OperatorId": "VC02",
+    "Talents": [
+        {
+            "Name": "Black Mist",
+            "Description": "Attacks reduce the target's RES by 20% for 1 second" 
+        }
+    ]
+}

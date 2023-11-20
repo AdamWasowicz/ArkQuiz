@@ -1,0 +1,9 @@
+{
+    "OperatorId": "JC09",
+    "Talents": [
+        {
+            "Name": "Frigid Respite",
+            "Description": "When this unit's skill is not active and SP is less than or equal to half of the maximum, stops attacking and restores 3% Max HP every second" 
+        }
+    ]
+}

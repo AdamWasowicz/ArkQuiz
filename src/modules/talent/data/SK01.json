@@ -1,0 +1,9 @@
+{
+    "OperatorId": "SK01",
+    "Talents": [
+        {
+            "Name": "Arts Sniper",
+            "Description": "Increases the Arts Damage taken by all blocked enemies by 15% when deployed" 
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "OperatorId": "R147",
+    "Talents": [
+        {
+            "Name": "Shambhala's Sanctuary",
+            "Description": "When this unit's skill is not active, restores 4% Max HP per second" 
+        }
+    ]
+}

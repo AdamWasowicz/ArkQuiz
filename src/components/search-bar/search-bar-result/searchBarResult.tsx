@@ -1,5 +1,5 @@
 import { routeToOperatorIcon } from "@/src/lib/serverFunctions"
-import { OperatorHeader } from "../../../resources/operator/lib/types"
+import { OperatorHeader } from "../../../modules/operator/lib/types"
 import Image from "next/image";
 import styles from './searchBarResult.module.scss';
 

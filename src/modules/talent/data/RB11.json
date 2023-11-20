@@ -1,0 +1,9 @@
+{
+    "OperatorId": "RB11",
+    "Talents": [
+        {
+            "Name": "Correcting Blueprints",
+            "Description": "Reduces Physical damage taken by 12%; The effect is doubled 35 seconds after deployment" 
+        }
+    ]
+}

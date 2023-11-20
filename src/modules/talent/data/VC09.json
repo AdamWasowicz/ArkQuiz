@@ -1,0 +1,14 @@
+{
+    "OperatorId": "VC09",
+    "Talents": [
+        {
+            "Name": "Beacon's Wrath",
+            "Description": "When this unit's skill is active, Drones have a 10% chance to self-destruct when attacking (and then return to the Operator), dealing 300% of <Operator Name>'s ATK as Arts damage to enemies in a small area" 
+        },
+
+        {
+            "Name": "Precise Redirection",
+            "Description": "<Operator Name> and her Drones' attacks ignore 15 RES" 
+        }
+    ]
+}

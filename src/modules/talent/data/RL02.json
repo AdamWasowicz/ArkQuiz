@@ -1,0 +1,14 @@
+{
+    "OperatorId": "RL02",
+    "Talents": [
+        {
+            "Name": "Rhine Charged Suit",
+            "Description": "For every 20 seconds Saria is deployed, ATK +5% and DEF +4%, stacking up to 5 times" 
+        },
+
+        {
+            "Name": "Refreshment",
+            "Description": "When <Operator Name> restores an ally's HP, she also restores 1 extra Skill Point to them" 
+        }
+    ]
+}

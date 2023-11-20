@@ -1,0 +1,14 @@
+{
+    "OperatorId": "SG03",
+    "Talents": [
+        {
+            "Name": "Peerless Bravery",
+            "Description": "When HP is above 50%, attacks deal 115% damage; When HP is 50% or lower, gains 20% Sanctuary effect" 
+        },
+
+        {
+            "Name": "Resilience",
+            "Description": "Increases this unit's SP recovery by +0.2/sec when blocking enemies" 
+        }
+    ]
+}

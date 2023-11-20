@@ -1,6 +1,6 @@
 // EXPERIMENTAL
 "use client"
-import { OperatorHeader, OperatorHeaderMap } from "@/src/resources/operator/lib/types"
+import { OperatorHeader, OperatorHeaderMap } from "@/src/modules/operator/lib/types"
 import styles from './searchBar.module.scss';
 import { ChangeEvent } from "react";
 import SearchBarResult from "@/src/components/search-bar/search-bar-result/searchBarResult";

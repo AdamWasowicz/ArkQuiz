@@ -1,0 +1,14 @@
+{
+    "OperatorId": "R155",
+    "Talents": [
+        {
+            "Name": "Thresher",
+            "Description": "Each attack deals additional Arts damage to the target equal to 40% of its DEF" 
+        },
+
+        {
+            "Name": "Lone Journey",
+            "Description": "When there are no other friendly units in the surrounding 4 tiles, ATK +8% and ASPD +8" 
+        }
+    ]
+}
