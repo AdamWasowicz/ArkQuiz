@@ -1,0 +1,14 @@
+{
+    "OperatorId": "JC01",
+    "Talents": [
+        {
+            "Name": "Leader",
+            "Description": "ATK +10%; All allies' Redeployment Time -10%" 
+        },
+
+        {
+            "Name": "Eagle Eyes",
+            "Description": "Reveals Invisible enemies within range" 
+        }
+    ]
+}

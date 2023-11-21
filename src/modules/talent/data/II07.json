@@ -1,0 +1,14 @@
+{
+    "OperatorId": "II07",
+    "Talents": [
+        {
+            "Name": "Flames of Castigation",
+            "Description": "Physical damage has a 50% chance to ignore 50% DEF. Chance increases to 100% against aerial units." 
+        },
+
+        {
+            "Name": "Sword of Cleansing",
+            "Description": "ASPD +18. Effect doubles when there are [Sea Monster] enemies on the battlefield." 
+        }
+    ]
+}

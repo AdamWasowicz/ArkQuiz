@@ -1,0 +1,9 @@
+{
+    "OperatorId": "R171",
+    "Talents": [
+        {
+            "Name": "Re-recycle",
+            "Description": "When overhealed, obtains a Barrier equal to the overheal amount; The Barrier strength cannot exceed 100% of own Max HP" 
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "OperatorId": "IU04",
+    "Talents": [
+        {
+            "Name": "Self-Healing",
+            "Description": "Restores HP by 12% of Max HP when there is an enemy killed within the 8 surrounding tiles" 
+        }
+    ]
+}

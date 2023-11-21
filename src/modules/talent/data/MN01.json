@@ -1,0 +1,9 @@
+{
+    "OperatorId": "MN01",
+    "Talents": [
+        {
+            "Name": "Safe Landing",
+            "Description": "DP Cost -4, Redeployment Time -15 seconds. This unit is Stunned for 10 seconds upon deployment" 
+        }
+    ]
+}

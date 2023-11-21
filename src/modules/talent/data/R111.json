@@ -1,0 +1,14 @@
+{
+    "OperatorId": "R111",
+    "Talents": [
+        {
+            "Name": "Molten Flame",
+            "Description": "Attacks ignore 20 RES" 
+        },
+
+        {
+            "Name": "Remnant Ash",
+            "Description": "After receiving fatal damage, continuously prevents HP from falling below 1. Retreat from the battlefield 8 seconds later" 
+        }
+    ]
+}

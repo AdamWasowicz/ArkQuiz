@@ -1,0 +1,14 @@
+{
+    "OperatorId": "II09",
+    "Talents": [
+        {
+            "Name": "An Everyman's Wish",
+            "Description": "Healing targets gain status resistance for 4 seconds. If the target's HP is above 75%, they gain status resistance for 6 seconds instead." 
+        },
+
+        {
+            "Name": "Quick Fix",
+            "Description": "When an ally within range receives a negative status, heal them for 80% of <Operator Name>'s ATK. 12 seconds cooldown." 
+        }
+    ]
+}

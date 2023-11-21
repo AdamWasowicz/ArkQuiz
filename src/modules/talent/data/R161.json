@@ -1,0 +1,9 @@
+{
+    "OperatorId": "R161",
+    "Talents": [
+        {
+            "Name": "Executor-in-Training",
+            "Description": "When dealing lethal damage, leave the enemy with 1 HP and inflict Critically Wounded (gives +2 SP to the attacker when killed); <Operator Name> will not attack Critically Wounded targets" 
+        }
+    ]
+}

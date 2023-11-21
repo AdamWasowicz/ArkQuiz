@@ -1,0 +1,14 @@
+{
+    "OperatorId": "FO01",
+    "Talents": [
+        {
+            "Name": "Black Fiend's Protection",
+            "Description": "DEF of allies within range +60" 
+        },
+
+        {
+            "Name": "Code of Law",
+            "Description": "ASPD +10" 
+        }
+    ]
+}

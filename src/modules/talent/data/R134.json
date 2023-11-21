@@ -1,0 +1,9 @@
+{
+    "OperatorId": "R134",
+    "Talents": [
+        {
+            "Name": "Solidly Grounded",
+            "Description": "Elemental Damage recovery +20% when healing ground units" 
+        }
+    ]
+}

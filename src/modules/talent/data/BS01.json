@@ -1,0 +1,9 @@
+{
+    "OperatorId": "BS01",
+    "Talents": [
+        {
+            "Name": "Thermite Blade",
+            "Description": "Has a 20% chance to ignore the target's Defense when attacking" 
+        }
+    ]
+}

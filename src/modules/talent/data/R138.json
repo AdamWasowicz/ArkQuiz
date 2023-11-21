@@ -1,0 +1,9 @@
+{
+    "OperatorId": "R138",
+    "Talents": [
+        {
+            "Name": "Soul Drinker",
+            "Description": "ASPD +6 after defeating an enemy (stacks up to 5 times)" 
+        }
+    ]
+}

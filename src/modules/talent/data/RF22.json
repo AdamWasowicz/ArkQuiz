@@ -1,0 +1,14 @@
+{
+    "OperatorId": "RF22",
+    "Talents": [
+        {
+            "Name": "Battleaxe",
+            "Description": "Increases ATK and DEF by 10%, increased by a further 4% for each blocked enemy" 
+        },
+
+        {
+            "Name": "Medical Background",
+            "Description": "Increases this unit's healing received by 20%, increased to 40% when under half HP" 
+        }
+    ]
+}

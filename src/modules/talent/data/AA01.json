@@ -1,0 +1,14 @@
+{
+    "OperatorId": "AA01",
+    "Talents": [
+        {
+            "Name": "Abyssal Predator",
+            "Description": "When this unit is in the squad, all [Abyssal Hunter] Operators gain +14% ATK" 
+        },
+
+        {
+            "Name": "Swift Action",
+            "Description": "Redeployment Time -10 seconds" 
+        }
+    ]
+}

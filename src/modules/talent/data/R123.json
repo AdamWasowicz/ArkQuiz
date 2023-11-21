@@ -1,0 +1,9 @@
+{
+    "OperatorId": "R123",
+    "Talents": [
+        {
+            "Name": "Covered Strike",
+            "Description": "Range expands, but Attack Interval increases slightly" 
+        }
+    ]
+}

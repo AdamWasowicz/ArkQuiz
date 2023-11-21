@@ -1,0 +1,9 @@
+{
+    "OperatorId": "MN03",
+    "Talents": [
+        {
+            "Name": "Lavender's Fragrance",
+            "Description": "Restores the HP of all allies by 5% of <Operator Name>'s ATK per second" 
+        }
+    ]
+}

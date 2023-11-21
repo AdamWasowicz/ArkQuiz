@@ -1,0 +1,14 @@
+{
+    "OperatorId": "YD20",
+    "Talents": [
+        {
+            "Name": "Find an Opening",
+            "Description": "Deal an additional 40% of ATK as Arts damage when attacking enemies affected by Slow or Bind" 
+        },
+
+        {
+            "Name": "Falling Petals",
+            "Description": "Attacks have a 20% chance to Bind the target for 1.5s" 
+        }
+    ]
+}

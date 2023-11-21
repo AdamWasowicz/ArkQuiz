@@ -1,0 +1,9 @@
+{
+    "OperatorId": "R175",
+    "Talents": [
+        {
+            "Name": "Focused Attention",
+            "Description": "When healing, heal an extra 140 HP if target HP is below 40%" 
+        }
+    ]
+}

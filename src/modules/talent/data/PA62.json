@@ -1,0 +1,9 @@
+{
+    "OperatorId": "PA62",
+    "Talents": [
+        {
+            "Name": "Targeting - Primary",
+            "Description": "When attacking, has a 20% chance to increase the current damage of that attack to 150%" 
+        }
+    ]
+}

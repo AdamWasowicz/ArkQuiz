@@ -1,0 +1,14 @@
+{
+    "OperatorId": "II10",
+    "Talents": [
+        {
+            "Name": "Sustenance from The Reaper",
+            "Description": "Recover 30 Elemental Damage per enemy hit during attacks, up to Block count" 
+        },
+
+        {
+            "Name": "Interfluence from Maladie",
+            "Description": "In [Mizuki & Caerula Arbor], ASPD +25, Block +1" 
+        }
+    ]
+}

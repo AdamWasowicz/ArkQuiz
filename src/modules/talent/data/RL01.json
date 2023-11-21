@@ -1,0 +1,9 @@
+{
+    "OperatorId": "RL01",
+    "Talents": [
+        {
+            "Name": "Booster Injection",
+            "Description": "All Medic Operators' ASPD +12 when <Operator Name> is deployed" 
+        }
+    ]
+}

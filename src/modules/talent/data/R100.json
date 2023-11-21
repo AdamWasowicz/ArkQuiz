@@ -1,0 +1,9 @@
+{
+    "OperatorId": "R100",
+    "Talents": [
+        {
+            "Name": "Starter Instructor",
+            "Description": "All three-star Operators' ATK +10%" 
+        }
+    ]
+}

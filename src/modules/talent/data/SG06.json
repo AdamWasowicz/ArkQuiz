@@ -1,0 +1,9 @@
+{
+    "OperatorId": "SG06",
+    "Talents": [
+        {
+            "Name": "Featherweight",
+            "Description": "Deals 40% more damage to enemies that are not blocked by this unit" 
+        }
+    ]
+}

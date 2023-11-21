@@ -1,0 +1,9 @@
+{
+    "OperatorId": "SG08",
+    "Talents": [
+        {
+            "Name": "Water Storage",
+            "Description": "If <Operator Name> does not heal for 4 seconds, increase the heal amount of the next heal to 150% ATK" 
+        }
+    ]
+}

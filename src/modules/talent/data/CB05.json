@@ -1,0 +1,14 @@
+{
+    "OperatorId": "CB05",
+    "Talents": [
+        {
+            "Name": "Forceful Fist",
+            "Description": "20% chance for attacks to deal 160% damage and reduce the target's ATK by 15% for 3 seconds (Does not stack)" 
+        },
+
+        {
+            "Name": "Sturdy Constitution",
+            "Description": "DEF +10%, Physical Dodge +15%" 
+        }
+    ]
+}

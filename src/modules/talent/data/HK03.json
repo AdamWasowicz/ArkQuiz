@@ -1,0 +1,9 @@
+{
+    "OperatorId": "HK03",
+    "Talents": [
+        {
+            "Name": "Serious Mode",
+            "Description": "When deployed, gains up to +100 ASPD Tenacity (reaches maximum when below 30% HP)" 
+        }
+    ]
+}

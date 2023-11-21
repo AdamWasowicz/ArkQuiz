@@ -1,0 +1,9 @@
+{
+    "OperatorId": "R104",
+    "Talents": [
+        {
+            "Name": "First Aid Kit",
+            "Description": "Immediately restores the HP of all allies by 150% of <Operator Name>'s ATK after deployment" 
+        }
+    ]
+}

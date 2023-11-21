@@ -1,0 +1,9 @@
+{
+    "OperatorId": "R137",
+    "Talents": [
+        {
+            "Name": "Bloody Slaughter",
+            "Description": "Increases Max HP by 40 after defeating an enemy, stacking up to 30 times." 
+        }
+    ]
+}

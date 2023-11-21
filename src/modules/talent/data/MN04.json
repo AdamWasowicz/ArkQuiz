@@ -1,0 +1,14 @@
+{
+    "OperatorId": "MN04",
+    "Talents": [
+        {
+            "Name": "Birth of a Hero",
+            "Description": "When deployed, all \"Minoan\" Operators gain Vigor effect of +25% ATK when HP is higher than 80%" 
+        },
+
+        {
+            "Name": "Goddess' Inspiration",
+            "Description": "Every hit against an enemy restores 40 HP to <Operator Name> and the Operator on the tile ahead" 
+        }
+    ]
+}

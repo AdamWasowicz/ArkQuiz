@@ -1,0 +1,9 @@
+{
+    "OperatorId": "RR01",
+    "Talents": [
+        {
+            "Name": "Celestial Globe",
+            "Description": "For every 20 seconds Astesia stays on the battlefield, ASPD +5, stacking up to 5 times" 
+        }
+    ]
+}

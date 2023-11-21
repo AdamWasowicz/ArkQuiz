@@ -1,0 +1,9 @@
+{
+    "OperatorId": "R132",
+    "Talents": [
+        {
+            "Name": "Medic Squad Protection",
+            "Description": "When this unit's skill is active, all Medic and Supporter Operators gain status resistance" 
+        }
+    ]
+}

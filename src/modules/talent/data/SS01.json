@@ -1,0 +1,9 @@
+{
+    "OperatorId": "SS01",
+    "Talents": [
+        {
+            "Name": "Lake Walker",
+            "Description": "ATK +5%, when there is water terrain on the battlefield, the effect becomes ATK +18%" 
+        }
+    ]
+}

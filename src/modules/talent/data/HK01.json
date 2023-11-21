@@ -1,0 +1,9 @@
+{
+    "OperatorId": "HK01",
+    "Talents": [
+        {
+            "Name": "Demonic Physique",
+            "Description": "DEF -20%; Max HP +20%" 
+        }
+    ]
+}

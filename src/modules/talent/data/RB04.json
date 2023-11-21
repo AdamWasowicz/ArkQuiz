@@ -1,0 +1,9 @@
+{
+    "OperatorId": "RB04",
+    "Talents": [
+        {
+            "Name": "Seek Aid",
+            "Description": "This unit and allied Operators in the surrounding 8 tiles gain +8 ASPD" 
+        }
+    ]
+}

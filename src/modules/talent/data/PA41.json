@@ -1,0 +1,9 @@
+{
+    "OperatorId": "PA41",
+    "Talents": [
+        {
+            "Name": "ATK Up",
+            "Description": "ATK +8%" 
+        }
+    ]
+}

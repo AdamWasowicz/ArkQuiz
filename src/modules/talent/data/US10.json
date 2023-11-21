@@ -1,0 +1,9 @@
+{
+    "OperatorId": "US10",
+    "Talents": [
+        {
+            "Name": "Boxer's Concentration",
+            "Description": "Each consecutive attack on the same target increases ATK by 5%, stacking up to 5 times. Stacks will be lost upon switching targets." 
+        }
+    ]
+}

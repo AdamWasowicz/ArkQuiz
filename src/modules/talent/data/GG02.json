@@ -1,0 +1,14 @@
+{
+    "OperatorId": "GG02",
+    "Talents": [
+        {
+            "Name": "Excited Pioneer",
+            "Description": "When deployed, gains up to 50% ATK Tenacity (reaches maximum when below 30% HP)" 
+        },
+
+        {
+            "Name": "Homeland Combat",
+            "Description": "In [All Quiet Under the Thunder], ignores the Unit Limit" 
+        }
+    ]
+}

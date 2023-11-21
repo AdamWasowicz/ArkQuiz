@@ -1,0 +1,9 @@
+{
+    "OperatorId": "AA02",
+    "Talents": [
+        {
+            "Name": "Abyssal Regeneration",
+            "Description": "Max HP +10%; Restores HP by 2% of Max HP per second" 
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "OperatorId": "LM04",
+    "Talents": [
+        {
+            "Name": "Scolding",
+            "Description": "Every 4 seconds when deployed, restores 1 Skill Point to all deployed allies that have an ATK Recovery or DEF Recovery skill." 
+        },
+
+        {
+            "Name": "Blade Art",
+            "Description": "ATK +5%; DEF +5%; Physical Dodge +10%" 
+        }
+    ]
+}

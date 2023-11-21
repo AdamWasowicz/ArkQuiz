@@ -1,0 +1,9 @@
+{
+    "OperatorId": "LM08",
+    "Talents": [
+        {
+            "Name": "Melee Combat Guidance",
+            "Description": "ATK of Melee allies in the 8 surrounding grids +10% when <Operator Name> is deployed" 
+        }
+    ]
+}

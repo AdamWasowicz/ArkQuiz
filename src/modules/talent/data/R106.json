@@ -1,0 +1,9 @@
+{
+    "OperatorId": "R106",
+    "Talents": [
+        {
+            "Name": "Blood Sample Recycle",
+            "Description": "Restores 2 Skill Points to this Operator and a random ally within range when an enemy within range is killed" 
+        }
+    ]
+}

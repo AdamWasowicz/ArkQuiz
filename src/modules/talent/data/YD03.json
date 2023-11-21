@@ -1,0 +1,9 @@
+{
+    "OperatorId": "YD03",
+    "Talents": [
+        {
+            "Name": "Helper",
+            "Description": "When <Operator Name> and at least one more Medic Operator are on the battlefield, all Medic Operators gain ATK +10%" 
+        }
+    ]
+}

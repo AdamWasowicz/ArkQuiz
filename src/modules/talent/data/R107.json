@@ -1,0 +1,9 @@
+{
+    "OperatorId": "R107",
+    "Talents": [
+        {
+            "Name": "Minimally Invasive Surgery",
+            "Description": "Increases healing effects by 20% on all Operators with DP Cost no more than 10 when <Operator Name> is in the squad" 
+        }
+    ]
+}

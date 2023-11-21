@@ -1,0 +1,9 @@
+{
+    "OperatorId": "BV12",
+    "Talents": [
+        {
+            "Name": "Waiting Game",
+            "Description": "When skill is inactive, deal 20% of <Operator Name>'s ATK as Arts damage to the attacker when <Operator Name> is attacked" 
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "OperatorId": "R144",
+    "Talents": [
+        {
+            "Name": "Photoetched Marks",
+            "Description": "When dealing damage, has 20% chance to recover 1 additional SP" 
+        }
+    ]
+}

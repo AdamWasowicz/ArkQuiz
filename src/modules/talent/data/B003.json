@@ -1,0 +1,14 @@
+{
+    "OperatorId": "B003",
+    "Talents": [
+        {
+            "Name": "Mon3tr",
+            "Description": "Can use and heal Mon3tr, and Mon3tr has a 25 second redeployment time. <Operator Name> will prioritize healing herself and Mon3tr; If Mon3tr is not within <Operator Name>'s Attack Range, Mon3tr's DEF is reduced to 0" 
+        },
+
+        {
+            "Name": "Non-Damaging Restructuring",
+            "Description": "When Mon3tr is defeated (excluding retreat), all enemies in the surrounding 8 tiles are Stunned for 3 seconds and receive 1200 True damage" 
+        }
+    ]
+}

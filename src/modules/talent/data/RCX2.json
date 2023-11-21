@@ -1,0 +1,9 @@
+{
+    "OperatorId": "RCX2",
+    "Talents": [
+        {
+            "Name": "Support Spray 1",
+            "Description": "Immediately restores the HP of all allies by 200 after deployment" 
+        }
+    ]
+}

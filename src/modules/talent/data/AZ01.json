@@ -1,0 +1,14 @@
+{
+    "OperatorId": "AZ01",
+    "Talents": [
+        {
+            "Name": "Waxing Moon",
+            "Description": "When deployed, gains up to +100 ASPD Tenacity (reaches maximum when below 30% HP)" 
+        },
+
+        {
+            "Name": "Ingenious Strategist",
+            "Description": "Regenerate 60 HP per second when this unit is not blocking an enemy." 
+        }
+    ]
+}

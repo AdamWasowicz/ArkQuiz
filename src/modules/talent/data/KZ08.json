@@ -1,0 +1,14 @@
+{
+    "OperatorId": "KZ08",
+    "Talents": [
+        {
+            "Name": "Wanderer",
+            "Description": "ATK increased to 110% when attacking. If there are 3 or more enemies nearby, ATK increased to 115%, and take 15% less damage" 
+        },
+
+        {
+            "Name": "Unmoved",
+            "Description": "More likely to be attacked while deployed. When any Kazimierz Operator is attacked, reflect 15% of <Operator Name>'s ATK as True Damage" 
+        }
+    ]
+}

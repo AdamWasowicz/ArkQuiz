@@ -1,0 +1,14 @@
+{
+    "OperatorId": "II01",
+    "Talents": [
+        {
+            "Name": "Nerve Corrosion",
+            "Description": "Poisons the targets when attacking, dealing 125 Arts Damage to them per second, lasting 3 seconds (damage is doubled against Ranged enemies)" 
+        },
+
+        {
+            "Name": "Echoes of Ancestral Waves",
+            "Description": "If this unit hasn't attacked for the last 2 seconds, restores 3.5% max HP every second" 
+        }
+    ]
+}

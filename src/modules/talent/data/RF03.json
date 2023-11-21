@@ -1,0 +1,9 @@
+{
+    "OperatorId": "RF03",
+    "Talents": [
+        {
+            "Name": "Dusk and Dawn",
+            "Description": "Attacks inflict 12% Arts Fragility to the target for 5 seconds" 
+        }
+    ]
+}

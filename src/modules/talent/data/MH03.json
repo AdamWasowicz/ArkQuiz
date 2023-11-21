@@ -1,0 +1,14 @@
+{
+    "OperatorId": "MH03",
+    "Talents": [
+        {
+            "Name": "Decisive",
+            "Description": "When deployed, gains up to +50 ASPD and +50% DEF Tenacity (reaches maximum when below 30% HP)" 
+        },
+
+        {
+            "Name": "Spirit",
+            "Description": "ATK +7% for every 5 attacks made while skill is inactive (stacks up to 3 times)" 
+        }
+    ]
+}

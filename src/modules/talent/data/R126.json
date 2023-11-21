@@ -1,0 +1,9 @@
+{
+    "OperatorId": "R126",
+    "Talents": [
+        {
+            "Name": "Mercenary's Tenacity",
+            "Description": "After defeating 7 enemies, Sideroca gains +15 ASPD and status resistance"
+        }
+    ]
+}

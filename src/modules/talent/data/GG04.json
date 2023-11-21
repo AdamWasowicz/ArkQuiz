@@ -1,0 +1,14 @@
+{
+    "OperatorId": "GG04",
+    "Talents": [
+        {
+            "Name": "Gang Spirit",
+            "Description": "Has a 30% chance of increasing ATK to 150% when attacking. When deployed, this multiplier increases by +5% for every enemy defeated within the 4 adjacent tiles of a [Glasgow Gang] Operator (max 240%)" 
+        },
+
+        {
+            "Name": "Knight's Honor",
+            "Description": "In [Return to Mist], HP +20%, and each attack restores HP equal to 20% of damage dealt" 
+        }
+    ]
+}

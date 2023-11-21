@@ -1,0 +1,9 @@
+{
+    "OperatorId": "SR01",
+    "Talents": [
+        {
+            "Name": "Spiritual Destruction",
+            "Description": "Disables the target's special ability when attacking, lasting 5 seconds" 
+        }
+    ]
+}

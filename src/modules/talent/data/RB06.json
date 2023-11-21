@@ -1,0 +1,9 @@
+{
+    "OperatorId": "RB06",
+    "Talents": [
+        {
+            "Name": "Collective Consciousness",
+            "Description": "Ranged Operators within Attack Range gain Max HP +10%" 
+        }
+    ]
+}

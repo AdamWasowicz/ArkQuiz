@@ -1,0 +1,9 @@
+{
+    "OperatorId": "KZ07",
+    "Talents": [
+        {
+            "Name": "Rebuke",
+            "Description": "When deployed, all Melee allies with 3 or more Block gain +6 ASPD and +12% DEF" 
+        }
+    ]
+}

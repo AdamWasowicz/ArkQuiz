@@ -1,0 +1,9 @@
+{
+    "OperatorId": "RS04",
+    "Talents": [
+        {
+            "Name": "Heavy Firepower",
+            "Description": "Attack Range +2 tiles, DEF +10%, Redeployment Time +20 seconds" 
+        }
+    ]
+}

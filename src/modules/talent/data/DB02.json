@@ -1,0 +1,14 @@
+{
+    "OperatorId": "DB02",
+    "Talents": [
+        {
+            "Name": "Cinder",
+            "Description": "When dealing damage, 30% chance to inflict Cinder: ATK -20%, 30% Arts Fragility, does not stack, lasts 6s" 
+        },
+
+        {
+            "Name": "Reflected Shine",
+            "Description": "When healing an ally, <Operator Name> heals herself for 50% of the amount healed" 
+        }
+    ]
+}

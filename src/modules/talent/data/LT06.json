@@ -1,0 +1,9 @@
+{
+    "OperatorId": "LT06",
+    "Talents": [
+        {
+            "Name": "Structural Decomposition",
+            "Description": "Prioritize attacking drones; ATK +40% when attacking drones" 
+        }
+    ]
+}

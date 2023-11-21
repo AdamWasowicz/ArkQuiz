@@ -1,0 +1,9 @@
+{
+    "OperatorId": "SR27",
+    "Talents": [
+        {
+            "Name": "Drill Strengthening",
+            "Description": "Increases ATK and DEF by 12% when blocking 2 or more enemies" 
+        }
+    ]
+}

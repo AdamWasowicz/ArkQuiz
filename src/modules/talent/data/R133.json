@@ -1,0 +1,9 @@
+{
+    "OperatorId": "R133",
+    "Talents": [
+        {
+            "Name": "Drug Inhibition Technique",
+            "Description": "Gains status resistance and -40% damage taken from environmental effects" 
+        }
+    ]
+}

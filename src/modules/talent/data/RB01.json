@@ -1,0 +1,9 @@
+{
+    "OperatorId": "RB01",
+    "Talents": [
+        {
+            "Name": "Valley",
+            "Description": "ATK and DEF +10% when there are at least two ranged tiles in the four surrounding tiles" 
+        }
+    ]
+}

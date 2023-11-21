@@ -1,0 +1,14 @@
+{
+    "OperatorId": "NM04",
+    "Talents": [
+        {
+            "Name": "An End to War",
+            "Description": "23% chance for normal attacks to increase the damage <Operator Name> deals to the target by 65% for 2.5 seconds" 
+        },
+
+        {
+            "Name": "All Are Guests",
+            "Description": "<Operator Name> recovers 3 SP if he defeats at least one enemy with a skill" 
+        }
+    ]
+}

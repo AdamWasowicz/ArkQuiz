@@ -1,0 +1,9 @@
+{
+    "OperatorId": "YD17",
+    "Talents": [
+        {
+            "Name": "Mountain Traveler",
+            "Description": "Max HP +5%, gain Vigor effect of +20% ATK when HP is above 50%" 
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "OperatorId": "RL04",
+    "Talents": [
+        {
+            "Name": "Skill Aura",
+            "Description": "When deployed, increases the SP recovery of all allies by 0.3/sec (only the highest effect of this type will be applied)" 
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "OperatorId": "IU07",
+    "Talents": [
+        {
+            "Name": "Battlefield Medic",
+            "Description": "After <Operator Name> is deployed, all [Medic] Operators' ATK +10% and DEF +100, lasting 15 seconds" 
+        }
+    ]
+}

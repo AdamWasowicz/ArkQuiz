@@ -1,0 +1,9 @@
+{
+    "OperatorId": "BV13",
+    "Talents": [
+        {
+            "Name": "Into the Groove",
+            "Description": "ASPD +3 after defeating an enemy (stacks up to 12 times)" 
+        }
+    ]
+}

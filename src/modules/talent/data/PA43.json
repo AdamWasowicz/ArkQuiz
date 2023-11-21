@@ -1,0 +1,9 @@
+{
+    "OperatorId": "PA43",
+    "Talents": [
+        {
+            "Name": "Additional Healing",
+            "Description": "15% chance to heal 1 extra ally" 
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "OperatorId": "RE41",
+    "Talents": [
+        {
+            "Name": "Emergency Defibrillation",
+            "Description": "When this unit's HP falls beneath 25%, restores 50% HP (one time only) and prevents HP from falling under 50% for 6 seconds" 
+        },
+
+        {
+            "Name": "Harsh Training",
+            "Description": "Gains status resistance after being deployed for 15 seconds" 
+        }
+    ]
+}

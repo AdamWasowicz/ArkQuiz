@@ -1,0 +1,14 @@
+{
+    "OperatorId": "KZ01",
+    "Talents": [
+        {
+            "Name": "Brave the Darkness",
+            "Description": "When deploying, deals 80% of ATK as True Damage to enemies in the four adjacent tiles and Stuns them for 3 seconds. If the previously deployed Operator is from Kazimierz, deals an additional hit" 
+        },
+
+        {
+            "Name": "Daybreak",
+            "Description": "Attacks ignore 20% DEF" 
+        }
+    ]
+}

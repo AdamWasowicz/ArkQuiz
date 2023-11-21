@@ -1,0 +1,14 @@
+{
+    "OperatorId": "FO03",
+    "Talents": [
+        {
+            "Name": "White Fiend's Protection",
+            "Description": "RES of allies within range +15" 
+        },
+
+        {
+            "Name": "Fleeting Phantom",
+            "Description": "Can summon Phantoms. Phantoms cannot attack or block enemies, but have 75 RES and 30% Physical Dodge and are more likely to be targeted by enemies. Phantoms lose 3% Max HP per second" 
+        }
+    ]
+}
