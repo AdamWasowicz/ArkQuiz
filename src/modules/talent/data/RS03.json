@@ -1,0 +1,9 @@
+{
+    "OperatorId": "RS03",
+    "Talents": [
+        {
+            "Name": "Welcome Mat",
+            "Description": "Can deploy up to 8 Welcome Mats (Can store up to 10); The first enemy that steps on a Welcome Mat will trigger its effect" 
+        }
+    ]
+}

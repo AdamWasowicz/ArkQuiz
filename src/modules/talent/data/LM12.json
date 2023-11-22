@@ -1,0 +1,9 @@
+{
+    "OperatorId": "LM12",
+    "Talents": [
+        {
+            "Name": "Red Browed Wing Chun",
+            "Description": "When attacking, has a 20% chance to increase ATK to 150% and slightly knock the target back" 
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "OperatorId": "SG01",
+    "Talents": [
+        {
+            "Name": "Hidden Killer - Elite",
+            "Description": "Normally in an untargetable state. The first attack made gains +50% ATK and removes the untargetable state. Regains the untargetable state after not attacking for 5 seconds" 
+        }
+    ]
+}

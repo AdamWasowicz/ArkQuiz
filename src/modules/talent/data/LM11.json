@@ -1,0 +1,9 @@
+{
+    "OperatorId": "LM11",
+    "Talents": [
+        {
+            "Name": "Fireproof Suit",
+            "Description": "RES +15" 
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "OperatorId": "R130",
+    "Talents": [
+        {
+            "Name": "Entwined",
+            "Description": "When attacking, has a 25% chance to Bind the target for 3 seconds" 
+        }
+    ]
+}

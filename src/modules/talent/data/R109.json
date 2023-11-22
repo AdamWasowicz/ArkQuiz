@@ -1,0 +1,14 @@
+{
+    "OperatorId": "R109",
+    "Talents": [
+        {
+            "Name": "Phantom in the Mirror",
+            "Description": "Can summon a stronger clone with the same abilities as <Operator Name>, but has its own redeployment time" 
+        },
+
+        {
+            "Name": "Phantom Mastery",
+            "Description": "Redeployment time of clone is reduced by 10 seconds" 
+        }
+    ]
+}

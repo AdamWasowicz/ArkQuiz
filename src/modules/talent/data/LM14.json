@@ -1,0 +1,9 @@
+{
+    "OperatorId": "LM14",
+    "Talents": [
+        {
+            "Name": "Anatomy Master",
+            "Description": "Increases ATK to 145% when attacking [Infected Creatures]" 
+        }
+    ]
+}

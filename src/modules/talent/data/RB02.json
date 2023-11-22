@@ -1,0 +1,9 @@
+{
+    "OperatorId": "RB02",
+    "Talents": [
+        {
+            "Name": "Auditory Training",
+            "Description": "Obtains 30% Physical Dodge" 
+        }
+    ]
+}

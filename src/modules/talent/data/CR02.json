@@ -1,0 +1,14 @@
+{
+    "OperatorId": "CR02",
+    "Talents": [
+        {
+            "Name": "Embraced Self",
+            "Description": "<Substitute> reduces the Movement Speed of nearby ground enemies by 40%, and deals 40% ATK Arts damage to them per second" 
+        },
+
+        {
+            "Name": "Ægir's Depths",
+            "Description": "While this unit is in the squad, all Abyssal Hunters Operators gain +20% Max HP" 
+        }
+    ]
+}

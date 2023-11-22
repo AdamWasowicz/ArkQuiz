@@ -1,0 +1,9 @@
+{
+    "OperatorId": "YD01",
+    "Talents": [
+        {
+            "Name": "Kung Fu",
+            "Description": "Obtains 40% Physical Dodge" 
+        }
+    ]
+}

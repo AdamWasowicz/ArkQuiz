@@ -1,0 +1,14 @@
+{
+    "OperatorId": "MH02",
+    "Talents": [
+        {
+            "Name": "Kirin Bolts",
+            "Description": "Attacks deal an additional 20% ATK as Arts damage" 
+        },
+
+        {
+            "Name": "Archdemon Mode",
+            "Description": "While skill is active and for 10 seconds after skill ends, ATK +13%" 
+        }
+    ]
+}

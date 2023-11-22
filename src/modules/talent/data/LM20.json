@@ -1,0 +1,14 @@
+{
+    "OperatorId": "LM20",
+    "Talents": [
+        {
+            "Name": "Drug Cocktail Administration",
+            "Description": "Each attack will randomly trigger one of the following effects: Restores own HP by 15%, that attack deals 150% damage, Slows the enemy for 1.4 second, or Stuns the enemy for 1 second" 
+        },
+
+        {
+            "Name": "Pharmaceutical Diffusion",
+            "Description": "Increases healing effects on this unit by 20%" 
+        }
+    ]
+}

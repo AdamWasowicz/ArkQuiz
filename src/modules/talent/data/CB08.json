@@ -1,0 +1,9 @@
+{
+    "OperatorId": "CB08",
+    "Talents": [
+        {
+            "Name": "\"Clip\" Specialist",
+            "Description": "Can deploy up to 8 \"Clip\" traps (Can store up to 10); The first enemy that steps on a trap will trigger its effect" 
+        }
+    ]
+}

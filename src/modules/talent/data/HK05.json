@@ -1,0 +1,9 @@
+{
+    "OperatorId": "HK05",
+    "Talents": [
+        {
+            "Name": "Lonesome Protector",
+            "Description": "Restores 2% HP per second. If there are no allied Operators in the surrounding 8 tiles, restores 3.5% HP per second instead" 
+        }
+    ]
+}

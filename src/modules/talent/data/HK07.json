@@ -1,0 +1,14 @@
+{
+    "OperatorId": "HK07",
+    "Talents": [
+        {
+            "Name": "Traumatic Hysteria",
+            "Description": "Attacks deal additional 50% of ATK as Arts damage to the target with the lowest HP" 
+        },
+
+        {
+            "Name": "Countertransference",
+            "Description": "When there are enemies with less than 50% HP within Attack Range, ATK +10%" 
+        }
+    ]
+}

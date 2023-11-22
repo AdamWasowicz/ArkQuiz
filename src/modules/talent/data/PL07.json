@@ -1,0 +1,14 @@
+{
+    "OperatorId": "PL07",
+    "Talents": [
+        {
+            "Name": "Texas Tradition",
+            "Description": "Gains +20% ATK during the duration of the passive skill; When defeating an enemy for the first time, fully restores HP and reactivates the effects of the passive skill" 
+        },
+
+        {
+            "Name": "Texas Swordsmanship",
+            "Description": "Before defeating an enemy for the first time after each deployment, gains +8 ASPD and reduces all damage taken by 25%" 
+        }
+    ]
+}

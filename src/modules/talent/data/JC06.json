@@ -1,0 +1,9 @@
+{
+    "OperatorId": "JC06",
+    "Talents": [
+        {
+            "Name": "Karlan Hunter",
+            "Description": "ATK and DEF +12% when <Operator Name> is not blocking any enemies" 
+        }
+    ]
+}

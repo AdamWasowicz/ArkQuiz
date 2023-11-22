@@ -1,0 +1,9 @@
+{
+    "OperatorId": "LM16",
+    "Talents": [
+        {
+            "Name": "Bug Catcher",
+            "Description": "When dragging an \"Infected Creature\", the strength of the shift increases by 1 degree, and silences the target for 4 seconds" 
+        }
+    ]
+}

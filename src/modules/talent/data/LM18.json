@@ -1,0 +1,14 @@
+{
+    "OperatorId": "LM18",
+    "Talents": [
+        {
+            "Name": "Kindness Begets Prosperity",
+            "Description": "When <Operator Name> is blocking an enemy, the enemy has ASPD -14 and <Operator Name> has ASPD +14; If there is only one enemy within the surrounding 8 tiles, this effect is doubled" 
+        },
+
+        {
+            "Name": "Preparedness Averts Peril",
+            "Description": "When DP is consumed by <Operator Name>'s Trait, if there is sufficient DP, consumes 5 DP instead to block the next Stun/Frozen effect inflicted on <Operator Name> and Stun the attacker for 3 seconds" 
+        }
+    ]
+}

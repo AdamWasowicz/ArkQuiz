@@ -1,0 +1,9 @@
+{
+    "OperatorId": "HK09",
+    "Talents": [
+        {
+            "Name": "From Paper Comes Life",
+            "Description": "When a Substitute is summoned, it will deal 270% of its ATK as Arts damage to ground enemies in the surrounding 8 tiles" 
+        }
+    ]
+}

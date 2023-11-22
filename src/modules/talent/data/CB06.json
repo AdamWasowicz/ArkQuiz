@@ -1,0 +1,9 @@
+{
+    "OperatorId": "CB06",
+    "Talents": [
+        {
+            "Name": "Misdirection",
+            "Description": "When skill is active, ATK +15%, Block becomes 0 and <Operator Name> gains Camouflage" 
+        }
+    ]
+}

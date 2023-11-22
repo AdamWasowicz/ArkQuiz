@@ -1,0 +1,9 @@
+{
+    "OperatorId": "YD11",
+    "Talents": [
+        {
+            "Name": "Unexpected Strike",
+            "Description": "After not attacking for 4 seconds, increase the ATK of the next attack to 150% and Stun the target for 4 seconds" 
+        }
+    ]
+}

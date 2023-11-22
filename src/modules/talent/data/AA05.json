@@ -1,0 +1,14 @@
+{
+    "OperatorId": "AA05",
+    "Talents": [
+        {
+            "Name": "Waves of Ægir",
+            "Description": "When deployed, all [Abyssal Hunters] Operators recover 2.5% of Max HP per second and receive 25% less Physical and Arts damage from [Seaborn] enemies" 
+        },
+
+        {
+            "Name": "Survival of the Fittest",
+            "Description": "When attacking enemies with 3 or less weight, increase ATK to 130%" 
+        }
+    ]
+}

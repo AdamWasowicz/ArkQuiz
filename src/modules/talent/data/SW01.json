@@ -1,0 +1,9 @@
+{
+    "OperatorId": "SW01",
+    "Talents": [
+        {
+            "Name": "Chill",
+            "Description": "Deals at least 30% of ATK damage every attack" 
+        }
+    ]
+}

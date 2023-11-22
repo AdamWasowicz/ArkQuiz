@@ -1,0 +1,9 @@
+{
+    "OperatorId": "KZ04",
+    "Talents": [
+        {
+            "Name": "Support of the Little",
+            "Description": "DP Cost -1; All units that cost 10 or less DP gain +6% DEF while <Operator Name> is in the squad" 
+        }
+    ]
+}

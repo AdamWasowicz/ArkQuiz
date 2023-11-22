@@ -1,0 +1,9 @@
+{
+    "OperatorId": "LT10",
+    "Talents": [
+        {
+            "Name": "Precise Aim",
+            "Description": "Ignores 180 DEF when attacking enemies with a weight greater than or equal to 3" 
+        }
+    ]
+}
