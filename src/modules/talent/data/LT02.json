@@ -1,0 +1,9 @@
+{
+    "OperatorId": "LT02",
+    "Talents": [
+        {
+            "Name": "Precise Strike",
+            "Description": "Has a 25% chance to Stun target for 2 seconds when attacking an enemy outside this unit's normal Attack Range" 
+        }
+    ]
+}

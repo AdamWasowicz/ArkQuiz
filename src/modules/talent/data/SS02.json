@@ -1,0 +1,14 @@
+{
+    "OperatorId": "SS02",
+    "Talents": [
+        {
+            "Name": "Armor Penetration Arrow",
+            "Description": "When attacking, has a 20% chance to increase the current damage of that attack to 160% and reduce the DEF of the target hit by 20% for 5 seconds" 
+        },
+
+        {
+            "Name": "Crossfire",
+            "Description": "When <Operator Name> and at least one more [Sniper] Operator are on the battlefield, all [Sniper] Operators' ATK +8%" 
+        }
+    ]
+}

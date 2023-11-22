@@ -1,0 +1,14 @@
+{
+    "OperatorId": "KZ13",
+    "Talents": [
+        {
+            "Name": "Concentration",
+            "Description": "When no damage is taken in the past 10 seconds, ATK +15%" 
+        },
+
+        {
+            "Name": "Stilled Breath",
+            "Description": "When this unit's skill is active, becomes less likely to be targeted by attacks and attacks ignore the target's Physical Dodge" 
+        }
+    ]
+}

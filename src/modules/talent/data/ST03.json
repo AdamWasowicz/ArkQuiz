@@ -1,0 +1,9 @@
+{
+    "OperatorId": "ST03",
+    "Talents": [
+        {
+            "Name": "Blast Attachment Refit",
+            "Description": "Has a 30% chance to increase the ATK of the current attack by 60% when using Normal Attacks and skills" 
+        }
+    ]
+}

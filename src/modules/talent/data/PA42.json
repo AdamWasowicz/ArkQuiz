@@ -1,9 +1,0 @@
-{
-    "OperatorId": "PA42",
-    "Talents": [
-        {
-            "Name": "Armor Break",
-            "Description": "ATK +6%; Attacks enemies with the highest DEF first" 
-        }
-    ]
-}

@@ -1,0 +1,9 @@
+{
+    "OperatorId": "R158",
+    "Talents": [
+        {
+            "Name": "Vulnerability Deconstruction",
+            "Description": "When deployed, all blocked enemies take +15% Physical damage" 
+        }
+    ]
+}

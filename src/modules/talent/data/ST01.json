@@ -1,0 +1,9 @@
+{
+    "OperatorId": "ST01",
+    "Talents": [
+        {
+            "Name": "Assassin",
+            "Description": "ATK increases to 140% when attacking ranged enemies" 
+        }
+    ]
+}

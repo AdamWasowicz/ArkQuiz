@@ -1,0 +1,9 @@
+{
+    "OperatorId": "LM10",
+    "Talents": [
+        {
+            "Name": "Heavy Shuriken",
+            "Description": "Attack Interval increases slightly, but ATK +20%" 
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "OperatorId": "SR37",
+    "Talents": [
+        {
+            "Name": "Wilderness Instinct",
+            "Description": "Gains Camouflage while this unit's skill is not active; Attack Interval reduced slightly after skill activation" 
+        }
+    ]
+}

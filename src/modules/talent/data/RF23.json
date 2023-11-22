@@ -1,0 +1,9 @@
+{
+    "OperatorId": "RF23",
+    "Talents": [
+        {
+            "Name": "Light-Stealing Chain",
+            "Description": "Attacks have a 40% chance to Slow the target for 2 seconds" 
+        }
+    ]
+}

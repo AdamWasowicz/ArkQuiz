@@ -1,0 +1,9 @@
+{
+    "OperatorId": "II04",
+    "Talents": [
+        {
+            "Name": "Abyssal Intuition",
+            "Description": "When this unit is in the squad, all [Abyssal Hunters] Operators gain +12 ASPD" 
+        }
+    ]
+}

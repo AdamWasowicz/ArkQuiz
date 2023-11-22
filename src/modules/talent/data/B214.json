@@ -1,0 +1,14 @@
+{
+    "OperatorId": "B214",
+    "Talents": [
+        {
+            "Name": "Ambush",
+            "Description": "After remaining deployed for 10 seconds, obtains 60% Physical and Arts Dodge, and is less likely to be targeted by enemies" 
+        },
+
+        {
+            "Name": "Insult to Injury",
+            "Description": "Enemies in range take +18% Physical damage when Stunned" 
+        }
+    ]
+}

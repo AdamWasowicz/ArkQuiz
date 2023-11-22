@@ -1,9 +1,0 @@
-{
-    "OperatorId": "RCX3",
-    "Talents": [
-        {
-            "Name": "Tactical Configuration 1",
-            "Description": "Increases the ATK and DEF of all [Melee] allies by 10% for 10 seconds after deployment" 
-        }
-    ]
-}

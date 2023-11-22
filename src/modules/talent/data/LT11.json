@@ -1,0 +1,14 @@
+{
+    "OperatorId": "LT11",
+    "Talents": [
+        {
+            "Name": "Sufferer of Tribulations",
+            "Description": "Continually loses HP over time (HP cannot drop to 0 as a result of this effect); When HP is above 50%, this unit gains Vigor, increasing ATK by 25%; this effect is doubled above 80% HP" 
+        },
+
+        {
+            "Name": "Herald of Revelations",
+            "Description": "While this unit has no skill active, ASPD +27" 
+        }
+    ]
+}

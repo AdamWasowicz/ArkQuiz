@@ -1,9 +1,0 @@
-{
-    "OperatorId": "PA64",
-    "Talents": [
-        {
-            "Name": "Smoke Installation",
-            "Description": "Heals an ally and then provides 20% Physical Dodge for 3 seconds" 
-        }
-    ]
-}

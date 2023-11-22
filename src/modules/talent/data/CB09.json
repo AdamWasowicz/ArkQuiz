@@ -1,0 +1,9 @@
+{
+    "OperatorId": "CB09",
+    "Talents": [
+        {
+            "Name": "Portable Energy Source",
+            "Description": "Improves own SP recovery rate by +0.45/second for 60 seconds after deployment" 
+        }
+    ]
+}

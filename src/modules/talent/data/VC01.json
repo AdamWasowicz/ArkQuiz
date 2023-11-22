@@ -1,0 +1,9 @@
+{
+    "OperatorId": "VC01",
+    "Talents": [
+        {
+            "Name": "Victorian Agent",
+            "Description": "ATK +7%, ASPD +7" 
+        }
+    ]
+}

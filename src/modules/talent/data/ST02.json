@@ -1,0 +1,9 @@
+{
+    "OperatorId": "ST02",
+    "Talents": [
+        {
+            "Name": "Anti-Air Specialist",
+            "Description": "Increases ATK to 135% when attacking aerial targets" 
+        }
+    ]
+}

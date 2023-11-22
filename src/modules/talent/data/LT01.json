@@ -1,0 +1,9 @@
+{
+    "OperatorId": "LT01",
+    "Talents": [
+        {
+            "Name": "Final Modification",
+            "Description": "Attacks ignore 160 DEF" 
+        }
+    ]
+}

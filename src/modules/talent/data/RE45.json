@@ -1,0 +1,14 @@
+{
+    "OperatorId": "RE45",
+    "Talents": [
+        {
+            "Name": "Armaments of Annihilation",
+            "Description": "Attacks ignore 160 DEF" 
+        },
+
+        {
+            "Name": "Stable Esthesia",
+            "Description": "When deployed, grants +8% ATK to this unit and a random deployed Caster Operator" 
+        }
+    ]
+}

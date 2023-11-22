@@ -1,0 +1,9 @@
+{
+    "OperatorId": "SR03",
+    "Talents": [
+        {
+            "Name": "Hunter's Arrow",
+            "Description": "Has a 20% chance to increase the ATK of the current attack to 180% when attacking, and the chance increases to 50% when an enemy is in the frontal tile" 
+        }
+    ]
+}

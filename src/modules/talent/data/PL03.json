@@ -1,0 +1,14 @@
+{
+    "OperatorId": "PL03",
+    "Talents": [
+        {
+            "Name": "Fast Cartridge",
+            "Description": "ASPD +12" 
+        },
+
+        {
+            "Name": "Angel's Blessings",
+            "Description": "ATK +6%; Max HP +10%; The same buff is given to a random ally when <Operator Name> is deployed" 
+        }
+    ]
+}

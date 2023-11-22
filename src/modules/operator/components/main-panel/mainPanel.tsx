@@ -2,6 +2,8 @@ import { useAppSelector } from '@/src/redux/hooks';
 import styles from './mainPanel.module.scss';
 import { routeToOperatorIcon } from '@/src/lib/serverFunctions';
 import Image from 'next/image';
+import { Fragment } from 'react';
+import QuizHeader from '@/src/components/quiz-header/quizHeader';
 
 /**
  * @param className (optional) additional css class name for root contanier
@@ -16,6 +18,37 @@ interface IMainPanelProps {
 const MainPanel: React.FC<IMainPanelProps> = (props) => {
     const guesses = useAppSelector(state => state.operator.currentGuesses);
     const gameWon = useAppSelector(state => state.operator.gameWon)
+
+    return (
+        <QuizHeader
+            headerContent='Guess the operator'
+        >
+            <Fragment>
+                {
+                    gameWon === true 
+                    ? <div className={styles.result}>
+                        <h4 className={styles.resultHeader}>Today operator was</h4>
+
+                        <Image
+                            className={styles.image}
+                            src={routeToOperatorIcon(guesses[0].operator.Id)}
+                            alt={guesses[0].operator.Id}
+                            width={180}
+                            height={180}
+                        />
+
+                        <h4 className={styles.operatorName}>{guesses[0].operator.Name}</h4>
+
+                        <p className={styles.resultP}>This operator took you {guesses.length} guesses</p>
+                    </div>
+                    : <h3 className={styles.amountOfGuesses}>
+                        Current number of guesses: <span>{guesses.length}</span>
+                    </h3>
+                }
+            </Fragment>
+        </QuizHeader>
+    )
+
 
     return (
         <div className={`${styles.mainPanel} ${props.className}`}>

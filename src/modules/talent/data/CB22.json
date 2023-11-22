@@ -1,0 +1,9 @@
+{
+    "OperatorId": "CB22",
+    "Talents": [
+        {
+            "Name": "Calibrating Parameters",
+            "Description": "Damage when skill is active increases by 15% from second skill activation onward" 
+        }
+    ]
+}

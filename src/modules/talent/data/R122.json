@@ -1,0 +1,9 @@
+{
+    "OperatorId": "R122",
+    "Talents": [
+        {
+            "Name": "Hunter's Wisdom",
+            "Description": "Improves own Skill Point recovery rate by +0.3/second" 
+        }
+    ]
+}

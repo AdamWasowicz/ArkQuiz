@@ -1,0 +1,9 @@
+{
+    "OperatorId": "AA03",
+    "Talents": [
+        {
+            "Name": "Neurotoxin",
+            "Description": "Poisons the targets when attacking, dealing 75 Arts Damage to them per second, lasting 3 seconds" 
+        }
+    ]
+}

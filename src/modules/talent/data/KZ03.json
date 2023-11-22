@@ -1,0 +1,9 @@
+{
+    "OperatorId": "KZ03",
+    "Talents": [
+        {
+            "Name": "All-Out Attack",
+            "Description": "The longer the interval from the last attack is, the higher the ATK of the next attack will be (The longest interval is 2.5 seconds and the corresponding ATK increases to 180%)" 
+        }
+    ]
+}

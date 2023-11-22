@@ -1,0 +1,9 @@
+{
+    "OperatorId": "R139",
+    "Talents": [
+        {
+            "Name": "Slideshot Style",
+            "Description": "Each attack deals at least 25% of this unit's ATK damage (increases to 40% of ATK when the enemy is in the two frontal tiles)" 
+        }
+    ]
+}

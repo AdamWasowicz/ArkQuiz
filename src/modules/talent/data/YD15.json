@@ -1,0 +1,9 @@
+{
+    "OperatorId": "YD15",
+    "Talents": [
+        {
+            "Name": "First Step Into the Wilds",
+            "Description": "When deployed for the first time, ATK +13%, Cost -3" 
+        }
+    ]
+}

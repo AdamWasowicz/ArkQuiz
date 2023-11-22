@@ -1,0 +1,14 @@
+{
+    "OperatorId": "LT08",
+    "Talents": [
+        {
+            "Name": "Landen Tactics",
+            "Description": "Every 2.5 seconds when deployed, restores 1 Skill Point to all deployed Sniper allies that have an Offensive Recovery skill." 
+        },
+
+        {
+            "Name": "Iron Bowstring",
+            "Description": "When deployed, this unit gains 1 Shield. Restores 7 Skill Points after the Shield breaks" 
+        }
+    ]
+}

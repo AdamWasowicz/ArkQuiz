@@ -1,0 +1,9 @@
+{
+    "OperatorId": "SR28",
+    "Talents": [
+        {
+            "Name": "Sharp Nails",
+            "Description": "Attacks inflict Bleed to unblocked enemies, dealing 18% ATK as Arts damage (unaffected by Trait) every second for 3 seconds" 
+        }
+    ]
+}

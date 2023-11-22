@@ -1,0 +1,9 @@
+{
+    "OperatorId": "SG11",
+    "Talents": [
+        {
+            "Name": "Illuminating Eyes",
+            "Description": "Can attack Invisible enemies. If there are Invisible enemies within attack range, ATK +17%" 
+        }
+    ]
+}

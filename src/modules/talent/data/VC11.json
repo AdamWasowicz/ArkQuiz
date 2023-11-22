@@ -1,0 +1,9 @@
+{
+    "OperatorId": "VC11",
+    "Talents": [
+        {
+            "Name": "Fiery Instinct",
+            "Description": "When attacking Sarkaz enemies, increase ATK to 145%" 
+        }
+    ]
+}

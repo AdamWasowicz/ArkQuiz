@@ -1,0 +1,14 @@
+{
+    "OperatorId": "USS4",
+    "Talents": [
+        {
+            "Name": "Bone Piercer",
+            "Description": "When attacking a heavy enemy, ignore 60% of its DEF (enemies with 3 weight or higher count for this effect)" 
+        },
+
+        {
+            "Name": "Ideal Student",
+            "Description": "When this unit is in the squad, all [Ursus Student Self-Governing Group] Operators gain +8% ATK" 
+        }
+    ]
+}

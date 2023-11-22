@@ -1,0 +1,14 @@
+{
+    "OperatorId": "R145",
+    "Talents": [
+        {
+            "Name": "Automatic Typewriter",
+            "Description": "Can summon a \"Typewriter\" for 25s; the \"Typewriter\" has the same skill as this unit, and has its own Redeployment Time" 
+        },
+
+        {
+            "Name": "Stenographer of Weaknesses",
+            "Description": "Attacks from the \"Typewriter\" reduce the target's DEF by 18% for 4 seconds; if the Typewriter is placed within the 4 tiles adjacent to <Operator Name>, this effect increases to to 23%" 
+        }
+    ]
+}

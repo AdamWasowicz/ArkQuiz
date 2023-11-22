@@ -1,0 +1,9 @@
+{
+    "OperatorId": "RF02",
+    "Talents": [
+        {
+            "Name": "Bullseye",
+            "Description": "When attacking, has a 20% chance to deal 150% damage and Stun the target for 0.2 seconds" 
+        }
+    ]
+}

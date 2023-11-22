@@ -1,9 +1,0 @@
-{
-    "OperatorId": "PA14",
-    "Talents": [
-        {
-            "Name": "DEF Up",
-            "Description": "DEF +10%" 
-        }
-    ]
-}

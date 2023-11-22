@@ -1,0 +1,9 @@
+{
+    "OperatorId": "R110",
+    "Talents": [
+        {
+            "Name": "Tailwind",
+            "Description": "ASPD +6, 15% chance to increase ATK to 150% when attacking" 
+        }
+    ]
+}

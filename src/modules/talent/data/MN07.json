@@ -1,0 +1,9 @@
+{
+    "OperatorId": "MN07",
+    "Talents": [
+        {
+            "Name": "Song of Dreams",
+            "Description": "Can attack Sleeping enemies, and ignores 50% DEF when attacking Sleeping enemies" 
+        }
+    ]
+}
