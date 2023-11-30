@@ -1,0 +1,14 @@
+{
+    "OperatorId": "JC02",
+    "Talents": [
+        {
+            "Name": "Rigid Ice",
+            "Description": "Attacks inflict Cold for 1 second; Apply 25% Fragile effect to Cold enemies within range. Frozen enemies within range receive double the Fragile effect" 
+        },
+
+        {
+            "Name": "Two Paths, One Goal",
+            "Description": "Grants Resist to all [Karlan Trade] Operators after <Operator Name> has been deployed for 10 seconds" 
+        }
+    ]
+}

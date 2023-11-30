@@ -1,0 +1,9 @@
+{
+    "OperatorId": "KZ10",
+    "Talents": [
+        {
+            "Name": "Kazimierz Legal Expertise",
+            "Description": "ASPD +10; the same buff is given to a random [Kazimierz] Operator when deployed" 
+        }
+    ]
+}

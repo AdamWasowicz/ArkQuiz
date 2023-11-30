@@ -1,0 +1,9 @@
+{
+    "OperatorId": "PL02",
+    "Talents": [
+        {
+            "Name": "Tactical Delivery",
+            "Description": "Gains 2 extra DP when <Operator Name> is in the squad" 
+        }
+    ]
+}

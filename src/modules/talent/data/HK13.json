@@ -1,0 +1,14 @@
+{
+    "OperatorId": "HK13",
+    "Talents": [
+        {
+            "Name": "Preaching",
+            "Description": "When dealing lethal damage, leave the enemy with 1 HP and inflict Critically Wounded (gives +2 SP to the attacker when killed); <Operator Name> will not attack Critically Wounded targets" 
+        },
+
+        {
+            "Name": "Clear Mind",
+            "Description": "When HP falls below 40%, gains 70% Physical Dodge and restores 5% of Max HP per second, lasting for 15 seconds. Can only activate once" 
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "OperatorId": "R108",
+    "Talents": [
+        {
+            "Name": "Glistening",
+            "Description": "All [Vanguard] Operators recover 25 HP per second while <Operator Name> is deployed" 
+        }
+    ]
+}

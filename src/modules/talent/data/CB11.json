@@ -1,0 +1,9 @@
+{
+    "OperatorId": "CB11",
+    "Talents": [
+        {
+            "Name": "Modeler Debugging",
+            "Description": "Carries 3 Modelers (max 3 deployed at once). Modelers grant DEF +30% and 2 Shields to the melee unit ahead (lasts for 25 seconds, DEF increase does not stack)" 
+        }
+    ]
+}

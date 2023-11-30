@@ -1,0 +1,9 @@
+{
+    "OperatorId": "R148",
+    "Talents": [
+        {
+            "Name": "Omen of Defeat",
+            "Description": "Apply 30% Fragile effect to enemies within range with less than 40% HP" 
+        }
+    ]
+}

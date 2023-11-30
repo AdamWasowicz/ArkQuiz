@@ -1,0 +1,9 @@
+{
+    "OperatorId": "R162",
+    "Talents": [
+        {
+            "Name": "Abyssal Predator",
+            "Description": "Can summon 5 Buggy Cams; Buggy Cams will reveal Invisible enemies within the surrounding 8 tiles" 
+        }
+    ]
+}

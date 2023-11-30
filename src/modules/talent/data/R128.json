@@ -1,0 +1,9 @@
+{
+    "OperatorId": "R128",
+    "Talents": [
+        {
+            "Name": "Countermeasure Device",
+            "Description": "Attacks [Drone] units first, and ATK increases to 150% when attacking [Drone] units" 
+        }
+    ]
+}

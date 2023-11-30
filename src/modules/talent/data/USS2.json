@@ -1,0 +1,9 @@
+{
+    "OperatorId": "USS2",
+    "Talents": [
+        {
+            "Name": "Explorer",
+            "Description": "DEF -35%; ASPD +18" 
+        }
+    ]
+}

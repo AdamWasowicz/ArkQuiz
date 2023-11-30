@@ -1,0 +1,9 @@
+{
+    "OperatorId": "CB16",
+    "Talents": [
+        {
+            "Name": "Professional Breeder",
+            "Description": "Can summon Metal Crabs to assist in combat from a Tactical Point; Metal Crabs will automatically respawn 15s after being defeated" 
+        }
+    ]
+}

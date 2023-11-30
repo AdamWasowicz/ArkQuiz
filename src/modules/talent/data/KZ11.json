@@ -1,0 +1,14 @@
+{
+    "OperatorId": "KZ11",
+    "Talents": [
+        {
+            "Name": "Vanguard Swordsmanship",
+            "Description": "After dodging an attack, the next attack deals two hits and attacks multiple enemies up to Block count" 
+        },
+
+        {
+            "Name": "Pinus Sylvestris Leader",
+            "Description": "When deployed, all \"Kazimierz\" Operators gain 22% Physical Dodge" 
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "OperatorId": "PL05",
+    "Talents": [
+        {
+            "Name": "Encore",
+            "Description": "Has a 50% chance to immediately restore Skill Point by 50% of Max Skill Points when the skill ends" 
+        }
+    ]
+}

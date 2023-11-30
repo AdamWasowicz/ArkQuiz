@@ -1,0 +1,9 @@
+{
+    "OperatorId": "LN01",
+    "Talents": [
+        {
+            "Name": "Geological Survey",
+            "Description": "Extends Slow duration slightly" 
+        }
+    ]
+}

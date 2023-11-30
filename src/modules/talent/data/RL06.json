@@ -1,0 +1,14 @@
+{
+    "OperatorId": "RL06",
+    "Talents": [
+        {
+            "Name": "Support Drone - Soaring Dragon",
+            "Description": "Can use up to 5 drones that do not block (max 3 deployed at once). Drones' effect changes based upon Skill." 
+        },
+
+        {
+            "Name": "Optical Refraction Accessories",
+            "Description": "Drones gain Invisibility for 20 seconds after deployment (cannot be targeted by enemy ranged attacks)" 
+        }
+    ]
+}

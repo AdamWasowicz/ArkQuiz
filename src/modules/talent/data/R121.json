@@ -1,0 +1,9 @@
+{
+    "OperatorId": "R121",
+    "Talents": [
+        {
+            "Name": "Forest Sanctuary",
+            "Description": "Apply 14% Sanctuary effect to allies within range with more than 70% HP" 
+        }
+    ]
+}

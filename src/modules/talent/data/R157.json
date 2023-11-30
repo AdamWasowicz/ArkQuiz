@@ -1,0 +1,9 @@
+{
+    "OperatorId": "R157",
+    "Talents": [
+        {
+            "Name": "Gardener",
+            "Description": "When deployed, all Supporter Operators gain +9% ATK" 
+        }
+    ]
+}

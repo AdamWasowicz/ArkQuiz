@@ -1,0 +1,14 @@
+{
+    "OperatorId": "RV02",
+    "Talents": [
+        {
+            "Name": "Precise Reloading",
+            "Description": "When attacking, has a 25% chance to increase ATK to 130% and strike an additional target" 
+        },
+
+        {
+            "Name": "Military Tradition",
+            "Description": "When this unit is in the squad, all Vanguards gain +6 Initial SP" 
+        }
+    ]
+}

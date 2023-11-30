@@ -1,0 +1,9 @@
+{
+    "OperatorId": "HT03",
+    "Talents": [
+        {
+            "Name": "Blighted Blood",
+            "Description": "RES +20" 
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "OperatorId": "VC10",
+    "Talents": [
+        {
+            "Name": "Unwavering Banner",
+            "Description": "Deploys with a banner; Within the surrounding 8 tiles of the banner, allied units have ASPD +10 and enemies have ASPD -10" 
+        },
+
+        {
+            "Name": "Spiritual Influence",
+            "Description": "After deployment, the next operator has -2 DP Cost" 
+        }
+    ]
+}

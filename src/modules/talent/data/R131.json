@@ -1,0 +1,9 @@
+{
+    "OperatorId": "R131",
+    "Talents": [
+        {
+            "Name": "Sniper Support",
+            "Description": "When deployed, all [Sniper] Operators have -2 DP Cost and gain +20 ASPD when <Operator Name>'s skill is active" 
+        }
+    ]
+}

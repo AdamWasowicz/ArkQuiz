@@ -1,0 +1,9 @@
+{
+    "OperatorId": "R129",
+    "Talents": [
+        {
+            "Name": "Blessing",
+            "Description": "Apply 18% Sanctuary effect to allies within range with less than 40% HP" 
+        }
+    ]
+}

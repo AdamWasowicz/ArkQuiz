@@ -1,0 +1,9 @@
+{
+    "OperatorId": "RL05",
+    "Talents": [
+        {
+            "Name": "Robotter",
+            "Description": "Can summon 5 Robotters; ASPD of enemies against Robotters -25" 
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "OperatorId": "YD09",
+    "Talents": [
+        {
+            "Name": "Ethereal Incandescent Clouds",
+            "Description": "Apply 20% Sanctuary effect to allies within range with less than 40% HP" 
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "OperatorId": "SR26",
+    "Talents": [
+        {
+            "Name": "Technical Expertise",
+            "Description": "When deployed, all [Support Robot] Operators have -75% Redeployment Time; For every [Support Robot] Operator currently deployed, this unit gains +11% ATK and DEF" 
+        }
+    ]
+}

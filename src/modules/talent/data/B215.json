@@ -1,0 +1,14 @@
+{
+    "OperatorId": "B215",
+    "Talents": [
+        {
+            "Name": "Shadow Weaver",
+            "Description": "The first hit on each enemy Binds the target for 5 seconds and Steals 90 ATK (effect expires when enemy is defeated or <Operator Name> retreats)" 
+        },
+
+        {
+            "Name": "Shadow Sentry",
+            "Description": "Enemies within attack range lose Invisibility and have -30% Movement Speed; after retreating, <Operator Name> leaves behind a Shadow Sentry with the same effect (Max 1)" 
+        }
+    ]
+}

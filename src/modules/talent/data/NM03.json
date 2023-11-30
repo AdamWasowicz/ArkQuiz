@@ -1,0 +1,14 @@
+{
+    "OperatorId": "NM03",
+    "Talents": [
+        {
+            "Name": "Lantern Lit, Thy Dream Sought",
+            "Description": "Can use up to 5 Summons (max 3 deployed at once). Summons' effect changes based upon Skill" 
+        },
+
+        {
+            "Name": "So is Writ, an Ode to Wine",
+            "Description": "When a summon is defeated/absorbed/retrieved, <Operator Name> gains +3 SP and ATK +3% (ATK increase stacks up to 5 times)" 
+        }
+    ]
+}

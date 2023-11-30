@@ -1,0 +1,9 @@
+{
+    "OperatorId": "KZ14",
+    "Talents": [
+        {
+            "Name": "Forward March",
+            "Description": "After deployment, all undeployed Guard Operators get DP Cost -1 (each Operator can have a maximum of -5 DP Cost before each deployment)" 
+        }
+    ]
+}

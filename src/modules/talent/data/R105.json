@@ -1,0 +1,9 @@
+{
+    "OperatorId": "R105",
+    "Talents": [
+        {
+            "Name": "Fierce Stabbing",
+            "Description": "When attacking, has a 10% chance to increase the current damage of that attack by 100%. The chance increases to 30% when <Operator Name>'s skill is active." 
+        }
+    ]
+}

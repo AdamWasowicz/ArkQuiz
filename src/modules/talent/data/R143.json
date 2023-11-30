@@ -1,0 +1,9 @@
+{
+    "OperatorId": "R143",
+    "Talents": [
+        {
+            "Name": "Protean",
+            "Description": "ASPD +12 when not blocking an enemy, ATK +12% when blocking an enemy" 
+        }
+    ]
+}

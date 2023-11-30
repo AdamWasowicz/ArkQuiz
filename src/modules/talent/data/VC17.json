@@ -1,0 +1,14 @@
+{
+    "OperatorId": "VC17",
+    "Talents": [
+        {
+            "Name": "Battlefield Engineer",
+            "Description": "Can carry 3 <Support Devices> (deploy up to 2), with different effects depending on Skill" 
+        },
+
+        {
+            "Name": "Cost Cutting",
+            "Description": "<Operator Name> has a 70% chance to recycle a device if it is destroyed within the 8 tiles surrounding him" 
+        }
+    ]
+}

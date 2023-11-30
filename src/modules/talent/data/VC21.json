@@ -1,0 +1,9 @@
+{
+    "OperatorId": "VC21",
+    "Talents": [
+        {
+            "Name": "Sequence",
+            "Description": "ATK increased to 120% and recover 2 additional SP when hitting an enemy with full HP" 
+        }
+    ]
+}

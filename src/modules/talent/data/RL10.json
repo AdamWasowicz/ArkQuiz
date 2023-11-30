@@ -1,0 +1,14 @@
+{
+    "OperatorId": "RL10",
+    "Talents": [
+        {
+            "Name": "Silent Sentinel",
+            "Description": "Applies 10% Sanctuary to allies within Attack Range; effect increases as ally's HP decreases (reaches maximum of 24% Sanctuary when below 30% HP)" 
+        },
+
+        {
+            "Name": "Plumes of Plenty",
+            "Description": "Allies with less than 50% HP within this unit's Attack Range heals HP equal to 5% of this unit's ATK every second; effect doubles for [Rhine Lab] Operators" 
+        }
+    ]
+}

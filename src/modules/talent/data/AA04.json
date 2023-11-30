@@ -1,0 +1,9 @@
+{
+    "OperatorId": "AA04",
+    "Talents": [
+        {
+            "Name": "Tentacle Summoner",
+            "Description": "Can summon 4 Tentacles to help in combat" 
+        }
+    ]
+}

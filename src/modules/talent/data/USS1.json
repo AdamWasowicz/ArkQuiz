@@ -1,0 +1,9 @@
+{
+    "OperatorId": "USS1",
+    "Talents": [
+        {
+            "Name": "Spearheader",
+            "Description": "All [Vanguard] Operators' DP Cost -1 when <Operator Name> is in the squad" 
+        }
+    ]
+}

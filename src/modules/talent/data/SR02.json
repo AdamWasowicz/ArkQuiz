@@ -1,0 +1,14 @@
+{
+    "OperatorId": "SR02",
+    "Talents": [
+        {
+            "Name": "Accelerator Field",
+            "Description": "All allies' ASPD +7" 
+        },
+
+        {
+            "Name": "Part-time Job",
+            "Description": "Restores the HP of all allies by 20 per second when the skill is not activated" 
+        }
+    ]
+}

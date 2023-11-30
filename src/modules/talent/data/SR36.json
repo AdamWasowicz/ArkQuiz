@@ -1,0 +1,14 @@
+{
+    "OperatorId": "SR36",
+    "Talents": [
+        {
+            "Name": "Leader of the Wolfpack",
+            "Description": "Can summon a Wolfpack initially consisting of 2 \"Wolf Shadows\" at the Tactical Point to assist in combat; The number of \"Wolf Shadows\" increases by 1 every 25 seconds (up to a maximum of 3; each \"Wolf Shadow\" increases the Wolfpack's Block by 1 and causes its attacks to deal an additional instance of damage)" 
+        },
+
+        {
+            "Name": "Wolven Nature",
+            "Description": "<Operator Name> and the Wolfpack's attacks ignore 175 DEF when attacking enemies blocked by the Wolfpack" 
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "OperatorId": "VC05",
+    "Talents": [
+        {
+            "Name": "Mounted Police",
+            "Description": "All [Vanguard] Operators obtain 20% Physical Dodge when <Operator Name> is deployed" 
+        }
+    ]
+}

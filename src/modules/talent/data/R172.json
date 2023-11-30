@@ -1,0 +1,14 @@
+{
+    "OperatorId": "R172",
+    "Talents": [
+        {
+            "Name": "Skill Aura - Supporter",
+            "Description": "When deployed, increases the SP recovery rate of all Supporters by +0.4/second (only the highest effect of this type takes place)" 
+        },
+
+        {
+            "Name": "Binding Circle",
+            "Description": "Enemies in range that are Slowed are inflicted with 20% Fragile effect for an equivalent duration" 
+        }
+    ]
+}

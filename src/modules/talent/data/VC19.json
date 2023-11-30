@@ -1,0 +1,14 @@
+{
+    "OperatorId": "VC19",
+    "Talents": [
+        {
+            "Name": "Crafty Rebel",
+            "Description": "When Skill 1 is equipped, allies within range gains +5% ATK; When Skill 2 is equipped, allies within range gains +5% DEF" 
+        },
+
+        {
+            "Name": "Private Messenger",
+            "Description": "Increases SP recovery of all allies in range by +0.5/sec while in [Shatterpoint]" 
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "OperatorId": "JC04",
+    "Talents": [
+        {
+            "Name": "Karlan Patrol",
+            "Description": "DEF +16% when two or more enemies are blocked" 
+        }
+    ]
+}

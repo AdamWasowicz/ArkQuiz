@@ -1,0 +1,9 @@
+{
+    "OperatorId": "CB19",
+    "Talents": [
+        {
+            "Name": "Forward Together",
+            "Description": "Carries 3 Reliable Batteries that only take effect on Casters and Supporters (max 2 deployed at once). Equipped units gain +15% ATK (lasts for 30 seconds)" 
+        }
+    ]
+}

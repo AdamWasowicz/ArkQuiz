@@ -1,0 +1,14 @@
+{
+    "OperatorId": "GG01",
+    "Talents": [
+        {
+            "Name": "King of Beasts",
+            "Description": "All Vanguard Operators' ATK and DEF +8%" 
+        },
+
+        {
+            "Name": "Crushing",
+            "Description": "Obtain 1 Skill Point when an enemy in the four surrounding grids is killed" 
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "OperatorId": "SW02",
+    "Talents": [
+        {
+            "Name": "Lone Wolf",
+            "Description": "ATK and DEF +11% when there are no allies in the four adjacent tiles" 
+        }
+    ]
+}

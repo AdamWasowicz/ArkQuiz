@@ -1,0 +1,14 @@
+{
+    "OperatorId": "RL09",
+    "Talents": [
+        {
+            "Name": "Pure Water is Life",
+            "Description": "Can summon a Flowing Shape to assist in combat. Flowing Shapes can partially copy an undeployed Operator's attributes (Max HP, ATK, DEF, RES, Block, Attack Interval, Attack Range, Damage Type, and obtain a special Trait depending on whether in melee or ranged form), will respawn 25 seconds after being defeated" 
+        },
+
+        {
+            "Name": "Expenditure Economization",
+            "Description": "When in the squad, all [Rhine Lab] Operators have DP cost -2, and the first [Rhine Lab] Operator deployed has an additional -1 DP Cost" 
+        }
+    ]
+}

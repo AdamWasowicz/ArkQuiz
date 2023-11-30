@@ -1,0 +1,9 @@
+{
+    "OperatorId": "RB12",
+    "Talents": [
+        {
+            "Name": "Nightwalker",
+            "Description": "Can summon a Slumberfoot to assist in combat from a Tactical Point; The Slumberfoot will automatically respawn 15s after being defeated" 
+        }
+    ]
+}

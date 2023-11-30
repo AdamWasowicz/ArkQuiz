@@ -1,0 +1,14 @@
+{
+    "OperatorId": "CR01",
+    "Talents": [
+        {
+            "Name": "Ancient Kin",
+            "Description": "Can use a Seaborn that lasts for 25 seconds. The Seaborn's attack range is regarded as an extension of this unit's Attack Range" 
+        },
+
+        {
+            "Name": "Predatory Habits",
+            "Description": "ATK +6% when there is an allied unit within the range of self or the Seaborn; If the allied unit is an [Abyssal Hunters] Operator, gain ATK +15% instead" 
+        }
+    ]
+}

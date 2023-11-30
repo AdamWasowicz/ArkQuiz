@@ -1,0 +1,14 @@
+{
+    "OperatorId": "JC05",
+    "Talents": [
+        {
+            "Name": "Weakening",
+            "Description": "Apply 30% Fragile effect to enemies within range with less than 40% HP" 
+        },
+
+        {
+            "Name": "The Bell Tolls Twice",
+            "Description": "Attacks 2 enemies simultaneously" 
+        }
+    ]
+}
