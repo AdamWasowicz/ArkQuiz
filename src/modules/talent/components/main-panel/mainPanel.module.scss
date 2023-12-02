@@ -1,0 +1,64 @@
+.result {
+    text-align: center;
+}
+
+.resultHeader {
+    // Size and Position
+    margin: 8px;
+
+    // Text
+    font-family: var(--HeaderFont);
+    font-size: 0.2em;
+    font-weight: 300;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.skillName {
+    // Size and Position
+    margin-bottom: 24px;
+
+    // Text
+    font-family: var(--TextFont);
+    font-size: 0.36em;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.resultP {
+    // Text
+    font-family: var(--TextFont);
+    font-size: 0.2em;
+    font-weight: 400;
+    //color: rgb(129, 218, 245);
+    color: var(--primary-400);
+    text-align: center;
+}
+
+.amountOfGuesses {
+    // Text
+    font-family: var(--TextFont);
+    font-size: 0.28em;
+    font-weight: 400;
+    color: var(--primary-400);
+    text-align: center;
+}
+
+.talentDescription {
+    // Size and Position
+    padding: 20px;
+    margin-bottom: 16px;
+
+    // Text
+    font-size: 24px;
+    font-family: var(--TextFont);
+    font-weight: 300;
+    color: white;
+
+    // Background
+    background-color: var(--gray-700);
+    border: 2px solid var(--gray-500);
+}

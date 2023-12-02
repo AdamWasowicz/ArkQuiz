@@ -1,31 +1,28 @@
 "use client"
-import { OperatorHeaderMap } from "@/src/modules/operator/lib/types";
-import SearchBar from "@/src/components/search-bar/searchBar";
-import OperatorGuessResult from "@/src/modules/operator/components/guess-result/guessResult";
-import { useAppDispatch, useAppSelector } from "@/src/redux/hooks";
-import styles from './operatorQuizPage.module.scss';
-import MainPanel from "@/src/modules/operator/components/main-panel/mainPanel";
+import { useAppDispatch, useAppSelector } from '@/src/redux/hooks';
+import styles from './talentQuizPage.module.scss';
+import { OperatorHeaderMap } from "@/src/modules/operator/lib/types"
 import { ChangeEvent, useEffect, useState } from "react";
-import { submitOperatorGuess } from "@/src/lib/serverFunctions";
-import { addGuess, setErrorMsg, setGameWon, setGuesses, setIsWorking } from "@/src/redux/features/operator-slice";
-import useLocalStorage from "./operatorQuizPage.utils";
-import NextQuizButton from "@/src/components/next-quiz-button/nextQuizButton";
-import { useRouter } from 'next/navigation'
-import QuizMainBody from "@/src/components/quiz-main-body/quizMainBody";
+import useLocalStorage from './talentQuiz.utils';
+import { setErrorMsg, setIsWorking, addGuess, setGameWon, setGuesses } from '@/src/redux/features/talent-slice';
+import { submitTalentGuess } from "@/src/lib/serverFunctions";
+import SearchBar from '@/src/components/search-bar/searchBar';
+import GuessResult from '@/src/modules/skill/components/guess-result/guessResult';
+import MainPanel from '@/src/modules/talent/components/main-panel/mainPanel';
+import QuizMainBody from '@/src/components/quiz-main-body/quizMainBody';
 
-interface IOperatorQuizPage {
+interface ITalentPage {
     operatorHeaderMap: OperatorHeaderMap
 }
 
-const OperatorQuizPage: React.FC<IOperatorQuizPage> = (props) => {
+const TalentQuizPage: React.FC<ITalentPage> = (props) => {
     const { operatorHeaderMap } = props;
-    const guesses = useAppSelector(state => state.operator.currentGuesses);
-    const isWorking = useAppSelector(state => state.operator.isWorking);
-    const quizWon = useAppSelector(state => state.operator.gameWon);
+    const guesses = useAppSelector(state => state.talent.currentGuesses);
+    const isWorking = useAppSelector(state => state.talent.isWorking);
+    const quizWon = useAppSelector(state => state.talent.gameWon);
     const dispatch = useAppDispatch();
     const localstorageHook = useLocalStorage();
     const [textInputValue, setTextInputValue] = useState<string>('');
-    const router = useRouter();
 
 
     const onFormSubmit = async (event: React.MouseEvent<HTMLElement>) => {
@@ -45,8 +42,8 @@ const OperatorQuizPage: React.FC<IOperatorQuizPage> = (props) => {
                 ?.find(item => item.Name.toUpperCase() === textInputValue.toUpperCase())
         
         if (typeof selectedOperatorHeader !== 'undefined') {
-            localstorageHook.saveOperatorDateToStorage();
-            const res = await submitOperatorGuess(selectedOperatorHeader.Id)
+            localstorageHook.saveDateToStorage();
+            const res = await submitTalentGuess(selectedOperatorHeader.Id)
 
             if (res === undefined) {
                 dispatch(setErrorMsg(`Error occured while submiting guess for Operator with Id: ${selectedOperatorHeader.Id}`))
@@ -54,15 +51,15 @@ const OperatorQuizPage: React.FC<IOperatorQuizPage> = (props) => {
                 return;
             }
 
-            setTextInputValue("")
+            setTextInputValue('')
             localstorageHook.saveCurrentGuessesToStorage([res ,...guesses]);
             dispatch(setIsWorking(false));
             dispatch(addGuess(res));
             
             // Quiz is won
-            if (res.isCorrect) {
-                localstorageHook.saveStatusToStorage(res.isCorrect)
-                dispatch(setGameWon(res.isCorrect));
+            if (res.IsCorrect) {
+                localstorageHook.saveStatusToStorage(res.IsCorrect)
+                dispatch(setGameWon(res.IsCorrect));
             }
         }
     }
@@ -71,12 +68,8 @@ const OperatorQuizPage: React.FC<IOperatorQuizPage> = (props) => {
         setTextInputValue(event.target.value);
     }
 
-    const onSearchBarItemClick = (value: string) => {
+    const onResultClick = (value: string) => {
         setTextInputValue(value);
-    }
-
-    const toNextQuiz = () => {
-        router.push('/skill');
     }
 
     // Load data from localstorage
@@ -86,7 +79,7 @@ const OperatorQuizPage: React.FC<IOperatorQuizPage> = (props) => {
         if (localstorageHook.isDataOutdated()) {
             localstorageHook.removeCurrentGuessesFromStorage();
             localstorageHook.removeStatusFromStorage();
-            localstorageHook.removeOeratorDateFromStorage();
+            localstorageHook.removeDateFromStorage();
             return;
         }
 
@@ -97,14 +90,13 @@ const OperatorQuizPage: React.FC<IOperatorQuizPage> = (props) => {
         //Status
         const status = localstorageHook.getStatusFromStorage();
         dispatch(setGameWon(status))
-
+        
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
-
     return (
         <QuizMainBody>
-            <MainPanel className={styles.mainPanel}/>
+            <MainPanel/>
 
             {
                 quizWon == false &&
@@ -112,30 +104,25 @@ const OperatorQuizPage: React.FC<IOperatorQuizPage> = (props) => {
                     <SearchBar
                         operatorHeadersMap={operatorHeaderMap}
                         currentGuessedOperatorNames={guesses.map(item => {
-                            return (item.operator.Name)
+                            return (item.OperatorHeader.Name)
                         })}
                         isFormDisabled={quizWon}
                         inputTextValue={textInputValue}
                         onFormSubmit={onFormSubmit}
                         onInputChange={onInputChange}
-                        onResultClick={onSearchBarItemClick}
+                        onResultClick={onResultClick}
                     />
                 </div>
             }
 
-            {
-                quizWon &&
-                <NextQuizButton onClick={toNextQuiz} id={'nextQuizButton'}/>
-            }
-
-            <div className={styles.results}>
+            <div className={styles.result}>
                 {
                     guesses.length > 0 &&
-                    <OperatorGuessResult guesses={guesses}/>
+                    <GuessResult guesses={guesses}/>
                 }
             </div>
         </QuizMainBody>
     )
 }
 
-export default OperatorQuizPage;
+export default TalentQuizPage;

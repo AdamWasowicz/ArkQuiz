@@ -11,7 +11,6 @@ import QuizHeader from '@/src/components/quiz-header/quizHeader';
 const MainPanel: React.FC = () => {
     const guesses = useAppSelector(state => state.skill.currentGuesses);
     const gameWon = useAppSelector(state => state.skill.gameWon)
-
     const [skillHeader, setSkillHeader] = useState<SkillHeader | undefined>(undefined);
     
     useEffect(() => {

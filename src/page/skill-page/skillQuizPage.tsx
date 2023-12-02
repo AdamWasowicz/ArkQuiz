@@ -12,6 +12,8 @@ import { SkillComparisonResult } from "@/src/modules/skill/lib/types";
 import useLocalstorage from './skillQuizPage.utils';
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
+import NextQuizButton from "@/src/components/next-quiz-button/nextQuizButton";
+import QuizMainBody from "@/src/components/quiz-main-body/quizMainBody";
 
 interface ISkillPage {
     operatorHeaderMap: OperatorHeaderMap
@@ -77,7 +79,7 @@ const SkillQuizPage: React.FC<ISkillPage> = (props) => {
 
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const toNextQuiz = () => {
-        router.push('/skill');
+        router.push('/talent');
     }
 
     // Load data from localstorage
@@ -116,7 +118,7 @@ const SkillQuizPage: React.FC<ISkillPage> = (props) => {
 
 
     return (
-        <div className={styles.page}>
+        <QuizMainBody>
             <MainPanel/>
 
             {
@@ -136,13 +138,18 @@ const SkillQuizPage: React.FC<ISkillPage> = (props) => {
                 </div>
             }
 
+            {
+                quizWon &&
+                <NextQuizButton onClick={toNextQuiz} id={'nextQuizButton'}/>
+            }
+
             <div className={styles.result}>
                 {
                     guesses.length > 0 &&
                     <GuessResult guesses={guesses}/>
                 }
             </div>
-        </div>
+        </QuizMainBody>
     )
 }
 
