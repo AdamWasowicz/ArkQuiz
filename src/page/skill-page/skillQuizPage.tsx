@@ -2,18 +2,19 @@
 import { OperatorHeaderMap } from "@/src/modules/operator/lib/types";
 import { submitSkillGuess } from "@/src/lib/serverFunctions";
 import styles from './skillQuizPage.module.scss';
-import SearchBar from "@/src/components/search-bar/searchBar";
+import QuizSearchBar from "@/src/components/quiz/quiz-search-bar/searchBar";
 import { useAppDispatch, useAppSelector } from "@/src/redux/hooks";
 import { ChangeEvent, useState } from "react";
 import { addGuess, setErrorMsg, setGameWon, setGuesses, setIsWorking } from "@/src/redux/features/skill-slice";
 import GuessResult from "@/src/modules/skill/components/guess-result/guessResult";
-import MainPanel from "@/src/modules/skill/components/main-panel/mainPanel";
+import SkillQuizMainPanel from "@/src/modules/skill/components/main-panel/mainPanel";
 import { SkillComparisonResult } from "@/src/modules/skill/lib/types";
 import useLocalstorage from './skillQuizPage.utils';
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
-import NextQuizButton from "@/src/components/next-quiz-button/nextQuizButton";
-import QuizMainBody from "@/src/components/quiz-main-body/quizMainBody";
+import NextQuizButton from "@/src/components/quiz/next-quiz-button/nextQuizButton";
+import QuizMainBody from "@/src/components/quiz/quiz-main-body/quizMainBody";
+
 
 interface ISkillPage {
     operatorHeaderMap: OperatorHeaderMap
@@ -104,12 +105,12 @@ const SkillQuizPage: React.FC<ISkillPage> = (props) => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
-    // Scroll to next quiz button
+    // Scroll to element
     useEffect(() => {
         if (quizWon === true) {
-            const button = document.getElementById('nextQuizButton');
-            if (button !== null) {
-                button.scrollIntoView({
+            const element = document.getElementById('mainContent');
+            if (element !== null) {
+                element.scrollIntoView({
                     behavior: "smooth"
                 })
             }
@@ -119,14 +120,14 @@ const SkillQuizPage: React.FC<ISkillPage> = (props) => {
 
     return (
         <QuizMainBody>
-            <MainPanel/>
+            <SkillQuizMainPanel/>
 
             {
                 quizWon == false &&
                 <div className={styles.search}>
-                    <SearchBar
+                    <QuizSearchBar
                         operatorHeadersMap={operatorHeaderMap}
-                        currentGuessedOperatorNames={guesses.map(item => {
+                        excludedOperatorNames={guesses.map(item => {
                             return (item.OperatorHeader.Name)
                         })}
                         isFormDisabled={quizWon}

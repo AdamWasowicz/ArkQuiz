@@ -4,10 +4,10 @@ import { doHealthCheck as operatorHC } from "@/src/modules/operator/lib/healthch
 import { generateSkillHeaderCompositeFile } from "@/src/modules/skill/lib/utils";
 import { doHealthCheck as skillHC } from "@/src/modules/skill/lib/healthcheck";
 
-interface IDirectorProps {
+interface IDirector {
     children: React.ReactNode
 }
-const Director: React.FC<IDirectorProps> = (props) => {
+const Director: React.FC<IDirector> = (props) => {
     // Operator Healthcheck
     if (process.env.NODE_ENV === 'development') {
         const hc = operatorHC();

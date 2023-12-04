@@ -47,13 +47,16 @@ const useUtils = () => {
     const getRaceData = async (data: string | string[]): Promise<RaceDescription[]> => {
         const dataAsArray = getFieldAsArray(data);
 
-        const promises: Promise<RaceDescription>[]  = dataAsArray.map((item) => {
-                return getOperatorRaceDescription(item)
-        })
-
         try {
-            const dataArray = await Promise.all(promises);
-            return dataArray;
+            const dataArray = await Promise.all(dataAsArray.map((item) => {
+                return getOperatorRaceDescription(item);
+            }));
+            
+            const output: RaceDescription[] = dataArray.filter((item) => {
+                return item !== undefined;
+            }) as RaceDescription[]
+
+            return output;
         }
         catch (exception) {
             console.log(`Could not fetch race data for ${data}`)
@@ -72,10 +75,13 @@ const useUtils = () => {
         // At least it was fun to solve this problem
         const dataAsArray = getFieldAsArray(data);
 
-        const components: JSX.Element[] = dataAsArray.map((item, key) => {
-            const description = raceArray.find((obj) => {return obj.Name === item})?.Description
+        const components: JSX.Element[] = dataAsArray.map((race, key) => {
+            const description = raceArray.find((raceArrayItem) => {
+                return raceArrayItem.Race === race
+            })?.Description
+
             return <span className={styles.span} key={key} title={description}>
-                {item}
+                {race}
             </span>
         })
 
@@ -87,7 +93,7 @@ const useUtils = () => {
                 finalResult = [...finalResult, comma];
             }
         }) 
-        
+
         return <Fragment>
             {
                 finalResult.map((item, key) => {

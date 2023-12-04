@@ -1,17 +1,18 @@
 "use client"
 import { OperatorHeaderMap } from "@/src/modules/operator/lib/types";
-import SearchBar from "@/src/components/search-bar/searchBar";
+import QuizSearchBar from "@/src/components/quiz/quiz-search-bar/searchBar";
 import OperatorGuessResult from "@/src/modules/operator/components/guess-result/guessResult";
 import { useAppDispatch, useAppSelector } from "@/src/redux/hooks";
 import styles from './operatorQuizPage.module.scss';
-import MainPanel from "@/src/modules/operator/components/main-panel/mainPanel";
+import OperatorQuizMainPanel from "@/src/modules/operator/components/main-panel/mainPanel";
 import { ChangeEvent, useEffect, useState } from "react";
 import { submitOperatorGuess } from "@/src/lib/serverFunctions";
 import { addGuess, setErrorMsg, setGameWon, setGuesses, setIsWorking } from "@/src/redux/features/operator-slice";
 import useLocalStorage from "./operatorQuizPage.utils";
-import NextQuizButton from "@/src/components/next-quiz-button/nextQuizButton";
+import NextQuizButton from "@/src/components/quiz/next-quiz-button/nextQuizButton";
 import { useRouter } from 'next/navigation'
-import QuizMainBody from "@/src/components/quiz-main-body/quizMainBody";
+import QuizMainBody from "@/src/components/quiz/quiz-main-body/quizMainBody";
+
 
 interface IOperatorQuizPage {
     operatorHeaderMap: OperatorHeaderMap
@@ -101,17 +102,29 @@ const OperatorQuizPage: React.FC<IOperatorQuizPage> = (props) => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
+    // Scroll to element
+    useEffect(() => {
+        if (quizWon === true) {
+            const element = document.getElementById('mainContent');
+            if (element !== null) {
+                element.scrollIntoView({
+                    behavior: "smooth"
+                })
+            }
+        }
+    }, [quizWon])
+
 
     return (
         <QuizMainBody>
-            <MainPanel className={styles.mainPanel}/>
+            <OperatorQuizMainPanel className={styles.mainPanel}/>
 
             {
                 quizWon == false &&
                 <div className={styles.search}>
-                    <SearchBar
+                    <QuizSearchBar
                         operatorHeadersMap={operatorHeaderMap}
-                        currentGuessedOperatorNames={guesses.map(item => {
+                        excludedOperatorNames={guesses.map(item => {
                             return (item.operator.Name)
                         })}
                         isFormDisabled={quizWon}

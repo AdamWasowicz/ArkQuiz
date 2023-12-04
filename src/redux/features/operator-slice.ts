@@ -52,7 +52,7 @@ const OperatorSlice = createSlice({
 
         addRaceToArray(state: IOperatorState, action: PayloadAction<RaceDescription[]>) {
             action.payload.forEach((item) => {
-                const isPresent = state.raceDescriptionArray.findIndex((obj) => {return item.Name === obj.Name}) !== -1 ? true : false;
+                const isPresent = state.raceDescriptionArray.findIndex((obj) => {return item.Race === obj.Race}) !== -1 ? true : false;
                 if (isPresent === false) {
                     state.raceDescriptionArray = [...state.raceDescriptionArray, item]
                 }

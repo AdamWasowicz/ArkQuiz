@@ -4,5 +4,4 @@
 - Custom 404 page
 
 ## Working on it
-- Talent quiz
 - Quizzes recap page

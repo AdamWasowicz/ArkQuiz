@@ -23,7 +23,7 @@
   --primary-200: #abc3fe;
   --primary-100: #d5e1fe;
 
-  // Gray
+  //// Gray
   --gray-1000: #0a0a0a;
   --gray-900: #141414;
   --gray-800: #1f1f1f;
@@ -35,7 +35,7 @@
   --gray-200: #c2c2c2;
   --gray-100: #ebebeb;
 
-  // Blue Gray
+  //// Blue Gray
   --blueGray-1000: #11111a;
   --blueGray-900: #212234;
   --blueGray-800: #32344f;
@@ -46,9 +46,9 @@
   --blueGray-300: #a9abc1;
   --blueGray-200: #cbccda;
 
-  // Accent
+  //// Accent
 
-  // Other
+  //// Other
   --correct: #32CD32;
   --wrong: #FF5349;
   --partial: #FFA500;
@@ -58,8 +58,4 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-}
-
-.center {
-  text-align: center;
 }

@@ -3,9 +3,10 @@ import styles from './mainPanel.module.scss';
 import { fetchTodayTalentHeader } from '@/src/lib/serverFunctions';
 import { useState, useEffect, Fragment } from 'react';
 import { TalentHeader } from '../../lib/types';
-import QuizHeader from '@/src/components/quiz-header/quizHeader';
+import QuizHeader from '@/src/components/quiz/quiz-header/quizHeader';
 
-const MainPanel: React.FC = () => {
+
+const TalentQuizMainPanel: React.FC = () => {
     const guesses = useAppSelector(state => state.talent.currentGuesses);
     const gameWon = useAppSelector(state => state.talent.gameWon)
     const [talentHeader, setTalentHeader] = useState<TalentHeader | undefined>(undefined);
@@ -33,8 +34,10 @@ const MainPanel: React.FC = () => {
                     gameWon == true
                     ? <div className={styles.result}>
                         <h4 className={styles.resultHeader}>Today talent was</h4>
-                        <h4 className={styles.skillName}>{talentHeader?.Name}</h4>
-                        <p className={styles.resultP}>This talent took you {guesses.length} guesses</p>
+                        <h4 className={styles.talentName}>{talentHeader?.Name}</h4>
+                        <p className={styles.resultP}>
+                            This talent took you {guesses.length} {guesses.length > 1 ? 'guesses' : 'guess'}
+                        </p>
                     </div>
                     : <h3 className={styles.amountOfGuesses}>
                         Current number of guesses: <span>{guesses.length}</span>
@@ -45,4 +48,4 @@ const MainPanel: React.FC = () => {
     )
 }
 
-export default MainPanel;
+export default TalentQuizMainPanel;

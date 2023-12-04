@@ -4,11 +4,15 @@ import { fetchTodaySkillHeader, routeToSkillIcon } from '@/src/lib/serverFunctio
 import Image from 'next/image';
 import { useState, useEffect, Fragment } from 'react';
 import { SkillHeader } from '../../lib/types';
-import QuizHeader from '@/src/components/quiz-header/quizHeader';
+import QuizHeader from '@/src/components/quiz/quiz-header/quizHeader';
 
+
+interface ISkillQuizMainPanel {
+    id?: string
+}
 
 /** Main panel of skill quiz */
-const MainPanel: React.FC = () => {
+const SkillQuizMainPanel: React.FC<ISkillQuizMainPanel> = (props) => {
     const guesses = useAppSelector(state => state.skill.currentGuesses);
     const gameWon = useAppSelector(state => state.skill.gameWon)
     const [skillHeader, setSkillHeader] = useState<SkillHeader | undefined>(undefined);
@@ -21,7 +25,11 @@ const MainPanel: React.FC = () => {
     }, [])
 
     return (
-        <QuizHeader headerContent='Whos skill is that?' className='center'>
+        <QuizHeader 
+            id={props.id}
+            headerContent='Whos skill is that?' 
+            className='center'
+        >
             <Fragment>
                 {
                     skillHeader !== undefined &&
@@ -39,7 +47,9 @@ const MainPanel: React.FC = () => {
                     ? <div className={styles.result}>
                         <h4 className={styles.resultHeader}>Today skill was</h4>
                         <h4 className={styles.skillName}>{skillHeader?.Name}</h4>
-                        <p className={styles.resultP}>This skill took you {guesses.length} guesses</p>
+                        <p className={styles.resultP}>
+                            This skill took you {guesses.length} {guesses.length > 1 ? 'gueses' : 'guess'}
+                        </p>
                     </div>
                     : <h3 className={styles.amountOfGuesses}>
                         Current number of guesses: <span>{guesses.length}</span>
@@ -50,4 +60,4 @@ const MainPanel: React.FC = () => {
     )
 }
 
-export default MainPanel;
+export default SkillQuizMainPanel;

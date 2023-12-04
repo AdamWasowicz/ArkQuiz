@@ -1,0 +1,35 @@
+.root {
+    // Size and Position
+    padding: 24px 48px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+
+    // Text
+    font-family: var(--TitleFont);
+    font-weight: 400;
+    font-size: 48px;
+    letter-spacing: 2px;
+    color: var(--primary-500);
+
+    // Background
+    border: none;
+    background-color: transparent;
+    border: 3px solid var(--primary-500);
+
+    // Other
+    transition: 0.3s;
+
+    &:hover {
+        // Text
+        color: var(--primary-400);
+
+        // Background
+        border-color: var(--primary-400);
+        background-color: var(--blueGray-800);
+
+        // Other
+        cursor: pointer;
+        transition: 0.3s;
+    }
+}

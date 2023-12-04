@@ -7,6 +7,9 @@
     margin-left: auto;
     margin-right: auto;
 
+    // Text
+    color: white;
+
     // Flex
     display: flex;
     flex-direction: row;
@@ -16,6 +19,29 @@
     // Background
     background-color: var(--gray-600);
     border: 2px solid var(--gray-500);
+
+    // Other
+    transition: 0.3s;
+
+    &:hover{
+        // Text
+        color: var(--primary-200);
+
+        // Background
+        border-color: var(--primary-200);
+        background-color: var(--blueGray-800);
+
+        // Other
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    &:hover > svg {
+        background-color: var(--blueGray-800);
+        border-color: var(--primary-200);
+        color: var(--primary-200);
+    }
+
 }
 
 .text {
@@ -24,7 +50,7 @@
     font-size: 48px;
     font-weight: 400;
     letter-spacing: 2px;
-    color: white;
+    //color: white;
 }
 
 .icon {
@@ -42,9 +68,4 @@
 
     // Other
     transition: 0.3s;
-
-    &:hover {
-        background-color: var(--primary-400);
-        transition: 0.3s;
-    }
 }

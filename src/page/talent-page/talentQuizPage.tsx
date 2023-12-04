@@ -6,10 +6,10 @@ import { ChangeEvent, useEffect, useState } from "react";
 import useLocalStorage from './talentQuiz.utils';
 import { setErrorMsg, setIsWorking, addGuess, setGameWon, setGuesses } from '@/src/redux/features/talent-slice';
 import { submitTalentGuess } from "@/src/lib/serverFunctions";
-import SearchBar from '@/src/components/search-bar/searchBar';
+import QuizSearchBar from '@/src/components/quiz/quiz-search-bar/searchBar';
 import GuessResult from '@/src/modules/skill/components/guess-result/guessResult';
-import MainPanel from '@/src/modules/talent/components/main-panel/mainPanel';
-import QuizMainBody from '@/src/components/quiz-main-body/quizMainBody';
+import TalentQuizMainPanel from '@/src/modules/talent/components/main-panel/mainPanel';
+import QuizMainBody from '@/src/components/quiz/quiz-main-body/quizMainBody';
 
 interface ITalentPage {
     operatorHeaderMap: OperatorHeaderMap
@@ -96,14 +96,14 @@ const TalentQuizPage: React.FC<ITalentPage> = (props) => {
 
     return (
         <QuizMainBody>
-            <MainPanel/>
+            <TalentQuizMainPanel/>
 
             {
                 quizWon == false &&
                 <div className={styles.search}>
-                    <SearchBar
+                    <QuizSearchBar
                         operatorHeadersMap={operatorHeaderMap}
-                        currentGuessedOperatorNames={guesses.map(item => {
+                        excludedOperatorNames={guesses.map(item => {
                             return (item.OperatorHeader.Name)
                         })}
                         isFormDisabled={quizWon}

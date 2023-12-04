@@ -138,3 +138,60 @@
         cursor: auto;
     }
 }
+
+.searchBarResultItem {
+    // Size and Position
+    width: 100%;
+
+    // Border
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+
+    // Flex
+    display: flex;
+    flex-direction: row;
+
+    // Color
+    background-color: var(--gray-700);
+    
+    // Text
+    color: white;
+    font-size: 100px;
+
+    // Other
+    transition: 0.2s;
+
+    &:hover {
+        transition: 0.2s;
+        background-color: var(--gray-600);
+        color: var(--primary-500);
+    }
+}
+
+// Result
+.image {
+    // Size and Position
+    width: 90px;
+    height: 90px;
+    margin-right: 20px;
+
+    background-color: white;
+}
+
+.p {
+    // Size and Position
+    width: 80%;
+
+    // Flex
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    // Text
+    font-size: 0.36em;
+    font-family: 'Roboto';
+    font-weight: 400;
+    letter-spacing: 4px;
+}

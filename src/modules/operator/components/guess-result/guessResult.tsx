@@ -11,7 +11,7 @@ import { addRaceToArray } from "@/src/redux/features/operator-slice";
  * @param guesses contains comparison results and is type {@link OperatorComparisonResultV2}
  * @param className (optional) css class name for root container
  */
-interface IOperatorGuessResultProps {
+interface IOperatorGuessResult {
     guesses: OperatorComparisonResultV2[]
     className?: string | string[]
 }
@@ -21,7 +21,7 @@ interface IOperatorGuessResultProps {
  * Headers are handled in this component and the rest of rows are handled 
  * by {@link OperatorGuessResultRow}
  */
-const OperatorGuessResult: React.FC<IOperatorGuessResultProps> = (props) => {
+const OperatorGuessResult: React.FC<IOperatorGuessResult> = (props) => {
     const { guesses } = props;
 
     return (
@@ -58,7 +58,7 @@ const OperatorGuessResult: React.FC<IOperatorGuessResultProps> = (props) => {
  * @param operatorData contains data for that row Operator and is type {@link Operator}
  * @param diffrences contains diffrences, is type {@link OperatorComparisonDiffrenceV2}
  */
-interface IOperatorGuessResultRowProps {
+interface IOperatorGuessResultRow {
     operatorData: Operator,
     diffrences: OperatorComparisonDiffrenceV2
 }
@@ -66,7 +66,7 @@ interface IOperatorGuessResultRowProps {
 /**
  * Renders row for comparison table
  */
-const OperatorGuessResultRow: React.FC<IOperatorGuessResultRowProps> = (props) => {
+const OperatorGuessResultRow: React.FC<IOperatorGuessResultRow> = (props) => {
     const { operatorData, diffrences } = props;
     const dispatch = useAppDispatch();
     const raceArray = useAppSelector(state => state.operator.raceDescriptionArray);

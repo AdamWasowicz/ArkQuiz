@@ -46,7 +46,7 @@ export type OperatorComparisonDiffrenceV2 = {
 
 /** Object for Operator race description  */
 export type RaceDescription = {
-    Name: string,
+    Race: string,
     Description: string
 }
 

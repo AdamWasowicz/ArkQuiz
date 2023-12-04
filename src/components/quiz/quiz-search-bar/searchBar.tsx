@@ -1,25 +1,26 @@
-// EXPERIMENTAL
 "use client"
 import { OperatorHeader, OperatorHeaderMap } from "@/src/modules/operator/lib/types"
 import styles from './searchBar.module.scss';
 import { ChangeEvent } from "react";
-import SearchBarResult from "@/src/components/search-bar/search-bar-result/searchBarResult";
+import Image from 'next/image';
+import { routeToOperatorIcon } from "@/src/lib/serverFunctions"
 
-interface ISearchBar {
+interface IQuizSearchBar {
     operatorHeadersMap: OperatorHeaderMap,
     isFormDisabled: boolean,
-    onInputChange: (event: ChangeEvent<HTMLInputElement>) => void,
     inputTextValue: string
+    excludedOperatorNames: string[],
+
+    onInputChange: (event: ChangeEvent<HTMLInputElement>) => void,
     onFormSubmit: (event: React.MouseEvent<HTMLElement>) => void,
-    currentGuessedOperatorNames: string[],
     onResultClick: (value: string) => void
 }
 
-const SearchBar: React.FC<ISearchBar> = (props) => {
+const QuizSearchBar: React.FC<IQuizSearchBar> = (props) => {
     const { 
         operatorHeadersMap, isFormDisabled, 
         onInputChange, inputTextValue, 
-        onFormSubmit, currentGuessedOperatorNames,
+        onFormSubmit, excludedOperatorNames: currentGuessedOperatorNames,
         onResultClick 
     } = props;
 
@@ -48,7 +49,6 @@ const SearchBar: React.FC<ISearchBar> = (props) => {
             return []
         }
     }
-
 
     const filteredOperatorHeaders = filterOperatorHeaders(operatorHeadersMap);
 
@@ -79,7 +79,7 @@ const SearchBar: React.FC<ISearchBar> = (props) => {
                         {
                             filteredOperatorHeaders.length > 0 &&
                             filteredOperatorHeaders.map((item, key) => {
-                                return <SearchBarResult 
+                                return <SearchResultRow 
                                     key={key} 
                                     operatorHeader={item}
                                     onClick={onResultClick}
@@ -94,4 +94,33 @@ const SearchBar: React.FC<ISearchBar> = (props) => {
     )
 }
 
-export default SearchBar;
+export default QuizSearchBar;
+
+
+// Result
+interface ISearchResultRow {
+    operatorHeader: OperatorHeader
+    onClick: (id: string) => void
+}
+
+const SearchResultRow: React.FC<ISearchResultRow> = (props) => {
+    const { operatorHeader, onClick } = props;
+
+    const onClickHandler = () => {
+        onClick(operatorHeader.Name)
+    }
+    
+    return (
+        <div className={styles.searchBarResultItem} onClick={onClickHandler}>
+            <Image
+                className={styles.image}
+                src={routeToOperatorIcon(operatorHeader.Id)}
+                alt={operatorHeader.Name}
+                width={75}
+                height={75}
+            />
+            
+            <p className={styles.p}>{operatorHeader.Name}</p>
+        </div>
+    )
+}

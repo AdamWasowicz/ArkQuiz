@@ -1,4 +1,52 @@
-.page {
+.root {
     // Size and Position
-    min-height: 100vh;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 24px;
+
+    // Background
+    background-color: var(--gray-600);
+    border: 2px solid var(--gray-500);
+}
+
+.section {
+    // Size and Position
+    margin-bottom: 28px;
+    width: 100%;
+}
+
+.subsection {
+    // Size and Position
+    margin-top: 14px;
+    width: 100%;
+}
+
+.list {
+    // Size and Position
+    margin-top: 8px;
+    padding-left: 24px;
+
+    > li {
+        // Size and Position
+        margin-bottom: 16px;
+
+        // Text
+        font-family: var(--TextFont);
+        font-weight: 300;
+        letter-spacing: 1px;
+        color: white;
+        
+
+        > span {
+            // Size and Position
+            margin-right: 16px;
+            
+            // Text
+            font-family: var(--HeaderFont);
+            font-size: 24px;
+            color: var(--primary-100);
+            letter-spacing: 2px;
+        }
+    }
 }
