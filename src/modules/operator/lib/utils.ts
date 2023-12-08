@@ -8,6 +8,10 @@ import {
     PATH_TO_OPERATOR_RACE, 
 } from "@/src/lib/paths";
 import packageDotJson from '@/package.json'; 
+import { Talent } from "../../talent/lib/types";
+import { getOperatorTalentsData } from "../../talent/lib/utils";
+import { getOperatorSkillsData } from "../../skill/lib/utils";
+import { Skill } from "../../skill/lib/types";
 
 // Const
 const imageFormat = '.webp';
@@ -295,4 +299,49 @@ export const getOperatorHeaderComposite = (): OperatorHeader[] | undefined => {
     }
 
     return undefined;
+}
+
+
+export const getUndiscoveredOperatorTrait = (operator: Operator, currentState: OperatorComparisonDiffrenceV2)
+: string => {
+
+    const cs_map = new Map(Object.entries(currentState));
+    const keys = Object.keys(currentState);
+    const operator_map = new Map(Object.entries(operator));
+    let output: string = ""
+
+    keys.forEach((key) => {
+        if (output !== "")
+            return;
+
+        if (cs_map.get(key)! < 1) {
+            output =  `${key.replace('_', '')} is ${operator_map.get(key)?.toString().replace('[', '').replace(']', '')}`
+        }
+    })
+
+    return output !== "" ? output : "All traits discovered";
+}
+
+export const getOperatorHintTalent = (operator: OperatorHeader): Talent => {
+    const talentsData = getOperatorTalentsData(operator.Id);
+    if (talentsData === undefined) {
+        throw new Error(`Talent with operator Id: ${operator.Id} not found`)
+    }
+    
+    const timestamp = new Date();
+    const talents: Talent[] = talentsData.Talents
+
+    return talents[ timestamp.getDate() % talents.length ]
+}
+
+export const getOperatorHintSkill = (operator: OperatorHeader): Skill => {
+    const skillData = getOperatorSkillsData(operator.Id);
+    if (skillData === undefined) {
+        throw new Error(`Skill with operator Id: ${operator.Id} not found`)
+    }
+
+    const timestamp = new Date();
+    const skills = skillData.Skills;
+
+    return skills[ timestamp.getDate() % skills.length ]
 }

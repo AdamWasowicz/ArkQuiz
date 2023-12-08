@@ -2,7 +2,7 @@ import { useAppSelector } from '@/src/redux/hooks';
 import styles from './mainPanel.module.scss';
 import { routeToOperatorIcon } from '@/src/lib/serverFunctions';
 import Image from 'next/image';
-import { Fragment } from 'react';
+import { Fragment, useState } from 'react';
 import QuizHeader from '@/src/components/quiz/quiz-header/quizHeader';
 
 
@@ -16,7 +16,29 @@ interface IOperatorQuizMainPanel {
  */
 const OperatorQuizMainPanel: React.FC<IOperatorQuizMainPanel> = (props) => {
     const guesses = useAppSelector(state => state.operator.currentGuesses);
-    const gameWon = useAppSelector(state => state.operator.gameWon)
+    const gameWon = useAppSelector(state => state.operator.gameWon);
+    const hints = useAppSelector(state => state.operator.hints);
+    const [hintText, setHintText] = useState<string>("");
+
+
+    const onHintClick = (hintNumber: number): void => {
+        if (hints === undefined) {
+            return;
+        }
+
+        switch (hintNumber) {
+            case 1:
+                setHintText(hints.trait);
+                break;
+            case 2:
+                setHintText(`Skill is ${hints.skill.Name}`)
+                break;
+            case 3:
+                setHintText(`Talent is ${hints.talent.Name}`)
+                break;
+        }
+    }
+
 
     return (
         <QuizHeader
@@ -47,6 +69,23 @@ const OperatorQuizMainPanel: React.FC<IOperatorQuizMainPanel> = (props) => {
                     : <h3 className={styles.amountOfGuesses}>
                         Current number of guesses: <span>{guesses.length}</span>
                     </h3>
+                }
+                
+                {
+                    guesses.length < 3 
+                    ? <h3 className={styles.amountOfGuesses}>
+                        Hints available in {3 - guesses.length} guesses
+                    </h3>
+                    : <div className={styles.hintsContainer}>
+                        <button onClick={() => onHintClick(1)}>Hint 1</button>
+                        <button onClick={() => onHintClick(2)}>Hint 2</button>
+                        <button onClick={() => onHintClick(3)}>Hint 3</button>
+                    </div>
+                }
+
+                {
+                    hintText != "" &&
+                    <div className={styles.hintText}>{hintText}</div>
                 }
             </Fragment>
         </QuizHeader>

@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
-import { compareTwoOperatorsV2, getOperatorById, getRaceDescription } from "./utils";
+import { compareTwoOperatorsV2, getOperatorById, getOperatorHintSkill, getOperatorHintTalent, getRaceDescription, getUndiscoveredOperatorTrait } from "./utils";
 import { getDayOperatorId } from "./utils";
+import { Operator } from "./types";
 
 
 /**
@@ -48,6 +49,35 @@ export const GET_Operator_Race = async (_: Request, { params }: { params: { race
     }
 
     const response = new NextResponse(JSON.stringify(raceData), 
+        {
+            status: 200,
+            headers: {
+                'content-type': 'application/json',
+            },
+        }
+    );
+    return response;
+}
+
+export const POST_Operator_Hints = async (req: Request): Promise<NextResponse> => {
+    const body = await req.json();
+    const currentState = body.currentState;
+    const timestamp = new Date(body.timestamp);
+
+    const nowId: string = getDayOperatorId(timestamp);
+    const operator: Operator = getOperatorById(nowId)!;
+
+    const trait = getUndiscoveredOperatorTrait(operator, currentState);
+    const talent = getOperatorHintTalent(operator);
+    const skill = getOperatorHintSkill(operator);
+
+    const output = {
+        trait,
+        talent,
+        skill
+    }
+
+    const response = new NextResponse(JSON.stringify(output), 
         {
             status: 200,
             headers: {

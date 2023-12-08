@@ -1,4 +1,4 @@
-import { OperatorComparisonResultV2, RaceDescription } from '@/src/modules/operator/lib/types';
+import { OperatorComparisonResultV2, OperatorHints, RaceDescription } from '@/src/modules/operator/lib/types';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 export interface IOperatorState {
@@ -16,6 +16,8 @@ export interface IOperatorState {
 
     /** Array of races descriptions */
     raceDescriptionArray: RaceDescription[]
+
+    hints: OperatorHints | undefined
 }
 
 const initialState: IOperatorState = {
@@ -23,7 +25,8 @@ const initialState: IOperatorState = {
     currentGuesses: [],
     errorMsg: "",
     gameWon: false,
-    raceDescriptionArray: []
+    raceDescriptionArray: [],
+    hints: undefined
 }
 
 const OperatorSlice = createSlice({
@@ -57,6 +60,10 @@ const OperatorSlice = createSlice({
                     state.raceDescriptionArray = [...state.raceDescriptionArray, item]
                 }
             })
+        },
+
+        setHints(state: IOperatorState, action: PayloadAction<OperatorHints>) {
+            state.hints = action.payload;
         }
     }
 })
@@ -64,7 +71,7 @@ const OperatorSlice = createSlice({
 export const {
     setIsWorking, setErrorMsg,
     addGuess, setGameWon, setGuesses,
-    addRaceToArray
+    addRaceToArray, setHints
 } = OperatorSlice.actions;
 
 export default OperatorSlice.reducer;

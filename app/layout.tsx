@@ -12,7 +12,7 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 config.autoAddCss = false;
 
 export const metadata: Metadata = {
-  title: 'ArkQuiz',
+  title: 'Arkquiz',
   description: 'Read README.md',
 }
 

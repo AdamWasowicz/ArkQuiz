@@ -6,12 +6,13 @@ import { useAppDispatch, useAppSelector } from "@/src/redux/hooks";
 import styles from './operatorQuizPage.module.scss';
 import OperatorQuizMainPanel from "@/src/modules/operator/components/main-panel/mainPanel";
 import { ChangeEvent, useEffect, useState } from "react";
-import { submitOperatorGuess } from "@/src/lib/serverFunctions";
-import { addGuess, setErrorMsg, setGameWon, setGuesses, setIsWorking } from "@/src/redux/features/operator-slice";
+import { fetchTodayOperatorHints, submitOperatorGuess } from "@/src/lib/serverFunctions";
+import { addGuess, setErrorMsg, setGameWon, setGuesses, setHints, setIsWorking } from "@/src/redux/features/operator-slice";
 import useLocalStorage from "./operatorQuizPage.utils";
 import NextQuizButton from "@/src/components/quiz/next-quiz-button/nextQuizButton";
 import { useRouter } from 'next/navigation'
 import QuizMainBody from "@/src/components/quiz/quiz-main-body/quizMainBody";
+import { specifyUndiscoveredOperatorTraits } from "@/src/modules/operator/lib/clientUtils";
 
 
 interface IOperatorQuizPage {
@@ -23,6 +24,7 @@ const OperatorQuizPage: React.FC<IOperatorQuizPage> = (props) => {
     const guesses = useAppSelector(state => state.operator.currentGuesses);
     const isWorking = useAppSelector(state => state.operator.isWorking);
     const quizWon = useAppSelector(state => state.operator.gameWon);
+    const hints = useAppSelector(state => state.operator.hints);
     const dispatch = useAppDispatch();
     const localstorageHook = useLocalStorage();
     const [textInputValue, setTextInputValue] = useState<string>('');
@@ -101,6 +103,20 @@ const OperatorQuizPage: React.FC<IOperatorQuizPage> = (props) => {
 
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
+
+    useEffect(() => {
+        if (guesses.length >= 0 && hints === undefined) {
+            const currentState = specifyUndiscoveredOperatorTraits(guesses);
+
+            fetchTodayOperatorHints(currentState)
+                .then((result) => {
+                    if (result !== undefined) {
+                        dispatch(setHints(result));
+                    }
+                })
+        }
+
+    }, [guesses.length])
 
     // Scroll to element
     useEffect(() => {

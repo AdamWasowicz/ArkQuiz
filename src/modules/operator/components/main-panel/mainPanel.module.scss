@@ -55,3 +55,67 @@
     color: var(--primary-400);
     text-align: center;
 }
+
+.hintsContainer {
+    // Size and Position
+    width: 100%;
+    margin-top: 24px;
+
+    // Display
+    display: flex;
+    flex-direction: row;
+    column-gap: 16px;
+
+    > button {
+        // Size and Position
+        padding: 24px;
+
+        // flex
+        flex-grow: 1;
+
+        // Text
+        text-align: center;
+        font-family: var(--HeaderFont);
+        letter-spacing: 2px;
+        font-size: 20px;
+        color: var(--primary-100);
+
+        // Background
+        background-color: transparent;
+        border: 3px solid var(--primary-100);
+
+        // Other
+        transition: 0.3s;
+
+        &:hover {
+
+            //Text
+            color: var(--primary-400);
+
+            // Background
+            border-color: var(--primary-400);
+            background-color: var(--blueGray-700);
+
+            // Other
+            cursor: pointer;
+            transition: 0.3s;
+        }
+    }
+}
+
+.hintText {
+    // Size and Position
+    padding: 20px;
+    margin-top: 16px;
+
+    // Text
+    font-size: 20px;
+    font-family: var(--TextFont);
+    font-weight: 300;
+    color: white;
+    text-align: center;
+
+    // Background
+    background-color: var(--gray-700);
+    border: 2px solid var(--primary-200);
+}
