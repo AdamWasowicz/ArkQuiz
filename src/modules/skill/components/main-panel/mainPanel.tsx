@@ -1,14 +1,16 @@
 import { useAppSelector } from '@/src/redux/hooks';
 import styles from './mainPanel.module.scss';
-import { fetchTodaySkillHeader, routeToSkillIcon } from '@/src/lib/serverFunctions';
+import { fetchTodaySkillHeader, routeToSkillIcon } from '@/src/lib/client-to-server-functions';
 import Image from 'next/image';
 import { useState, useEffect, Fragment } from 'react';
 import { SkillHeader } from '../../lib/types';
-import QuizHeader from '@/src/components/quiz/quiz-header/quizHeader';
+import QuizMainPanelLayout from '@/src/layouts/quiz-header-layout/quizMainPanelLayout';
+import QuizHeader from '@/src/components/ui/quiz-header/quizHeader';
 
 
 interface ISkillQuizMainPanel {
-    id?: string
+    id?: string,
+    className?: string
 }
 
 /** Main panel of skill quiz */
@@ -25,11 +27,9 @@ const SkillQuizMainPanel: React.FC<ISkillQuizMainPanel> = (props) => {
     }, [])
 
     return (
-        <QuizHeader 
-            id={props.id}
-            headerContent='Whos skill is that?' 
-            className='center'
-        >
+        <QuizMainPanelLayout id={props.id} className={'center' + " " + props.className}>
+            <QuizHeader>Who has this skill?</QuizHeader>
+
             <Fragment>
                 {
                     skillHeader !== undefined &&
@@ -56,7 +56,7 @@ const SkillQuizMainPanel: React.FC<ISkillQuizMainPanel> = (props) => {
                     </h3>
                 }
             </Fragment>
-        </QuizHeader>
+        </QuizMainPanelLayout>
     )
 }
 

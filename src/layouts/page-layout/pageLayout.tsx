@@ -1,12 +1,12 @@
 import { ReactNode } from 'react';
-import styles from './quizMainBody.module.scss';
+import styles from './pageLayout.module.scss';
 
-interface IQuizMainBody {
+interface IPageLayout {
     children: JSX.Element | JSX.Element[] | ReactNode,
     className?: string
 }
 
-const QuizMainBody: React.FC<IQuizMainBody> = (props) => {
+const PageLayout: React.FC<IPageLayout> = (props) => {
     return (
         <div className={styles.root + " " + props.className}>
             { props.children }
@@ -14,4 +14,4 @@ const QuizMainBody: React.FC<IQuizMainBody> = (props) => {
     )
 }
 
-export default QuizMainBody;
+export default PageLayout;

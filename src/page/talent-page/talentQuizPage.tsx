@@ -5,11 +5,11 @@ import { OperatorHeaderMap } from "@/src/modules/operator/lib/types"
 import { ChangeEvent, useEffect, useState } from "react";
 import useLocalStorage from './talentQuiz.utils';
 import { setErrorMsg, setIsWorking, addGuess, setGameWon, setGuesses } from '@/src/redux/features/talent-slice';
-import { submitTalentGuess } from "@/src/lib/serverFunctions";
+import { submitTalentGuess } from "@/src/lib/client-to-server-functions";
 import QuizSearchBar from '@/src/components/quiz/quiz-search-bar/searchBar';
 import GuessResult from '@/src/modules/skill/components/guess-result/guessResult';
 import TalentQuizMainPanel from '@/src/modules/talent/components/main-panel/mainPanel';
-import QuizMainBody from '@/src/components/quiz/quiz-main-body/quizMainBody';
+import PageLayout from '@/src/layouts/page-layout/pageLayout';
 
 interface ITalentPage {
     operatorHeaderMap: OperatorHeaderMap
@@ -95,7 +95,7 @@ const TalentQuizPage: React.FC<ITalentPage> = (props) => {
     }, [])
 
     return (
-        <QuizMainBody>
+        <PageLayout>
             <TalentQuizMainPanel/>
 
             {
@@ -121,7 +121,7 @@ const TalentQuizPage: React.FC<ITalentPage> = (props) => {
                     <GuessResult guesses={guesses}/>
                 }
             </div>
-        </QuizMainBody>
+        </PageLayout>
     )
 }
 

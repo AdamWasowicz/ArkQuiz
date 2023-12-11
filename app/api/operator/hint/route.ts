@@ -1,3 +1,3 @@
-import { POST_Operator_Hints } from "@/src/modules/operator/lib/api";
+import { GET_Operator_Hints } from "@/src/modules/operator/lib/api";
 
-export const POST = POST_Operator_Hints;
+export const GET = GET_Operator_Hints;

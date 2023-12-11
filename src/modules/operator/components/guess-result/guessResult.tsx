@@ -1,7 +1,7 @@
 import { useAppDispatch, useAppSelector } from "@/src/redux/hooks";
 import { Operator, OperatorComparisonDiffrenceV2, OperatorComparisonResultV2 } from "../../lib/types";
 import styles from './guessResult.module.scss';
-import { routeToOperatorIcon } from "@/src/lib/serverFunctions";
+import { routeToOperatorIcon } from "@/src/lib/client-to-server-functions";
 import Image from "next/image";
 import useUtils from "./guessResult.utils";
 import { useEffect } from "react";

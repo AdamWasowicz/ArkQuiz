@@ -1,4 +1,4 @@
-.mainPanel {
+.root {
     // Size and Position
     width: 60%;
     padding: 28px;
@@ -26,17 +26,4 @@
         font-size: 70px;
         width: 95%;
     }
-}
-
-.header {
-    // Size and Position
-    margin-bottom: 24px;
-
-    // Text
-    font-family: var(--HeaderFont);
-    font-size: 0.64em;
-    font-weight: 400;
-    color: white;
-    text-align: center;
-    letter-spacing: 2px;
 }

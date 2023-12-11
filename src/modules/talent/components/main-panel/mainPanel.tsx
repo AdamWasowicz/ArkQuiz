@@ -1,9 +1,10 @@
 import { useAppSelector } from '@/src/redux/hooks';
 import styles from './mainPanel.module.scss';
-import { fetchTodayTalentHeader } from '@/src/lib/serverFunctions';
+import { fetchTodayTalentHeader } from '@/src/lib/client-to-server-functions';
 import { useState, useEffect, Fragment } from 'react';
 import { TalentHeader } from '../../lib/types';
-import QuizHeader from '@/src/components/quiz/quiz-header/quizHeader';
+import QuizMainPanelLayout from '@/src/layouts/quiz-header-layout/quizMainPanelLayout';
+import QuizHeader from '@/src/components/ui/quiz-header/quizHeader';
 
 
 const TalentQuizMainPanel: React.FC = () => {
@@ -21,7 +22,9 @@ const TalentQuizMainPanel: React.FC = () => {
 
 
     return (
-        <QuizHeader headerContent='Whos talent is that?' className='center'>
+        <QuizMainPanelLayout className='center'>
+            <QuizHeader>Who has this talent?</QuizHeader>
+            
             <Fragment>
                 {
                     talentHeader !== undefined &&
@@ -44,7 +47,7 @@ const TalentQuizMainPanel: React.FC = () => {
                     </h3>
                 }
             </Fragment>
-        </QuizHeader>
+        </QuizMainPanelLayout>
     )
 }
 

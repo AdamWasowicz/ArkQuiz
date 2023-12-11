@@ -11,7 +11,6 @@ import packageDotJson from '@/package.json';
 import { Talent } from "../../talent/lib/types";
 import { getOperatorTalentsData } from "../../talent/lib/utils";
 import { getOperatorSkillsData } from "../../skill/lib/utils";
-import { Skill } from "../../skill/lib/types";
 
 // Const
 const imageFormat = '.webp';
@@ -322,26 +321,26 @@ export const getUndiscoveredOperatorTrait = (operator: Operator, currentState: O
     return output !== "" ? output : "All traits discovered";
 }
 
-export const getOperatorHintTalent = (operator: OperatorHeader): Talent => {
+export const getOperatorHintTalent = (operator: OperatorHeader): string => {
     const talentsData = getOperatorTalentsData(operator.Id);
     if (talentsData === undefined) {
-        throw new Error(`Talent with operator Id: ${operator.Id} not found`)
+        return 'No talent'
     }
     
     const timestamp = new Date();
     const talents: Talent[] = talentsData.Talents
 
-    return talents[ timestamp.getDate() % talents.length ]
+    return talents[ timestamp.getDate() % talents.length ].Name
 }
 
-export const getOperatorHintSkill = (operator: OperatorHeader): Skill => {
+export const getOperatorHintSkill = (operator: OperatorHeader): string => {
     const skillData = getOperatorSkillsData(operator.Id);
     if (skillData === undefined) {
-        throw new Error(`Skill with operator Id: ${operator.Id} not found`)
+        return 'No skills'
     }
 
     const timestamp = new Date();
     const skills = skillData.Skills;
 
-    return skills[ timestamp.getDate() % skills.length ]
+    return skills[ timestamp.getDate() % skills.length ].Name
 }

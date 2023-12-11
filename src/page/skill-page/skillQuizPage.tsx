@@ -1,6 +1,6 @@
 "use client"
 import { OperatorHeaderMap } from "@/src/modules/operator/lib/types";
-import { submitSkillGuess } from "@/src/lib/serverFunctions";
+import { submitSkillGuess } from "@/src/lib/client-to-server-functions";
 import styles from './skillQuizPage.module.scss';
 import QuizSearchBar from "@/src/components/quiz/quiz-search-bar/searchBar";
 import { useAppDispatch, useAppSelector } from "@/src/redux/hooks";
@@ -13,7 +13,7 @@ import useLocalstorage from './skillQuizPage.utils';
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import NextQuizButton from "@/src/components/quiz/next-quiz-button/nextQuizButton";
-import QuizMainBody from "@/src/components/quiz/quiz-main-body/quizMainBody";
+import PageLayout from "@/src/layouts/page-layout/pageLayout";
 
 
 interface ISkillPage {
@@ -119,7 +119,7 @@ const SkillQuizPage: React.FC<ISkillPage> = (props) => {
 
 
     return (
-        <QuizMainBody>
+        <PageLayout>
             <SkillQuizMainPanel/>
 
             {
@@ -150,7 +150,7 @@ const SkillQuizPage: React.FC<ISkillPage> = (props) => {
                     <GuessResult guesses={guesses}/>
                 }
             </div>
-        </QuizMainBody>
+        </PageLayout>
     )
 }
 

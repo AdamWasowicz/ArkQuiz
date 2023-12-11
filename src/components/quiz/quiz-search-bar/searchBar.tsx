@@ -3,7 +3,7 @@ import { OperatorHeader, OperatorHeaderMap } from "@/src/modules/operator/lib/ty
 import styles from './searchBar.module.scss';
 import { ChangeEvent } from "react";
 import Image from 'next/image';
-import { routeToOperatorIcon } from "@/src/lib/serverFunctions"
+import { routeToOperatorIcon } from "@/src/lib/client-to-server-functions"
 
 interface IQuizSearchBar {
     operatorHeadersMap: OperatorHeaderMap,

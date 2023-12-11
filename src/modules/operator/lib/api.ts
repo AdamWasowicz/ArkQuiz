@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { compareTwoOperatorsV2, getOperatorById, getOperatorHintSkill, getOperatorHintTalent, getRaceDescription, getUndiscoveredOperatorTrait } from "./utils";
 import { getDayOperatorId } from "./utils";
-import { Operator } from "./types";
+import { Operator, OperatorComparisonDiffrenceV2 } from "./types";
 
 
 /**
@@ -59,10 +59,9 @@ export const GET_Operator_Race = async (_: Request, { params }: { params: { race
     return response;
 }
 
-export const POST_Operator_Hints = async (req: Request): Promise<NextResponse> => {
-    const body = await req.json();
-    const currentState = body.currentState;
-    const timestamp = new Date(body.timestamp);
+export const GET_Operator_Hints = async (req: NextRequest): Promise<NextResponse> => {
+    const timestamp = new Date(req.nextUrl.searchParams.get("timestamp")!)
+    const currentState = JSON.parse(req.nextUrl.searchParams.get("currentState")!) as OperatorComparisonDiffrenceV2;
 
     const nowId: string = getDayOperatorId(timestamp);
     const operator: Operator = getOperatorById(nowId)!;

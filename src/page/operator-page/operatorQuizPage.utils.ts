@@ -1,18 +1,20 @@
-import { OperatorComparisonResultV2 } from "@/src/modules/operator/lib/types";
+import { OperatorComparisonResultV2, OperatorHints } from "@/src/modules/operator/lib/types";
 
 // Helper for localStorage
 /** Hook for saving quiz data to localstorage */
 const useLocalStorage = () => {
-    const OPERATOR_CURRENT_GUESSES = "OPERATOR_CURRENT_GUESSES";
-    const OPERATOR_STATUS = "OPERATOR_STATUS";
-    const OPERATOR_DATE = "OPERATOR_DATE";
+    const CURRENT_GUESSES = "OPERATOR_CURRENT_GUESSES";
+    const STATUS = "OPERATOR_STATUS";
+    const DATE = "OPERATOR_DATE";
+    const HINTS = "OPERATOR_HINTS";
 
+    // CurrentGuesses
     const saveCurrentGuessesToStorage = (data: OperatorComparisonResultV2[]) => {
-        localStorage.setItem(OPERATOR_CURRENT_GUESSES, JSON.stringify(data));
+        localStorage.setItem(CURRENT_GUESSES, JSON.stringify(data));
     }
 
     const getCurrentGuessesFromStorage = (): OperatorComparisonResultV2[] => {
-        const data =  localStorage.getItem(OPERATOR_CURRENT_GUESSES);
+        const data =  localStorage.getItem(CURRENT_GUESSES);
         if (data === null) {
             return []
         }
@@ -23,15 +25,16 @@ const useLocalStorage = () => {
     }
 
     const removeCurrentGuessesFromStorage = () => {
-        localStorage.removeItem(OPERATOR_CURRENT_GUESSES);
+        localStorage.removeItem(CURRENT_GUESSES);
     }
 
+    // Status
     const saveStatusToStorage = (status: boolean) => {
-        localStorage.setItem(OPERATOR_STATUS, status.toString());
+        localStorage.setItem(STATUS, status.toString());
     }
 
     const getStatusFromStorage = (): boolean => {
-        const data = localStorage.getItem(OPERATOR_STATUS);
+        const data = localStorage.getItem(STATUS);
         if (data === null) {
             return false
         }
@@ -41,16 +44,17 @@ const useLocalStorage = () => {
     }
 
     const removeStatusFromStorage = () => {
-        localStorage.removeItem(OPERATOR_STATUS);
+        localStorage.removeItem(STATUS);
     }
 
-    const saveOperatorDateToStorage = () => {
+    // Date
+    const saveDateToStorage = () => {
         const date = new Date()
-        localStorage.setItem(OPERATOR_DATE, date.toString());
+        localStorage.setItem(DATE, date.toString());
     }
 
-    const getOperatorDateFromStorage = (): Date | null => {
-        const data = localStorage.getItem(OPERATOR_DATE)
+    const getDateFromStorage = (): Date | null => {
+        const data = localStorage.getItem(DATE)
         if (data === null) {
             return data;
         }
@@ -60,12 +64,35 @@ const useLocalStorage = () => {
         }
     }
 
-    const removeOeratorDateFromStorage = () => {
-        localStorage.removeItem(OPERATOR_DATE);
+    const removeDateFromStorage = () => {
+        localStorage.removeItem(DATE);
     }
 
+    // Hints
+    const saveHintsToStorage = (data: OperatorHints) => {
+        localStorage.setItem(HINTS, JSON.stringify(data));
+    }
+
+    const getHintsFromStorage = (): OperatorHints | undefined => {
+        const data =  localStorage.getItem(HINTS);
+        if (data === null) {
+            return undefined;
+        }
+        else {
+            const out: OperatorHints = JSON.parse(data);
+            return out;
+        }
+    }
+
+    const removeHintsFromStorage = () => {
+        localStorage.removeItem(HINTS);
+    }
+
+
+
+    // Utils
     const isDataOutdated = (): boolean => {
-        const dateFromStorage = getOperatorDateFromStorage();
+        const dateFromStorage = getDateFromStorage();
         if (dateFromStorage == null) {
             return true;
         }
@@ -90,11 +117,16 @@ const useLocalStorage = () => {
     }
  
     return {
-        saveCurrentGuessesToStorage, getCurrentGuessesFromStorage,
-        saveStatusToStorage, getStatusFromStorage,
-        saveOperatorDateToStorage, getOperatorDateFromStorage,
+        // Guesses
+        saveCurrentGuessesToStorage, getCurrentGuessesFromStorage, removeCurrentGuessesFromStorage,
+        // Status
+        getStatusFromStorage, removeStatusFromStorage, saveStatusToStorage,
+        // Date
+        saveDateToStorage, getDateFromStorage, removeDateFromStorage,
+        // Other
         isDataOutdated,
-        removeCurrentGuessesFromStorage, removeStatusFromStorage, removeOeratorDateFromStorage
+        // Hints
+        saveHintsToStorage, getHintsFromStorage, removeHintsFromStorage
     }
 }
 

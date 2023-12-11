@@ -1,4 +1,4 @@
-import { routeToOperatorIcon } from "@/src/lib/serverFunctions";
+import { routeToOperatorIcon } from "@/src/lib/client-to-server-functions";
 import { SkillComparisonResult } from "../../lib/types";
 import styles from './guessResult.module.scss';
 import Image from "next/image";

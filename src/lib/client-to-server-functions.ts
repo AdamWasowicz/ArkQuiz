@@ -43,7 +43,7 @@ export const routeToSkillIcon = (header: SkillHeader): string => {
  * @param id Id of operator
  * @param timestamp (optional) answer for that time
  * */
-export const submitOperatorGuess = async (id: string, timestamp: Date = new Date(), ): Promise<OperatorComparisonResultV2 | undefined> => {
+export const submitOperatorGuess = async (id: string): Promise<OperatorComparisonResultV2 | undefined> => {
     const axiosClient = axios.create({
         headers: {
             'Content-Type': 'application/json'
@@ -54,7 +54,7 @@ export const submitOperatorGuess = async (id: string, timestamp: Date = new Date
         SERVER_ROUTE_TO_OPERATOR_GUESS, 
         {
             id: id, 
-            timestamp: timestamp.toString()
+            timestamp: new Date().toString()
         }
     )
 
@@ -70,7 +70,7 @@ export const submitOperatorGuess = async (id: string, timestamp: Date = new Date
  * @param raceName name of race
  * @returns promise of type {@link RaceDescription} or undefined
  */
-export const getOperatorRaceDescription = async (raceName: string): Promise<RaceDescription | undefined> => {
+export const fetchOperatorRaceDescription = async (raceName: string): Promise<RaceDescription | undefined> => {
     const axiosClient = axios.create({
         headers: {
             'Content-Type': 'application/json'
@@ -93,7 +93,7 @@ export const getOperatorRaceDescription = async (raceName: string): Promise<Race
  * @param id Id of operator
  * @param timestamp (optional) answer for that time
  */
-export const submitSkillGuess = async (id: string, timestamp: Date = new Date(), ): Promise<SkillComparisonResult | undefined> => {
+export const submitSkillGuess = async (id: string): Promise<SkillComparisonResult | undefined> => {
     const axiosClient = axios.create({
         headers: {
             'Content-Type': 'application/json'
@@ -104,7 +104,7 @@ export const submitSkillGuess = async (id: string, timestamp: Date = new Date(),
         SERVER_ROUTE_TO_SKILL_GUESS, 
         {
             id: id, 
-            timestamp: timestamp.toString()
+            timestamp: new Date().toString()
         }
     )
 
@@ -126,7 +126,11 @@ export const fetchTodaySkillHeader = async (): Promise<SkillHeader | undefined> 
         }
     })
 
-    const response = await axiosClient.get<SkillHeader>(SERVER_ROUTE_TO_SKILL_GUESS)
+    const response = await axiosClient.get<SkillHeader>(SERVER_ROUTE_TO_SKILL_GUESS, {
+        params: {
+            timestamp: new Date().toString()
+        }
+    })
 
     if (response.status !== 200) {
         return undefined;
@@ -165,7 +169,11 @@ export const fetchTodayTalentHeader = async (): Promise<TalentHeader | undefined
         }
     })
 
-    const response = await axiosClient.get<TalentHeader>(SERVER_ROUTE_TO_TALENT_GUESS);
+    const response = await axiosClient.get<TalentHeader>(SERVER_ROUTE_TO_TALENT_GUESS, {
+        params: {
+            timestamp: new Date().toString()
+        }
+    });
 
     if (response.status !== 200) {
         return undefined;
@@ -182,9 +190,11 @@ export const fetchTodayOperatorHints = async (cs: OperatorComparisonDiffrenceV2)
         }
     })
 
-    const response = await axiosClient.post<OperatorHints>(SERVER_ROUTE_TO_OPERATOR_HINTS, {
-        timestamp: new Date().toString(),
-        currentState: cs
+    const response = await axiosClient.get<OperatorHints>(SERVER_ROUTE_TO_OPERATOR_HINTS, {
+        params: {
+            timestamp: new Date().toString(),
+            currentState: JSON.stringify(cs)
+        }
     });
 
     if (response.status !== 200) {

@@ -1,4 +1,4 @@
-import { getOperatorRaceDescription } from "@/src/lib/serverFunctions";
+import { fetchOperatorRaceDescription } from "@/src/lib/client-to-server-functions";
 import { RaceDescription } from "../../lib/types";
 import styles from './guessResult.module.scss';
 import { Fragment } from 'react';
@@ -49,7 +49,7 @@ const useUtils = () => {
 
         try {
             const dataArray = await Promise.all(dataAsArray.map((item) => {
-                return getOperatorRaceDescription(item);
+                return fetchOperatorRaceDescription(item);
             }));
             
             const output: RaceDescription[] = dataArray.filter((item) => {

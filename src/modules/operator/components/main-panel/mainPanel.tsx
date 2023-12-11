@@ -1,10 +1,14 @@
-import { useAppSelector } from '@/src/redux/hooks';
+import { useAppDispatch, useAppSelector } from '@/src/redux/hooks';
 import styles from './mainPanel.module.scss';
-import { routeToOperatorIcon } from '@/src/lib/serverFunctions';
+import { fetchTodayOperatorHints, routeToOperatorIcon } from '@/src/lib/client-to-server-functions';
 import Image from 'next/image';
 import { Fragment, useState } from 'react';
-import QuizHeader from '@/src/components/quiz/quiz-header/quizHeader';
-
+import Hints from '@/src/components/quiz/hints/hints';
+import { specifyUndiscoveredOperatorTraits } from '../../lib/client-utils';
+import { setHints } from '@/src/redux/features/operator-slice';
+import useLocalStorage from "../../../../page/operator-page/operatorQuizPage.utils";
+import QuizMainPanelLayout from '@/src/layouts/quiz-header-layout/quizMainPanelLayout';
+import QuizHeader from '@/src/components/ui/quiz-header/quizHeader';
 
 interface IOperatorQuizMainPanel {
     id?: string,
@@ -18,34 +22,31 @@ const OperatorQuizMainPanel: React.FC<IOperatorQuizMainPanel> = (props) => {
     const guesses = useAppSelector(state => state.operator.currentGuesses);
     const gameWon = useAppSelector(state => state.operator.gameWon);
     const hints = useAppSelector(state => state.operator.hints);
-    const [hintText, setHintText] = useState<string>("");
+    const localstorageHook = useLocalStorage();
+    const dispatch = useAppDispatch();
 
+    const [areHintsLoading, setAreHintsLoading] = useState<boolean>(false);
 
-    const onHintClick = (hintNumber: number): void => {
-        if (hints === undefined) {
-            return;
-        }
+    const fetchHints = () => {
+        const currentState = specifyUndiscoveredOperatorTraits(guesses);
 
-        switch (hintNumber) {
-            case 1:
-                setHintText(hints.trait);
-                break;
-            case 2:
-                setHintText(`Skill is ${hints.skill.Name}`)
-                break;
-            case 3:
-                setHintText(`Talent is ${hints.talent.Name}`)
-                break;
-        }
+        setAreHintsLoading(true);
+        fetchTodayOperatorHints(currentState)
+            .then((result) => {
+                if (result !== undefined) {
+                    localstorageHook.saveHintsToStorage(result);
+                    dispatch(setHints(result));
+                }
+            })
+            .finally(() => {
+                setAreHintsLoading(false);
+            })
     }
 
-
     return (
-        <QuizHeader
-            id={props.id}
-            headerContent='Guess the operator'
-            className={props.className}
-        >
+        <QuizMainPanelLayout id={props.id} className={props.className}>
+            <QuizHeader>Guess the operator</QuizHeader>
+
             <Fragment>
                 {
                     gameWon === true 
@@ -72,23 +73,32 @@ const OperatorQuizMainPanel: React.FC<IOperatorQuizMainPanel> = (props) => {
                 }
                 
                 {
-                    guesses.length < 3 
-                    ? <h3 className={styles.amountOfGuesses}>
-                        Hints available in {3 - guesses.length} guesses
-                    </h3>
-                    : <div className={styles.hintsContainer}>
-                        <button onClick={() => onHintClick(1)}>Hint 1</button>
-                        <button onClick={() => onHintClick(2)}>Hint 2</button>
-                        <button onClick={() => onHintClick(3)}>Hint 3</button>
-                    </div>
-                }
+                    gameWon === false &&
+                    <Hints
+                        currentNumberForHints={guesses.length}
+                        requiredNumberForHints={5}
+                        hints={hints === undefined ? undefined : [
+                            {
+                                buttonLabel: 'Trait',
+                                hintText: hints?.trait ?? ''
+                            },
 
-                {
-                    hintText != "" &&
-                    <div className={styles.hintText}>{hintText}</div>
+                            {
+                                buttonLabel: 'Skill',
+                                hintText: hints?.skill ?? ''
+                            },
+
+                            {
+                                buttonLabel: 'Talent',
+                                hintText: hints?.talent ?? ''
+                            }
+                        ]}
+                        onLoadData={fetchHints}
+                        isLoading={areHintsLoading}
+                    />
                 }
             </Fragment>
-        </QuizHeader>
+        </QuizMainPanelLayout>
     )
 }
 

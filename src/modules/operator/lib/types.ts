@@ -1,6 +1,3 @@
-import { Skill } from "../../skill/lib/types"
-import { Talent } from "../../talent/lib/types"
-
 /** Represents only Operator data used for identification */
 export interface OperatorHeader {
     Id: string,
@@ -88,6 +85,6 @@ export class OperatorHelperFunctions {
 
 export type OperatorHints = {
     trait: string,
-    talent: Talent,
-    skill: Skill
+    talent: string,
+    skill: string
 }

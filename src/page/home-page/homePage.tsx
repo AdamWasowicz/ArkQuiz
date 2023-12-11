@@ -1,5 +1,5 @@
 "use client"
-import QuizMainBody from '@/src/components/quiz/quiz-main-body/quizMainBody';
+import PageLayout from '@/src/layouts/page-layout/pageLayout';
 import styles from './homePage.module.scss';
 import Header from '@/src/components/ui/header/header';
 import Paragraph from '@/src/components/ui/paragraph/paragraph';
@@ -10,13 +10,12 @@ import { useRouter } from 'next/navigation';
 const HomePage: React.FC = () => {
     const router = useRouter();
 
-
     const navigateToFirstQuiz = () => {
         router.push('./operator');
     }
 
     return (
-        <QuizMainBody>
+        <PageLayout>
             <div className={styles.root}>
                 <div className={styles.section}>
                     <Header>What is Arkquiz?</Header>
@@ -59,7 +58,7 @@ const HomePage: React.FC = () => {
                     Go to first quiz
                 </Button>
             </div>
-        </QuizMainBody>
+        </PageLayout>
     )
 }
 

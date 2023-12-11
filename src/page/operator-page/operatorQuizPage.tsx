@@ -6,13 +6,13 @@ import { useAppDispatch, useAppSelector } from "@/src/redux/hooks";
 import styles from './operatorQuizPage.module.scss';
 import OperatorQuizMainPanel from "@/src/modules/operator/components/main-panel/mainPanel";
 import { ChangeEvent, useEffect, useState } from "react";
-import { fetchTodayOperatorHints, submitOperatorGuess } from "@/src/lib/serverFunctions";
+import { submitOperatorGuess } from "@/src/lib/client-to-server-functions";
 import { addGuess, setErrorMsg, setGameWon, setGuesses, setHints, setIsWorking } from "@/src/redux/features/operator-slice";
 import useLocalStorage from "./operatorQuizPage.utils";
 import NextQuizButton from "@/src/components/quiz/next-quiz-button/nextQuizButton";
 import { useRouter } from 'next/navigation'
-import QuizMainBody from "@/src/components/quiz/quiz-main-body/quizMainBody";
-import { specifyUndiscoveredOperatorTraits } from "@/src/modules/operator/lib/clientUtils";
+import PageLayout from "@/src/layouts/page-layout/pageLayout";
+import LoadingPage from "@/src/components/other/loading-page/loadingPage";
 
 
 interface IOperatorQuizPage {
@@ -24,10 +24,10 @@ const OperatorQuizPage: React.FC<IOperatorQuizPage> = (props) => {
     const guesses = useAppSelector(state => state.operator.currentGuesses);
     const isWorking = useAppSelector(state => state.operator.isWorking);
     const quizWon = useAppSelector(state => state.operator.gameWon);
-    const hints = useAppSelector(state => state.operator.hints);
     const dispatch = useAppDispatch();
     const localstorageHook = useLocalStorage();
     const [textInputValue, setTextInputValue] = useState<string>('');
+    const [syncInProgress, setSyncInProgress] = useState<boolean>(true);
     const router = useRouter();
 
 
@@ -48,7 +48,7 @@ const OperatorQuizPage: React.FC<IOperatorQuizPage> = (props) => {
                 ?.find(item => item.Name.toUpperCase() === textInputValue.toUpperCase())
         
         if (typeof selectedOperatorHeader !== 'undefined') {
-            localstorageHook.saveOperatorDateToStorage();
+            localstorageHook.saveDateToStorage();
             const res = await submitOperatorGuess(selectedOperatorHeader.Id)
 
             if (res === undefined) {
@@ -89,7 +89,9 @@ const OperatorQuizPage: React.FC<IOperatorQuizPage> = (props) => {
         if (localstorageHook.isDataOutdated()) {
             localstorageHook.removeCurrentGuessesFromStorage();
             localstorageHook.removeStatusFromStorage();
-            localstorageHook.removeOeratorDateFromStorage();
+            localstorageHook.removeDateFromStorage();
+            localstorageHook.removeHintsFromStorage();
+            setSyncInProgress(false);
             return;
         }
 
@@ -97,26 +99,20 @@ const OperatorQuizPage: React.FC<IOperatorQuizPage> = (props) => {
         const data = localstorageHook.getCurrentGuessesFromStorage();
         dispatch(setGuesses(data));
 
-        //Status
+        // Status
         const status = localstorageHook.getStatusFromStorage();
-        dispatch(setGameWon(status))
+        dispatch(setGameWon(status));
+
+        // Hints
+        const hints = localstorageHook.getHintsFromStorage();
+        if (hints !== undefined) {
+            dispatch(setHints(hints));
+        }
+
+        setSyncInProgress(false);
 
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
-
-    useEffect(() => {
-        if (guesses.length >= 0 && hints === undefined) {
-            const currentState = specifyUndiscoveredOperatorTraits(guesses);
-
-            fetchTodayOperatorHints(currentState)
-                .then((result) => {
-                    if (result !== undefined) {
-                        dispatch(setHints(result));
-                    }
-                })
-        }
-
-    }, [guesses.length])
 
     // Scroll to element
     useEffect(() => {
@@ -130,9 +126,13 @@ const OperatorQuizPage: React.FC<IOperatorQuizPage> = (props) => {
         }
     }, [quizWon])
 
+    if (syncInProgress) {
+        return <LoadingPage/>
+    }
+
 
     return (
-        <QuizMainBody>
+        <PageLayout>
             <OperatorQuizMainPanel className={styles.mainPanel}/>
 
             {
@@ -163,7 +163,7 @@ const OperatorQuizPage: React.FC<IOperatorQuizPage> = (props) => {
                     <OperatorGuessResult guesses={guesses}/>
                 }
             </div>
-        </QuizMainBody>
+        </PageLayout>
     )
 }
 
