@@ -1,6 +1,6 @@
 import { doesFileExist } from "@/src/lib/filesystem";
 import { Operator, OperatorHeader, OperatorHealthcheckResult } from "./types";
-import { getAbsolutePathToIcon, getAllOperatorHeaders, getOperatorById, getRaceDescription } from "./utils";
+import { getAbsolutePathToIcon, getAllOperatorHeaders, getOperatorById, getRaceDescription } from "./server-utils";
 
 
 // Helpers

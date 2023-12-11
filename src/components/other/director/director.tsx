@@ -1,5 +1,5 @@
 import { Fragment } from "react"
-import { generateOperatorHeaderCompositeFile } from "@/src/modules/operator/lib/utils";
+import { generateOperatorHeaderCompositeFile } from "@/src/modules/operator/lib/server-utils";
 import { doHealthCheck as operatorHC } from "@/src/modules/operator/lib/healthcheck";
 import { generateSkillHeaderCompositeFile } from "@/src/modules/skill/lib/utils";
 import { doHealthCheck as skillHC } from "@/src/modules/skill/lib/healthcheck";

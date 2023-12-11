@@ -1,5 +1,5 @@
 import SkillQuizPage from "@/src/page/skill-page/skillQuizPage";
-import { getOperatorHeaderMap } from "@/src/modules/operator/lib/utils";
+import { getOperatorHeaderMap } from "@/src/modules/operator/lib/server-utils";
 
 const SkillPage: React.FC = () => {
     const headers = getOperatorHeaderMap();

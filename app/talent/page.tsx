@@ -1,4 +1,4 @@
-import { getOperatorHeaderMap } from "@/src/modules/operator/lib/utils";
+import { getOperatorHeaderMap } from "@/src/modules/operator/lib/server-utils";
 import TalentQuizPage from "@/src/page/talent-page/talentQuizPage";
 
 

@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
-import { compareTwoOperatorsV2, getOperatorById, getOperatorHintSkill, getOperatorHintTalent, getRaceDescription, getUndiscoveredOperatorTrait } from "./utils";
-import { getDayOperatorId } from "./utils";
+import { 
+    compareTwoOperatorsV2, getOperatorById, getOperatorHintSkill, 
+    getOperatorHintTalent, getRaceDescription, getDayOperatorId 
+} from "./server-utils";
+import { getUndiscoveredOperatorTrait } from "./client-utils";
 import { Operator, OperatorComparisonDiffrenceV2 } from "./types";
 
 
