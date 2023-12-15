@@ -29,7 +29,7 @@ const operatorHeadersLocation = path.join(process.cwd(), ...['src' ,'modules', '
 export const getOperatorById = (id: string): Operator | undefined => {
     const fileExist = doesFileExist(path.join(localPathToOperators, id + operatorDataFormat))
     if (fileExist == false) {
-        console.log(`File ${id + operatorDataFormat} not found`)
+        //console.log(`File ${id + operatorDataFormat} not found`)
         return undefined
     }
 
@@ -44,10 +44,10 @@ export const getAllOperatorHeaders = (): OperatorHeader[] => {
     const fileNames: string[] = getAllFileNamesInDirectory(localPathToOperators);
 
     // Composite headers
-    const compositeHeaders = getOperatorHeaderComposite();
-    if (compositeHeaders !== undefined) {
-        return compositeHeaders;
-    }
+    // const compositeHeaders = getOperatorHeaderComposite();
+    // if (compositeHeaders !== undefined) {
+    //     return compositeHeaders;
+    // }
 
     // Get headers using default method
     const operatorHeaders: OperatorHeader[] = [];
@@ -74,7 +74,7 @@ export const getAbsolutePathToIcon = (id: string): string | undefined => {
     const fileExist = doesFileExist(path.join(process.cwd(), pathToOperatorIcon, id + imageFormat))
     
     if (fileExist == false) {
-        console.log(`Icon ${id + imageFormat} not found`)
+        //console.log(`Icon ${id + imageFormat} not found`)
         return undefined;
     }
 
