@@ -1,6 +1,6 @@
 import { Operator, OperatorComparisonDiffrenceV2, OperatorComparisonResultV2 } from "./types";
 
-export const specifyUndiscoveredOperatorTraits = (currentGuesses: OperatorComparisonResultV2[]): OperatorComparisonDiffrenceV2 => {
+export const specifyUndiscoveredOperatorTraits = (currentGuesses: OperatorComparisonDiffrenceV2[]): OperatorComparisonDiffrenceV2 => {
     const currentState: OperatorComparisonDiffrenceV2 = {
         Rarity: -1,
         Class: -1,
@@ -16,7 +16,7 @@ export const specifyUndiscoveredOperatorTraits = (currentGuesses: OperatorCompar
 
     keys.forEach((key) => {
         currentGuesses.forEach((result) => {
-            const dif = new Map(Object.entries(result.diffrences));
+            const dif = new Map(Object.entries(result));
 
             if ( dif.get(key)! > cs_dict.get(key)! ) {
                 cs_dict.set(key, dif.get(key)!)
@@ -25,7 +25,6 @@ export const specifyUndiscoveredOperatorTraits = (currentGuesses: OperatorCompar
     })
 
     const output = Object.fromEntries(cs_dict.entries()) as OperatorComparisonDiffrenceV2;
-    console.log(output)
     return output;
 }
 

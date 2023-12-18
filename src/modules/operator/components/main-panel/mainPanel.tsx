@@ -28,7 +28,7 @@ const OperatorQuizMainPanel: React.FC<IOperatorQuizMainPanel> = (props) => {
     const [areHintsLoading, setAreHintsLoading] = useState<boolean>(false);
 
     const fetchHints = () => {
-        const currentState = specifyUndiscoveredOperatorTraits(guesses);
+        const currentState = specifyUndiscoveredOperatorTraits(guesses.map(item => item.diffrences));
 
         setAreHintsLoading(true);
         fetchTodayOperatorHints(currentState)

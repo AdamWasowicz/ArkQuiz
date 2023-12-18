@@ -7,7 +7,6 @@ import {
     PATH_TO_OPERATOR_DATA,
     PATH_TO_OPERATOR_RACE, 
 } from "@/src/lib/paths";
-import packageDotJson from '@/package.json'; 
 import { Talent } from "../../talent/lib/types";
 import { getOperatorTalentsData } from "../../talent/lib/utils";
 import { getOperatorSkillsData } from "../../skill/lib/utils";
@@ -19,8 +18,6 @@ const operatorDataFormat = '.json';
 const localPathToOperators = path.join(process.cwd(), ...PATH_TO_OPERATOR_DATA);
 const localPathToRaces = path.join(process.cwd(), ...PATH_TO_OPERATOR_RACE)
 const pathToOperatorIcon = path.join(...EXTERNAL_PATH_TO_OPERATOR_ICONS)
-const operatorHeadersLocation = path.join(process.cwd(), ...['src' ,'modules', 'operator', 'lib', 'OperatorHeaders.json']);
-
 
 /**
  * @param id is unique string for each operator (ex. R001 is Amiya).
@@ -37,19 +34,26 @@ export const getOperatorById = (id: string): Operator | undefined => {
     return json;
 }
 
+export const getAllOperators = (): Operator[] => {
+    const fileNames: string[] = getAllFileNamesInDirectory(localPathToOperators); 
+
+    const operators: Operator[] = [];
+    fileNames.forEach(file => {
+        const json = readJson(path.join(localPathToOperators, file)) as Operator | undefined;
+        if (json !== undefined) {
+            operators.push(json);
+        }
+    })
+
+    return operators;
+}
+
 /**
  * @returns array of OperatorHeader for all operators.
  */
 export const getAllOperatorHeaders = (): OperatorHeader[] => {
     const fileNames: string[] = getAllFileNamesInDirectory(localPathToOperators);
 
-    // Composite headers
-    // const compositeHeaders = getOperatorHeaderComposite();
-    // if (compositeHeaders !== undefined) {
-    //     return compositeHeaders;
-    // }
-
-    // Get headers using default method
     const operatorHeaders: OperatorHeader[] = [];
     fileNames.forEach(file => {
         const json = readJson(path.join(localPathToOperators, file)) as Operator | undefined;
@@ -179,7 +183,7 @@ export const compareTwoOperatorsV2 = (originalId: string, comparedId: string): O
  * @param t2 can be anything
  * @returns number representing comparison result
  */
-const __compareTwoOperatorsComparer = (t1: unknown, t2: unknown): number => {
+export const __compareTwoOperatorsComparer = (t1: unknown, t2: unknown): number => {
     //  1 means correct
     //  0 means partial
     // -1 means wrong
@@ -238,67 +242,6 @@ export const getRaceDescription = (raceName: string): RaceDescription | undefine
     return json;
 }
 
-// Composite files
-/** Generates composite file of Operator data */
-export const generateOperatorHeaderCompositeFile = (): void => {
-    const fullPath = operatorHeadersLocation;
-
-    // Check if file already exists
-    let fileExists: boolean = true;
-    try {
-        fileExists = doesFileExist(fullPath);
-    }
-    catch {
-        fileExists = false;
-    }
-
-    if (fileExists) {
-        const data = readJson(fullPath) as OperatorHeaderComposite;
-        // File exists and is current
-        if (data.Version === packageDotJson.version) {
-            return;
-        }
-    }
-
-    // Read all headers
-    const headers = getAllOperatorHeaders();
-    const output: OperatorHeaderComposite = {
-        Version: packageDotJson.version,
-        WhenCreated: new Date(),
-        Data: headers
-    }
-
-    // Save it
-    saveJson(
-        output,
-        fullPath
-    );
-}
-
-/** Try getting OperatorHeaderComposite file */
-export const getOperatorHeaderComposite = (): OperatorHeader[] | undefined => {
-    const fullPath = operatorHeadersLocation;
-
-    // Check if file already exists
-    let fileExists: boolean = true;
-    try {
-        fileExists = doesFileExist(fullPath);
-    }
-    catch {
-        fileExists = false;
-    }
-
-    if (fileExists) {
-        const data = readJson(fullPath) as OperatorHeaderComposite;
-        // File exists and is current
-        if (data.Version === packageDotJson.version) {
-            return data.Data;
-        }
-    }
-
-    return undefined;
-}
-
 export const getOperatorHintTalent = (operator: OperatorHeader): string => {
     const talentsData = getOperatorTalentsData(operator.Id);
     if (talentsData === undefined) {
@@ -314,7 +257,7 @@ export const getOperatorHintTalent = (operator: OperatorHeader): string => {
 export const getOperatorHintSkill = (operator: OperatorHeader): string => {
     const skillData = getOperatorSkillsData(operator.Id);
     if (skillData === undefined) {
-        return 'No skills'
+        return 'No skill'
     }
 
     const timestamp = new Date();
