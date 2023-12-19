@@ -1,0 +1,9 @@
+{
+    "OperatorId": "LT12",
+    "Talents": [
+        {
+            "Name": "Differential Reloading Experiment",
+            "Description": "Each attack has a 70% chance to trigger one of the following effects: the attack instead hits twice; the target is Stunned for 1 second; the attack ignores 80% of the target's DEF" 
+        }
+    ]
+}

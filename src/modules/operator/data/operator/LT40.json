@@ -1,0 +1,12 @@
+{
+    "Id": "LT40",
+    "Name": "Executor the Ex Foedere",
+    "Rarity": 6,
+    "Class": "Guard",
+    "Branch": "Reaper",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Male",
+    "Race": "Sankta",
+    "Faction": "Laterano"
+}

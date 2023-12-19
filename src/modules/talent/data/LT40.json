@@ -1,0 +1,14 @@
+{
+    "OperatorId": "LT40",
+    "Talents": [
+        {
+            "Name": "The Chosen One",
+            "Description": "Attacks have a 20% chance to hit twice; this chance increases by 5% for each ammo consumed while skill is active, resetting when the skill ends" 
+        },
+
+        {
+            "Name": "Empathy by Shotgun",
+            "Description": "For every [Laterano] Operator deployed, increases the ammo capacity of ammo-based skills by +1 (stacks up to 4 times)" 
+        }
+    ]
+}

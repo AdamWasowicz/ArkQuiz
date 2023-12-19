@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { getSkillByDate } from "./utils";
 import { SkillComparisonResult } from "./types";
 import { OperatorHelperFunctions } from "../../operator/lib/types";
-import { getOperatorById } from "../../operator/lib/utils";
+import { getOperatorById } from "../../operator/lib/server-utils";
 
 
 /** POST: send skill guess, body of request contains id of operator and timestamp of when guess was posted */

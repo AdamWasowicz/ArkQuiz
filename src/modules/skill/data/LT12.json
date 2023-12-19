@@ -1,0 +1,14 @@
+{
+    "Id": "LT12",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Seize the Moment"
+        },
+
+        {
+            "Number": 2,
+            "Name": "On-the-Fly Weapon Modding"
+        }
+    ]
+}

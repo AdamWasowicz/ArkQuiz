@@ -1,0 +1,19 @@
+{
+    "Id": "LT40",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Testament Exacted"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Close Combat"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Damnatus Ex Foedere"
+        }
+    ]
+}

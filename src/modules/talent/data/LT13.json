@@ -1,0 +1,9 @@
+{
+    "OperatorId": "LT13",
+    "Talents": [
+        {
+            "Name": "Fire Support",
+            "Description": "After being deployed for 20 seconds, increases the ammo capacity for this unit by +3, and increases the ammo cap for a random [Laterano] Operator's ammo-based skill by +1" 
+        }
+    ]
+}

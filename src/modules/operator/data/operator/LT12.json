@@ -1,0 +1,12 @@
+{
+    "Id": "LT12",
+    "Name": "Spuria",
+    "Rarity": 5,
+    "Class": "Specialist",
+    "Branch": "Geek",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Sankta",
+    "Faction": "Laterano"
+}

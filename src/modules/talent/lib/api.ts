@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getTalentByDate } from "./utils";
-import { getOperatorById } from "../../operator/lib/utils";
+import { getOperatorById } from "../../operator/lib/server-utils";
 import { OperatorHelperFunctions } from "../../operator/lib/types";
 import { TalentComparisonResult } from "./types";
 
