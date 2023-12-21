@@ -1,0 +1,12 @@
+{
+    "Id": "RCX5",
+    "Name": "Friston-3",
+    "Rarity": 1,
+    "Class": "Defender",
+    "Branch": "Protector",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Male",
+    "Race": "Robot",
+    "Faction": "Rhodes Island"
+}

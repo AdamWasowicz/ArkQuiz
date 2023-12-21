@@ -1,6 +1,6 @@
-import { Operator, OperatorHeader, OperatorHeaderMap, RaceDescription, OperatorHeaderComposite, OperatorComparisonResultV2, OperatorComparisonDiffrenceV2 } from "./types";
+import { Operator, OperatorHeader, OperatorHeaderMap, RaceDescription, OperatorComparisonResultV2, OperatorComparisonDiffrenceV2 } from "./types";
 import path from 'path';
-import { getAllFileNamesInDirectory, readJson, doesFileExist, saveJson } from "@/src/lib/filesystem";
+import { getAllFileNamesInDirectory, readJson, doesFileExist } from "@/src/lib/filesystem";
 import { 
     EXTERNAL_PATH_TO_OPERATOR_ICONS,
     LOCAL_PATH_TO_OPERATOR_ICONS, 

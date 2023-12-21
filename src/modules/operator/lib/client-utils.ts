@@ -1,4 +1,4 @@
-import { Operator, OperatorComparisonDiffrenceV2, OperatorComparisonResultV2 } from "./types";
+import { Operator, OperatorComparisonDiffrenceV2 } from "./types";
 
 export const specifyUndiscoveredOperatorTraits = (currentGuesses: OperatorComparisonDiffrenceV2[]): OperatorComparisonDiffrenceV2 => {
     const currentState: OperatorComparisonDiffrenceV2 = {

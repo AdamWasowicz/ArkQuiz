@@ -11,9 +11,14 @@ export interface SkillHeader{
     Name: string
 }
 
-export interface OperatorSkills {
-    Id: string,
-    Skills: Skill[]
+export interface OperatorSkills  {
+    Id: string;
+    Skills: Skill[];
+
+    // constructor(Id: string, Skills: Skill[]) {
+    //     this.Id = Id;
+    //     this.Skills = Skills;
+    // }
 } 
 
 export interface SkillComparisonResult {
