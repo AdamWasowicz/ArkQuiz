@@ -22,8 +22,9 @@ const Hints: React.FC<IHints> = (props) => {
         if (props.hints === undefined) {
             return;
         }
-
-        setText(props.hints[id].hintText)
+        text !== '' 
+            ? setText('') 
+            : setText(props.hints[id].hintText);
     }
 
     const onButtonClick = () => {
@@ -36,7 +37,7 @@ const Hints: React.FC<IHints> = (props) => {
     return (
         <div className={styles.root}>
             {
-                props.currentNumberForHints <= props.requiredNumberForHints && 
+                props.currentNumberForHints < props.requiredNumberForHints && 
                 showHints == false &&
                 <h3 className={styles.information}>
                     After {props.requiredNumberForHints - props.currentNumberForHints} guesses you will be able to see hints

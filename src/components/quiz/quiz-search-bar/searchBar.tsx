@@ -4,6 +4,7 @@ import styles from './searchBar.module.scss';
 import { ChangeEvent } from "react";
 import Image from 'next/image';
 import { routeToOperatorIcon } from "@/src/lib/client-to-server-functions"
+import useUtils from "./searchBar.utils";
 
 interface IQuizSearchBar {
     operatorHeadersMap: OperatorHeaderMap,
@@ -13,7 +14,8 @@ interface IQuizSearchBar {
 
     onInputChange: (event: ChangeEvent<HTMLInputElement>) => void,
     onFormSubmit: (event: React.MouseEvent<HTMLElement>) => void,
-    onResultClick: (value: string) => void
+    onResultClick: (value: string) => void,
+    onEnterKeyDown?: () => void
 }
 
 const QuizSearchBar: React.FC<IQuizSearchBar> = (props) => {
@@ -23,34 +25,22 @@ const QuizSearchBar: React.FC<IQuizSearchBar> = (props) => {
         onFormSubmit, excludedOperatorNames: currentGuessedOperatorNames,
         onResultClick 
     } = props;
+    const utils = useUtils();
+    const filteredOperatorHeaders = utils.filterOperatorHeaders(
+        operatorHeadersMap, inputTextValue, currentGuessedOperatorNames);
+    
 
-    const filterOperatorHeaders = (chm: OperatorHeaderMap): OperatorHeader[] => {
-        if (inputTextValue.length > 0) {
-
-            const values = chm.get(inputTextValue[0].toUpperCase())
-            let filteredValues = values?.filter(item => {
-                return item.Name.toUpperCase().startsWith(inputTextValue.toUpperCase());
-            })
-
-            if (typeof filteredValues === 'undefined') {
-                filteredValues = [];
+    const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
+        if (event.key === 'Enter') {
+            event.preventDefault();
+            event.stopPropagation();
+            
+            if (props.onEnterKeyDown !== undefined) {
+                props.onEnterKeyDown();
             }
-
-            const guessedOperatorNames = currentGuessedOperatorNames
-            filteredValues = filteredValues.filter((item) => {
-                return guessedOperatorNames.includes(item.Name)
-                    ? false
-                    : true;
-            })
-
-            return filteredValues!;
-        }
-        else {
-            return []
         }
     }
 
-    const filteredOperatorHeaders = filterOperatorHeaders(operatorHeadersMap);
 
     return (
         <div className={styles.searchBar}>
@@ -61,6 +51,7 @@ const QuizSearchBar: React.FC<IQuizSearchBar> = (props) => {
                         disabled={isFormDisabled}
                         className={styles.input}
                         onChange={onInputChange}
+                        onKeyDown={handleKeyDown}
                         value={inputTextValue}
                     />
 

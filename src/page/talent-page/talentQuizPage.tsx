@@ -25,10 +25,7 @@ const TalentQuizPage: React.FC<ITalentPage> = (props) => {
     const [textInputValue, setTextInputValue] = useState<string>('');
 
 
-    const onFormSubmit = async (event: React.MouseEvent<HTMLElement>) => {
-        event.preventDefault();
-
-        // isWorking
+    const sendGuess = async (value: string) => {
         if (isWorking === true) { 
             return; 
         }
@@ -37,9 +34,13 @@ const TalentQuizPage: React.FC<ITalentPage> = (props) => {
             dispatch(setIsWorking(true)); 
         }
         
+        const excludedOperatorNames = guesses.map(item => item.OperatorHeader.Name);
         const selectedOperatorHeader = operatorHeaderMap
-            .get(textInputValue.toUpperCase()[0])
-                ?.find(item => item.Name.toUpperCase() === textInputValue.toUpperCase())
+            .get(value.toUpperCase()[0])
+                ?.find(item => {
+                    const iU = item.Name.toUpperCase();
+                    return iU.includes(value.toUpperCase()) && excludedOperatorNames.findIndex(item => item.toUpperCase() === iU) === -1 
+                })
         
         if (typeof selectedOperatorHeader !== 'undefined') {
             localstorageHook.saveDateToStorage();
@@ -62,6 +63,15 @@ const TalentQuizPage: React.FC<ITalentPage> = (props) => {
                 dispatch(setGameWon(res.IsCorrect));
             }
         }
+        else {
+            dispatch(setErrorMsg(`Selected OperatorHeader not found, value was: ${value}`));
+            dispatch(setIsWorking(false)); 
+        }
+    }
+
+    const onFormSubmit = (event: React.MouseEvent<HTMLElement>) => {
+        event.preventDefault();
+        sendGuess(textInputValue); 
     }
 
     const onInputChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -69,7 +79,7 @@ const TalentQuizPage: React.FC<ITalentPage> = (props) => {
     }
 
     const onResultClick = (value: string) => {
-        setTextInputValue(value);
+        sendGuess(value);
     }
 
     // Load data from localstorage
@@ -111,6 +121,7 @@ const TalentQuizPage: React.FC<ITalentPage> = (props) => {
                         onFormSubmit={onFormSubmit}
                         onInputChange={onInputChange}
                         onResultClick={onResultClick}
+                        onEnterKeyDown={() => onResultClick(textInputValue)}
                     />
                 </div>
             }

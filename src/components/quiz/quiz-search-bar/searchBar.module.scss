@@ -166,6 +166,7 @@
         transition: 0.2s;
         background-color: var(--gray-600);
         color: var(--primary-500);
+        cursor: pointer;
     }
 }
 
@@ -194,4 +195,5 @@
     font-family: 'Roboto';
     font-weight: 400;
     letter-spacing: 4px;
+    user-select: none;
 }

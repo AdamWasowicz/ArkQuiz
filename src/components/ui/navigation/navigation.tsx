@@ -1,3 +1,4 @@
+import Title from '../title/title';
 import styles from './navigation.module.scss';
 import Link from 'next/link';
 
@@ -6,7 +7,11 @@ const Navigation: React.FC = () => {
     return (
         <nav className={styles.navigation}>
             <div className={styles.content}>
-                <Link className={styles.logo} href='/'><h1>Arkquiz</h1></Link>
+                <Link className={styles.logo} href='/'>
+                    <Title className={styles.logoHover}>
+                        Arkquiz
+                    </Title>
+                </Link>
 
                 <div className={styles.links}>
                     <Link className={styles.link} href='/operator'>Operator</Link>
