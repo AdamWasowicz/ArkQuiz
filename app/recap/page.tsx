@@ -1,4 +1,4 @@
-import QuizRecapPage from "@/src/page/recap-page/quizRecapPage";
+import QuizRecapPage from "@/src/modules/recap/components/quiz-recap/quizRecap";
 
 const Page: React.FC = () => {
     return <QuizRecapPage/>
