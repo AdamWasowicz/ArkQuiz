@@ -1,7 +1,9 @@
 .root {
     // Size and Position
-    width: 400px;
-    padding: 16px;
+    width: fit-content;
+    padding: 20px;
+    padding-left: 28px;
+    padding-right: 28px;
     margin-top: 32px;
     margin-bottom: 32px;
     margin-left: auto;
@@ -13,8 +15,9 @@
     // Flex
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    column-gap: 16px;
 
     // Background
     background-color: var(--gray-600);

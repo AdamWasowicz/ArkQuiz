@@ -14,6 +14,7 @@ import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import NextQuizButton from "@/src/components/quiz/next-quiz-button/nextQuizButton";
 import PageLayout from "@/src/layouts/page-layout/pageLayout";
+import useRecapLocalStorage from "../recap-page/recapPage.utils";
 
 
 interface ISkillPage {
@@ -29,6 +30,7 @@ const SkillQuizPage: React.FC<ISkillPage> = (props) => {
     const localstorageHook = useLocalstorage();
     const [textInputValue, setTextInputValue] = useState<string>('');
     const router = useRouter();
+    const recapHook = useRecapLocalStorage();
 
     const sendGuess = async (value: string) => {
         if (isWorking === true) { 
@@ -57,14 +59,16 @@ const SkillQuizPage: React.FC<ISkillPage> = (props) => {
                 return;
             }
 
+            const newState = [res ,...guesses];
             setTextInputValue('')
-            localstorageHook.saveCurrentGuessesToStorage([res ,...guesses]);
+            localstorageHook.saveCurrentGuessesToStorage(newState);
             dispatch(setIsWorking(false));
             dispatch(addGuess(res));
             
             // Quiz is won
             if (res.IsCorrect) {
                 localstorageHook.saveStatusToStorage(res.IsCorrect)
+                recapHook.updateSkill(newState);
                 dispatch(setGameWon(res.IsCorrect));
             }
         }

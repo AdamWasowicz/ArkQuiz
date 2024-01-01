@@ -10,6 +10,9 @@ import QuizSearchBar from '@/src/components/quiz/quiz-search-bar/searchBar';
 import GuessResult from '@/src/modules/skill/components/guess-result/guessResult';
 import TalentQuizMainPanel from '@/src/modules/talent/components/main-panel/mainPanel';
 import PageLayout from '@/src/layouts/page-layout/pageLayout';
+import useRecapLocalStorage from '../recap-page/recapPage.utils';
+import NextQuizButton from '@/src/components/quiz/next-quiz-button/nextQuizButton';
+import { useRouter } from 'next/navigation';
 
 interface ITalentPage {
     operatorHeaderMap: OperatorHeaderMap
@@ -23,6 +26,8 @@ const TalentQuizPage: React.FC<ITalentPage> = (props) => {
     const dispatch = useAppDispatch();
     const localstorageHook = useLocalStorage();
     const [textInputValue, setTextInputValue] = useState<string>('');
+    const recapHook = useRecapLocalStorage();
+    const router = useRouter();
 
 
     const sendGuess = async (value: string) => {
@@ -52,14 +57,16 @@ const TalentQuizPage: React.FC<ITalentPage> = (props) => {
                 return;
             }
 
+            const newState = [res ,...guesses];
             setTextInputValue('')
-            localstorageHook.saveCurrentGuessesToStorage([res ,...guesses]);
+            localstorageHook.saveCurrentGuessesToStorage(newState);
             dispatch(setIsWorking(false));
             dispatch(addGuess(res));
             
             // Quiz is won
             if (res.IsCorrect) {
                 localstorageHook.saveStatusToStorage(res.IsCorrect)
+                recapHook.updateTalent(newState);
                 dispatch(setGameWon(res.IsCorrect));
             }
         }
@@ -80,6 +87,10 @@ const TalentQuizPage: React.FC<ITalentPage> = (props) => {
 
     const onResultClick = (value: string) => {
         sendGuess(value);
+    }
+
+    const toNextQuiz = () => {
+        router.push('/recap');
     }
 
     // Load data from localstorage
@@ -104,6 +115,19 @@ const TalentQuizPage: React.FC<ITalentPage> = (props) => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
+    // Scroll to element
+    useEffect(() => {
+        if (quizWon === true) {
+            const element = document.getElementById('mainContent');
+            if (element !== null) {
+                element.scrollIntoView({
+                    behavior: "smooth"
+                })
+            }
+        }
+    }, [quizWon])
+
+
     return (
         <PageLayout>
             <TalentQuizMainPanel/>
@@ -124,6 +148,11 @@ const TalentQuizPage: React.FC<ITalentPage> = (props) => {
                         onEnterKeyDown={() => onResultClick(textInputValue)}
                     />
                 </div>
+            }
+
+            {
+                quizWon &&
+                <NextQuizButton onClick={toNextQuiz} id={'nextQuizButton'} textContent="Go to recap"/>
             }
 
             <div className={styles.result}>
