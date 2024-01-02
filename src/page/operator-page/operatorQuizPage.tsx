@@ -1,5 +1,5 @@
 "use client"
-import { OperatorHeaderMap } from "@/src/modules/operator/lib/types";
+import { OperatorComparisonResultV2, OperatorHeaderMap } from "@/src/modules/operator/lib/types";
 import QuizSearchBar from "@/src/components/quiz/quiz-search-bar/searchBar";
 import OperatorGuessResult from "@/src/modules/operator/components/guess-result/guessResult";
 import { useAppDispatch, useAppSelector } from "@/src/redux/hooks";
@@ -13,6 +13,8 @@ import NextQuizButton from "@/src/components/quiz/next-quiz-button/nextQuizButto
 import { useRouter } from 'next/navigation'
 import PageLayout from "@/src/layouts/page-layout/pageLayout";
 import LoadingPage from "@/src/components/other/loading-page/loadingPage";
+import useRecapLocalStorage from "../recap-page/recapPage.utils";
+
 
 
 interface IOperatorQuizPage {
@@ -26,6 +28,7 @@ const OperatorQuizPage: React.FC<IOperatorQuizPage> = (props) => {
     const quizWon = useAppSelector(state => state.operator.gameWon);
     const dispatch = useAppDispatch();
     const localstorageHook = useLocalStorage();
+    const recapHook = useRecapLocalStorage();
     const [textInputValue, setTextInputValue] = useState<string>('');
     const [syncInProgress, setSyncInProgress] = useState<boolean>(true);
     const router = useRouter();
@@ -58,14 +61,16 @@ const OperatorQuizPage: React.FC<IOperatorQuizPage> = (props) => {
                 return;
             }
 
+            const newGuessesState: OperatorComparisonResultV2[] = [res ,...guesses];
             setTextInputValue("")
-            localstorageHook.saveCurrentGuessesToStorage([res ,...guesses]);
+            localstorageHook.saveCurrentGuessesToStorage(newGuessesState);
             dispatch(setIsWorking(false));
             dispatch(addGuess(res));
             
             // Quiz is won
             if (res.isCorrect) {
                 localstorageHook.saveStatusToStorage(res.isCorrect)
+                recapHook.updateOperator(newGuessesState)
                 dispatch(setGameWon(res.isCorrect));
             }
         }

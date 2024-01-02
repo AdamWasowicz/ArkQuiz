@@ -7,7 +7,7 @@ interface IFooter {
 const Footer: React.FC<IFooter> = (props) => {
     return (
         <footer className={styles.footer + " " + props.className}>
-            Footer
+            
         </footer>
     )
 }

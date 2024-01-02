@@ -6,7 +6,8 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 interface INextQuizButton {
     onClick: () => void,
     id?: string,
-    className?: string
+    className?: string,
+    textContent?: string
 }
 
 const NextQuizButton: React.FC<INextQuizButton> = (props) => {
@@ -17,8 +18,7 @@ const NextQuizButton: React.FC<INextQuizButton> = (props) => {
             onClick={props.onClick}
             id={props.id}
         >
-            <h2 className={styles.text}>Next quiz</h2>
-
+            <h2 className={styles.text}>{props.textContent ?? "Next quiz"}</h2>
             <FontAwesomeIcon icon={faArrowRight} className={styles.icon}/>
         </div>
     )

@@ -8,15 +8,12 @@ const Navigation: React.FC = () => {
         <nav className={styles.navigation}>
             <div className={styles.content}>
                 <Link className={styles.logo} href='/'>
-                    <Title className={styles.logoHover}>
-                        Arkquiz
-                    </Title>
+                    <Title className={styles.logoHover}>Arkquiz</Title>
                 </Link>
 
                 <div className={styles.links}>
-                    <Link className={styles.link} href='/operator'>Operator</Link>
-                    <Link className={styles.link} href='/skill'>Skill</Link>
-                    <Link className={styles.link} href='/talent'>Talent</Link>
+                    <Link className={styles.link} href='/operator'>Quiz</Link>
+                    <Link className={styles.link} href='/recap'>Recap</Link>
                 </div>
             </div>  
         </nav>

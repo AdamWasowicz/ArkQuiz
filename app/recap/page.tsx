@@ -1,7 +1,7 @@
-import QuizRecapPage from "@/src/page/recap-page/quizRecapPage";
+import RecapPage from "@/src/page/recap-page/recapPage";
 
 const Page: React.FC = () => {
-    return <QuizRecapPage/>
+    return (<RecapPage/>)
 }
 
 export default Page;
