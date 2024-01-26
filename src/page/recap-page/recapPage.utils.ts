@@ -7,6 +7,7 @@ const useRecapLocalStorage = () => {
     const RECAP_OPERATOR = "RECAP_OPERATOR";
     const RECAP_SKILL = "RECAP_SKILL";
     const RECAP_TALENT = "RECAP_TALENT";
+    const TIME_TO_LIVE_DAYS = 14;
 
     const get = (id: string): RecapData[] => {
         //if (typeof window !== 'undefined') { return [] }
@@ -15,14 +16,23 @@ const useRecapLocalStorage = () => {
         if (data === null) { return [] }
         else { 
             const raw: RecapData[] = JSON.parse(data) 
-            const correct: RecapData[] = raw.map((item: RecapData) => {
+            let correct: RecapData[] = raw.map((item: RecapData) => {
                 const dateObj = new Date(item.date);
                 return {
                     date: new Date(dateObj.getFullYear(), dateObj.getMonth(), dateObj.getDate()), 
                     numberOfTries: item.numberOfTries }
             })
 
-            console.log('get', id, correct)
+            // Remove outdated records
+            correct = correct.filter((item) => {
+            const dateObj = new Date(item.date);
+            const d = new Date()
+            d.setDate(new Date().getDate() - TIME_TO_LIVE_DAYS)
+
+            if (dateObj <= d) { return false; }
+            else { return true; }
+        })
+
             return correct;
         }
     }
@@ -33,14 +43,24 @@ const useRecapLocalStorage = () => {
         const date = new Date();
         const numberOfGuesses: number = data.length;
         const newEntry: RecapData = {
-            date: date,
+            // Get only year, month, date
+            date: new Date(date.getFullYear(), date.getMonth(), date.getDate()),
             numberOfTries: numberOfGuesses
         }
 
         let currentState: RecapData[] = get(id);
         currentState = [...currentState, newEntry];
 
-        console.log('update', id, currentState)
+        // Remove outdated records
+        currentState = currentState.filter((item) => {
+            const dateObj = new Date(item.date);
+            const d = new Date()
+            d.setDate(new Date().getDate() - TIME_TO_LIVE_DAYS)
+
+            if (dateObj <= d) { return false; }
+            else { return true; }
+        })
+
         localStorage.setItem(id, JSON.stringify(currentState))
     }
 

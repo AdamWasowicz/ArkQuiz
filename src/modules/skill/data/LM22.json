@@ -1,0 +1,19 @@
+{
+    "Id": "LM22",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Loyalty and Generosity"
+        },
+
+        {
+            "Number": 2,
+            "Name": "\"Courtesy Gift\""
+        },
+
+        {
+            "Number": 3,
+            "Name": "Lavish and Prodigal"
+        }
+    ]
+}

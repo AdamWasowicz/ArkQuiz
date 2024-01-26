@@ -1,0 +1,12 @@
+{
+    "Id": "LN10",
+    "Name": "Eyjafjalla the Hvít Aska",
+    "Rarity": 6,
+    "Class": "Medic",
+    "Branch": "Wandering",
+    "Attack_Range": "Ranged",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Caprinae",
+    "Faction": "Leithanien"
+}

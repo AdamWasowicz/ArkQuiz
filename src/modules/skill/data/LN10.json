@@ -1,0 +1,19 @@
+{
+    "Id": "LN10",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Soundless Sustenance"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Cloudmist Shelter"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Volcanic Echoes"
+        }
+    ]
+}

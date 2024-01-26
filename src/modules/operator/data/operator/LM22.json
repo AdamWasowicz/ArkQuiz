@@ -1,0 +1,12 @@
+{
+    "Id": "LM22",
+    "Name": "Swire the Elegant Wit",
+    "Rarity": 6,
+    "Class": "Specialist",
+    "Branch": "Merchant",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Feline",
+    "Faction": "Lungmen"
+}

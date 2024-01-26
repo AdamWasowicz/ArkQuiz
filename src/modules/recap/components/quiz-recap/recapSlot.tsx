@@ -15,23 +15,9 @@ export const RecapSlot: React.FC<IRecapSlot> = (props) => {
     const svgRef = useRef<SVGSVGElement>();
 
     const getPreviousDate = (date: Date, daysBack: number): Date => {
-        let y = date.getFullYear();
-        let m = date.getMonth();
-        let d = date.getDate();
-
-        d = d - daysBack;
-        if  (d < 1) {
-            d = 30 + d;
-            m = m - 1;
-        }
-
-        if (m < 0) {
-            m = 12 + m;
-            y = y - 1;
-        }
-
-        const output = new Date(y, m, d);
-        return output;
+        const dateCopy = new Date(date);
+        dateCopy.setDate(dateCopy.getDate() - daysBack);
+        return dateCopy;
     }
 
     const displayGraph = (aapl: RecapData[]): SVGSVGElement => {
@@ -52,8 +38,7 @@ export const RecapSlot: React.FC<IRecapSlot> = (props) => {
 
         // Create date range
         const lastDate: Date = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
-        const firstDate: Date = getPreviousDate(lastDate, 14);
-        console.log(aapl.map(item => item.numberOfTries))
+        const firstDate: Date = getPreviousDate(lastDate, 13);
         const yMaxValue = Math.max(...aapl.map(item => item.numberOfTries))
         
         // Declare the x (horizontal position) scale.

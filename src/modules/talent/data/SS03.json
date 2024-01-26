@@ -1,0 +1,9 @@
+{
+    "OperatorId": "SS03",
+    "Talents": [
+        {
+            "Name": "Cautious and Calculated",
+            "Description": "When not blocking an enemy, increases the DEF of melee Operators in the surrounding 8 tiles by +12%; while blocking enemies, increases this unit's DEF by +12%" 
+        }
+    ]
+}

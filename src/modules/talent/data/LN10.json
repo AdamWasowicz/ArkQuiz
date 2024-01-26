@@ -1,0 +1,14 @@
+{
+    "OperatorId": "LN10",
+    "Talents": [
+        {
+            "Name": "Replenishing Mist",
+            "Description": "Normal heals additionally restores HP and Elemental Damage per second equal to 10% of the original amount, lasting for 6 seconds (stacks up to 3 times)" 
+        },
+
+        {
+            "Name": "Volcanic Ash Remedy",
+            "Description": "Increases the Max HP of friendly units within range by +6%, and reduces the Elemental Damage they take by 12%" 
+        }
+    ]
+}

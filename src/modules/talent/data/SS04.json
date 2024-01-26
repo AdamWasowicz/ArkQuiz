@@ -1,0 +1,9 @@
+{
+    "OperatorId": "SS04",
+    "Talents": [
+        {
+            "Name": "Demolition Team's Code",
+            "Description": "After being deployed for 30 seconds, Max HP +15%" 
+        }
+    ]
+}

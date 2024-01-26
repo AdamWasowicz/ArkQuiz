@@ -1,0 +1,14 @@
+{
+    "OperatorId": "LM22",
+    "Talents": [
+        {
+            "Name": "Big Spendthrift",
+            "Description": "Gains 1 Coin upon skill activation (can be spent through skills). While a skill is active, gains 1 Coin each time DP is consumed by this unit's Trait, and +4% ATK (stacks up to 8 times)" 
+        },
+
+        {
+            "Name": "Cash Claps Calamity",
+            "Description": "Upon receiving lethal damage, as long as enough DP is available, consumes 5 DP to restore this unit's HP to 70%; the cost of this Talent doubles every time it is activated" 
+        }
+    ]
+}

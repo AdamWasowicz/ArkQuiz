@@ -1,0 +1,12 @@
+{
+    "Id": "SS03",
+    "Name": "Bryophyta",
+    "Rarity": 5,
+    "Class": "Guard",
+    "Branch": "Instructor",
+    "Attack_Range": "Ranged",
+    "Position": "Ground",
+    "Gender": "Male",
+    "Race": "Liberi",
+    "Faction": "Siesta"
+}

@@ -1,0 +1,12 @@
+{
+    "Id": "SS04",
+    "Name": "Poncirus",
+    "Rarity": 5,
+    "Class": "Vanguard",
+    "Branch": "Pioneer",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Liberi",
+    "Faction": "Siesta"
+}
