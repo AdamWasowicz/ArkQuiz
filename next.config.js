@@ -5,6 +5,8 @@ const environment = process.env.NODE_ENV;
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'standalone',
+
   reactStrictMode: true,
 
   sassOptions: {
