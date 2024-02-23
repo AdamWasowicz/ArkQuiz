@@ -12,7 +12,7 @@ const Navigation: React.FC = () => {
                 </Link>
 
                 <div className={styles.links}>
-                    <Link className={styles.link} href='/operator'>Quiz</Link>
+                    <Link className={styles.link} href='/operator'>Quizes</Link>
                     <Link className={styles.link} href='/recap'>Recap</Link>
                 </div>
             </div>  

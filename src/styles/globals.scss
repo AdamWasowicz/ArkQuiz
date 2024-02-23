@@ -12,16 +12,14 @@
 
   // Colors
   /// Primary
-  --primary-1000: #091532;
-  --primary-900: #122a65;
-  --primary-800: #1b3e97;
-  --primary-700: #2453ca;
-  --primary-600: #2d68fc;
-  --primary-500: #4277fc;
-  --primary-400: #6c95fd;
-  --primary-300: #81a4fd;
-  --primary-200: #abc3fe;
-  --primary-100: #d5e1fe;
+  --primary-800: #0d202d;
+  --primary-700: #1a415b;
+  --primary-600: #266188;
+  --primary-500: #3382b6;
+  --primary-400: #40a2e3;
+  --primary-300: #66b5e9;
+  --primary-200: #8cc7ee;
+  --primary-100: #b3daf4;
 
   //// Gray
   --gray-1000: #0a0a0a;
@@ -47,6 +45,14 @@
   --blueGray-200: #cbccda;
 
   //// Accent
+  
+  --accent-800: #322410;
+  --accent-700: #644821;
+  --accent-600: #966c31;
+  --accent-500: #c89042;
+  --accent-400: #FAB452;
+  --accent-300: #fbc375;
+  --accent-200: #fcd297;
 
   //// Other
   --correct: #32CD32;
@@ -58,4 +64,17 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+.page_content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+
+  > #mainContent {
+    display: flex;
+    flex-grow: 1;
+    background-color: red;
+  }
 }

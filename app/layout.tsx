@@ -22,11 +22,13 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
       <body>
         <ReduxProvider>
           <Director>
-            <Navigation/>
+            <div className='page_content'>
+              <Navigation/>
 
-            <main id="mainContent">{ children }</main>
+              <main id="mainContent">{ children }</main>
 
-            <Footer/>
+              <Footer/>
+            </div>
           </Director>
         </ReduxProvider>
       </body>

@@ -1,13 +1,13 @@
 .root {
     // Size and Position
-    width: 1000px;
+    max-width: 1100px;
     margin-left: auto;
     margin-right: auto;
     padding: 24px;
 
     // Background
-    background-color: var(--gray-600);
-    border: 2px solid var(--gray-500);
+    background-color: var(--gray-700);
+    border: 1px solid var(--gray-300);
 }
 
 .section {
@@ -36,8 +36,11 @@
         font-weight: 300;
         letter-spacing: 1px;
         color: white;
-        
 
+        &::marker {
+            color: var(--accent-400);
+        }
+        
         > span {
             // Size and Position
             margin-right: 16px;
@@ -45,7 +48,7 @@
             // Text
             font-family: var(--HeaderFont);
             font-size: 24px;
-            color: var(--primary-100);
+            color: var(--accent-400);
             letter-spacing: 2px;
         }
     }
