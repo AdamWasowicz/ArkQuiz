@@ -43,9 +43,9 @@ const QuizSearchBar: React.FC<IQuizSearchBar> = (props) => {
 
 
     return (
-        <div className={styles.searchBar}>
+        <div className={styles.root}>
             <div className={styles.main}>
-                <div className={styles.topPart}>
+                <div className={styles.searchBar_and_button}>
                     <input 
                         type='text'
                         disabled={isFormDisabled}
@@ -63,10 +63,11 @@ const QuizSearchBar: React.FC<IQuizSearchBar> = (props) => {
                         Guess
                     </button>
                 </div>
+
                 {
                     filteredOperatorHeaders.length > 0 &&
                     <div className={styles.searchResult}>
-                        <div className={styles.abs}>
+                        <div className={styles.results}>
                         {
                             filteredOperatorHeaders.length > 0 &&
                             filteredOperatorHeaders.map((item, key) => {
@@ -111,7 +112,7 @@ const SearchResultRow: React.FC<ISearchResultRow> = (props) => {
                 height={75}
             />
             
-            <p className={styles.p}>{operatorHeader.Name}</p>
+            <p className={styles.operatorName}>{operatorHeader.Name}</p>
         </div>
     )
 }

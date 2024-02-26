@@ -1,15 +1,19 @@
 .table {
     // Size and position
+    max-width: 1200px;
     width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 
     // Color
-    background-color: var(--gray-600);
-    border: 3px solid var(--gray-500);
+    background-color: var(--gray-500);
+    border: 1px solid var(--gray-400);
+
 
     // Text
     text-align: center;
     font-size: 100px;
-
 
     @media (max-width: 1200px) {
         //background-color: red;
@@ -18,17 +22,22 @@
     @media (max-width: 1050px) {
         //background-color: blue;
         font-size: 80px;
+        
     }
     @media (max-width: 900px) {
         //background-color: green;
         font-size: 60px;
     }
+
+    & > tbody {
+        display: table;
+        width: 100%;
+    }
 }
 
 .headerRow {
     // Size and Position
-    height: 40px;
-    width: 20%;
+    min-height: 40px;
 
     // Text
     color: white;
@@ -36,49 +45,52 @@
     letter-spacing: 2px;
     font-size: 0.16em;
     font-weight: 300;
+
+    // Background
+    background-color: var(--gray-700);
+}
+
+.columnGeneric {
+    padding: 8px;
+}
+
+.operatorTableColumnHeader {
+    width: 0px;
 }
 
 .smallSizedColumn {
-    width: 50px;
+    @extend .columnGeneric;
+    flex-grow: 1;
 }
 
 .mediumSizedColumn {
-    width: 100px;
+    @extend .columnGeneric;
+    flex-grow: 2;
 }
 
 .bigSizedColumn {
-    width: 150px;
+    @extend .columnGeneric;
+    flex-grow: 3;
 }
 
 .resultRow {
     font-family: var(--TextFont);
     font-size: 100px;
     font-weight: 400;
-    max-height: 75px;
-
-    @media (max-width: 600px) {
-        //background-color: green;
-        font-size: 50px;
-    }
 }
 
 .operatorColumn {
     background-color: rgb(54, 51, 51);
-    width: 100%;
-    height: 75px;
     display: block;
+    width: 100px;
+    height: fit-content;
 
     & > img {
         background: linear-gradient(
             180deg, 
-            var(--gray-100) 0%,
-            var(--gray-500) 100%);
+            var(--primary-400) 0%,
+            var(--gray-800) 100%);
         object-fit: cover;
-    }
-
-    @media (max-width: 600px) {
-        //background-color: green;
-        height: 45px;
     }
 }
 
@@ -87,11 +99,10 @@
     font-size: 0.20em;
     font-weight: 400;
     max-height: 75px;
-    padding: 10px;
+    padding: 8px;
     overflow: hidden;
 
     @media (max-width: 600px) {
-        //background-color: green;
         height: 45px;
     }
 }
@@ -115,4 +126,9 @@
     &:hover {
         cursor: pointer;
     }
+}
+
+.test {
+    display: table;
+    overflow: scroll;
 }

@@ -129,7 +129,7 @@ const TalentQuizPage: React.FC<ITalentPage> = (props) => {
 
 
     return (
-        <PageLayout>
+        <PageLayout className={styles.extentedPage}>
             <TalentQuizMainPanel/>
 
             {

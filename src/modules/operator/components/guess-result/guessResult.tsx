@@ -28,10 +28,10 @@ const OperatorGuessResult: React.FC<IOperatorGuessResult> = (props) => {
         <table className={`${styles.table} ${props.className}`}>
             <tbody>
                 <tr className={styles.headerRow}>
-                    <th className={styles.smallSizedColumn}>Operator</th>
+                    <th className={styles.operatorTableColumnHeader}></th>
                     <th className={styles.smallSizedColumn}>Rarity</th>
                     <th className={styles.mediumSizedColumn}>Class</th>
-                    <th className={styles.mediumSizedColumn}>Branch</th>
+                    <th className={styles.smallSizedColumn}>Branch</th>
                     <th className={styles.bigSizedColumn}>Attack Range</th>
                     <th className={styles.mediumSizedColumn}>Position</th>
                     <th className={styles.mediumSizedColumn}>Gender</th>
@@ -107,6 +107,7 @@ const OperatorGuessResultRow: React.FC<IOperatorGuessResultRow> = (props) => {
                 />
             </td>
 
+            
             {
                 dataToDisplay.map((value, key) => {
                     keyOutside = key;

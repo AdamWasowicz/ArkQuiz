@@ -11,7 +11,8 @@
             180deg, 
             var(--primary-200) 0%,
             var(--gray-800) 100%);
-    border: 3px solid var(--primary-300);
+    border: 3px solid var(--accent-400);
+    border-radius: 10px;
 }
 
 .resultHeader {
@@ -43,7 +44,7 @@
     font-size: 0.2em;
     font-weight: 400;
     //color: rgb(129, 218, 245);
-    color: var(--primary-400);
+    color: var(--accent-400);
     text-align: center;
 }
 
