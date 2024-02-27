@@ -13,6 +13,11 @@
             var(--gray-800) 100%);
     border: 3px solid var(--accent-400);
     border-radius: 10px;
+
+    @media (max-width: 400px) {
+        width: 140px;
+        height: 140px;
+    }
 }
 
 .resultHeader {

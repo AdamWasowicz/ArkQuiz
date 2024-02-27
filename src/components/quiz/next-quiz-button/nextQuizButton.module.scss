@@ -11,6 +11,7 @@
 
     // Text
     color: white;
+    font-size: 48px;
 
     // Flex
     display: flex;
@@ -51,15 +52,20 @@
         color: var(--accent-400);
     }
 
+    @media (max-width: 400px) {
+        flex-direction: column;
+        text-align: center;
+        font-size: 32px;
+        row-gap: 12px;
+    }
 }
 
 .text {
     // Text
     font-family: var(--HeaderFont);
-    font-size: 48px;
+    font-size: 1em;
     font-weight: 400;
     letter-spacing: 2px;
-    //color: white;
 }
 
 .icon {
@@ -67,7 +73,7 @@
     padding: 12px;
 
     // Text
-    font-size: 64px;
+    font-size: 2em;
     color: white;
 
     // Background
@@ -77,4 +83,5 @@
 
     // Other
     transition: 0.3s;
+
 }

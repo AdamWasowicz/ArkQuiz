@@ -1,3 +1,44 @@
+@keyframes beDark {
+    0% {
+        background-color: var(--gray-400);
+    }
+    100% {
+        background-color: var(--gray-400);
+    }
+}
+
+@keyframes fadeInWrong {
+    0% {
+      background-color: var(--gray-600);
+    }
+    90% {
+        background-color: var(--gray-600);
+    }
+    100% {
+        background-color: var(--wrong);
+    }
+}
+
+@keyframes fadeInPartial {
+    0% {
+      background-color: var(--gray-200);
+    }
+    100% {
+        background-color: var(--partial);
+    }
+}
+
+@keyframes fadeInCorrect{
+    0% {
+      background-color: var(--gray-200);
+    }
+    100% {
+        background-color: var(--correct);
+    }
+}
+
+
+
 .table {
     // Size and position
     max-width: 1200px;
@@ -6,32 +47,21 @@
     margin-right: auto;
     display: block;
 
-    // Color
+    // Background
     background-color: var(--gray-500);
     border: 1px solid var(--gray-400);
-
+    overflow: auto;
+    transform:  rotateX(180deg);
+    scrollbar-width: thin;
 
     // Text
     text-align: center;
     font-size: 100px;
 
-    @media (max-width: 1200px) {
-        //background-color: red;
-        font-size: 90px;
-    }
-    @media (max-width: 1050px) {
-        //background-color: blue;
-        font-size: 80px;
-        
-    }
-    @media (max-width: 900px) {
-        //background-color: green;
-        font-size: 60px;
-    }
-
     & > tbody {
         display: table;
         width: 100%;
+        transform:  rotateX(180deg);
     }
 }
 
@@ -83,7 +113,7 @@
     background-color: rgb(54, 51, 51);
     display: block;
     width: 100px;
-    height: fit-content;
+    height: 100px;
 
     & > img {
         background: linear-gradient(
@@ -101,11 +131,15 @@
     max-height: 75px;
     padding: 8px;
     overflow: hidden;
-
-    @media (max-width: 600px) {
-        height: 45px;
-    }
 }
+
+// @for $i from 1 through 10 {
+//     .column:nth-child(#{$i}n) {
+//         animation: beDark, fadeOut;
+//         animation-duration: #{$i * 0.5}s, 1s;
+//         animation-iteration-count: 1, 1;
+//     }
+// }
 
 .correct {
     @extend .column;

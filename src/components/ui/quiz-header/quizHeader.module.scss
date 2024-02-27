@@ -9,4 +9,8 @@
     color: white;
     text-align: center;
     letter-spacing: 2px;
+
+    @media (max-width: 400px) {
+        font-size: 0.48em;
+    }
 }

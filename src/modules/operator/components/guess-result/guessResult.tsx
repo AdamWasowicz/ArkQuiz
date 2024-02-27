@@ -25,7 +25,7 @@ const OperatorGuessResult: React.FC<IOperatorGuessResult> = (props) => {
     const { guesses } = props;
 
     return (
-        <table className={`${styles.table} ${props.className}`}>
+        <table className={`${styles.table} ${props.className ?? ''}`}>
             <tbody>
                 <tr className={styles.headerRow}>
                     <th className={styles.operatorTableColumnHeader}></th>
@@ -46,6 +46,7 @@ const OperatorGuessResult: React.FC<IOperatorGuessResult> = (props) => {
                             operatorData={item.operator}
                             diffrences={item.diffrences}
                             key={key}
+                            id={key}
                         />
                     })
                 }
@@ -61,6 +62,7 @@ const OperatorGuessResult: React.FC<IOperatorGuessResult> = (props) => {
 interface IOperatorGuessResultRow {
     operatorData: Operator,
     diffrences: OperatorComparisonDiffrenceV2
+    id: number
 }
 
 /**
@@ -96,7 +98,7 @@ const OperatorGuessResultRow: React.FC<IOperatorGuessResultRow> = (props) => {
     let keyOutside: number = 0;
 
     return (
-        <tr className={styles.resultRow}>
+        <tr className={styles.resultRow + " " + (props.id === 0 ? styles.newestRow : '')}>
             <td className={styles.operatorColumn}>
                 <Image 
                     src={routeToOperatorIcon(operatorData.Id)} 
