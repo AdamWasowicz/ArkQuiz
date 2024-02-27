@@ -1,0 +1,14 @@
+{
+    "OperatorId": "SI07",
+    "Talents": [
+        {
+            "Name": "Sharp as a Beast's Fang",
+            "Description": "Continuous attacks gradually ignore increasing amounts of the target's DEF, up to a maximum of 50% of its DEF (each attack increases the DEF ignored by 10%, additive). This bonus is lost if no attacks have been made within 8 seconds" 
+        },
+
+        {
+            "Name": "Heavy as the Swamp's Mire",
+            "Description": "When damaging an enemy for the first time while a skill is active, ATK increases to 160% and Slows targets for 3 seconds" 
+        }
+    ]
+}

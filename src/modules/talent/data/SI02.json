@@ -1,0 +1,9 @@
+{
+    "OperatorId": "SI02",
+    "Talents": [
+        {
+            "Name": "Born of the Biting Cold",
+            "Description": "After being deployed for 20 seconds, this unit gains ATK +15% and Status Resistance" 
+        }
+    ]
+}

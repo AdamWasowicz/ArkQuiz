@@ -1,0 +1,12 @@
+{
+    "Id": "SI07",
+    "Name": "Typhon",
+    "Rarity": 6,
+    "Class": "Sniper",
+    "Branch": "Besieger",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Sarkaz",
+    "Faction": "Sami"
+}
