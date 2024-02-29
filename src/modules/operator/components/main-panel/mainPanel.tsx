@@ -7,8 +7,8 @@ import Hints from '@/src/components/quiz/hints/hints';
 import { specifyUndiscoveredOperatorTraits } from '../../lib/client-utils';
 import { setHints } from '@/src/redux/features/operator-slice';
 import useLocalStorage from "../../../../page/operator-page/operatorQuizPage.utils";
-import QuizMainPanelLayout from '@/src/layouts/quiz-header-layout/quizMainPanelLayout';
 import QuizHeader from '@/src/components/ui/quiz-header/quizHeader';
+import QuizMainPanelLayout from '@/src/layouts/quiz-main-panel-layout/quizMainPanelLayout';
 
 interface IOperatorQuizMainPanel {
     id?: string,
@@ -42,6 +42,66 @@ const OperatorQuizMainPanel: React.FC<IOperatorQuizMainPanel> = (props) => {
                 setAreHintsLoading(false);
             })
     }
+
+    return (
+        <QuizMainPanelLayout>
+            <h1>Guess the operator</h1>
+
+            <Fragment>
+                {
+                    gameWon === true &&
+                    <Fragment>
+                        <h3>Today operator was</h3>
+
+                        <Image
+                            className={styles.image}
+                            src={routeToOperatorIcon(guesses[0].operator.Id)}
+                            alt={guesses[0].operator.Id}
+                            width={180}
+                            height={180}
+                        />
+
+                        <h2>{guesses[0].operator.Name}</h2>
+
+                        <p>
+                            This operator took you {guesses.length} { guesses.length > 1 ? 'guesses' : 'guess'}
+                        </p>
+                    </Fragment>
+                }
+
+                {
+                    gameWon === false &&
+                    <p>Current number of guesses: <span>{guesses.length}</span></p>
+                }
+                
+                {
+                    gameWon === false &&
+                    <Hints
+                        currentNumberForHints={guesses.length}
+                        requiredNumberForHints={5}
+                        hints={hints === undefined ? undefined : [
+                            {
+                                buttonLabel: 'Trait',
+                                hintText: hints?.trait ?? ''
+                            },
+
+                            {
+                                buttonLabel: 'Skill',
+                                hintText: hints?.skill ?? ''
+                            },
+
+                            {
+                                buttonLabel: 'Talent',
+                                hintText: hints?.talent ?? ''
+                            }
+                        ]}
+                        onLoadData={fetchHints}
+                        isLoading={areHintsLoading}
+                    />
+                }
+            </Fragment>
+        </QuizMainPanelLayout>
+    )
 
     return (
         <QuizMainPanelLayout id={props.id} className={props.className}>
