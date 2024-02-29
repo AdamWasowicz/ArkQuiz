@@ -28,17 +28,15 @@ interface IGuessResultRow {
 const GuessResultRow: React.FC<IGuessResultRow> = (props) => {
     return (
         <div className={props.guess.IsCorrect ? styles.guessRight : styles.guessWrong}>
-            <div className={styles.content}>
-                <Image
-                    className={styles.image}
-                    src={routeToOperatorIcon(props.guess.OperatorHeader.Id)}
-                    alt={props.guess.OperatorHeader.Name}
-                    width={100}
-                    height={100}
-                />
+            <Image
+                className={styles.image}
+                src={routeToOperatorIcon(props.guess.OperatorHeader.Id)}
+                alt={props.guess.OperatorHeader.Name}
+                width={100}
+                height={100}
+            />
 
-                <p className={styles.rowText}>{props.guess.OperatorHeader.Name}</p>
-            </div>
+            <p className={styles.rowText}>{props.guess.OperatorHeader.Name}</p>
         </div>
     )
 }

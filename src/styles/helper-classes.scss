@@ -1,2 +1,13 @@
 .center { text-align: center; margin-left: auto; margin-right: auto; }
 .displayBlock { display: block; }
+
+.operatorImageBackground {
+    // Background
+    background: linear-gradient(
+        180deg, 
+        var(--primary-400) 0%,
+        var(--gray-800) 100%);
+    object-fit: cover;
+    border: 2px solid var(--gray-300);
+    border-radius: 10px;
+}

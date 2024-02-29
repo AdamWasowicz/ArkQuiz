@@ -74,14 +74,16 @@
 
     // Text
     font-size: 2em;
-    color: white;
+    color: var(--gray-600);
 
     // Background
-    background-color: var(--primary-500);
+    background-color: white;
     border-radius: 100%;
-    border: 2px solid var(--primary-700);
+    border: 2px solid transparent;
 
     // Other
     transition: 0.3s;
+    font-size: 32px;
 
+    
 }
