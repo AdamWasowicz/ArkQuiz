@@ -25,13 +25,13 @@ const OperatorGuessResult: React.FC<IOperatorGuessResult> = (props) => {
     const { guesses } = props;
 
     return (
-        <table className={`${styles.table} ${props.className}`}>
+        <table className={`${styles.table} ${props.className ?? ''}`}>
             <tbody>
                 <tr className={styles.headerRow}>
-                    <th className={styles.smallSizedColumn}>Operator</th>
+                    <th className={styles.operatorTableColumnHeader}></th>
                     <th className={styles.smallSizedColumn}>Rarity</th>
                     <th className={styles.mediumSizedColumn}>Class</th>
-                    <th className={styles.mediumSizedColumn}>Branch</th>
+                    <th className={styles.smallSizedColumn}>Branch</th>
                     <th className={styles.bigSizedColumn}>Attack Range</th>
                     <th className={styles.mediumSizedColumn}>Position</th>
                     <th className={styles.mediumSizedColumn}>Gender</th>
@@ -46,6 +46,7 @@ const OperatorGuessResult: React.FC<IOperatorGuessResult> = (props) => {
                             operatorData={item.operator}
                             diffrences={item.diffrences}
                             key={key}
+                            id={key}
                         />
                     })
                 }
@@ -61,6 +62,7 @@ const OperatorGuessResult: React.FC<IOperatorGuessResult> = (props) => {
 interface IOperatorGuessResultRow {
     operatorData: Operator,
     diffrences: OperatorComparisonDiffrenceV2
+    id: number
 }
 
 /**
@@ -96,7 +98,7 @@ const OperatorGuessResultRow: React.FC<IOperatorGuessResultRow> = (props) => {
     let keyOutside: number = 0;
 
     return (
-        <tr className={styles.resultRow}>
+        <tr className={styles.resultRow + " " + (props.id === 0 ? styles.newestRow : '')}>
             <td className={styles.operatorColumn}>
                 <Image 
                     src={routeToOperatorIcon(operatorData.Id)} 
@@ -107,6 +109,7 @@ const OperatorGuessResultRow: React.FC<IOperatorGuessResultRow> = (props) => {
                 />
             </td>
 
+            
             {
                 dataToDisplay.map((value, key) => {
                     keyOutside = key;

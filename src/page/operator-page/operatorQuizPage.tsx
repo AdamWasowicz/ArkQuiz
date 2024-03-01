@@ -151,7 +151,7 @@ const OperatorQuizPage: React.FC<IOperatorQuizPage> = (props) => {
 
 
     return (
-        <PageLayout>
+        <PageLayout className={'extendedVertical'}>
             <OperatorQuizMainPanel className={styles.mainPanel}/>
 
             {

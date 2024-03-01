@@ -1,15 +1,21 @@
 .root {
+    // Size and Position
+    padding: 24px;
 
+    // Flex
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
 }
 
 .textContainer {
     // Size and Position
-    padding: 10px;
-    padding-bottom: 36px;
+    padding: 20px;
 
     // Text
     text-align: center;
 
     // Background
-    background-color: var(--gray-600);
+    background-color: var(--gray-700);
+    border: 2px solid var(--gray-400);
 }

@@ -1,0 +1,81 @@
+.root {
+    // Size and Position
+    width: 60%;
+    padding: 28px;
+    font-size: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 36px;
+
+    // Color
+    background-color: var(--gray-700);
+    border: 2px solid var(--gray-400);
+
+    @media (max-width: 1200px) {
+        //background-color: red;
+        font-size: 90px;
+        width: 65%;
+    }
+    @media (max-width: 1050px) {
+        //background-color: blue;
+        font-size: 80px;
+        width: 75%;
+    }
+    @media (max-width: 900px) {
+        //background-color: green;
+        font-size: 70px;
+        width: 95%;
+    }
+
+    & > h1 {
+        // Size and Position
+        margin-bottom: 24px;
+
+        // Text
+        font-family: var(--HeaderFont);
+        font-size: 0.64em;
+        font-weight: 300;
+        color: white;
+        text-align: center;
+        letter-spacing: 2px;
+
+        @media (max-width: 400px) {
+            font-size: 0.48em;
+        }
+    }
+
+    & >h2 {
+        // Size and Position
+        margin-bottom: 12px;
+
+        // Text
+        font-family: var(--TextFont);
+        font-size: 0.36em;
+        font-weight: 400;
+        color: white;
+        text-align: center;
+        letter-spacing: 2px;
+    }
+
+    & > h3 {
+        // Size and Position
+        margin: 12px;
+
+        // Text
+        font-family: var(--HeaderFont);
+        font-size: 0.2em;
+        font-weight: 300;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        letter-spacing: 3px;
+    }
+
+    & > p {
+        // Text
+        font-family: var(--TextFont);
+        font-size: 0.25em;
+        font-weight: 400;
+        color: var(--accent-400);
+        text-align: center;
+    }
+}

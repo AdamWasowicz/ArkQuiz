@@ -1,6 +1,5 @@
 ## Pending
-- Create some good UI (now it's just a placeholder)
-- Custom 404 page
+- Replace branch and class names with icons with hover text over them
 
 ## Working on it
-- Pity system (guesing medics skill is hell, most of them look the same)
+- Custom 404 page

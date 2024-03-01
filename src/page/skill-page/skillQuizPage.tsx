@@ -131,7 +131,7 @@ const SkillQuizPage: React.FC<ISkillPage> = (props) => {
 
 
     return (
-        <PageLayout>
+        <PageLayout className={'extendedVertical'}>
             <SkillQuizMainPanel/>
 
             {

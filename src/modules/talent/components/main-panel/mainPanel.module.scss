@@ -1,56 +1,10 @@
-.result {
-    text-align: center;
-}
-
-.resultHeader {
-    // Size and Position
-    margin: 8px;
-
-    // Text
-    font-family: var(--HeaderFont);
-    font-size: 0.2em;
-    font-weight: 300;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    letter-spacing: 3px;
-}
-
-.talentName {
-    // Size and Position
-    margin-bottom: 24px;
-
-    // Text
-    font-family: var(--TextFont);
-    font-size: 0.36em;
-    font-weight: 400;
-    color: white;
-    text-align: center;
-    letter-spacing: 2px;
-}
-
-.resultP {
-    // Text
-    font-family: var(--TextFont);
-    font-size: 0.2em;
-    font-weight: 400;
-    //color: rgb(129, 218, 245);
-    color: var(--primary-400);
-    text-align: center;
-}
-
-.amountOfGuesses {
-    // Text
-    font-family: var(--TextFont);
-    font-size: 0.28em;
-    font-weight: 400;
-    color: var(--primary-400);
-    text-align: center;
-}
-
 .talentDescription {
     // Size and Position
-    padding: 20px;
+    width: 80%;
+    padding: 24px;
     margin-bottom: 16px;
+    margin-left: auto;
+    margin-right: auto;
 
     // Text
     font-size: 24px;
@@ -59,6 +13,24 @@
     color: white;
 
     // Background
-    background-color: var(--gray-700);
-    border: 2px solid var(--primary-200);
+    background-color: var(--gray-600);
+    border: 2px solid var(--gray-300);
+
+    @media (max-width: 600px) {
+        width: 100%;
+    }
+}
+
+.operatorImage {
+    width: 200px;
+    height: 200px;
+
+    // Background
+    background: linear-gradient(
+        180deg, 
+        var(--primary-400) 0%,
+        var(--gray-800) 100%);
+    object-fit: cover;
+    border: 2px solid var(--accent-400);
+    border-radius: 10px;
 }

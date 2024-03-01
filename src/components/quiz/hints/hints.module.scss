@@ -20,6 +20,11 @@
     flex-direction: row;
     column-gap: 16px;
 
+    @media (max-width: 400px) {
+        flex-direction: column;
+        row-gap: 12px;
+    }
+
     > button {
         // Size and Position
         padding: 12px;
@@ -32,35 +37,57 @@
         font-family: var(--HeaderFont);
         letter-spacing: 2px;
         font-size: 20px;
-        color: var(--primary-100);
+        color: var(--gray-200);
 
         // Background
         background-color: transparent;
-        border: 2px solid var(--primary-100);
+        border: 2px solid var(--gray-200);
+        border-radius: 10px;
 
         // Other
-        transition: 0.3s;
+        transition: 0.2s;
 
         &:hover {
 
             //Text
-            color: var(--primary-400);
+            color: var(--accent-400);
 
             // Background
-            border-color: var(--primary-400);
-            background-color: var(--blueGray-700);
+            border-color: var(--accent-400);
+            background-color: var(--gray-800);
 
             // Other
             cursor: pointer;
-            transition: 0.3s;
+            transition: 0.2s;
+        }
+
+        &.current {
+            border-color: var(--primary-400);
+            color: var(--primary-400);
+            background-color: var(--gray-800);
+
+            &:hover {
+                //Text
+                color: var(--accent-400);
+    
+                // Background
+                border-color: var(--accent-400);
+                background-color: var(--gray-800);
+    
+                // Other
+                cursor: pointer;
+                transition: 0.2s;
+            }
         }
     }
+
+
 }
 
 
 .hintText {
     // Size and Position
-    padding: 20px;
+    padding: 28px;
     margin-top: 16px;
 
     // Text
@@ -71,8 +98,8 @@
     text-align: center;
 
     // Background
-    background-color: var(--gray-700);
-    border: 2px solid var(--primary-200);
+    background-color: var(--gray-800);
+    border: 2px solid var(--primary-400);
 }
 
 .button {

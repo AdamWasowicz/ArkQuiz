@@ -1,11 +1,6 @@
 .root {
     // Size and Position
     width: 100%;
-    min-height: 100vh;
-    padding: 24px 12px 48px 12px;
-    background: linear-gradient(
-        180deg, 
-        var(--gray-700) 0%,
-        var(--primary-800) 85%, 
-        var(--gray-700) 100%);
+    padding: 24px 24px 32px 24px;
+    background-color: var(--gray-600);
 }

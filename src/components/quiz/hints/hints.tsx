@@ -17,16 +17,28 @@ interface IHints {
 const Hints: React.FC<IHints> = (props) => {
     const [text, setText] = useState<string>('');
     const [showHints, setShowHints] = useState<boolean>(false);
+    const [currentHintId, setCurrentHintId] = useState<number>(-1);
 
+    // Toggle visibility or change current hint text
     const onHintClick = (id: number) => {
         if (props.hints === undefined) {
             return;
         }
-        text !== '' 
-            ? setText('') 
-            : setText(props.hints[id].hintText);
+
+        setCurrentHintId(id !== currentHintId ? id : -1);
+
+        if (text === '') {
+            setText(props.hints[id].hintText);
+        }
+        else {
+            const newText = props.hints[id].hintText;
+            text === newText
+                ? setText('')
+                : setText(newText);
+        }
     }
 
+    // Load hints
     const onButtonClick = () => {
         if (props.hints === undefined) {
             props.onLoadData();
@@ -59,7 +71,11 @@ const Hints: React.FC<IHints> = (props) => {
                 <div className={styles.hintsContainer}>
                     {
                         props.hints!.map((hint, key) => 
-                            <button key={key} onClick={() => onHintClick(key)}>
+                            <button 
+                                className={currentHintId === key ?styles.current : ''} 
+                                key={key} 
+                                onClick={() => onHintClick(key)}
+                            >
                                 {hint.buttonLabel}
                             </button>
                         )

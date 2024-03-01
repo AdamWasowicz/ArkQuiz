@@ -2,8 +2,8 @@
     // Size and Position
     width: fit-content;
     padding: 20px;
-    padding-left: 28px;
-    padding-right: 28px;
+    padding-left: 48px;
+    padding-right: 48px;
     margin-top: 32px;
     margin-bottom: 32px;
     margin-left: auto;
@@ -11,6 +11,7 @@
 
     // Text
     color: white;
+    font-size: 48px;
 
     // Flex
     display: flex;
@@ -20,40 +21,51 @@
     column-gap: 16px;
 
     // Background
-    background-color: var(--gray-600);
-    border: 2px solid var(--gray-500);
+    border: none;
+    background-color: var(--gray-700);
+    border: 3px solid var(--gray-200);
+    border-radius: 15px;
 
     // Other
-    transition: 0.3s;
+    transition: 0.2s;
 
     &:hover{
         // Text
-        color: var(--primary-200);
+        color: var(--accent-400);
 
         // Background
-        border-color: var(--primary-200);
-        background-color: var(--blueGray-800);
+        border-color: var(--accent-400);
+        background-color: var(--gray-800);
 
         // Other
         cursor: pointer;
-        transition: 0.3s;
+        transition: 0.2s;
+    }
+
+    & > svg {
+        border-width: 3px;
     }
 
     &:hover > svg {
-        background-color: var(--blueGray-800);
-        border-color: var(--primary-200);
-        color: var(--primary-200);
+        border-color: var(--accent-400);
+        background-color: var(--gray-700);
+        color: var(--accent-400);
     }
 
+    @media (max-width: 400px) {
+        flex-direction: column;
+        text-align: center;
+        font-size: 32px;
+        row-gap: 12px;
+    }
 }
 
 .text {
     // Text
     font-family: var(--HeaderFont);
-    font-size: 48px;
+    font-size: 1em;
     font-weight: 400;
     letter-spacing: 2px;
-    //color: white;
 }
 
 .icon {
@@ -61,14 +73,17 @@
     padding: 12px;
 
     // Text
-    font-size: 64px;
-    color: white;
+    font-size: 2em;
+    color: var(--gray-600);
 
     // Background
-    background-color: var(--primary-500);
+    background-color: white;
     border-radius: 100%;
-    border: 2px solid var(--primary-700);
+    border: 2px solid transparent;
 
     // Other
     transition: 0.3s;
+    font-size: 32px;
+
+    
 }

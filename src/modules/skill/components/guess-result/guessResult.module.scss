@@ -1,51 +1,77 @@
 .table {
     //Size and Position
     width: 100%;
-    
 }
 
 .resultRow {
     // Size and Position
-    width: 80%;
+    max-width: 900px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 16px;
+    padding: 16px;
+
+    // Flex
+    display: flex;
+    flex-direction: row;
+    column-gap: 24px;
+    row-gap: 12px;
+    align-items: center;
 
     // Text
     text-align: center;
+    color: white;
 
     // Background
-    border: 2px solid var(--gray-400);
+    border: 3px solid var(--gray-400);
+    background-color: var(--gray-800);
+    border-radius: 15px;
+
+    @media (max-width: 800px) {
+        flex-direction: column;
+    }
 }
 
 .guessRight {
     @extend .resultRow;
 
     // Background
-    background-color: var(--correct);
+    border-color: var(--correct);
 }
 
 .guessWrong {
     @extend .resultRow;
 
     // Background
-    background-color: var(--wrong);
-}
-
-.content {
-    // Size and Position
-    padding: 8px;
+    border-color: var(--wrong);
 }
 
 .image {
+    width: 100px;
+    height: 100px;
+
     // Background
-    
+    background: linear-gradient(
+        180deg, 
+        var(--primary-400) 0%,
+        var(--gray-800) 100%);
+    object-fit: cover;
+    border: 2px solid var(--gray-300);
 }
 
 .rowText {
+    // Size and position
+    display: block;
+    width: 100%;
+
     // Text
-    font-family: var(--TextFont);
-    font-size: 20px;
-    letter-spacing: 2px;
-    font-weight: 400;
+    font-family: var(--HeaderFont);
+    font-size: 48px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    color: inherit;
+
+    @media (max-width: 800px) {
+        font-size: 32px;
+    }
 }

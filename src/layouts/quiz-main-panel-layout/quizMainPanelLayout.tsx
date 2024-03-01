@@ -8,13 +8,13 @@ interface IQuizMainPanelLayout {
 
 const QuizMainPanelLayout: React.FC<IQuizMainPanelLayout> = (props) => {
     return (
-        <div
-            id={props.id}
-            className={`${styles.root}  ${props.className}`}
+        <div 
+            id={props.id} 
+            className={styles.root +  ' center ' + props.className}
         >
-            { props.children}
+            { props.children }
         </div>
     )
 }
 
-export default QuizMainPanelLayout;
+export default QuizMainPanelLayout

@@ -2,28 +2,31 @@
     // Size and Position
     padding: 24px;
     max-width: 1800px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
+    overflow: auto;
 
     // Background
-    background-color: var(--gray-600);
+    background-color: var(--gray-700);
 
     // Text
     text-align: center;
     color: white;
-    border: 2px solid var(--gray-500);
+    border: 2px solid var(--gray-400);
 }
 
 .svgContainer {
     // Size and Positon
+    min-width: 400px;
     margin-top: 24px;
+
 
     // Flex
     display: flex;
     flex-direction: row;
 
     min-width: 400px;
-    //border: 2px solid var(--gray-400);
 }
 
 .svg {

@@ -1,57 +1,17 @@
-.result {
-    text-align: center;
-}
-
 .image {
     // Size and Position
-    width: 180px;
-    height: 180px;
+    width: 200px;
+    height: 200px;
 
     background: linear-gradient(
             180deg, 
-            var(--primary-200) 0%,
+            var(--primary-400) 0%,
             var(--gray-800) 100%);
-    border: 3px solid var(--primary-300);
-}
+    border: 3px solid var(--accent-400);
+    border-radius: 10px;
 
-.resultHeader {
-    // Size and Position
-    margin: 24px;
-
-    // Text
-    font-family: var(--HeaderFont);
-    font-size: 0.2em;
-    font-weight: 300;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    letter-spacing: 3px;
-}
-
-.operatorName {
-    // Text
-    font-family: var(--TextFont);
-    font-size: 0.36em;
-    font-weight: 400;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    letter-spacing: 2px;
-}
-
-.resultP {
-    // Text
-    font-family: var(--TextFont);
-    font-size: 0.2em;
-    font-weight: 400;
-    //color: rgb(129, 218, 245);
-    color: var(--primary-400);
-    text-align: center;
-}
-
-.amountOfGuesses {
-    // Text
-    font-family: var(--TextFont);
-    font-size: 0.28em;
-    font-weight: 400;
-    color: var(--primary-400);
-    text-align: center;
+    @media (max-width: 400px) {
+        width: 140px;
+        height: 140px;
+    }
 }
