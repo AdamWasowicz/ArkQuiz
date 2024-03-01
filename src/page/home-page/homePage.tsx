@@ -18,7 +18,7 @@ const HomePage: React.FC = () => {
         <PageLayout>
             <div className={styles.root}>
                 <div className={styles.section}>
-                    <Header>What is Arkquiz?</Header>
+                    <Header className={styles.shrinkWhenTight}>What is Arkquiz?</Header>
 
                     <Paragraph>
                         It&apos;s an app for Arknights trivia quizes, made for fun by one developer. 
@@ -28,7 +28,7 @@ const HomePage: React.FC = () => {
                 </div>
 
                 <div className={styles.section}>
-                    <Header>Quizes</Header>
+                    <Header className={styles.shrinkWhenTight}>Quizes</Header>
 
                     <Paragraph>
                         There are several types of quizes, you can see them at the top of app. 
@@ -63,7 +63,7 @@ const HomePage: React.FC = () => {
                 </div>
 
                 <div className={styles.section}>
-                    <Header>Recap</Header>
+                    <Header className={styles.shrinkWhenTight}>Recap</Header>
 
                     <Paragraph>
                         Arkquiz keeps track of your scores over two weeks, you can see them in form of graph in recap section of app. 

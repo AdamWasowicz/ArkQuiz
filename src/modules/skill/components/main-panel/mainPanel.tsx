@@ -69,55 +69,6 @@ const SkillQuizMainPanel: React.FC<ISkillQuizMainPanel> = (props) => {
             </Fragment>
         </QuizMainPanelLayout>
     )
-
-    // return (
-    //     <QuizMainPanelLayout id={props.id} className={'center' + " " + props.className}>
-    //         <QuizHeader>Who has this skill?</QuizHeader>
-
-    //         <Fragment>
-    //             {
-    //                 skillHeader !== undefined &&
-    //                 <Image
-    //                     className={styles.skillImage}
-    //                     src={routeToSkillIcon(skillHeader)}
-    //                     alt={skillHeader.Id}
-    //                     width={150}
-    //                     height={150}
-    //                 />
-    //             }
-
-    //             {
-    //                 gameWon === true &&
-    //                 <div className={styles.result}>
-    //                     <h4 className={styles.resultHeader}>Today skill was</h4>
-    //                     <h4 className={styles.skillName}>{skillHeader?.Name}</h4>
-
-
-    //                     <h4 className={styles.resultHeader}>It belongs to</h4>
-    //                     <Image
-    //                         className={styles.operatorImage}
-    //                         src={routeToOperatorIcon(guesses[0].OperatorHeader.Id)}
-    //                         alt={guesses[0].OperatorHeader.Id}
-    //                         width={180}
-    //                         height={180}
-    //                     />
-    //                     <h4 className={styles.skillName}>{guesses[0].OperatorHeader.Name}</h4>
-
-    //                     <p className={styles.resultP}>
-    //                         This skill took you {guesses.length} {guesses.length > 1 ? 'gueses' : 'guess'}
-    //                     </p>
-    //                 </div>
-    //             }
-
-    //             {
-    //                 gameWon === false &&
-    //                 <h3 className={styles.amountOfGuesses}>
-    //                     Current number of guesses: <span>{guesses.length}</span>
-    //                 </h3>
-    //             }
-    //         </Fragment>
-    //     </QuizMainPanelLayout>
-    // )
 }
 
 export default SkillQuizMainPanel;

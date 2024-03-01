@@ -1,5 +1,5 @@
 ## Pending
-- Custom 404 page
+- Replace branch and class names with icons with hover text over them
 
 ## Working on it
-- Create some good UI (now it's just a placeholder)
+- Custom 404 page

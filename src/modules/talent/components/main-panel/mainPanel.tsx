@@ -59,36 +59,6 @@ const TalentQuizMainPanel: React.FC = () => {
             </Fragment>
         </QuizMainPanelLayout>
     )
-
-
-    // return (
-    //     <QuizMainPanelLayout className='center'>
-    //         <QuizHeader>Who has this talent?</QuizHeader>
-            
-    //         <Fragment>
-    //             {
-    //                 talentHeader !== undefined &&
-    //                 <div className={styles.talentDescription}>
-    //                     {talentHeader.Description}
-    //                 </div>
-    //             }
-
-    //             {
-    //                 gameWon == true
-    //                 ? <div className={styles.result}>
-    //                     <h4 className={styles.resultHeader}>Today talent was</h4>
-    //                     <h4 className={styles.talentName}>{talentHeader?.Name}</h4>
-    //                     <p className={styles.resultP}>
-    //                         This talent took you {guesses.length} {guesses.length > 1 ? 'guesses' : 'guess'}
-    //                     </p>
-    //                 </div>
-    //                 : <h3 className={styles.amountOfGuesses}>
-    //                     Current number of guesses: <span>{guesses.length}</span>
-    //                 </h3>
-    //             }
-    //         </Fragment>
-    //     </QuizMainPanelLayout>
-    // )
 }
 
 export default TalentQuizMainPanel;

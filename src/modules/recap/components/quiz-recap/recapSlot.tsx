@@ -31,8 +31,8 @@ export const RecapSlot: React.FC<IRecapSlot> = (props) => {
         // Other
         const axisTickFormat = d3.format('.0f');
         const formatTime = d3.utcFormat("%d.%m");
-        const svgBackgroundColor = "--gray-700";
-        const borderColor = "--gray-400"
+        const svgBackgroundColor = "var(--gray-800)";
+        const borderColor = "var(--gray-400)"
         const dotColor = "var(--primary-400)";
         const lineColor = "white";
 
@@ -57,7 +57,7 @@ export const RecapSlot: React.FC<IRecapSlot> = (props) => {
             .attr("width", width)
             .attr("height", height)
             .attr("viewBox", [0, 0, width, height])
-            .attr("style", `width: auto; height: auto; height: intrinsic; background-color: var(${svgBackgroundColor}); border: 2px solid var(${borderColor}); padding: 10px; margin-left: auto;
+            .attr("style", `width: auto; height: auto; height: intrinsic; background-color: ${svgBackgroundColor}; border: 2px solid ${borderColor}; padding: 10px; margin-left: auto;
             margin-right: auto;`);
 
         // Add the x-axis.
