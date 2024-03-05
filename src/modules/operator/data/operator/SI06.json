@@ -1,0 +1,12 @@
+{
+    "Id": "SI06",
+    "Name": "Valarqvin",
+    "Rarity": 5,
+    "Class": "Supporter",
+    "Branch": "Ritualist",
+    "Attack_Range": "Ranged",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Sarkaz",
+    "Faction": "Sami"
+}

@@ -1,6 +1,6 @@
 import { OperatorComparisonDiffrenceV2, OperatorComparisonResultV2, OperatorHeader, OperatorHints, RaceDescription } from '@/src/modules/operator/lib/types';
 import axios from 'axios';
-import { LOCAL_PATH_TO_OPERATOR_ICONS, LOCAL_PATH_TO_SKILL_ICONS } from './paths';
+import { LOCAL_PATH_TO_BRANCH_ICONS, LOCAL_PATH_TO_CLASS_ICONS, LOCAL_PATH_TO_OPERATOR_ICONS, LOCAL_PATH_TO_SKILL_ICONS } from './paths';
 import path from 'path';
 import { SkillComparisonResult, SkillHeader } from '../modules/skill/lib/types';
 import { TalentComparisonResult, TalentHeader } from '../modules/talent/lib/types';
@@ -37,6 +37,17 @@ export const routeToSkillIcon = (header: SkillHeader): string => {
     return `${path.join(...LOCAL_PATH_TO_SKILL_ICONS)}/${header.Id}_${header.Number}.webp`
 }
 
+export const routeToClassIcon = (id: string): string => {
+    return `${path.join(...LOCAL_PATH_TO_CLASS_ICONS)}/${id}.webp`
+}
+
+export const routeToBranchIcon = (branch: string, cName: string): string => {
+    const fileName = `${branch.trim().replace(' ', '_')}_${cName}`;
+    const output = `${path.join(...LOCAL_PATH_TO_BRANCH_ICONS)}/${fileName}.webp`;
+
+    return output;
+}
+
 // Operator
 /** 
  * Try submiting Operator guiz guess 
@@ -45,17 +56,12 @@ export const routeToSkillIcon = (header: SkillHeader): string => {
  * */
 export const submitOperatorGuess = async (id: string): Promise<OperatorComparisonResultV2 | undefined> => {
     const axiosClient = axios.create({
-        headers: {
-            'Content-Type': 'application/json'
-        }
+        headers: { 'Content-Type': 'application/json' }
     })
 
     const response = await axiosClient.post<OperatorComparisonResultV2>(
         SERVER_ROUTE_TO_OPERATOR_GUESS, 
-        {
-            id: id, 
-            timestamp: new Date().toString()
-        }
+        { id: id, timestamp: new Date().toString() }
     )
 
     if (response.status !== 200) {
@@ -72,9 +78,7 @@ export const submitOperatorGuess = async (id: string): Promise<OperatorCompariso
  */
 export const fetchOperatorRaceDescription = async (raceName: string): Promise<RaceDescription | undefined> => {
     const axiosClient = axios.create({
-        headers: {
-            'Content-Type': 'application/json'
-        }
+        headers: { 'Content-Type': 'application/json' }
     })
 
     const response = await axiosClient.get<RaceDescription>(

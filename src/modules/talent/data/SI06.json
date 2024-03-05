@@ -1,0 +1,14 @@
+{
+    "OperatorId": "SI06",
+    "Talents": [
+        {
+            "Name": "The One Who Reveals",
+            "Description": "During [Expeditioner's Jǫklumarkar], attacks deal an additional 30% of ATK as Necrosis damage" 
+        },
+
+        {
+            "Name": "The Reclusive One",
+            "Description": "ATK +6%, ASPD +6" 
+        }
+    ]
+}

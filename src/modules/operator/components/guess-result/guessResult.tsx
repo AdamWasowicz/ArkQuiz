@@ -1,7 +1,7 @@
 import { useAppDispatch, useAppSelector } from "@/src/redux/hooks";
 import { Operator, OperatorComparisonDiffrenceV2, OperatorComparisonResultV2 } from "../../lib/types";
 import styles from './guessResult.module.scss';
-import { routeToOperatorIcon } from "@/src/lib/client-to-server-functions";
+import { routeToBranchIcon, routeToClassIcon, routeToOperatorIcon } from "@/src/lib/client-to-server-functions";
 import Image from "next/image";
 import useUtils from "./guessResult.utils";
 import { useEffect } from "react";
@@ -74,16 +74,6 @@ const OperatorGuessResultRow: React.FC<IOperatorGuessResultRow> = (props) => {
     const raceArray = useAppSelector(state => state.operator.raceDescriptionArray);
     const currentGuesses = useAppSelector(state => state.operator.currentGuesses);
     const utils = useUtils();
-
-    const dataToDisplay = [
-        operatorData.Rarity,
-        operatorData.Class,
-        operatorData.Branch,
-        operatorData.Attack_Range,
-        operatorData.Position,
-        operatorData.Gender,
-    ]
-
     const diffrencesValues: number[] = Object.values(diffrences);
 
     useEffect(() => {
@@ -94,8 +84,6 @@ const OperatorGuessResultRow: React.FC<IOperatorGuessResultRow> = (props) => {
         getRaceData();
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [currentGuesses])
-
-    let keyOutside: number = 0;
 
     return (
         <tr className={styles.resultRow + " " + (props.id === 0 ? styles.newestRow : '')}>
@@ -109,24 +97,47 @@ const OperatorGuessResultRow: React.FC<IOperatorGuessResultRow> = (props) => {
                 />
             </td>
 
+            <td className={utils.getClassName(diffrencesValues[0])}>
+                { utils.getFieldAsString(operatorData.Rarity) }
+            </td>
+
+            <td className={styles.iconColumn + " " + utils.getClassName(diffrencesValues[1])}>
+                <Image 
+                    src={routeToClassIcon(operatorData.Class)} 
+                    alt={operatorData.Class}
+                    height={100}
+                    width={100}  
+                    title={operatorData.Class}              
+                />
+            </td>
+
+            <td className={styles.branchColumn + " " + utils.getClassName(diffrencesValues[2])}>
+                <Image 
+                    src={routeToBranchIcon(operatorData.Branch,operatorData.Class)} 
+                    alt={operatorData.Branch}
+                    height={100}
+                    width={100}
+                    title={operatorData.Branch}        
+                />
+            </td>
+
+            <td className={utils.getClassName(diffrencesValues[3])}>
+                {utils.getFieldAsString(operatorData.Attack_Range)}
+            </td>
+
+            <td className={utils.getClassName(diffrencesValues[4])}>
+                {utils.getFieldAsString(operatorData.Position)}
+            </td>
+
+            <td className={utils.getClassName(diffrencesValues[5])}>
+                {utils.getFieldAsString(operatorData.Gender)}
+            </td>
             
-            {
-                dataToDisplay.map((value, key) => {
-                    keyOutside = key;
-                    return <td 
-                            key={key}
-                            className={utils.getClassName(diffrencesValues[key])}
-                        >
-                            {utils.getFieldAsString(value)}
-                        </td>
-                })
-            }
-            
-            <td className={utils.getClassName(diffrencesValues[++keyOutside])} key={keyOutside}>
+            <td className={utils.getClassName(diffrencesValues[6])}>
                 { utils.getRaceDescription(operatorData.Race, raceArray) }
             </td>
 
-            <td className={utils.getClassName(diffrencesValues[++keyOutside])} key={keyOutside}>
+            <td className={utils.getClassName(diffrencesValues[7])}>
                 { operatorData.Faction }
             </td>
         </tr>
