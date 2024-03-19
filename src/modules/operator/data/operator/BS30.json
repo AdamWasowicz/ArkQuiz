@@ -1,0 +1,12 @@
+{
+    "Id": "BS30",
+    "Name": "Jessica the Liberated",
+    "Rarity": 6,
+    "Class": "Defender",
+    "Branch": "Sentinel Protector",
+    "Attack_Range": "Ranged",
+    "Position": "Ground",
+    "Gender": "Female",
+    "Race": "Feline",
+    "Faction": "Blacksteel"
+}

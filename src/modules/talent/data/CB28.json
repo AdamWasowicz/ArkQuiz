@@ -1,0 +1,9 @@
+{
+    "OperatorId": "CB28",
+    "Talents": [
+        {
+            "Name": "Not to be Outdone",
+            "Description": "If no attack is made for 2 seconds, the next attack deals 130% of ATK as Physical damage" 
+        }
+    ]
+}

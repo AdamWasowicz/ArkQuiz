@@ -1,0 +1,19 @@
+{
+    "Id": "BS30",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Hold the Line"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Covered Defense"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Saturation Burst"
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "OperatorId": "BS05",
+    "Talents": [
+        {
+            "Name": "Engineer's Backpack",
+            "Description": "Immediately restores 8 SP after activating a skill for the first time each battle" 
+        }
+    ]
+}

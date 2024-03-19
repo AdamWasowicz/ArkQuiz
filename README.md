@@ -22,5 +22,9 @@ Game ends when correct operatos was guessed, in that case whole row will be gree
 Try to guess whos skill is displayed. You will get indicator if you got it wrong (red) or right (green). Searching and selecting operator works as same as in "Operator quiz".
 Game ends when correct operatos was guessed, in that case row will be green.
 
+### Talent quiz
+Try to guess whos skill description is displayed. You will get indicator if you got it wrong (red) or right (green). Searching and selecting operator works as same as in "Operator quiz".
+Game ends when correct operatos was guessed, in that case row will be green.
+
 #### Important
 Game operates on one per day basis, so if you open app again during the same day then operator won't change. Game uses you local day, month and year to determine that day's operator.

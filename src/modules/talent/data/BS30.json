@@ -1,0 +1,14 @@
+{
+    "OperatorId": "BS30",
+    "Talents": [
+        {
+            "Name": "Adaptable",
+            "Description": "Can use a Mobile Riot Shield that lasts for 50s. The Mobile Riot Shield can only be deployed in the four adjacent tiles to <Operator Name>, and when deployed, <Operator Name> immediately turns to face the shield and the DEF of herself and units behind her +15%" 
+        },
+
+        {
+            "Name": "Charge and Release",
+            "Description": "When the Mobile Riot Shield takes damage, there is a 50% chance to restore 1 SP to <Operator Name>" 
+        }
+    ]
+}

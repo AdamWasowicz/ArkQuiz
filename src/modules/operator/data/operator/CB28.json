@@ -1,0 +1,12 @@
+{
+    "Id": "CB28",
+    "Name": "Coldshot",
+    "Rarity": 5,
+    "Class": "Sniper",
+    "Branch": "Hunter",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Elafia",
+    "Faction": "Columbia"
+}
