@@ -100,9 +100,7 @@ const SkillQuizPage: React.FC<ISkillPage> = (props) => {
         // Check if data is outdated
         // if so then delete current stored data
         if (localstorageHook.isDataOutdated()) {
-            localstorageHook.removeCurrentGuessesFromStorage();
-            localstorageHook.removeStatusFromStorage();
-            localstorageHook.removeSkillDateFromStorage();
+            localstorageHook.clearLocalStorage();
             return;
         }
 

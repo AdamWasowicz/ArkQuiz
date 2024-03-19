@@ -2,7 +2,7 @@ import { OperatorComparisonDiffrenceV2, OperatorComparisonResultV2, OperatorHead
 import axios from 'axios';
 import { LOCAL_PATH_TO_BRANCH_ICONS, LOCAL_PATH_TO_CLASS_ICONS, LOCAL_PATH_TO_OPERATOR_ICONS, LOCAL_PATH_TO_SKILL_ICONS } from './paths';
 import path from 'path';
-import { SkillComparisonResult, SkillHeader } from '../modules/skill/lib/types';
+import { SkillComparisonResult, SkillHeader, SkillHints } from '../modules/skill/lib/types';
 import { TalentComparisonResult, TalentHeader } from '../modules/talent/lib/types';
 
 const SERVER_ROUTE_TO_OPERATOR_GUESS = 'api/operator';
@@ -10,6 +10,7 @@ const SERVER_ROUTE_TO_OPERATOR_HEADERS = 'api/operator/headers';
 const SERVER_ROUTE_TO_OPERATOR_RACE = 'api/operator/race';
 const SERVER_ROUTE_TO_OPERATOR_HINTS = 'api/operator/hint';
 const SERVER_ROUTE_TO_SKILL_GUESS = 'api/skill';
+const SERVER_ROUTE_TO_SKILL_HINTS = 'api/skill/hint';
 const SERVER_ROUTE_TO_TALENT_GUESS = 'api/talent';
 
 /** Try fetching all Operator headers  */
@@ -198,6 +199,26 @@ export const fetchTodayOperatorHints = async (cs: OperatorComparisonDiffrenceV2)
         params: {
             timestamp: new Date().toString(),
             currentState: JSON.stringify(cs)
+        }
+    });
+
+    if (response.status !== 200) {
+        return undefined;
+    }
+
+    return response.data;
+}
+
+export const fetchTodaySkillHints = async(): Promise<SkillHints | undefined> => {
+    const axiosClient = axios.create({
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+
+    const response = await axiosClient.get<SkillHints>(SERVER_ROUTE_TO_SKILL_HINTS, {
+        params: {
+            timestamp: new Date().toString(),
         }
     });
 

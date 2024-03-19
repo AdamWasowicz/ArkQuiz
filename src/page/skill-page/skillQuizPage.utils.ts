@@ -1,4 +1,4 @@
-import { SkillComparisonResult } from "@/src/modules/skill/lib/types";
+import { SkillComparisonResult, SkillHints } from "@/src/modules/skill/lib/types";
 
 
 // Helper for localStorage
@@ -7,6 +7,7 @@ const useLocalstorage = () => {
     const SKILL_CURRENT_GUESSES = "SKILL_CURRENT_GUESSES";
     const SKILL_STATUS = "SKILL_STATUS";
     const SKILL_DATE = "SKILL_DATE";
+    const HINTS = "SKILL_HINTS";
 
     // SKILL_CURRENT_GUESSES
     const saveCurrentGuessesToStorage = (data: SkillComparisonResult[]) => {
@@ -93,12 +94,40 @@ const useLocalstorage = () => {
         return dateNC > dateFsC ? true : false;
     }
 
+    // Hints
+    const saveHintsToStorage = (data: SkillHints) => {
+        localStorage.setItem(HINTS, JSON.stringify(data));
+    }
+
+    const getHintsFromStorage = (): SkillHints | undefined => {
+        const data =  localStorage.getItem(HINTS);
+        if (data === null) {
+            return undefined;
+        }
+        else {
+            const out: SkillHints = JSON.parse(data);
+            return out;
+        }
+    }
+
+    const removeHintsFromStorage = () => {
+        localStorage.removeItem(HINTS);
+    }
+
+    const clearLocalStorage = () => {
+        removeCurrentGuessesFromStorage();
+        removeHintsFromStorage();
+        removeSkillDateFromStorage();
+        removeStatusFromStorage();
+    }
+
     return {
         saveCurrentGuessesToStorage, getCurrentGuessesFromStorage,
         saveStatusToStorage, getStatusFromStorage,
         saveSkillDateToStorage, getSkillDateFromStorage,
         isDataOutdated,
-        removeCurrentGuessesFromStorage, removeStatusFromStorage, removeSkillDateFromStorage
+        getHintsFromStorage, saveHintsToStorage, removeHintsFromStorage,
+        clearLocalStorage
     }
 }
 

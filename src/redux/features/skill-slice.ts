@@ -1,4 +1,4 @@
-import { SkillComparisonResult } from '@/src/modules/skill/lib/types';
+import { SkillComparisonResult, SkillHints } from '@/src/modules/skill/lib/types';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 export interface ISkillState {
@@ -13,13 +13,16 @@ export interface ISkillState {
 
     /** Indicates that guiz has concluded */
     gameWon: boolean,
+
+    hints: SkillHints | undefined,
 }
 
 const initialState: ISkillState = {
     isWorking: false,
     currentGuesses: [],
     errorMsg: "",
-    gameWon: false
+    gameWon: false,
+    hints: undefined
 }
 
 const SkillSlice = createSlice({
@@ -44,13 +47,18 @@ const SkillSlice = createSlice({
 
         setGameWon(state: ISkillState, action: PayloadAction<boolean>) {
             state.gameWon = action.payload;
+        },
+
+        setHints(state: ISkillState, action: PayloadAction<SkillHints>) {
+            state.hints = action.payload;
         }
     }
 })
 
 export const {
     setIsWorking, setErrorMsg,
-    addGuess, setGuesses, setGameWon
+    addGuess, setGuesses, setGameWon,
+    setHints
 } = SkillSlice.actions;
 
 export default SkillSlice.reducer;

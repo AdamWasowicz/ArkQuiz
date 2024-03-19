@@ -50,3 +50,9 @@ export class SkillHelperFunctions {
         return output;
     } 
 }
+
+export type SkillHints = {
+    Name: string
+    OperatorBranch: string,
+    OperatorFaction: string
+}
