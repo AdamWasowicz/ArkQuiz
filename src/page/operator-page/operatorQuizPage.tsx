@@ -1,5 +1,5 @@
 "use client"
-import { OperatorComparisonResultV2, OperatorHeaderMap } from "@/src/modules/operator/lib/types";
+import { OperatorComparisonResultV2, OperatorHeaderMap, OperatorHints } from "@/src/modules/operator/lib/types";
 import QuizSearchBar from "@/src/components/quiz/quiz-search-bar/searchBar";
 import OperatorGuessResult from "@/src/modules/operator/components/guess-result/guessResult";
 import { useAppDispatch, useAppSelector } from "@/src/redux/hooks";
@@ -25,9 +25,9 @@ const OperatorQuizPage: React.FC<IOperatorQuizPage> = (props) => {
     const { operatorHeaderMap } = props;
     const guesses = useAppSelector(state => state.operator.currentGuesses);
     const isWorking = useAppSelector(state => state.operator.isWorking);
-    const quizWon = useAppSelector(state => state.operator.gameWon);
+    const isQuizWon = useAppSelector(state => state.operator.gameWon);
     const dispatch = useAppDispatch();
-    const localstorageHook = useLocalStorage();
+    const localStorageHook = useLocalStorage();
     const recapHook = useRecapLocalStorage();
     const [textInputValue, setTextInputValue] = useState<string>('');
     const [syncInProgress, setSyncInProgress] = useState<boolean>(true);
@@ -35,9 +35,7 @@ const OperatorQuizPage: React.FC<IOperatorQuizPage> = (props) => {
 
 
     const sendGuess = async (value: string) => {
-        if (isWorking === true) { 
-            return; 
-        }
+        if (isWorking === true) { return; }
         else { 
             dispatch(setErrorMsg(""));
             dispatch(setIsWorking(true)); 
@@ -52,7 +50,7 @@ const OperatorQuizPage: React.FC<IOperatorQuizPage> = (props) => {
                 })
         
         if (typeof selectedOperatorHeader !== 'undefined') {
-            localstorageHook.saveDateToStorage();
+            localStorageHook.saveDateToStorage();
             const res = await submitOperatorGuess(selectedOperatorHeader.Id)
 
             if (res === undefined) {
@@ -63,13 +61,13 @@ const OperatorQuizPage: React.FC<IOperatorQuizPage> = (props) => {
 
             const newGuessesState: OperatorComparisonResultV2[] = [res ,...guesses];
             setTextInputValue("")
-            localstorageHook.saveCurrentGuessesToStorage(newGuessesState);
+            localStorageHook.saveCurrentGuessesToStorage(newGuessesState);
             dispatch(setIsWorking(false));
             dispatch(addGuess(res));
             
             // Quiz is won
             if (res.isCorrect) {
-                localstorageHook.saveStatusToStorage(res.isCorrect)
+                localStorageHook.saveStatusToStorage(res.isCorrect)
                 recapHook.updateOperator(newGuessesState)
                 dispatch(setGameWon(res.isCorrect));
             }
@@ -105,25 +103,22 @@ const OperatorQuizPage: React.FC<IOperatorQuizPage> = (props) => {
     useEffect(() => {
         // Check if data is outdated
         // if so then delete current stored data
-        if (localstorageHook.isDataOutdated()) {
-            localstorageHook.removeCurrentGuessesFromStorage();
-            localstorageHook.removeStatusFromStorage();
-            localstorageHook.removeDateFromStorage();
-            localstorageHook.removeHintsFromStorage();
+        if (localStorageHook.isDataOutdated()) {
+            localStorageHook.clearLocalStorage();
             setSyncInProgress(false);
             return;
         }
 
         // Guesses
-        const data = localstorageHook.getCurrentGuessesFromStorage();
+        const data: OperatorComparisonResultV2[] = localStorageHook.getCurrentGuessesFromStorage() as OperatorComparisonResultV2[];
         dispatch(setGuesses(data));
 
         // Status
-        const status = localstorageHook.getStatusFromStorage();
+        const status = localStorageHook.getStatusFromStorage();
         dispatch(setGameWon(status));
 
         // Hints
-        const hints = localstorageHook.getHintsFromStorage();
+        const hints: OperatorHints = localStorageHook.getHintsFromStorage() as OperatorHints;
         if (hints !== undefined) {
             dispatch(setHints(hints));
         }
@@ -135,7 +130,7 @@ const OperatorQuizPage: React.FC<IOperatorQuizPage> = (props) => {
 
     // Scroll to element
     useEffect(() => {
-        if (quizWon === true) {
+        if (isQuizWon === true) {
             const element = document.getElementById('mainContent');
             if (element !== null) {
                 element.scrollIntoView({
@@ -143,26 +138,26 @@ const OperatorQuizPage: React.FC<IOperatorQuizPage> = (props) => {
                 })
             }
         }
-    }, [quizWon])
+    }, [isQuizWon])
 
+    // While loading
     if (syncInProgress) {
         return <LoadingPage/>
     }
-
 
     return (
         <PageLayout className={'extendedVertical'}>
             <OperatorQuizMainPanel className={styles.mainPanel}/>
 
             {
-                quizWon == false &&
+                isQuizWon == false &&
                 <div className={styles.search}>
                     <QuizSearchBar
                         operatorHeadersMap={operatorHeaderMap}
                         excludedOperatorNames={guesses.map(item => {
                             return (item.operator.Name)
                         })}
-                        isFormDisabled={quizWon}
+                        isFormDisabled={isQuizWon}
                         inputTextValue={textInputValue}
                         onFormSubmit={onFormSubmit}
                         onInputChange={onInputChange}
@@ -173,7 +168,7 @@ const OperatorQuizPage: React.FC<IOperatorQuizPage> = (props) => {
             }
 
             {
-                quizWon &&
+                isQuizWon &&
                 <NextQuizButton onClick={toNextQuiz} id={'nextQuizButton'}/>
             }
 

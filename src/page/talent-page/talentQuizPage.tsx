@@ -3,7 +3,7 @@ import { useAppDispatch, useAppSelector } from '@/src/redux/hooks';
 import styles from './talentQuizPage.module.scss';
 import { OperatorHeaderMap } from "@/src/modules/operator/lib/types"
 import { ChangeEvent, useEffect, useState } from "react";
-import useLocalStorage from './talentQuiz.utils';
+import useLocalStorage from './talentQuizPage.utils';
 import { setErrorMsg, setIsWorking, addGuess, setGameWon, setGuesses } from '@/src/redux/features/talent-slice';
 import { submitTalentGuess } from "@/src/lib/client-to-server-functions";
 import QuizSearchBar from '@/src/components/quiz/quiz-search-bar/searchBar';
@@ -13,6 +13,7 @@ import PageLayout from '@/src/layouts/page-layout/pageLayout';
 import useRecapLocalStorage from '../recap-page/recapPage.utils';
 import NextQuizButton from '@/src/components/quiz/next-quiz-button/nextQuizButton';
 import { useRouter } from 'next/navigation';
+import { TalentComparisonResult } from '@/src/modules/talent/lib/types';
 
 interface ITalentPage {
     operatorHeaderMap: OperatorHeaderMap
@@ -24,7 +25,7 @@ const TalentQuizPage: React.FC<ITalentPage> = (props) => {
     const isWorking = useAppSelector(state => state.talent.isWorking);
     const quizWon = useAppSelector(state => state.talent.gameWon);
     const dispatch = useAppDispatch();
-    const localstorageHook = useLocalStorage();
+    const localStorageHook = useLocalStorage();
     const [textInputValue, setTextInputValue] = useState<string>('');
     const recapHook = useRecapLocalStorage();
     const router = useRouter();
@@ -48,7 +49,7 @@ const TalentQuizPage: React.FC<ITalentPage> = (props) => {
                 })
         
         if (typeof selectedOperatorHeader !== 'undefined') {
-            localstorageHook.saveDateToStorage();
+            localStorageHook.saveDateToStorage();
             const res = await submitTalentGuess(selectedOperatorHeader.Id)
 
             if (res === undefined) {
@@ -59,13 +60,13 @@ const TalentQuizPage: React.FC<ITalentPage> = (props) => {
 
             const newState = [res ,...guesses];
             setTextInputValue('')
-            localstorageHook.saveCurrentGuessesToStorage(newState);
+            localStorageHook.saveCurrentGuessesToStorage(newState);
             dispatch(setIsWorking(false));
             dispatch(addGuess(res));
             
             // Quiz is won
             if (res.IsCorrect) {
-                localstorageHook.saveStatusToStorage(res.IsCorrect)
+                localStorageHook.saveStatusToStorage(res.IsCorrect)
                 recapHook.updateTalent(newState);
                 dispatch(setGameWon(res.IsCorrect));
             }
@@ -97,19 +98,17 @@ const TalentQuizPage: React.FC<ITalentPage> = (props) => {
     useEffect(() => {
         // Check if data is outdated
         // if so then delete current stored data
-        if (localstorageHook.isDataOutdated()) {
-            localstorageHook.removeCurrentGuessesFromStorage();
-            localstorageHook.removeStatusFromStorage();
-            localstorageHook.removeDateFromStorage();
+        if (localStorageHook.isDataOutdated()) {
+            localStorageHook.clearLocalStorage();
             return;
         }
 
         // Guesses
-        const data = localstorageHook.getCurrentGuessesFromStorage();
+        const data: TalentComparisonResult[] = localStorageHook.getCurrentGuessesFromStorage() as TalentComparisonResult[];
         dispatch(setGuesses(data));
 
         //Status
-        const status = localstorageHook.getStatusFromStorage();
+        const status = localStorageHook.getStatusFromStorage();
         dispatch(setGameWon(status))
         
         // eslint-disable-next-line react-hooks/exhaustive-deps

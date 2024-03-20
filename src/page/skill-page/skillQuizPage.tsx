@@ -50,7 +50,7 @@ const SkillQuizPage: React.FC<ISkillPage> = (props) => {
                 })
         
         if (typeof selectedOperatorHeader !== 'undefined') {
-            localstorageHook.saveSkillDateToStorage();
+            localstorageHook.saveDateToStorage();
             const res = await submitSkillGuess(selectedOperatorHeader.Id)
 
             if (res === undefined) {
@@ -105,7 +105,7 @@ const SkillQuizPage: React.FC<ISkillPage> = (props) => {
         }
 
         // Guesses
-        const data = localstorageHook.getCurrentGuessesFromStorage();
+        const data: SkillComparisonResult[] = localstorageHook.getCurrentGuessesFromStorage() as SkillComparisonResult[];
         dispatch(setGuesses(data));
 
         //Status
