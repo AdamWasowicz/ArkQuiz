@@ -1,9 +1,9 @@
 import { OperatorComparisonDiffrenceV2, OperatorComparisonResultV2, OperatorHeader, OperatorHints, RaceDescription } from '@/src/modules/operator/lib/types';
 import axios from 'axios';
-import { LOCAL_PATH_TO_BRANCH_ICONS, LOCAL_PATH_TO_CLASS_ICONS, LOCAL_PATH_TO_OPERATOR_ICONS, LOCAL_PATH_TO_SKILL_ICONS } from './paths';
+import { LOCAL_PATH_TO_BRANCH_ICONS, LOCAL_PATH_TO_CLASS_ICONS, LOCAL_PATH_TO_FACTION_ICONS, LOCAL_PATH_TO_OPERATOR_ICONS, LOCAL_PATH_TO_SKILL_ICONS } from './paths';
 import path from 'path';
 import { SkillComparisonResult, SkillHeader, SkillHints } from '../modules/skill/lib/types';
-import { TalentComparisonResult, TalentHeader } from '../modules/talent/lib/types';
+import { TalentComparisonResult, TalentHeader, TalentHints } from '../modules/talent/lib/types';
 
 const SERVER_ROUTE_TO_OPERATOR_GUESS = 'api/operator';
 const SERVER_ROUTE_TO_OPERATOR_HEADERS = 'api/operator/headers';
@@ -12,6 +12,7 @@ const SERVER_ROUTE_TO_OPERATOR_HINTS = 'api/operator/hint';
 const SERVER_ROUTE_TO_SKILL_GUESS = 'api/skill';
 const SERVER_ROUTE_TO_SKILL_HINTS = 'api/skill/hint';
 const SERVER_ROUTE_TO_TALENT_GUESS = 'api/talent';
+const SERVER_ROUTE_TO_TALENT_HINTS = 'api/talent/hint';
 
 /** Try fetching all Operator headers  */
 export const fetchAllOperatorHeaders = async (): Promise<OperatorHeader[] | undefined> => {
@@ -47,6 +48,13 @@ export const routeToBranchIcon = (branch: string, cName: string): string => {
     const output = `${path.join(...LOCAL_PATH_TO_BRANCH_ICONS)}/${fileName}.webp`;
 
     return output;
+}
+
+export const routeToFactionIcon = (factionName: string): string => {
+    const fileName = `${factionName.trim().replace(' ', '_')}`;
+    const output = `${path.join(...LOCAL_PATH_TO_FACTION_ICONS)}/${fileName}.webp`;
+
+    return output; 
 }
 
 // Operator
@@ -217,6 +225,26 @@ export const fetchTodaySkillHints = async(): Promise<SkillHints | undefined> => 
     })
 
     const response = await axiosClient.get<SkillHints>(SERVER_ROUTE_TO_SKILL_HINTS, {
+        params: {
+            timestamp: new Date().toString(),
+        }
+    });
+
+    if (response.status !== 200) {
+        return undefined;
+    }
+
+    return response.data;
+}
+
+export const fetchTodayTalentlHints = async(): Promise<SkillHints | undefined> => {
+    const axiosClient = axios.create({
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+
+    const response = await axiosClient.get<TalentHints>(SERVER_ROUTE_TO_TALENT_HINTS, {
         params: {
             timestamp: new Date().toString(),
         }

@@ -1,7 +1,7 @@
 import { useAppDispatch, useAppSelector } from "@/src/redux/hooks";
 import { Operator, OperatorComparisonDiffrenceV2, OperatorComparisonResultV2 } from "../../lib/types";
 import styles from './guessResult.module.scss';
-import { routeToBranchIcon, routeToClassIcon, routeToOperatorIcon } from "@/src/lib/client-to-server-functions";
+import { routeToBranchIcon, routeToClassIcon, routeToFactionIcon, routeToOperatorIcon } from "@/src/lib/client-to-server-functions";
 import Image from "next/image";
 import useUtils from "./guessResult.utils";
 import { useEffect } from "react";
@@ -137,8 +137,14 @@ const OperatorGuessResultRow: React.FC<IOperatorGuessResultRow> = (props) => {
                 { utils.getRaceDescription(operatorData.Race, raceArray) }
             </td>
 
-            <td className={utils.getClassName(diffrencesValues[7])}>
-                { operatorData.Faction }
+            <td className={styles.factionColumn + " " + utils.getClassName(diffrencesValues[7])}>
+                <Image 
+                    src={routeToFactionIcon(operatorData.Faction)} 
+                    alt={operatorData.Faction}
+                    height={100}
+                    width={100}
+                    title={operatorData.Faction}        
+                />
             </td>
         </tr>
     )

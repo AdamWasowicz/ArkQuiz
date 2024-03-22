@@ -34,3 +34,9 @@ export class TalentHelperFunctions {
         return output;
     }
 }
+
+export type TalentHints = {
+    Name: string,
+    OperatorBranch: string,
+    OperatorFaction: string
+}

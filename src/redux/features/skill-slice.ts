@@ -5,7 +5,7 @@ export interface ISkillState {
     /** Indicates that action is in progress */
     isWorking: boolean,
 
-     /** Array of current guesses in form of array of {@link SkillComparisonResult} */
+    /** Array of current guesses in form of array of {@link SkillComparisonResult} */
     currentGuesses: SkillComparisonResult[],
 
     /** Contains text content of error */

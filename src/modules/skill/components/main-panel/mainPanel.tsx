@@ -3,7 +3,7 @@ import styles from './mainPanel.module.scss';
 import { fetchTodaySkillHeader, fetchTodaySkillHints, routeToOperatorIcon, routeToSkillIcon } from '@/src/lib/client-to-server-functions';
 import Image from 'next/image';
 import { useState, useEffect, Fragment } from 'react';
-import { SkillHeader } from '../../lib/types';
+import { SkillHeader, SkillHints } from '../../lib/types';
 import QuizMainPanelLayout from '@/src/layouts/quiz-main-panel-layout/quizMainPanelLayout';
 import Hints from '@/src/components/quiz/hints/hints';
 import useLocalstorage from '@/src/page/skill-page/skillQuizPage.utils';
@@ -30,7 +30,7 @@ const SkillQuizMainPanel: React.FC<ISkillQuizMainPanel> = (props) => {
         setAreHintsLoading(true);
 
         // get from localstorage
-        const sh = localstorageHook.getHintsFromStorage();
+        const sh: SkillHints = localstorageHook.getHintsFromStorage() as SkillHints;
         if (sh !== undefined) {
             dispatch(setHints(sh));
             setAreHintsLoading(false);

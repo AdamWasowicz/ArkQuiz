@@ -1,17 +1,48 @@
 import { useAppSelector } from '@/src/redux/hooks';
 import styles from './mainPanel.module.scss';
-import { fetchTodayTalentHeader, routeToOperatorIcon } from '@/src/lib/client-to-server-functions';
+import { fetchTodayTalentHeader, fetchTodayTalentlHints, routeToOperatorIcon } from '@/src/lib/client-to-server-functions';
 import { useState, useEffect, Fragment } from 'react';
-import { TalentHeader } from '../../lib/types';
+import { TalentHeader, TalentHints } from '../../lib/types';
 import QuizMainPanelLayout from '@/src/layouts/quiz-main-panel-layout/quizMainPanelLayout';
 import Image from 'next/image';
+import { setHints } from '@/src/redux/features/talent-slice';
+import Hints from '@/src/components/quiz/hints/hints';
+import { useDispatch } from 'react-redux';
+import useLocalStorage from '@/src/page/talent-page/talentQuizPage.utils';
 
 
 const TalentQuizMainPanel: React.FC = () => {
     const guesses = useAppSelector(state => state.talent.currentGuesses);
-    const gameWon = useAppSelector(state => state.talent.gameWon)
+    const gameWon = useAppSelector(state => state.talent.gameWon);
+    const hints = useAppSelector(state => state.talent.hints);
     const [talentHeader, setTalentHeader] = useState<TalentHeader | undefined>(undefined);
+    const [areHintsLoading, setAreHintsLoading] = useState<boolean>(false);
+    const localstorageHook = useLocalStorage();
+    const dispatch = useDispatch();
 
+    const fetchHints = () => {
+        setAreHintsLoading(true);
+
+        // get from localstorage
+        const sh: TalentHints = localstorageHook.getHintsFromStorage() as TalentHints;
+        if (sh !== undefined) {
+            dispatch(setHints(sh));
+            setAreHintsLoading(false);
+            return;
+        }
+
+        // fetch
+        fetchTodayTalentlHints()
+            .then((result) => {
+                if (result !== undefined) {
+                    localstorageHook.saveHintsToStorage(result);
+                    dispatch(setHints(result));
+                }
+            })
+            .finally(() => {
+                setAreHintsLoading(false);
+            })
+    }
 
     useEffect(() => {
         fetchTodayTalentHeader()
@@ -55,6 +86,32 @@ const TalentQuizMainPanel: React.FC = () => {
                 {
                     gameWon == false &&
                     <p>Current number of guesses: <span>{guesses.length}</span></p>
+                }
+
+                {
+                    gameWon === false &&
+                    <Hints
+                        currentNumberForHints={guesses.length}
+                        requiredNumberForHints={5}
+                        hints={hints === undefined ? undefined : [
+                            {
+                                buttonLabel: 'Name',
+                                hintText: hints?.Name ?? ''
+                            },
+
+                            {
+                                buttonLabel: 'Faction',
+                                hintText: hints?.OperatorFaction ?? ''
+                            },
+
+                            {
+                                buttonLabel: 'Branch',
+                                hintText: hints?.OperatorBranch ?? ''
+                            }
+                        ]}
+                        onLoadData={fetchHints}
+                        isLoading={areHintsLoading}
+                    />
                 }
             </Fragment>
         </QuizMainPanelLayout>

@@ -14,11 +14,6 @@ export interface SkillHeader{
 export interface OperatorSkills  {
     Id: string;
     Skills: Skill[];
-
-    // constructor(Id: string, Skills: Skill[]) {
-    //     this.Id = Id;
-    //     this.Skills = Skills;
-    // }
 } 
 
 export interface SkillComparisonResult {
@@ -52,7 +47,7 @@ export class SkillHelperFunctions {
 }
 
 export type SkillHints = {
-    Name: string
+    Name: string,
     OperatorBranch: string,
     OperatorFaction: string
 }

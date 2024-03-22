@@ -7,6 +7,8 @@ export const LOCAL_PATH_TO_CLASS_ICONS = ['images', 'operator', 'class']
 export const EXTERNAL_PATH_TO_CLASS_ICONS = ['public', 'images', 'operator', 'class']
 export const LOCAL_PATH_TO_BRANCH_ICONS = ['images', 'operator', 'branch']
 export const EXTERNAL_PATH_TO_BRANCH_ICONS = ['public', 'images', 'operator', 'branch']
+export const LOCAL_PATH_TO_FACTION_ICONS = ['images', 'operator', 'faction'];
+export const EXTERNAL_PATH_TO_FACTION_ICONS = ['public', 'images', 'operator', 'faction']
 
 // Data
 export const PATH_TO_OPERATOR_DATA = ['src', 'modules', 'operator', 'data', 'operator']

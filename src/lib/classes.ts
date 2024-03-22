@@ -88,7 +88,7 @@ export class QuizLocalStorageAgent {
         this.remove(this.HINTS);
     }
 
-    // OTHER
+    //// OTHER
     public isDataOutdated = (): boolean => {
         const dateFromStorage = this.getDateFromStorage();
         if (dateFromStorage == null) { return true; }

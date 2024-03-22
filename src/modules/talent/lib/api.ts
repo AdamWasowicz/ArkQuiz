@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { getTalentByDate } from "./utils";
 import { getOperatorById } from "../../operator/lib/server-utils";
 import { OperatorHelperFunctions } from "../../operator/lib/types";
-import { TalentComparisonResult } from "./types";
+import { TalentComparisonResult, TalentHeader, TalentHints } from "./types";
 
 
 export const POST_Talent_Quiz = async (req: NextRequest): Promise<NextResponse> => {
@@ -44,6 +44,31 @@ export const GET_Talent_Quiz = async (): Promise<NextResponse> => {
             headers: { 'content-type': 'application/json', },
         }
     )
+
+    return response;
+}
+
+export const GET_Talent_Hints = async (req: NextRequest): Promise<NextResponse> => {
+    const timestamp = new Date(req.nextUrl.searchParams.get("timestamp")!)
+
+    const talent: TalentHeader = getTalentByDate(timestamp);
+    const operator = getOperatorById(talent.OperatorId);
+
+    const output = {
+        Name: talent.Name,
+        OperatorFaction: operator?.Faction ?? '',
+        OperatorBranch: `${operator?.Branch} ${operator?.Class}` ?? ''
+    } satisfies TalentHints
+
+
+    const response = new NextResponse(JSON.stringify(output), 
+        {
+            status: 200,
+            headers: {
+                'content-type': 'application/json',
+            },
+        }
+    );
 
     return response;
 }
