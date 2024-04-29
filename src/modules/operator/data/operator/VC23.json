@@ -1,0 +1,12 @@
+{
+    "Id": "VC23",
+    "Name": "Delphine",
+    "Rarity": 5,
+    "Class": "Caster",
+    "Branch": "Mystic",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Feline",
+    "Faction": "Victoria"
+}

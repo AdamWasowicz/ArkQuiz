@@ -1,0 +1,9 @@
+{
+    "OperatorId": "VC24",
+    "Talents": [
+        {
+            "Name": "Soil Fertilizer Enhancement",
+            "Description": "The ally with the highest Max HP within range receives 15% more healing" 
+        }
+    ]
+}

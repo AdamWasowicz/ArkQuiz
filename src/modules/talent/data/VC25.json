@@ -1,0 +1,9 @@
+{
+    "OperatorId": "VC25",
+    "Talents": [
+        {
+            "Name": "Vegetative Regeneration",
+            "Description": "<Substitute> restores 3.5% HP per second" 
+        }
+    ]
+}

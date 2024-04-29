@@ -1,0 +1,14 @@
+{
+    "OperatorId": "VC23",
+    "Talents": [
+        {
+            "Name": "Baptize the Blade",
+            "Description": "Increases damage dealt to enemies above 80% HP by 18%" 
+        },
+
+        {
+            "Name": "Cut Without Mercy",
+            "Description": "In [The Whirlpool that is Passion], ATK is increased to 120% against [Sarkaz] enemies, and stores an additional attack charge that only fires against [Sarkaz] enemies" 
+        }
+    ]
+}

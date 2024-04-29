@@ -1,0 +1,12 @@
+{
+    "Id": "VC25",
+    "Name": "Verdant",
+    "Rarity": 4,
+    "Class": "Specialist",
+    "Branch": "Dollkeeper",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Male",
+    "Race": "Pythia",
+    "Faction": "Victoria"
+}

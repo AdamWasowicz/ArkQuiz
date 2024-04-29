@@ -1,0 +1,14 @@
+{
+    "OperatorId": "B216",
+    "Talents": [
+        {
+            "Name": "Do or Die",
+            "Description": "ATK increases to 110% when attacking an enemy; If the target is stunned or bound, ATK further increases to 140%" 
+        },
+
+        {
+            "Name": "Cloak of Lingering Flame",
+            "Description": "Provides a 18% Sanctuary effect to self and the allied unit directly behind this unit" 
+        }
+    ]
+}

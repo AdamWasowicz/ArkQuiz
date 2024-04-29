@@ -1,0 +1,12 @@
+{
+    "Id": "VC24",
+    "Name": "Vendela",
+    "Rarity": 5,
+    "Class": "Medic",
+    "Branch": "Incantation",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Feline",
+    "Faction": "Victoria"
+}

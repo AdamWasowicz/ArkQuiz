@@ -1,0 +1,14 @@
+{
+    "Id": "VC23",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "\"Concentration\""
+        },
+
+        {
+            "Number": 2,
+            "Name": "\"Preemptive Strike\""
+        }
+    ]
+}
