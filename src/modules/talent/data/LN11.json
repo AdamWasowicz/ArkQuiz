@@ -1,0 +1,14 @@
+{
+    "OperatorId": "LN11",
+    "Talents": [
+        {
+            "Name": "Candlelight",
+            "Description": "Deal +8% damage and take -8% Physical and Arts damage. Double effect if there is an elite or leader enemy within attack range" 
+        },
+
+        {
+            "Name": "Nova",
+            "Description": "When attacking an elite or leader enemy, there is a 18% chance to gain a Shield that only blocks melee attacks (max 1 stack)" 
+        }
+    ]
+}

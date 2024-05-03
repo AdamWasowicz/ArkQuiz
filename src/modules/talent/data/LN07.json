@@ -1,0 +1,14 @@
+{
+    "OperatorId": "LN07",
+    "Talents": [
+        {
+            "Name": "Pain Focus",
+            "Description": "When blocking, take 35% less Physical and Arts damage from enemies not blocked by this unit"
+        },
+
+        {
+            "Name": "Whetted With Pain",
+            "Description": "When damage is taken, ATK +12% for 15s (does not stack)" 
+        }
+    ]
+}

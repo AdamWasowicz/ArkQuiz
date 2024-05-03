@@ -1,0 +1,14 @@
+{
+    "Id": "LN07",
+    "Skills": [
+        {
+            "Number": 2,
+            "Name": "Clash of the Faithful"
+        },
+
+        {
+            "Number": 3,
+            "Name": "Oathbreaker"
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "Id": "LN21",
+    "Name": "Diamante",
+    "Rarity": 5,
+    "Class": "Caster",
+    "Branch": "Primal",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Male",
+    "Race": "Caprinae",
+    "Faction": "Leithanien"
+}

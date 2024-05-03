@@ -1,0 +1,14 @@
+{
+    "OperatorId": "LT22",
+    "Talents": [
+        {
+            "Name": "Wordless Elegy",
+            "Description": "Enemies within attack range take 10% ATK as Necrosis damage per second, and are Slowed for 0.2s" 
+        },
+
+        {
+            "Name": "Mental Inversion",
+            "Description": "Enemies within attack range take 20% more Necrosis damage" 
+        }
+    ]
+}

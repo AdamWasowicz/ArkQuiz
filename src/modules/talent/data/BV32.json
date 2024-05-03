@@ -1,0 +1,9 @@
+{
+    "OperatorId": "BV32",
+    "Talents": [
+        {
+            "Name": "Larking About",
+            "Description": "When attacking, 25% chance to increase that attack's ATK to 150%"
+        }
+    ]
+}

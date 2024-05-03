@@ -1,0 +1,19 @@
+{
+    "Id": "LN11",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "Blade of Fleeting Shadows"
+        },
+
+        {
+            "Number": 2,
+            "Name": "Shadowed by Candlelight"
+        },
+
+        {
+            "Number": 3,
+            "Name": "\"Flicker\""
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "Id": "BV32",
+    "Name": "Caper",
+    "Rarity": 4,
+    "Class": "Sniper",
+    "Branch": "Loopshooter",
+    "Attack_Range": "Ranged",
+    "Position": "High ground",
+    "Gender": "Female",
+    "Race": "Catus",
+    "Faction": "Bolívar"
+}

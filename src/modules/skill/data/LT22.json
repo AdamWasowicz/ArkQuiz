@@ -1,0 +1,19 @@
+{
+    "Id": "LT22",
+    "Skills": [
+        {
+            "Number": 1,
+            "Name": "\"Golden Ecstasy\""
+        },
+
+        {
+            "Number": 2,
+            "Name": "\"Requiem Mass\""
+        },
+
+        {
+            "Number": 3,
+            "Name": "\"Liberal Tango\""
+        }
+    ]
+}

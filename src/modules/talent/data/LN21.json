@@ -1,0 +1,9 @@
+{
+    "OperatorId": "LN21",
+    "Talents": [
+        {
+            "Name": "Advanced Notice",
+            "Description": "If there is an enemy within attack range under the burst effect of Necrosis damage, ATK +18%" 
+        }
+    ]
+}

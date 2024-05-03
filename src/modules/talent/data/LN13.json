@@ -1,0 +1,9 @@
+{
+    "OperatorId": "LN13",
+    "Talents": [
+        {
+            "Name": "Authoritarian Teachings",
+            "Description": "RES +12; if there are allied Operators in the 8 surrounding tiles, gain another RES +4" 
+        }
+    ]
+}

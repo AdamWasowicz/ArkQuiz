@@ -1,0 +1,12 @@
+{
+    "Id": "LN07",
+    "Name": "Lessing",
+    "Rarity": 6,
+    "Class": "Guard",
+    "Branch": "Dreadnought",
+    "Attack_Range": "Melee",
+    "Position": "Ground",
+    "Gender": "Male",
+    "Race": "Caprinae",
+    "Faction": "Leithanien"
+}
